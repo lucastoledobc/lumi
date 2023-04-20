@@ -18,35 +18,41 @@
     font-family: Helvetica, Arial, sans-serif;
 }
 
-html, body {
-    width: 600px;
-    height: 100vh;
-    background-color: var(--cor3);
+
+
+
+
+html {
+    width: 100vw;
+    height: 100%;
+    background-color: var(--cor1);
 }
 
 
 
-header {
-    background-color: var(--cor3);
-    color: white;
-    height: 30%;
-}
-
-h1 {
-    font-size: 80px;
-    padding: 30px 0;
+body {
+    height: 100%;
+    width: 100%;
+    max-width: 1500px;
     margin: auto;
-    text-align: center;
-    font-family: 'DynaPuff', cursive;
 }
 
-nav {
+
+
+
+
+
+
+
+/*Header importado */
+
+
+nav#nav1 {
     background-color: var(--cor3);    
     font-size: 20px;
     padding: 5px;
     margin-left: 10px;
 }
-
 
 
 nav > a {
@@ -70,15 +76,32 @@ a:hover {
 
 
 
+
 main {
-    height: 50%;
-    background-color: var(--cor1);
+    display: block;
+    width: 100%;
 }
 
 
+nav#nav2 {
+    display: flex;
+    width: 200px;
+    height: 100%;
+    background-color: white;
+    float: left;
+}
+
+
+div#main {
+    display: flex;
+    float: right;
+}
+
+
+
+
+
+
 footer {
-    background-color: var(--cor5);
-    color: white;
-    text-align: center;
-    padding: 5px;
+    display: block;
 }
