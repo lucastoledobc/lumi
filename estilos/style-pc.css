@@ -23,15 +23,15 @@
 
 
 html {
-    width: 100vw;
+    width: 100%;
     background-color: var(--cor1);
 }
 
 
 
 body {
-    width: 100vw;
-    max-width: 1500px;
+    width: 98vw;
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -49,7 +49,6 @@ nav#nav1 {
     background-color: var(--cor3);    
     font-size: 20px;
     padding: 5px;
-    margin-left: 10px;
 }
 
 
@@ -59,11 +58,10 @@ nav > a {
     color: black;
     border-radius: 10px 10px 0 0;
     padding: 5px;
-
 }
 
 
-a:hover {
+nav > a:hover {
     background-image: var(--cor1);
     color: white;
     border-radius: 10px 10px 0 0;
@@ -72,32 +70,142 @@ a:hover {
 
 
 
+/* MAIN */
 
 
+
+section#top {
+    display: block;
+    background-color: black;
+    height: 3px;
+}
 
 main {
     display: flex;
     width: 100%;
 }
 
+/* MENU LATERAL */
 
 nav#nav2 {
-    display: flex;
-    width: 400px;
-    background-color: white;
-    float: left;
+    display: block;
+    width: 160px;
+    max-width: 30%;
+    background-color: var(--cor2);
 }
 
+nav > ul > ul {
+    height: 30px;
+    background-color: white;   
+}
+nav > ul > li {
+    height: 30px;
+    background-color: rgb(255, 241, 115);
+    text-indent: 1em;  
+}
+
+
+
+nav > ul > ul > a {
+    display: block;
+    width: 150px;
+    height: 20px;
+    padding: 5px;
+    background-image: linear-gradient(to bottom, var(--cor1),var(--cor3));
+    border-radius: 10px 0 0 0;
+    color: white;
+    text-decoration: none;
+}
+
+nav > ul > ul > a:hover {
+    display: block;
+    width: 150px;
+    height: 20px;
+    padding: 5px;
+    background-image: linear-gradient(to bottom, var(--cor1),var(--cor3));
+    color: white;
+    text-decoration: none;
+    border-radius: 0px 0 100px 0;
+    transition: 0.3s;
+}
+
+
+
+
+nav > ul > li > a {
+    display: block;
+    width: 150px;
+    height: 20px;
+    padding: 5px;
+    background-color: var(--cor3);
+    color: white;
+    text-decoration: none;
+
+}
+
+
+nav > ul > li > a:hover {
+    display: block;
+    width: 150px;
+    height: 20px;
+    padding: 5px;
+    background-image: linear-gradient(to bottom, var(--cor1),var(--cor3));
+    color: white;
+    text-decoration: none;
+    border-radius: 0px 0 100px 0;
+    transition: 0.3s;
+}   
+
+/* CONTEÚDO */
 
 div#main {
-    display: flex;
-    float: right;
+    display: block;
+    background-color: white;
+    width: 100%;
 }
 
 
 
+
+input {
+    display: none;
+}
+
+input.botao {
+    display: block;
+}
+
+label {
+    display: block;
+    width: auto;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 5px;
+}
+
+label:hover {
+    background-color: rgb(209, 209, 209);
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+label:active {
+    background-color: yellow;
+}
+
+label:focus{
+    background-color: green;
+}
+
+
+
+section.resposta {
+    display: none;
+}
+/* FOOTER */
+
 footer {
-    position: absolute;
-    bottom: 0;
-    width: 100vw;
+    width: 100%;
 }

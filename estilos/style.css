@@ -60,13 +60,20 @@ h1 {
 
 
 
-
+label {
+    display: block;
+    width: auto;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 5px;
+}
 
 
 
 main {
     display: block;
-    height: 50%;
     background-color: var(--cor1);
 }
 
