@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+header, footer, nav {
+    visibility: hidden;
+    display: none;
+    width: 100%;
+}
+
+section.resposta {
+    display: none;
+}
