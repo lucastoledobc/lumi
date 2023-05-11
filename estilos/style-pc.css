@@ -21,6 +21,8 @@
 
 
 
+/* GERAL */
+
 
 html {
     width: 100%;
@@ -35,7 +37,9 @@ body {
     margin: auto;
 }
 
-
+p {
+    margin: 10px;
+}
 
 
 
@@ -160,7 +164,7 @@ nav > ul > li > a:hover {
 
 div#main {
     display: block;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     width: 100%;
 }
 
@@ -200,6 +204,25 @@ label:focus{
 }
 
 
+input.botao {
+    font-size: 1.2em;
+    color: var(--cor5);
+    margin: 10px;
+    padding: 15px;
+    border: var(--cor3) 2px solid;
+    border-radius: 10px;
+    border-radius: 10px;
+    background: linear-gradient(225deg, #ffffff, #e6e6e6);
+    box-shadow:  -13px 13px 100px #f0f0f0,
+                 13px -13px 100px #ffffff;
+}
+
+input.botao:active {
+    border-radius: 10px;
+    background: linear-gradient(225deg, #e6e6e6, #ffffff);
+    box-shadow:  -13px 13px 100px #f0f0f0,
+                 13px -13px 100px #ffffff;
+}
 
 section.resposta {
     display: none;
@@ -207,5 +230,6 @@ section.resposta {
 /* FOOTER */
 
 footer {
+    margin-top: auto;
     width: 100%;
 }
