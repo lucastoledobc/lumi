@@ -3,9 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&family=Passion+One:wght@400;700&display=swap');
 
 
+/* 
+primeiro 07ADF5 
+shiny 0EA5FF
+twitter 1DA3F2
+*/
 
 :root {
-    --cor1: #51C1F1;
+    --cor1: #73C4F4;
     --cor2: #22B5F4;
     --cor3: #07ADF5;
     --cor4: #0191D0;
@@ -32,7 +37,7 @@ html {
 
 
 body {
-    width: 98vw;
+    width: 100%;
     max-width: 1200px;
     margin: auto;
 }
@@ -74,6 +79,25 @@ nav > a:hover {
 
 
 
+div#search {
+    float: inline-end;
+    background-image: linear-gradient(to bottom, var(--cor1),var(--cor2));
+    padding: 3px 10px;
+    color: black;
+    border-radius: 5px 5px 0 0;
+}
+
+input[type=text] {
+    font-size: 15px;
+}
+
+div#search > form > button {
+    cursor: pointer;
+}
+
+
+
+
 /* MAIN */
 
 
@@ -100,11 +124,11 @@ nav#nav2 {
 
 nav > ul > ul {
     height: 30px;
-    background-color: white;   
+    background-color: rosybrown;   
 }
 nav > ul > li {
     height: 30px;
-    background-color: rgb(255, 241, 115);
+    background-color: rosybrown;
     text-indent: 1em;  
 }
 
@@ -116,7 +140,7 @@ nav > ul > ul > a {
     height: 20px;
     padding: 5px;
     background-image: linear-gradient(to bottom, var(--cor1),var(--cor3));
-    border-radius: 10px 0 0 0;
+    border-radius: 0px 10px 0 0;
     color: white;
     text-decoration: none;
 }
@@ -129,8 +153,8 @@ nav > ul > ul > a:hover {
     background-image: linear-gradient(to bottom, var(--cor1),var(--cor3));
     color: white;
     text-decoration: none;
-    border-radius: 0px 0 100px 0;
-    transition: 0.3s;
+    border-radius: 0px 150px 0 0;
+    transition: 0.5s;
 }
 
 
@@ -156,8 +180,8 @@ nav > ul > li > a:hover {
     background-image: linear-gradient(to bottom, var(--cor1),var(--cor3));
     color: white;
     text-decoration: none;
-    border-radius: 0px 0 100px 0;
-    transition: 0.3s;
+    border-radius: 0px 150px 0 0;
+    transition: 0.5s;
 }   
 
 /* CONTEÚDO */
@@ -169,9 +193,35 @@ div#main {
 }
 
 
+img {
+    display: block;
+    margin: 10px auto;
+}
 
 
-input {
+strong {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+div.box {
+    display: none;
+    position: relative;
+    bottom: 50vh;
+    left: 50%;
+
+    width: 300px;
+    height: auto;
+    background: wheat;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+div.box > button {
+    float: right;
+    margin: 10px;
+}
+input[type="radio"] {
     display: none;
 }
 
@@ -224,9 +274,40 @@ input.botao:active {
                  13px -13px 100px #ffffff;
 }
 
+
+
+
+div#res {
+    font-family: 'DynaPuff', cursive;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+
 section.resposta {
     display: none;
+    width: auto;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
 }
+
+
+
+div.divres {
+    display: none;
+    width: 97%;
+    padding: 10px;
+    text-align: justify;
+    transition: 0.1s;
+}
+
+
+
 /* FOOTER */
 
 footer {
