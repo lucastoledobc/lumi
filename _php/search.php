@@ -4,11 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Com Ciência Física</title>
+    <title>Com Ciência</title>
+    <meta name="description" content="Site sobre Física no ensino básico, ensino médio, ensino superior">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../estilos/style.css" media="all">
-    <link rel="stylesheet" href="../estilos/style-pc.css" media="screen and (min-width: 601px)">
-    <link rel="stylesheet" href="../estilos/print.css" media="print">
+
+    <link rel="stylesheet" href="../_estilos/style.css" media="all">
+    <link rel="stylesheet" href="../_estilos/style-pc.css" media="screen and (min-width: 601px)">
+    <link rel="stylesheet" href="../_estilos/style-full.css" media="screen and (min-width: 1200px)">
+    <link rel="stylesheet" href="../_estilos/print.css" media="print">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&family=Passion+One:wght@400;700&display=swap');
+        p#home {
+            font-size: 600%;
+            font-family: DynaPuff;
+            text-align: center;
+            color: #0EA5FF;
+            line-height: 95px;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -16,17 +32,25 @@
     </header>
 
     <nav id="nav1">
-        <a href="../home/home.html" rel="home">Home</a>
+        <a href="../home/home.html">Home</a>
         <a href="../questoes/index.html">Conteúdo</a>
         <a href="../pag003/pag003.html">Jogos</a>
         <a href="../pag004/pag004.html">Artigos</a>
         <a href="../sobre/sobre.html">Sobre</a>
+
+        <button id="lupa" onclick="lupa()"><span class="material-symbols-outlined">search</span></button>
+
+        <div id="search">
+            <button id="x" onclick="lupa2()">x</button>
+            <form action="../_php/search.php">
+              <input type="text" placeholder="Procurar.." name="search">
+              <button type="submit">🔎</button>
+            </form>
+        </div>
+
     </nav>
 
-    <section id="top"></section>
-
-    <main>
-    <nav id="nav2">
+    <nav id="nav2" onclick="flexivel()">
         <ul type="none">
             <ul type="none"><a href="">Mecânica</a></ul>
                 <li><a href="">Cinemática</a></li>
@@ -48,17 +72,18 @@
                 <li><a href="">Física Quântica</a></li>
         </ul>
     </nav>
-    <div id="main">
-        <h2>Banco de Provas</h2>
-        <ul type="none">
-            <li><a href="ENEM/index.html">ENEM</a></li>
-            <li><a href="UERJ/index.html">UERJ</a></li>
-        </ul>
-    </div>
+
+    <main>
+        <p id="home">
+            <br><br>
+            PHP
+        </p>
     </main>
-    <script src="script.js"></script>
+
     <footer>
         Site criado por Lucas Toledo.
     </footer>
+
+    <script src="../_scripts/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,266 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&family=Passion+One:wght@400;700&display=swap');
+
+/* 
+primeiro 07ADF5 
+shiny 0EA5FF
+twitter 1DA3F2
+*/
+
+:root {
+    --cor1: #51C1F1;
+    --cor2: #22B5F4;
+    --cor3: #07ADF5;
+    --cor4: #0191D0;
+    --cor5: #016590;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+
+
+/* GERAL */
+/* GERAL */
+/* GERAL */
+
+html {
+    width: 100%;
+    background-color: var(--cor1);
+}
+
+body {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+p {
+    padding: 10px 20px ;
+    line-height: 25px;
+    text-align: justify;
+    text-indent: 20px;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+/* HEADER */
+/* HEADER */
+/* HEADER */
+
+
+
+header {
+    background-color: var(--cor3);
+    color: white;
+    height: 320px;
+}
+
+h1 {
+    font-family: 'DynaPuff', cursive;
+    font-size: 80px;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content:center;
+}
+
+
+
+label {
+    display: block;
+    width: auto;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 5px;
+}
+
+
+
+/* NAV */
+/* NAV */
+/* NAV */
+
+nav {
+    display: block;
+    font-size: 18px;
+}
+
+nav#nav1 {
+    background-color: var(--cor1);
+    height: 20px;
+    padding: 4px 0px 5px 0px;
+    
+}
+
+nav > a {
+    text-decoration: none;
+    color: black;
+    padding:  4px 5px 5px 5px;
+}
+
+nav > a:hover {
+    background: var(--cor4);
+    color: white;
+    padding:  5px 5px 3px 5px;
+    transition: 0.3s;
+}
+
+/* LUPA */
+
+button#lupa {
+    float: inline-end;
+    cursor: pointer;
+    border:none;
+    background:none;
+    font-size: 18px;
+    margin-top: -2px;
+}
+
+
+div#search {
+    display: none;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    width: fit-content;
+    padding: 5px;
+    background-color: var(--cor5);
+    border-radius: 5px;
+}
+
+button#x {
+    display: flex;
+    float: inline-end;
+    border:none;
+    background:none;
+    margin: 5px 0;
+    color: white;
+}
+
+input[type='text'] {
+    color: black;
+    font-size: 20px;
+}
+
+div#search > form > button {
+    display: flex;
+    float: inline-end;
+    border:none;
+    background:none;
+    font-size: 20px;
+}
+
+/* NAV2 */
+
+nav#nav2 {
+    display: none;
+    width: 160px;
+    max-width: 30%;
+    background-color: var(--cor2);
+}
+
+nav > ul > ul {
+    height: 30px;
+    background-color: rosybrown;   
+}
+nav > ul > li {
+    height: 30px;
+    background-color: rosybrown;
+    text-indent: 1em;  
+}
+
+
+
+nav > ul > ul > a {
+    display: block;
+    width: 150px;
+    height: 20px;
+    padding: 5px;
+    background-image: linear-gradient(to bottom, var(--cor1),var(--cor3));
+    border-radius: 0px 10px 0 0;
+    color: white;
+    text-decoration: none;
+}
+
+nav > ul > ul > a:hover {
+    display: block;
+    width: 150px;
+    height: 20px;
+    padding: 5px;
+    background-image: linear-gradient(to bottom, var(--cor1),var(--cor3));
+    color: white;
+    text-decoration: none;
+    border-radius: 0px 150px 0 0;
+    transition: 0.5s;
+}
+
+
+
+
+nav > ul > li > a {
+    display: block;
+    width: 150px;
+    height: 20px;
+    padding: 5px;
+    background-color: var(--cor3);
+    color: white;
+    text-decoration: none;
+
+}
+
+
+nav > ul > li > a:hover {
+    display: block;
+    width: 150px;
+    height: 20px;
+    padding: 5px;
+    background-image: linear-gradient(to bottom, var(--cor1),var(--cor3));
+    color: white;
+    text-decoration: none;
+    border-radius: 0px 150px 0 0;
+    transition: 0.5s;
+} 
+
+
+
+/* MAIN */
+/* MAIN */
+/* MAIN */
+
+main {
+    display: block;
+    background-color: rgb(255, 255, 255);
+    width: 100%-20px;
+    max-width: 1000px;
+    min-height: 500px;
+    padding: 10px;
+}
+
+
+
+
+
+/* FOOTER */
+/* FOOTER */
+/* FOOTER */    
+
+footer {
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+}

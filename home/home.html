@@ -5,23 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Com Ciência</title>
+    <meta name="description" content="Site sobre Física no ensino básico, ensino médio, ensino superior">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../estilos/style.css" media="all">
-    <link rel="stylesheet" href="../estilos/style-pc.css" media="screen and (min-width: 601px)">
-    <link rel="stylesheet" href="../estilos/print.css" media="print">
+
+    <link rel="stylesheet" href="../_estilos/style.css" media="all">
+    <link rel="stylesheet" href="../_estilos/style-pc.css" media="screen and (min-width: 601px)">
+    <link rel="stylesheet" href="../_estilos/style-full.css" media="screen and (min-width: 1200px)">
+    <link rel="stylesheet" href="../_estilos/print.css" media="print">
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&family=Passion+One:wght@400;700&display=swap');
         p#home {
-            font-size: 700%;
+            font-size: 600%;
             font-family: DynaPuff;
             text-align: center;
             color: #0EA5FF;
+            line-height: 95px;
+            margin: 0;
+            padding: 0;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Com Ciência Física</h1>
+        <button id="nav2" onclick="flexivel()">☰</button>
     </header>
 
     <nav id="nav1">
@@ -30,15 +38,18 @@
         <a href="../pag003/pag003.html">Jogos</a>
         <a href="../pag004/pag004.html">Artigos</a>
         <a href="../sobre/sobre.html">Sobre</a>
+
+        <button id="lupa" onclick="lupa()">🔍</button>
+        
         <div id="search">
-            <form action="/search.php">
+            <form action="../_php/search.php">
               <input type="text" placeholder="Procurar.." name="search">
-              <button type="submit">🔎</button>
+              <button type="submit">🔍</button>
             </form>
+            <button id="x" onclick="lupa2()">[fechar]</button>
         </div>
     </nav>
-    <section id="top"></section>
-    <main>
+
     <nav id="nav2">
         <ul type="none">
             <ul type="none"><a href="">Mecânica</a></ul>
@@ -61,14 +72,18 @@
                 <li><a href="">Física Quântica</a></li>
         </ul>
     </nav>
-    <div id="main">
+
+    <main>
         <p id="home">
+            <br><br>
             Bem-vindo
         </p>
-    </div>
     </main>
+
     <footer>
         Site criado por Lucas Toledo.
     </footer>
+
+    <script src="../_scripts/script.js"></script>
 </body>
 </html>
