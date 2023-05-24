@@ -14,6 +14,8 @@ twitter 1DA3F2
     --cor3: #07ADF5;
     --cor4: #0191D0;
     --cor5: #016590;
+
+    --fon1: DynaPuff;
 }
 
 * {
@@ -48,9 +50,14 @@ p {
 
 
 button {
+    background: none;
+    border: none;
     cursor: pointer;
 }
 
+a {
+    text-decoration: none;
+}
 
 /* HEADER */
 /* HEADER */
@@ -76,16 +83,6 @@ h1 {
 
 
 
-label {
-    display: block;
-    width: auto;
-    height: 30px;
-    border: 1px solid black;
-    border-radius: 3px;
-    margin: 5px;
-    padding: 5px;
-}
-
 
 
 /* NAV */
@@ -97,7 +94,7 @@ nav {
     font-size: 18px;
 }
 
-nav#nav1 {
+.nav1 {
     background-color: var(--cor1);
     height: 20px;
     padding: 4px 0px 5px 0px;
@@ -120,10 +117,7 @@ nav > a:hover {
 /* LUPA */
 
 button#lupa {
-    float: inline-end;
-    cursor: pointer;
-    border:none;
-    background:none;
+    float: right;
     font-size: 18px;
     margin-top: -2px;
 }
@@ -166,20 +160,46 @@ div#search > form > button {
 
 /* NAV2 */
 
-nav#nav2 {
-    display: none;
-    width: 160px;
-    max-width: 30%;
-    background-color: var(--cor2);
+nav > p {
+    background-color: var(--cor1);
+    width: 200px;
+    font-family: var(--fon1);
+    font-size: 14px;
+    color: white;
+    margin: 0;
+    padding: 0;
 }
+nav > button {
+    text-align: right;
+}
+
+.bnav2 {
+    display: block;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    color: white;
+    font-size: 20px;
+}
+
+.nav2 {
+    display: block;
+    position: absolute;
+    left: -200px;
+    opacity: 0;
+    background: none;
+}
+
 
 nav > ul > ul {
     height: 30px;
+    width: 200px;
     background-color: rosybrown;   
 }
 nav > ul > li {
     height: 30px;
-    background-color: rosybrown;
+    width: 200px;
+    background-color: rgb(110, 40, 40);
     text-indent: 1em;  
 }
 
@@ -187,7 +207,7 @@ nav > ul > li {
 
 nav > ul > ul > a {
     display: block;
-    width: 150px;
+    width: 190px;
     height: 20px;
     padding: 5px;
     background-image: linear-gradient(to bottom, var(--cor1),var(--cor3));
@@ -198,7 +218,7 @@ nav > ul > ul > a {
 
 nav > ul > ul > a:hover {
     display: block;
-    width: 150px;
+    width: 190px;
     height: 20px;
     padding: 5px;
     background-image: linear-gradient(to bottom, var(--cor1),var(--cor3));
@@ -250,7 +270,44 @@ main {
     padding: 10px;
 }
 
+h2 {
+    text-align: center;
+    font-family: DynaPuff;
+    padding-bottom: 30px;
+}
 
+.t {
+    float: left;
+    width: 50%;
+}
+
+.p {
+    float: right;
+    width: 50%;
+}
+
+main > section > ul > li {
+    padding: 5px;
+    margin: 2px;
+}
+
+main > section > ul > li > a {
+    padding: 5px;
+    margin: 2px;
+    color: black;
+    text-decoration: underline;
+}
+
+main > section > ul > li > a:hover {
+    padding: 5px;
+    margin: 2px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+
+    background: var(--cor1);
+    border-radius: 5px;
+    transition: .3s;
+}
 
 
 
