@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&family=Passion+One:wght@400;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 /* GERAL */
 
@@ -32,128 +33,6 @@ h1 {
 /* MENU LATERAL */
 
   
-
-/* CONTEÚDO */
-
-div#main {
-    display: block;
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-}
-
-
-img {
-    display: block;
-    margin: 10px auto;
-}
-
-
-strong {
-    text-decoration: none;
-    cursor: pointer;
-}
-
-div.box {
-    display: none;
-    position: relative;
-    bottom: 50vh;
-    left: 50%;
-
-    width: 300px;
-    height: auto;
-    background: wheat;
-    border: 1px solid black;
-    border-radius: 3px;
-}
-
-div.box > button {
-    float: right;
-    margin: 10px;
-}
-input[type="radio"] {
-    display: none;
-}
-
-input.botao {
-    display: block;
-}
-
-label {
-    display: block;
-    width: auto;
-    height: 30px;
-    border: 1px solid black;
-    border-radius: 3px;
-    margin: 5px;
-    padding: 5px;
-}
-
-label:hover {
-    background-color: rgb(209, 209, 209);
-    cursor: pointer;
-    transition: 0.1s;
-}
-
-label:active {
-    background-color: yellow;
-}
-
-label:focus{
-    background-color: green;
-}
-
-
-input.botao {
-    font-size: 1.2em;
-    color: var(--cor5);
-    margin: 10px;
-    padding: 15px;
-    border: var(--cor3) 2px solid;
-    border-radius: 10px;
-    border-radius: 10px;
-    background: linear-gradient(225deg, #ffffff, #e6e6e6);
-    box-shadow:  -13px 13px 100px #f0f0f0,
-                 13px -13px 100px #ffffff;
-}
-
-input.botao:active {
-    border-radius: 10px;
-    background: linear-gradient(225deg, #e6e6e6, #ffffff);
-    box-shadow:  -13px 13px 100px #f0f0f0,
-                 13px -13px 100px #ffffff;
-}
-
-
-
-
-div#res {
-    font-family: 'DynaPuff', cursive;
-    padding: 10px;
-    margin-bottom: 20px;
-    font-size: 2em;
-}
-
-
-section.resposta {
-    display: none;
-    width: auto;
-    height: auto;
-    border: 1px solid black;
-    border-radius: 3px;
-    margin: 5px;
-    padding: 5px;
-    cursor: pointer;
-}
-
-
-
-div.divres {
-    display: none;
-    width: 97%;
-    padding: 10px;
-    text-align: justify;
-    transition: 0.1s;
-}
 
 
 

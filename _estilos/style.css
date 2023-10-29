@@ -2,6 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&family=Passion+One:wght@400;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 /* 
 primeiro 07ADF5 
 shiny 0EA5FF
@@ -16,14 +20,16 @@ twitter 1DA3F2
     --cor5: #016590;
 
     --fon1: DynaPuff;
+    --fon2: EB+Garamond;
+    --fon3: Lato;
 }
 
 * {
     margin: 0;
     padding: 0;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: var(--fon2), var(--fon3) Helvetica, Arial, sans-serif;
+    font-size: 18px;
 }
-
 
 
 /* GERAL */
@@ -31,14 +37,11 @@ twitter 1DA3F2
 /* GERAL */
 
 html {
-    width: 100%;
     background-color: var(--cor1);
 }
 
 body {
-    width: 100%;
     max-width: 1200px;
-    margin: auto;
 }
 
 p {
@@ -72,7 +75,7 @@ header {
 }
 
 h1 {
-    font-family: 'DynaPuff', cursive;
+    font-family: var(--fon1), cursive;
     font-size: 80px;
     height: 100%;
     display: flex;
@@ -264,41 +267,41 @@ nav > ul > li > a:hover {
 main {
     display: block;
     background-color: rgb(255, 255, 255);
-    width: 100%-20px;
     max-width: 1000px;
-    min-height: 500px;
     padding: 10px;
 }
 
-h2 {
-    text-align: center;
+#content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main > div > section > h2 {
     font-family: DynaPuff;
     padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 .t {
-    float: left;
     width: 50%;
 }
 
-.p {
-    float: right;
-    width: 50%;
-}
-
-main > section > ul > li {
+main > div > section > ul > li {
+    display: flex;
     padding: 5px;
     margin: 2px;
 }
 
-main > section > ul > li > a {
+main > div > section > ul > li > a {
     padding: 5px;
     margin: 2px;
     color: black;
-    text-decoration: underline;
+    border: 2px outset var(--cor1);
+    border-radius: 5px;
 }
 
-main > section > ul > li > a:hover {
+main > div > section > ul > li > a:hover {
     padding: 5px;
     margin: 2px;
     color: rgb(255, 255, 255);
@@ -311,6 +314,123 @@ main > section > ul > li > a:hover {
 
 
 
+/* CONTEÚDO */
+
+img {
+    display: block;
+    margin: 10px auto;
+}
+
+
+strong {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.box {
+    display: none;
+    position: relative;
+    bottom: 50vh;
+    left: 50%;
+
+    width: 300px;
+    height: auto;
+    background: wheat;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+div.box > button {
+    float: right;
+    margin: 10px;
+}
+input[type="radio"] {
+    display: none;
+}
+
+input.botao {
+    display: block;
+}
+
+label {
+    display: block;
+    width: auto;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 5px;
+}
+
+label:hover {
+    background-color: rgb(209, 209, 209);
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+label:active {
+    background-color: yellow;
+}
+
+label:focus{
+    background-color: green;
+}
+
+
+input.botao {
+    font-size: 1.2em;
+    color: var(--cor5);
+    margin: 10px;
+    padding: 15px;
+    border: var(--cor3) 2px solid;
+    border-radius: 10px;
+    border-radius: 10px;
+    background: linear-gradient(225deg, #ffffff, #e6e6e6);
+    box-shadow:  -13px 13px 100px #f0f0f0,
+                 13px -13px 100px #ffffff;
+}
+
+input.botao:active {
+    border-radius: 10px;
+    background: linear-gradient(225deg, #e6e6e6, #ffffff);
+    box-shadow:  -13px 13px 100px #f0f0f0,
+                 13px -13px 100px #ffffff;
+}
+
+
+
+
+div#res {
+    font-family: 'DynaPuff', cursive;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+
+section.resposta {
+    display: none;
+    width: auto;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+
+div.divres {
+    display: none;
+    width: 97%;
+    padding: 10px;
+    text-align: justify;
+    transition: 0.1s;
+}
+
+
+
 /* FOOTER */
 /* FOOTER */
 /* FOOTER */    
@@ -318,6 +438,9 @@ main > section > ul > li > a:hover {
 footer {
     background-color: var(--cor5);
     color: white;
-    text-align: center;
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+
     padding: 5px 0;
 }
