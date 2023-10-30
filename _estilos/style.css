@@ -38,10 +38,12 @@ twitter 1DA3F2
 
 html {
     background-color: var(--cor1);
+    margin: auto;
 }
 
 body {
     max-width: 1200px;
+    margin: auto;
 }
 
 p {
@@ -84,7 +86,11 @@ h1 {
     justify-content:center;
 }
 
-
+h2 {
+    font-family: DynaPuff;
+    padding: 5px;
+    color: var(--cor5);
+}
 
 
 
@@ -329,15 +335,15 @@ strong {
 
 .box {
     display: none;
-    position: relative;
+    position: absolute;
     bottom: 50vh;
     left: 50%;
 
     width: 300px;
     height: auto;
-    background: wheat;
-    border: 1px solid black;
-    border-radius: 3px;
+    background-image: linear-gradient(125deg, rgb(255, 255, 255),rgb(250, 250, 250));
+    border: 2px outset var(--cor1);
+    border-radius: 5px;
 }
 
 div.box > button {
@@ -356,45 +362,40 @@ label {
     display: block;
     width: auto;
     height: 30px;
-    border: 1px solid black;
+    border: 1px outset black;
     border-radius: 3px;
     margin: 5px;
     padding: 5px;
 }
 
 label:hover {
-    background-color: rgb(209, 209, 209);
+    background-color: rgba(187, 187, 187, 0.404);
     cursor: pointer;
-    transition: 0.1s;
+    transition: 0.2s;
 }
 
 label:active {
-    background-color: yellow;
-}
-
-label:focus{
-    background-color: green;
+    background-color: rgba(223, 223, 0, 0.658);
+    transition: 0.1s;
 }
 
 
-input.botao {
+.botao {
     font-size: 1.2em;
     color: var(--cor5);
+    background-color:  rgba(233, 233, 233, 0.651);
     margin: 10px;
     padding: 15px;
-    border: var(--cor3) 2px solid;
-    border-radius: 10px;
-    border-radius: 10px;
-    background: linear-gradient(225deg, #ffffff, #e6e6e6);
-    box-shadow:  -13px 13px 100px #f0f0f0,
-                 13px -13px 100px #ffffff;
+    cursor: pointer;
+    border: var(--cor3) 2px outset;
+    border-radius: 8px;
+
 }
 
-input.botao:active {
-    border-radius: 10px;
-    background: linear-gradient(225deg, #e6e6e6, #ffffff);
-    box-shadow:  -13px 13px 100px #f0f0f0,
-                 13px -13px 100px #ffffff;
+.botao:active {
+    background-color: rgba(221, 221, 221, 0.726);
+    border: var(--cor3) 2px inset;
+    border-radius: 7px;
 }
 
 
@@ -410,11 +411,9 @@ div#res {
 
 section.resposta {
     display: none;
-    width: auto;
-    height: auto;
-    border: 1px solid black;
+    margin-top: 5px;
+    border: 1px solid var(--cor5);
     border-radius: 3px;
-    margin: 5px;
     padding: 5px;
     cursor: pointer;
 }
@@ -423,10 +422,11 @@ section.resposta {
 
 div.divres {
     display: none;
-    width: 97%;
     padding: 10px;
     text-align: justify;
     transition: 0.1s;
+    border: 1px solid var(--cor5);
+    border-radius: 3px;
 }
 
 
@@ -436,11 +436,11 @@ div.divres {
 /* FOOTER */    
 
 footer {
+    position: absolute;
+    width: 100%;
+    max-width: 1200px;
     background-color: var(--cor5);
     color: white;
-    align-items: flex-start;
-    display: flex;
-    justify-content: center;
-
+    text-align: center;
     padding: 5px 0;
 }

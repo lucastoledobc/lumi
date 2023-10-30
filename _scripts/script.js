@@ -1,3 +1,4 @@
+/* Lupa */
 
 function flexivel() {
     let nav2 = document.getElementById('nav2');
@@ -37,3 +38,29 @@ function lupa2() {
         caixa.style.display = 'none';
     }
 }
+
+
+/* Caixa de dicas */
+
+function tip1() {
+    box1.style.display = 'block';
+}
+function fechar1() {
+    box1.style.display = 'none';
+}
+
+function tip2() {
+    box2.style.display = 'block';
+}
+function fechar2() {
+    box2.style.display = 'none';
+}
+
+function tip3() {
+    box3.style.display = 'block';
+}
+function fechar3() {
+    box3.style.display = 'none';
+}
+
+

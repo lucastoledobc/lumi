@@ -2,6 +2,7 @@ function gabarito() {
     var opt = document.getElementsByName('opt');
     var res = document.getElementById('res');
 
+
     for (c=10;c<40;c+=10) {
         document.getElementById(c).style.display = 'block';
     }
@@ -25,7 +26,38 @@ function gabarito() {
     }
 }
 
+ /* checks do label */
+function check1() {
+    for (c=5; c<9; c++) {
+        document.getElementById(c).style.borderStyle = "outset";
+    }
+        document.getElementById(5).style.borderStyle = "inset";
+    }
 
+function check2() {
+    for (c=5; c<9; c++) {
+        document.getElementById(c).style.borderStyle = "outset";
+    }
+        document.getElementById(6).style.borderStyle = "inset";
+    }
+
+function check3() {
+    for (c=5; c<9; c++) {
+        document.getElementById(c).style.borderStyle = "outset";
+    }
+        document.getElementById(7).style.borderStyle = "inset";
+    }
+
+function check4() {
+    for (c=5; c<9; c++) {
+        document.getElementById(c).style.borderStyle = "outset";
+    }
+        document.getElementById(8).style.borderStyle = "inset";
+
+    }
+
+
+/* respostas */
 
 function abrir1() {
     if (res1.style.display == 'block') {
@@ -50,27 +82,4 @@ function abrir3() {
     else {
         res3.style.display = 'block'
     }
-}
-
-
-
-function tip1() {
-    box1.style.display = 'block';
-}
-function fechar1() {
-    box1.style.display = 'none';
-}
-
-function tip2() {
-    box2.style.display = 'block';
-}
-function fechar2() {
-    box2.style.display = 'none';
-}
-
-function tip3() {
-    box3.style.display = 'block';
-}
-function fechar3() {
-    box3.style.display = 'none';
 }

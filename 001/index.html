@@ -19,7 +19,6 @@
     
     <style>
         .home {
-            font-size: 600%;
             font-family: DynaPuff;
             color: #0EA5FF;
             min-height: 500px;
@@ -27,7 +26,35 @@
             justify-content: center;
             align-items: center;
         }
+
+        main > p {
+            font-size: 13vw;
+            max-width: 1000px;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        section > ul > li {
+            display: flex;
+            flex-wrap: wrap;
+            width: 70vh;
+            max-width: 400px;
+        }
+        section > ul > li > a {
+            width: 80vh;
+            max-width: 400px;
+            text-align: center;
+        }
         
+        @media screen and (min-width: 1000px) {
+            main > p {
+                font-size: 130px;
+            }
+            
+        }
     </style>
 </head>
 
@@ -82,6 +109,14 @@
         <p class="home">
             Bem-vindo
         </p>
+        <section>
+            <ul type="none">
+                <li><a href="../002/inicio/000.html" class="botao">"Não sei nada de Física". Clique aqui</a></li>
+                <li><a href="#" id="random" onclick="random()" class="botao">Curiosidade do dia</a></li>
+                <li><a href="" class="botao"  onclick="lupa()">Pesquise sua questão</a></li>
+                <li><a href="" class="botao">Monte sua lista automaticamente</a></li>
+            </ul>
+        </section>
     </main>
 
     <footer>
@@ -89,5 +124,6 @@
     </footer>
 
     <script src="../_scripts/script.js"></script>
+    <script src="../_scripts/random.js"></script>
 </body>
 </html>
