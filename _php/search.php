@@ -6,62 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Com Ciência</title>
     <meta name="description" content="Site sobre Física no ensino básico, ensino médio, ensino superior">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="_midias/favicon.ico" type="image/x-icon">
 
-    <link rel="stylesheet" href="../_estilos/style.css" media="all">
-    <link rel="stylesheet" href="../_estilos/style-pc.css" media="screen and (min-width: 601px)">
-    <link rel="stylesheet" href="../_estilos/style-full.css" media="screen and (min-width: 1200px)">
-    <link rel="stylesheet" href="../_estilos/print.css" media="print">
+    <link rel="stylesheet" href="_estilos/style.css" media="all">
+    <link rel="stylesheet" href="_estilos/style-pc.css" media="screen and (min-width: 960px)">
+    <link rel="stylesheet" href="_estilos/print.css" media="print">
 
     <!-- importações -->
+    <!-- 3 tracinhos - MENU e lupa-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    
-    <style>
-        .home {
-            font-size: 600%;
-            font-family: DynaPuff;
-            text-align: center;
-            color: #0EA5FF;
-            line-height: 95px;
-        }
-    </style>
+
 </head>
 <body>
     <header>
         <h1>Com Ciência Física</h1>
-        <button class="bnav2" onclick="flexivel()"><span class="material-symbols-outlined">
-            menu
-            </button>
+        <button class="bnav2" onclick="flexivel()"><span class="material-symbols-outlined">menu</button>
     </header>
 
     <nav class="nav1">
-        <a href="../home/home.html">Home</a>
-        <a href="../questoes/index.html">Conteúdo</a>
-        <a href="../pag003/pag003.html">Jogos</a>
-        <a href="../pag004/pag004.html">Artigos</a>
-        <a href="../sobre/sobre.html">Sobre</a>
+        <a href="/">Home</a>
+        <a href="/002/index.html">Conteúdo</a>
+        <a href="/003/index.html">Jogos</a>
+        <a href="/004/index.html">Artigos</a>
+        <a href="/005/index.html">Sobre</a>
 
-        <button id="lupa" onclick="lupa()"><span class="material-symbols-outlined">
-            search
-            </span></button>
+        <button id="lupa" onclick="lupa()"><span class="material-symbols-outlined">search</span></button>
         
         <div id="search">
             <form action="../_php/search.php">
               <input type="text" placeholder="Procurar.." name="search">
-              <button type="submit">🔍</button>
+              <button type="submit"><span class="material-symbols-outlined" style="color: white;">search</span></button></button>
             </form>
             <button id="x" onclick="lupa2()">[fechar]</button>
         </div>
     </nav>
 
-    <nav class="nav2" id="nav2">
+    <nav class="nav2" id="nav2" onclick="flexivel()">
         <ul type="none">
             <ul type="none"><a href="">Mecânica</a></ul>
                 <li><a href="">Cinemática</a></li>
                 <li><a href="">Dinâmica</a></li>
             <ul type="none"><a href="">Termologia</a></ul>
-                <li><a href="">Conceitos Iniciais</a></li>
+                <li><a href="">Calor</a></li>
                 <li><a href="">Calorimetria</a></li>
                 <li><a href="">Fluxo de Calor</a></li>
             <ul type="none"><a href="">Ondulatória</a></ul>

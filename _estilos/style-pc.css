@@ -23,7 +23,19 @@ h1 {
 
 
 /* MAIN */
+/* MAIN */
+/* MAIN */
 
+.nav2 {
+    display: block;
+    position: fixed;
+
+}
+
+.bnav2 {
+    display: none;
+
+}
 
 
 
