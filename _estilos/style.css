@@ -58,6 +58,9 @@ p {
     text-indent: 20px;
 }
 
+ul {
+    list-style:none;
+}
 
 button {
     background: none;
@@ -68,6 +71,8 @@ button {
 a {
     text-decoration: none;
 }
+
+
 
 /* HEADER */
 /* HEADER */
@@ -111,7 +116,7 @@ nav {
 .nav1 {
     background-color: var(--cor1);
     height: 20px;
-    padding: 5px 0px 5px 0px;
+    padding: 4px 0px 5px 0px;
     position: sticky;
     top: 0px;
 }
@@ -176,7 +181,7 @@ div#search > form > button {
 /* NAV2 */
 
 .nav2 {
-    display: block;
+    display: none;
     position: fixed;
     right: -200px;
     top: 30px;
@@ -440,10 +445,8 @@ div.divres {
 /* FOOTER */    
 
 footer {
-    position: relative;
+    font-size: 15px;
     width: 100%;
-    min-width: 350px;
-    max-width: 1200px;
     background-color: var(--cor5);
     color: white;
     text-align: center;

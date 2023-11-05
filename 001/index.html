@@ -9,27 +9,26 @@
     <link rel="shortcut icon" href="../_midias/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="../_estilos/style.css" media="all">
-    <link rel="stylesheet" href="../_estilos/style-pc.css" media="screen and (min-width: 601px)">
-    <link rel="stylesheet" href="../_estilos/style-full.css" media="screen and (min-width: 1200px)">
+    <link rel="stylesheet" href="../_estilos/style-pc.css" media="screen and (min-width: 1180px)">
     <link rel="stylesheet" href="../_estilos/print.css" media="print">
 
     <!-- importações -->
+    <!-- 3 tracinhos - MENU e lupa-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    
+
     <style>
         .home {
             font-family: DynaPuff;
             color: #0EA5FF;
-            min-height: 500px;
+            height: 50vh;
+            max-height: 500px;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
         main > p {
-            font-size: 13vw;
-            max-width: 1000px;
+            font-size: clamp(50px, 13vw, 150px);
         }
 
         ul {
@@ -48,13 +47,6 @@
             max-width: 400px;
             text-align: center;
         }
-        
-        @media screen and (min-width: 1000px) {
-            main > p {
-                font-size: 130px;
-            }
-            
-        }
     </style>
 </head>
 
@@ -71,6 +63,7 @@
         <a href="../004/index.html">Artigos</a>
         <a href="../005/index.html">Sobre</a>
 
+
         <button id="lupa" onclick="lupa()"><span class="material-symbols-outlined">search</span></button>
         
         <div id="search">
@@ -80,26 +73,27 @@
             </form>
             <button id="x" onclick="lupa2()">[fechar]</button>
         </div>
+
     </nav>
 
     <nav class="nav2" id="nav2" onclick="flexivel()">
-        <ul type="none">
-            <ul type="none"><a href="">Mecânica</a></ul>
+        <ul>
+            <ul><a href="">Mecânica</a></ul>
                 <li><a href="">Cinemática</a></li>
                 <li><a href="">Dinâmica</a></li>
-            <ul type="none"><a href="">Termologia</a></ul>
+            <ul><a href="">Termologia</a></ul>
                 <li><a href="">Calor</a></li>
                 <li><a href="">Calorimetria</a></li>
                 <li><a href="">Fluxo de Calor</a></li>
-            <ul type="none"><a href="">Ondulatória</a></ul>
+            <ul><a href="">Ondulatória</a></ul>
                 <li><a href="">Ondas</a></li>
                 <li><a href="">Acústica</a></li>
                 <li><a href="">Eq. de Onda</a></li>
-            <ul type="none"><a href="">Eletromagnetismo</a></ul>
+            <ul><a href="">Eletromagnetismo</a></ul>
                 <li><a href="">Eletricidade</a></li>
                 <li><a href="">Magnetismo</a></li>
                 <li><a href="">Eletromagnetismo</a></li>
-            <ul type="none"><a href="">Moderna</a></ul>
+            <ul><a href="">Moderna</a></ul>
                 <li><a href="">Relatividade</a></li>
                 <li><a href="">Física Quântica</a></li>
         </ul>
@@ -110,7 +104,7 @@
             Bem-vindo
         </p>
         <section>
-            <ul type="none">
+            <ul>
                 <li><a href="../002/inicio/000.html" class="botao">"Não sei nada de Física". Clique aqui</a></li>
                 <li><a href="#" id="random" onclick="random()" class="botao">Curiosidade do dia</a></li>
                 <li><a href="" class="botao"  onclick="lupa()">Pesquise sua questão</a></li>
