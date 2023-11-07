@@ -108,29 +108,21 @@ h2 {
 /* NAV */
 /* NAV */
 
-nav {
-    display: block;
-    font-size: 18px;
-}
-
 .nav1 {
     background-color: var(--cor1);
-    height: 20px;
     padding: 4px 0px 5px 0px;
-    position: sticky;
-    top: 0px;
 }
 
 nav > a {
     text-decoration: none;
     color: black;
-    padding:  5px 5px 5px 5px;
+    padding:  4px 5px 5px 5px;
 }
 
 nav > a:hover {
     background: var(--cor4);
     color: white;
-    padding:  5px 5px 4px 5px;
+    padding:  5px 5px 5px 5px;
     transition: 0.3s;
 }
 
@@ -247,7 +239,11 @@ nav > ul > ul > a:hover {
 }
 
 
+/* NAV 3 */
 
+main > nav > label {
+
+}
 
 nav > ul > li > a {
     display: block;
