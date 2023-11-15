@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lançamento</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(252, 251, 251);
+        }
+
+        .tela {
+            width: 100vw;
+            height: 100vh;
+            cursor: default;
+            background-color: rgba(255, 255, 255, 0)55, 255, 255);
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body onkeydown="myFunction(event)">
+    <div class="box" id="box" onkeydown="move(event)"></div>
+
+    <!-- <p id="demo"></p> -->
+</body>
+
+<script>
+    box=document.getElementById('box');
+    box.style.background = 'red'
+
+    posx = '50px';
+    posy = '150px';
+
+    box.style.left = posx;
+    box.style.top = posy;
+
+
+    function myFunction(event) {
+        let key = event.key;
+        // document.getElementById("demo").innerHTML = "The key was: " + key;
+        if (key == "w" || key == "ArrowUp" ) {
+            posy = parseInt(posy) - 10 + "px";
+            box.style.top = posy;
+    }   if (key == "s" || key == "ArrowDown") {
+            posy = parseInt(posy) + 10 + "px";
+            box.style.top = posy;
+    }   if (key == "d" || key == "ArrowRight") {
+            posx = parseInt(posx) + 10 + "px";
+            box.style.left = posx;
+    }   if (key == "a" || key == "ArrowLeft") {
+            posx = parseInt(posx) - 10 + "px";
+            box.style.left = posx;
+    }
+}
+    
+</script>
+
+</html>
