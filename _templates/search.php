@@ -68,7 +68,7 @@
         <p>Resultado da pesquisa:</p>
         <section id="res">
             <?php 
-            echo "oi"
+            echo "oi";
             ?>
         </section>
     </main>

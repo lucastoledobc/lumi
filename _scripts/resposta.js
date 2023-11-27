@@ -26,7 +26,10 @@ function gabarito() {
     }
 }
 
- /* checks do label */
+
+
+// Label ao dar check
+
 function check1() {
     for (c=5; c<9; c++) {
         document.getElementById(c).style.borderStyle = "outset";
@@ -57,7 +60,8 @@ function check4() {
     }
 
 
-/* respostas */
+
+// Respostas
 
 function abrir1() {
     if (res1.style.display == 'block') {
