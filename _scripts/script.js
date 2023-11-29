@@ -11,12 +11,13 @@ head.innerHTML += `
 
 let header = document.getElementById('header')
 header.innerHTML = `
-<header class="header">
     <h1>Com Ciência Física</h1>
     <button class="bnav2" onclick="flexivel()"><span class="material-symbols-outlined">menu</button>
-</header>
+`;
 
-<nav class="nav1">
+let nav1 = document.getElementById('nav1')
+nav1.innerHTML = `
+
     <a href="../001/index.html">Home</a>
     <a href="../002/index.html">Conteúdo</a>
     <a href="../003/index.html">Jogos</a>
@@ -32,11 +33,11 @@ header.innerHTML = `
         </form>
         <button id="x" onclick="lupa2()">[fechar]</button>
     </div>
+    `;
     
-</nav>
 
-
-<nav class="nav2" id="nav2" onclick="flexivel()">
+let nav21 = document.getElementById('nav21')
+nav21.innerHTML = `
     <ul>
         <ul><a href="">Mecânica</a></ul>
             <li><a href="">Cinemática</a></li>
@@ -57,11 +58,37 @@ header.innerHTML = `
             <li><a href="">Relatividade</a></li>
             <li><a href="">Física Quântica</a></li>
     </ul>
-</nav>
 `;
 
+let nav22 = document.getElementById('nav22')
+nav22.innerHTML = `
+    <ul>
+        <ul><a href="">Mecânica</a></ul>
+            <li><a href="">Cinemática</a></li>
+            <li><a href="">Dinâmica</a></li>
+        <ul><a href="">Termologia</a></ul>
+            <li><a href="">Calor</a></li>
+            <li><a href="">Calorimetria</a></li>
+            <li><a href="">Fluxo de Calor</a></li>
+        <ul><a href="">Ondulatória</a></ul>
+            <li><a href="">Ondas</a></li>
+            <li><a href="">Acústica</a></li>
+            <li><a href="">Eq. de Onda</a></li>
+        <ul><a href="">Eletromagnetismo</a></ul>
+            <li><a href="">Eletricidade</a></li>
+            <li><a href="">Magnetismo</a></li>
+            <li><a href="">Eletromagnetismo</a></li>
+        <ul><a href="">Moderna</a></ul>
+            <li><a href="">Relatividade</a></li>
+            <li><a href="">Física Quântica</a></li>
+    </ul>
+    <div id="ad" class="ad2"><div class="boxad"></div>Ad</div>
+`;
+
+// Footer
 let footer = document.getElementById('footer')
 footer.innerHTML = `Site criado por Lucas Toledo.`
+
 
 
 
@@ -94,18 +121,15 @@ function lupa2() {
 // nav 2
 
 function flexivel() {
-    let nav2 = document.getElementById('nav2');
-    if (nav2.style.opacity == '1') {
-        nav2.style.opacity = '0.9';
-        nav2.style.right = '-200px';
-        nav2.style.width = '200px';
+    let nav21 = document.getElementById('nav21');
+    if (nav21.style.right == '-200px') {
+        nav21.style.right = '0px';
+        
+    } else if (nav21.style.right = '0px') {
+        nav21.style.right = '-200px';
+        nav21.style.transition = '0.5s';
     }
-    else {
-        nav2.style.opacity = '1';
-        nav2.style.right = '0%';
-        nav2.style.width = '200px';
-        nav2.style.transition = '0.5s';
-    }
+    
 }
 
 

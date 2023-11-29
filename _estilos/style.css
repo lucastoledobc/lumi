@@ -27,8 +27,8 @@ twitter 1DA3F2
 }
 
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     font-family: var(--fon2), var(--fon3) Helvetica, Arial, sans-serif;
     font-size: 18px;
 }
@@ -47,7 +47,7 @@ html {
 body {
     margin: auto;
     min-width: 350px;
-    max-width: 1180px;
+    max-width: 960px;
     
 }
 
@@ -80,7 +80,7 @@ a {
 
 
 
-.header {
+header {
     background-color: var(--cor3);
     color: white;
     height: 320px;
@@ -170,15 +170,18 @@ div#search > form > button {
     font-size: 20px;
 }
 
-/* NAV2 */
+/* NAV21 */
 
-.nav2 {
+.nav22 {
     display: none;
+}
+
+.nav21 {
+    display: block;
     position: fixed;
     right: -200px;
     top: 30px;
     opacity: 0.9;
-    background: none;
 }
 
 .bnav2 {
@@ -187,49 +190,27 @@ div#search > form > button {
     top: 1%;
     right: 1%;
     color: white;
-    font-size: 20px;
 }
-
-nav > p {
-    background-color: var(--cor1);
-    width: 200px;
-    font-family: var(--fon1);
-    font-size: 14px;
-    color: white;
-    margin: 0;
-    padding: 0;
-}
-
 
 nav > ul > ul {
-    height: 30px;
-    width: 200px;
-    background-color: rosybrown;   
+    background-color: rgb(255, 255, 255);   
 }
+
 nav > ul > li {
-    height: 30px;
-    width: 200px;
     background-color: rgb(110, 40, 40);
     text-indent: 1em;  
 }
 
-
-
 nav > ul > ul > a {
     display: block;
-    width: 190px;
-    height: 20px;
     padding: 5px;
     background-image: linear-gradient(to bottom, var(--cor1),var(--cor3));
-    border-radius: 0px 10px 0 0;
     color: white;
     text-decoration: none;
 }
 
 nav > ul > ul > a:hover {
     display: block;
-    width: 190px;
-    height: 20px;
     padding: 5px;
     background-image: linear-gradient(to bottom, var(--cor1),var(--cor3));
     color: white;
@@ -239,11 +220,11 @@ nav > ul > ul > a:hover {
 }
 
 
+
 /* NAV 3 */
 
 nav > ul > li > a {
     display: block;
-    width: 150px;
     height: 20px;
     padding: 5px;
     background-color: var(--cor3);
@@ -255,7 +236,6 @@ nav > ul > li > a {
 
 nav > ul > li > a:hover {
     display: block;
-    width: 150px;
     height: 20px;
     padding: 5px;
     background-image: linear-gradient(to bottom, var(--cor1),var(--cor3));
@@ -274,8 +254,6 @@ nav > ul > li > a:hover {
 main {
     display: block;
     background-color: rgb(255, 255, 255);
-    max-width: 960px;
-    padding: 10px;
 }
 
 #content {
@@ -305,7 +283,6 @@ main > div > section > ul > li > a {
     margin: 2px;
     color: black;
     border: 2px outset var(--cor1);
-    border-radius: 5px;
 }
 
 main > div > section > ul > li > a:hover {
@@ -435,6 +412,24 @@ div.divres {
 /* FOOTER */
 /* FOOTER */
 /* FOOTER */    
+
+
+.ad1 {
+    display: block;
+    background-color: white;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.boxad {
+    display: block;
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+
 
 footer {
     font-size: 15px;
