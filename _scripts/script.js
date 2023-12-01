@@ -1,6 +1,6 @@
 // Head
 
-let head = document.getElementById('head')
+const head = document.getElementsByTagName("head")[0];
 head.innerHTML += `
 <!-- importações -->
 <!-- 3 tracinhos - MENU e lupa-->
@@ -8,14 +8,14 @@ head.innerHTML += `
 `;
 
 // Header
-
-let header = document.getElementById('header')
+const body = document.getElementsByTagName("body");
+const header = document.getElementsByTagName("header")[0];
 header.innerHTML = `
     <h1>Com Ciência Física</h1>
     <button class="bnav2" onclick="flexivel()"><span class="material-symbols-outlined">menu</button>
 `;
 
-let nav1 = document.getElementById('nav1')
+const nav1 = document.getElementById('nav1')
 nav1.innerHTML = `
 
     <a href="../001/index.html">Home</a>
@@ -36,7 +36,8 @@ nav1.innerHTML = `
     `;
     
 
-let nav21 = document.getElementById('nav21')
+
+const nav21 = document.getElementById('nav21')
 nav21.innerHTML = `
     <ul>
         <ul><a href="">Mecânica</a></ul>
@@ -60,7 +61,7 @@ nav21.innerHTML = `
     </ul>
 `;
 
-let nav22 = document.getElementById('nav22')
+const nav22 = document.getElementById('nav22')
 nav22.innerHTML = `
     <ul>
         <ul><a href="">Mecânica</a></ul>
@@ -122,12 +123,12 @@ function lupa2() {
 
 function flexivel() {
     let nav21 = document.getElementById('nav21');
-    if (nav21.style.right == '-200px') {
+    if (nav21.style.right != '0px') {
         nav21.style.right = '0px';
-        
-    } else if (nav21.style.right = '0px') {
-        nav21.style.right = '-200px';
         nav21.style.transition = '0.5s';
+        
+    } else {
+        nav21.style.right = '-200px';
     }
     
 }
