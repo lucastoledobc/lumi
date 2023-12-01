@@ -414,20 +414,12 @@ div.divres {
 /* FOOTER */    
 
 
-.ad1 {
+#ad1 {
     display: block;
     background-color: white;
     text-align: center;
     width: 100%;
     margin-top: 10px;
-}
-
-.boxad {
-    display: block;
-    border: 2px solid black;
-    width: 100px;
-    height: 100px;
-    margin: auto;
 }
 
 

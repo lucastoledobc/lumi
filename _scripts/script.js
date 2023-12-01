@@ -17,22 +17,21 @@ header.innerHTML = `
 
 const nav1 = document.getElementById('nav1')
 nav1.innerHTML = `
+<a href="/">Home</a>
+<a href="002/index.html">Conteúdo</a>
+<a href="003/index.html">Jogos</a>
+<a href="004/index.html">Artigos</a>
+<a href="005/index.html">Sobre</a>
 
-    <a href="../001/index.html">Home</a>
-    <a href="../002/index.html">Conteúdo</a>
-    <a href="../003/index.html">Jogos</a>
-    <a href="../004/index.html">Artigos</a>
-    <a href="../005/index.html">Sobre</a>
+<button id="lupa" onclick="lupa()"><span class="material-symbols-outlined">search</span></button>
 
-    <button id="lupa" onclick="lupa()"><span class="material-symbols-outlined">search</span></button>
-    
-    <div id="search">
-        <form action="../_php/search.php">
-          <input type="text" placeholder="Procurar.." name="search">
-          <button type="submit"><span class="material-symbols-outlined" style="color: white;">search</span></button></button>
-        </form>
-        <button id="x" onclick="lupa2()">[fechar]</button>
-    </div>
+<div id="search">
+    <form action="../_php/search.php">
+      <input type="text" placeholder="Procurar.." name="search">
+      <button type="submit"><span class="material-symbols-outlined" style="color: white;">search</span></button></button>
+    </form>
+    <button id="x" onclick="lupa2()">[fechar]</button>
+</div>
     `;
     
 
@@ -83,8 +82,15 @@ nav22.innerHTML = `
             <li><a href="">Relatividade</a></li>
             <li><a href="">Física Quântica</a></li>
     </ul>
-    <div id="ad" class="ad2"><div class="boxad"></div>Ad</div>
+    <div id="ad2" class="ad"></div>
 `;
+
+// ad
+
+const ad = document.getElementsByClassName("ad");
+for (c=0; c<2; c++) {
+    ad[c].innerHTML = `oi1`;
+}
 
 // Footer
 let footer = document.getElementById('footer')

@@ -44,22 +44,15 @@ main {
 
 /* ad */
 
-.ad1 {
+#ad1 {
     display: none;
 }
 
-.ad2 {
+#ad2 {
     display: block;
     background-color: white;
     text-align: center;
     width: 100%;
     margin-top: 10px;
-}
-
-.boxad {
-    border: 2px solid black;
-    width: 100px;
-    height: 100px;
-    margin: 10px auto;
 }
 
