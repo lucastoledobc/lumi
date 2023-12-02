@@ -17,11 +17,11 @@ header.innerHTML = `
 
 const nav1 = document.getElementById('nav1')
 nav1.innerHTML = `
-<a href="/">Home</a>
-<a href="002/index.html">Conteúdo</a>
-<a href="003/index.html">Jogos</a>
-<a href="004/index.html">Artigos</a>
-<a href="005/index.html">Sobre</a>
+<a href="/01/">Home</a>
+<a href="/02/">Conteúdo</a>
+<a href="/03/">Jogos</a>
+<a href="/04/">Artigos</a>
+<a href="/05/">Sobre</a>
 
 <button id="lupa" onclick="lupa()"><span class="material-symbols-outlined">search</span></button>
 
