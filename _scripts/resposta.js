@@ -2,7 +2,6 @@ function gabarito() {
     var opt = document.getElementsByName('opt');
     var res = document.getElementById('res');
 
-
     for (c=10;c<40;c+=10) {
         document.getElementById(c).style.display = 'block';
     }
