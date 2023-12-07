@@ -17,14 +17,15 @@ body {
 /* MAIN */
 
 main {
-    display: flex;
+    display: grid;
     width: 100%;
+    grid-template-columns:auto 200px;
 }
 
 .main {
     display: block;
-    flex-grow: 1;
 }
+
 /* MENU LATERAL */
 
 .bnav2, .nav21 {
@@ -41,6 +42,13 @@ main {
     opacity: 1;
     
 } 
+
+/* J3 */
+
+.j3 {
+    display: grid;
+    grid-template-columns:200px auto;
+}
 
 /* ad */
 

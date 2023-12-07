@@ -7,13 +7,13 @@
     <title>Com Ciência</title>
     <meta name="description" content="Site de Física para ensino básico, ensino médio e ensino superior">
     
-    <link rel="shortcut icon" href="_midias/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="_estilos/style.css" media="all">
-    <link rel="stylesheet" href="_estilos/style-pc.css" media="screen and (min-width: 1180px)">
-    <link rel="stylesheet" href="_estilos/print.css" media="print">
+    <link rel="shortcut icon" href="/_midias/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/_estilos/style.css" media="all">
+    <link rel="stylesheet" href="/_estilos/style-pc.css" media="screen and (min-width: 1180px)">
+    <link rel="stylesheet" href="/_estilos/print.css" media="print">
 
-    <script src="_scripts/script.js" defer></script>
-    <script src="_scripts/random.js" defer></script>
+    <script src="/_scripts/script.js" defer></script>
+    <script src="/_scripts/random.js" defer></script>
 
     <style>
         .home {
@@ -30,7 +30,7 @@
             font-size: clamp(50px, 13vw, 150px);
         }
 
-        ul {
+        #um {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
@@ -46,6 +46,7 @@
             max-width: 400px;
             text-align: center;
         }
+
     </style>
 </head>
 
@@ -59,13 +60,14 @@
                 Bem-vindo
             </p>
             <section>
-                <ul>
+                <ul id="um">
                     <li><a href="001/trilha/000.html" class="botao">"Não sei nada de Física". Clique aqui</a></li>
                     <li><a href="#" id="random" onclick="random()" class="botao">Curiosidade do dia</a></li>
                     <li><a href="" class="botao"  onclick="lupa()">Pesquise sua questão</a></li>
                     <li><a href="" class="botao">Monte sua lista automaticamente</a></li>
                 </ul>
             </section>
+            <p style="font-size: 18px;">Última atualização: 01/12/2023</p>
         </div>
         <nav id="nav22" class="nav22"></nav>
         <div id="ad1" class="ad"></div>

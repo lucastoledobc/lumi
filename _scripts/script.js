@@ -17,7 +17,7 @@ header.innerHTML = `
 
 const nav1 = document.getElementById('nav1')
 nav1.innerHTML = `
-<a href="/01/">Home</a>
+<a href="/">Home</a>
 <a href="/02/">Conteúdo</a>
 <a href="/03/">Jogos</a>
 <a href="/04/">Artigos</a>
