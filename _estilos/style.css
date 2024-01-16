@@ -15,11 +15,11 @@ twitter 1DA3F2
 */
 
 :root {
-    --cor1: #51C1F1;
-    --cor2: #22B5F4;
+    --cor1: #B7E8FD;
+    --cor2: #5DCBFA;
     --cor3: #07ADF5;
-    --cor4: #0191D0;
-    --cor5: #016590;
+    --cor4: #056F9C;
+    --cor5: #023145;
 
     --fon1: DynaPuff;
     --fon2: EB+Garamond;
@@ -39,17 +39,21 @@ twitter 1DA3F2
 /* GERAL */
 
 html {
-    background-color: var(--cor1);
     margin: auto;
     min-width: 350px;
+    background:var(--cor1) url(../_midias/fundo) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 body {
     margin: auto;
     min-width: 350px;
     max-width: 960px;
-    
+
+    box-shadow: 1px 0px 20px 1px rgba(0, 0, 0, 0.486);
 }
+
 
 p {
     padding: 10px 20px ;
