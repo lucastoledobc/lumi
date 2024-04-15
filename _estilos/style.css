@@ -41,7 +41,7 @@ twitter 1DA3F2
 html {
     margin: auto;
     min-width: 350px;
-    background:var(--cor1) url(../_midias/fundo) no-repeat center center;
+    background:var(--cor1) url(/_midias/fundo.svg) no-repeat center center;
     background-attachment: fixed;
     background-size: cover;
 }

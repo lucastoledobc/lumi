@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@
             height: 100vh;
             cursor: default;
             background-color: rgba(255, 255, 255, 0);
-            background-image: url("paisagem1.jpg");
+            background-image: url("fase1.svg");
             background-repeat: no-repeat;
             background-size: cover;
             background-position: left bottom;
@@ -27,18 +27,64 @@
 
             position: absolute;
         }
+
+        .fase {
+            position: absolute;
+            right: 100px;
+            top: 10px;
+
+            padding: 3px 8px;
+        }
+
+        button {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+
+            padding: 3px 8px;
+        }
     </style>
 </head>
 
 <body onkeydown="myFunction(event)">    
-    <!-- ITENS -->
+    <nav>
+        <h1 id="hoje">OI</h1>
+        <select class="fase" id="fase">
+            <option value="1">Fase 1</option>
+            <option value="2">Fase 2</option>
+        </select>
+        <button type="submit">Confirmar</button>
+    </nav>
 
-    <div class="box" id="box" onkeydown="move(event)"></div>
+    <main>
+        <!-- ITENS -->
+            
+        <div class="box" id="box" onkeydown="move(event)"></div>
 
-    <!-- <p id="demo"></p> -->
+            
+        <!-- <p id="demo"></p> -->
+    </main>
+    
 </body>
 
 <script>
+
+    // fase
+    
+    
+    var hoje = document.getElementById("hoje");
+    hoje.innerHTML = `teste`;
+
+    if ( fase == '1') {
+        document.body.style.backgroundImage = "url(fase1.svg)";
+    }
+    if ( fase == '2') {
+        document.body.style.backgroundImage = "url(paisagem3.jpg)";
+    }
+    
+    
+    //box
+
     box=document.getElementById('box');
     box.style.background = 'red'
 
