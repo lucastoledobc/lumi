@@ -13,18 +13,8 @@ body {
 
 
 /* MAIN */
-/* MAIN */
-/* MAIN */
 
-main {
-    display: grid;
-    width: 100%;
-    grid-template-columns:auto 200px;
-}
 
-.main {
-    display: block;
-}
 
 /* MENU LATERAL */
 
@@ -42,13 +32,6 @@ main {
     opacity: 1;
     
 } 
-
-/* J3 */
-
-.j3 {
-    display: grid;
-    grid-template-columns:200px auto;
-}
 
 /* ad */
 

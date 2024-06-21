@@ -11,11 +11,12 @@ head.innerHTML += `
 const body = document.getElementsByTagName("body");
 const header = document.getElementsByTagName("header")[0];
 header.innerHTML = `
-    <h1>Com Ciência Física</h1>
+    <h1>Lumi Física</h1>
     <button class="bnav2" onclick="flexivel()"><span class="material-symbols-outlined">menu</button>
+    <nav id="nav1" class="nav1"></nav>
 `;
 
-const nav1 = document.getElementById('nav1')
+const nav1 = document.getElementById('nav1');
 nav1.innerHTML = `
 <a href="/">Home</a>
 <a href="/02/">Conteúdo</a>
@@ -36,7 +37,7 @@ nav1.innerHTML = `
     
 
 
-const nav21 = document.getElementById('nav21')
+const nav21 = document.getElementById('nav21');
 nav21.innerHTML = `
     <ul>
         <ul><a href="">Mecânica</a></ul>
@@ -87,14 +88,14 @@ nav22.innerHTML = `
 
 // ad
 
-const ad = document.getElementsByClassName("ad");
-for (c=0; c<2; c++) {
-    ad[c].innerHTML = `oi1`;
-}
+// const ad = document.getElementsByClassName("ad");
+// for (c=0; c<2; c++) {
+//     ad[c].innerHTML = `oi1`;
+// }
 
 // Footer
-let footer = document.getElementById('footer')
-footer.innerHTML = `Site criado por Lucas Toledo.`
+let footer = document.getElementsByTagName("footer")[0];
+footer.innerHTML = `Site criado por Lucas Toledo.`;
 
 
 

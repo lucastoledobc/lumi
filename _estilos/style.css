@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/*fontes */
+/* fontes */
 
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&family=Passion+One:wght@400;700&display=swap');
 
@@ -29,7 +29,7 @@ twitter 1DA3F2
 * {
     margin: 0px;
     padding: 0px;
-    font-family: var(--fon2), var(--fon3) Helvetica, Arial, sans-serif;
+    font-family: var(--fon2), var(--fon3), Helvetica, Arial, sans-serif;
     font-size: 18px;
 }
 
@@ -39,7 +39,7 @@ twitter 1DA3F2
 /* GERAL */
 
 html {
-    margin: auto;
+    
     min-width: 350px;
     background:var(--cor1) url(/_midias/fundo.svg) no-repeat center center;
     background-attachment: fixed;
@@ -49,8 +49,6 @@ html {
 body {
     margin: auto;
     min-width: 350px;
-    max-width: 960px;
-
     box-shadow: 1px 0px 20px 1px rgba(0, 0, 0, 0.486);
 }
 
@@ -91,8 +89,8 @@ header {
 }
 
 h1 {
-    font-family: var(--fon1), cursive;
-    font-size: 80px;
+    font-family: var(--fon1);
+    font-size: 130px;
     height: 100%;
     display: flex;
     text-align: center;
@@ -104,8 +102,8 @@ h2 {
     font-family: DynaPuff;
     padding: 5px;
     color: var(--cor5);
+    font-size: 1.2rem;
 }
-
 
 
 /* NAV */
@@ -256,48 +254,8 @@ nav > ul > li > a:hover {
 /* MAIN */
 
 main {
-    display: block;
+    /* display: block; */
     background-color: rgb(255, 255, 255);
-}
-
-#content {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-main > div > section > h2 {
-    font-family: DynaPuff;
-    padding-bottom: 30px;
-    display: flex;
-    justify-content: center;
-}
-
-.t {
-    width: 50%;
-}
-
-main > div > section > ul > li {
-    display: flex;
-    padding: 5px;
-    margin: 2px;
-}
-
-main > div > section > ul > li > a {
-    padding: 5px;
-    margin: 2px;
-    color: black;
-    border: 2px outset var(--cor1);
-}
-
-main > div > section > ul > li > a:hover {
-    padding: 5px;
-    margin: 2px;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-
-    background: var(--cor1);
-    border-radius: 5px;
-    transition: .3s;
 }
 
 
@@ -411,15 +369,8 @@ div.divres {
     border-radius: 3px;
 }
 
-/* J3 */
 
-.nav3 {
-    display: block;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    
-}
+
 
 /* FOOTER */
 /* FOOTER */
@@ -435,6 +386,12 @@ div.divres {
 }
 
 
+.update {
+    display: block;
+    font-size: 0.8rem;
+    text-align: end;
+    padding-right: 0.1em;
+}
 footer {
     font-size: 15px;
     width: 100%;

@@ -15,30 +15,50 @@
     <script src="/_scripts/script.js" defer></script>
     <script src="/_scripts/random.js" defer></script>
 </head>
+    <style>
+        .main {
+            display: grid;
+            grid-template-columns: 18rem auto;
+        }
 
+        .nav3 {
+            height: 100%;
+            /* display: block; */
+            
+        }
+
+        .jogos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+    </style>
 <body>
     <header></header>
     <nav id="nav1" class="nav1"></nav>
     <nav id="nav21" class="nav21" onclick="flexivel()"></nav>
     <main>
         <div class="main" id="main">
-            <div class="j3" id="j3">
-                <button>Filtro</button>
-                <nav class="nav3" id="nav3">
-                    <fieldset>
-                        <legend>Tipo</legend>
-                        <input type="checkbox" name="cjogo" id="cjogo"> <label for="cjogo">Jogos</label>
-                        <input type="checkbox" name="clab" id="clab"><label for="clab">Lab. virtuais</label>
-                    </fieldset>
-                </nav>
-                <div class="boxj" id="boxj">
-                    <img src="_midia/a.jpg" alt="">
-                    <img src="_midia/cb.webp" alt="">
-                </div>
+            <nav class="nav3" id="nav3">
+                <h3>Filtro</h3>
+                <fieldset>
+                    <legend>Tipo</legend>
+                    <input type="checkbox" name="cjogo" id="cjogo"> <label for="cjogo">Jogos</label>
+                    <input type="checkbox" name="clab" id="clab"><label for="clab">Lab. virtuais</label>
+                </fieldset>
+            </nav>
+            <div class="jogos" id="jogos">
+                <h3>Jogos</h3>
+                <div class="div"><img src="_midia/a.jpg" alt=""></div>
+                <div class="div"><img src="_midia/cb.webp" alt=""></div>
+                <div class="div"><img src="_midia/a.jpg" alt=""></div>
+                <div class="div"><img src="_midia/cb.webp" alt=""></div>
+                <div class="div"><img src="_midia/a.jpg" alt=""></div>
             </div>
         </div>
-        <nav id="nav22" class="nav22"></nav>
-        <div id="ad1" class="ad"></div>
+        <!-- <div id="ad1" class="ad"></div> -->
+        <div class="update">Última atualização: 20/06/2024</div>
     </main>
     <footer id="footer"></footer>
 </body>
