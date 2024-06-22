@@ -133,3 +133,65 @@ Pratique:
 
 lixeira:
 <nav id="nav21" class="nav21" onclick="flexivel()"></nav>
+
+script:
+const nav21 = document.getElementById('nav21');
+nav21.innerHTML = `
+    <ul>
+        <ul><a href="">Mecânica</a></ul>
+            <li><a href="">Cinemática</a></li>
+            <li><a href="">Dinâmica</a></li>
+        <ul><a href="">Termologia</a></ul>
+            <li><a href="">Calor</a></li>
+            <li><a href="">Calorimetria</a></li>
+            <li><a href="">Fluxo de Calor</a></li>
+        <ul><a href="">Ondulatória</a></ul>
+            <li><a href="">Ondas</a></li>
+            <li><a href="">Acústica</a></li>
+            <li><a href="">Eq. de Onda</a></li>
+        <ul><a href="">Eletromagnetismo</a></ul>
+            <li><a href="">Eletricidade</a></li>
+            <li><a href="">Magnetismo</a></li>
+            <li><a href="">Eletromagnetismo</a></li>
+        <ul><a href="">Moderna</a></ul>
+            <li><a href="">Relatividade</a></li>
+            <li><a href="">Física Quântica</a></li>
+    </ul>
+`;
+
+const nav22 = document.getElementById('nav22')
+nav22.innerHTML = `
+    <ul>
+        <ul><a href="">Mecânica</a></ul>
+            <li><a href="">Cinemática</a></li>
+            <li><a href="">Dinâmica</a></li>
+        <ul><a href="">Termologia</a></ul>
+            <li><a href="">Calor</a></li>
+            <li><a href="">Calorimetria</a></li>
+            <li><a href="">Fluxo de Calor</a></li>
+        <ul><a href="">Ondulatória</a></ul>
+            <li><a href="">Ondas</a></li>
+            <li><a href="">Acústica</a></li>
+            <li><a href="">Eq. de Onda</a></li>
+        <ul><a href="">Eletromagnetismo</a></ul>
+            <li><a href="">Eletricidade</a></li>
+            <li><a href="">Magnetismo</a></li>
+            <li><a href="">Eletromagnetismo</a></li>
+        <ul><a href="">Moderna</a></ul>
+            <li><a href="">Relatividade</a></li>
+            <li><a href="">Física Quântica</a></li>
+    </ul>
+    <div id="ad2" class="ad"></div>
+`;
+
+function flexivel() {
+    let nav21 = document.getElementById('nav21');
+    if (nav21.style.right != '0px') {
+        nav21.style.right = '0px';
+        nav21.style.transition = '0.5s';
+        
+    } else {
+        nav21.style.right = '-200px';
+    }
+    
+}

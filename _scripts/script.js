@@ -12,7 +12,6 @@ const body = document.getElementsByTagName("body");
 const header = document.getElementsByTagName("header")[0];
 header.innerHTML = `
     <h1>Lumi Física</h1>
-    <button class="bnav2" onclick="flexivel()"><span class="material-symbols-outlined">menu</button>
     <nav id="nav1" class="nav1"></nav>
 `;
 
@@ -31,69 +30,12 @@ nav1.innerHTML = `
       <input type="text" placeholder="Procurar.." name="search">
       <button type="submit"><span class="material-symbols-outlined" style="color: white;">search</span></button></button>
     </form>
-    <button id="x" onclick="lupa2()">[fechar]</button>
+    <button id="x" onclick="fecharlupa()">[fechar]</button>
 </div>
     `;
     
 
-
-const nav21 = document.getElementById('nav21');
-nav21.innerHTML = `
-    <ul>
-        <ul><a href="">Mecânica</a></ul>
-            <li><a href="">Cinemática</a></li>
-            <li><a href="">Dinâmica</a></li>
-        <ul><a href="">Termologia</a></ul>
-            <li><a href="">Calor</a></li>
-            <li><a href="">Calorimetria</a></li>
-            <li><a href="">Fluxo de Calor</a></li>
-        <ul><a href="">Ondulatória</a></ul>
-            <li><a href="">Ondas</a></li>
-            <li><a href="">Acústica</a></li>
-            <li><a href="">Eq. de Onda</a></li>
-        <ul><a href="">Eletromagnetismo</a></ul>
-            <li><a href="">Eletricidade</a></li>
-            <li><a href="">Magnetismo</a></li>
-            <li><a href="">Eletromagnetismo</a></li>
-        <ul><a href="">Moderna</a></ul>
-            <li><a href="">Relatividade</a></li>
-            <li><a href="">Física Quântica</a></li>
-    </ul>
-`;
-
-const nav22 = document.getElementById('nav22')
-nav22.innerHTML = `
-    <ul>
-        <ul><a href="">Mecânica</a></ul>
-            <li><a href="">Cinemática</a></li>
-            <li><a href="">Dinâmica</a></li>
-        <ul><a href="">Termologia</a></ul>
-            <li><a href="">Calor</a></li>
-            <li><a href="">Calorimetria</a></li>
-            <li><a href="">Fluxo de Calor</a></li>
-        <ul><a href="">Ondulatória</a></ul>
-            <li><a href="">Ondas</a></li>
-            <li><a href="">Acústica</a></li>
-            <li><a href="">Eq. de Onda</a></li>
-        <ul><a href="">Eletromagnetismo</a></ul>
-            <li><a href="">Eletricidade</a></li>
-            <li><a href="">Magnetismo</a></li>
-            <li><a href="">Eletromagnetismo</a></li>
-        <ul><a href="">Moderna</a></ul>
-            <li><a href="">Relatividade</a></li>
-            <li><a href="">Física Quântica</a></li>
-    </ul>
-    <div id="ad2" class="ad"></div>
-`;
-
-// ad
-
-// const ad = document.getElementsByClassName("ad");
-// for (c=0; c<2; c++) {
-//     ad[c].innerHTML = `oi1`;
-// }
-
-// Footer
+// Footer (criar ad aqui)
 let footer = document.getElementsByTagName("footer")[0];
 footer.innerHTML = `Site criado por Lucas Toledo.`;
 
@@ -110,35 +52,18 @@ function lupa() {
     }
     else {
         caixa.style.display = 'block';
-        lup.style.display = 'none';
+        lup.style.display = 'block';
     }
 }
 
-function lupa2() {
-    if (lup.style.display == 'block') {
-        lup.style.display = 'none';
-    }
-    else {
-        lup.style.display = 'block';
+function fecharlupa() {
+    if (caixa.style.display == 'block') {
         caixa.style.display = 'none';
     }
 }
 
 
 
-// nav 2
-
-function flexivel() {
-    let nav21 = document.getElementById('nav21');
-    if (nav21.style.right != '0px') {
-        nav21.style.right = '0px';
-        nav21.style.transition = '0.5s';
-        
-    } else {
-        nav21.style.right = '-200px';
-    }
-    
-}
 
 
 
