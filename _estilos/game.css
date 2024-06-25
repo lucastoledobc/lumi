@@ -14,12 +14,10 @@ body {
 
 h1 {
     position: relative;
-    top: 0px;
-    display: block;
-    
-    font-size: clamp(1rem, 40vw, 2vh);
-    color: white;
     text-align: center;
+    color: white;
+    font-size: 50px;
+    overflow: hidden
 }
 
 .button {
@@ -33,7 +31,7 @@ h1 {
 
 
 .icon {
-    width: clamp(25px, 3vw, 40px);
+    width: 30px;
     aspect-ratio: 1;
 
     background-color: rgba(0, 255, 34, 0);
@@ -75,13 +73,19 @@ h1 {
     margin: -5px -5px 0 10px;
 }
 
-#iclose {
+#iclose { /* i = icone do close */
     width: 20px;
     background-color: rgb(192, 255, 255);
 }
 
-input {
+input { /* caixa onde escreve */
     margin: 5px 0;
     width: 300px;
     height: fit-content;
+}
+
+#maxi {
+    bottom: 10px;
+    right: 10px;
+    opacity: 50%;
 }
