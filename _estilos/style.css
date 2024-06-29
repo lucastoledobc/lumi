@@ -22,6 +22,7 @@ twitter 1DA3F2
     --fon1: DynaPuff;
     --fon2: EB+Garamond;
     --fon3: Lato;
+
 }
 
 * {
@@ -96,21 +97,24 @@ h2 {
     font-size: 1.2rem;
 }
 
-
+h3 {
+    font-family: DynaPuff;
+}
 
 /* NAV */
 
-.nav1 {
+#nav1 {
     font-size: 1.2rem;
     background-color: var(--cor1);
-    padding: 0.28em;
+    display: flex;
 }
 
 nav > a {
+    margin: auto 0;
     font-size: 1em;
     text-decoration: none;
     color: black;
-    padding:  0.3em 0.2em;
+    padding:  0.3em 0.3em;
     border-radius: 9px 9px 0 0;
 }
 
@@ -121,17 +125,23 @@ nav > a:hover {
     transition: 0.3s;
 }
 
+#barra {
+    height: 2px;
+    background-color: var(--cor4);
+}
 /* LUPA */
 
 button#lupa {
-    float: right;
-    margin-right: 5px;
-
-    color: var(--cor5);
+    aspect-ratio: 1;
+    width: px;
+    margin: 3px 10px 3px auto;
     font-size: 0rem; /*ajuste da borda */
-
     border: 2px solid var(--cor5);
-    border-radius: 5px;
+    border-radius: 4px;
+}
+
+button#lupa:active {
+    background-color: var(--cor2);
 }
 
 

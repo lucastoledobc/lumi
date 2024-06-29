@@ -16,6 +16,7 @@ botoes.innerHTML = `
 
 `;
 
+
 // WARNING
 
 const war = document.getElementById("warn");
@@ -28,6 +29,8 @@ const war = document.getElementById("warn");
             </form>
         `;
 
+
+// Functions
 
 function info() {
     let img = document.getElementById("info");

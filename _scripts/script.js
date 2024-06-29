@@ -13,15 +13,16 @@ const header = document.getElementsByTagName("header")[0];
 header.innerHTML = `
     <h1>Lumi Física</h1>
     <nav id="nav1" class="nav1"></nav>
+    <div id="barra"></div>
 `;
 
 const nav1 = document.getElementById('nav1');
 nav1.innerHTML = `
-<a href="/">Home</a>
-<a href="/02/">Conteúdo</a>
-<a href="/03/">Jogos</a>
-<a href="/04/">Artigos</a>
-<a href="/05/">Sobre</a>
+<a href="/" id="nav01">Home</a>
+<a href="/02/" id="nav02">Conteúdo</a>
+<a href="/03/" id="nav03">Jogos</a>
+<a href="/04/" id="nav04">Artigos</a>
+<a href="/05/" id="nav05">Sobre</a>
 
 <button id="lupa" onclick="lupa()"><span class="material-symbols-outlined">search</span></button>
 
