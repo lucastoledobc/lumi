@@ -1,0 +1,138 @@
+0. matematica {
+    Vetores
+        soma
+        multiplicação -> escalar
+        Matriz
+}
+
+01. física {
+	- História da Física
+	- Unidades de medida
+}
+
+02. Mecanica {
+	- cinematica
+		movimento retilineo
+		movimento curvilineo
+	- dinamica
+		forças
+			peso
+			elástica
+			resultante
+			centrípeta
+		Leis
+			1a Lei
+			2a Lei
+			3a Lei
+	momentum
+		quantidade de movimento
+		colisão
+			Tipo
+			coef. de restituição
+	trabalho
+		de uma força constante
+		gasto(uso) de energia
+	energia
+		cinética
+		potencial
+		conservação
+		usinas
+	fluidos
+		estatico
+			Pascal
+			Arquimedes
+		dinamico
+			bernoulli
+}
+
+04. astronomia {
+	Leis de Kepler
+		1a
+		2a
+	Lei da gravitação
+	Satélites estacionários
+	energia potencial gravitacional
+}
+
+05. termologia {
+	termometria
+	dilatação
+	calorimetria
+	gases
+		Transformações
+		1a Lei
+	maquinas
+		2a Lei
+}
+
+06. ondulatoria {
+	frequencia e periodo
+	MHS
+	acustica
+		intensidade sonora
+		nível sonoro
+}
+
+07. optica {
+	luz
+		propriedades
+		meios
+	cores
+	reflexão
+		espelhos
+	refração
+		dioptro plano
+		lentes
+		olho humano
+	polarização
+}
+
+08. eletromagnetismo {
+	- estatica: 
+		carga
+		campo
+		potencial
+		energia
+	- dinamica: 
+		corrente
+		Lei de Ohm
+		circuitos
+	- magnetismo:
+		ímãs
+		campo magnético 
+	- eletromagnetismo:
+		campo gerado por corrente
+		corrente gerada por campo (Lei de Lenz)
+		transformadores
+}
+
+09. moderna {
+	relatividade
+		restrita
+		geral
+	atômica
+		radiação
+		médica
+		quântica
+}
+
+10. superior {
+    Álgebra
+        Vetores
+            O que é
+            soma: combinação linear
+            multiplicação: escalar
+            transformação linear
+    Cálculo
+        Função
+
+	grupos
+	campos
+}
+
+10. tecnologia {
+	hardware
+	Física
+	SO
+	linguagens
+}

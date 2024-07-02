@@ -1,131 +1,48 @@
--sistema de busca
-
--latex
-
 - propaganda do app
 
 - descrição de imagens para cegos
 
 - SEO - deixar o site mais rapido
 
+- criar estatistica do temas que caem no vestibular
+
 
 	Home:
 
 - icone do site (raio azul)
-
+- lista de exercicios do mesmo temas
+- motor de busca
 
 	Conteudo:
+
+-latex
 
 - links de diferentes explicações e feedback do aluno
 
 
-0. matematica
-1. mecanica {
-	cinematica
-		movimento retilineo
-		movimento curvilineo
-	dinamica
-		força
-		Leis
-	momentum
-		quantidade de movimento 
-	trabalho
-		de uma força constante
-		gasto(uso) de energia
-	energia
-		cinética
-		potencial
-		conservação
-}
-	
-2. fluidos {
-	estatico
-	dinamico
-}
+    Pratique:
 
-3. astronomia {
-	Leis de Kepler
-	Lei da gravitação
-	satélites estacionários
-	energia potencial gravitacional
-}
-
-4. termologia {
-	termometria
-	calorimetria
-	gases
-	maquinas
-}
-
-5. ondulatoria {
-	- frequencia e periodo
-	- MHS
-	- acustica
-}
-
-6. optica {
-	luz
-	cores
-	reflexão
-		espelhos
-	refração
-		dioptro plano
-		lentes
-		olho humano
-	polarização
-}
-
-7. eletromagnetismo {
-	- estatica: 
-		carga
-		campo
-		potencial 
-	- dinamica: 
-		corrente
-		Lei de Ohm
-		circuitos 
-	- magnetismo:
-		ímãs
-		campo magnético 
-	- eletromagnetismo:
-		campo gerado por corrente
-		corrente gerada por campo (Lei de Lenz)
-		transformadores
-}
-
-8. moderna {
-	relatividade
-		restrita
-		completa
-	atômica
-		radiação
-		médica
-		quântica
-}
-
-9. superior {
-	grupos
-	campos
-}
-
-
-
-Pratique:
 "Tentar aprender sem praticar é como tentar aprender a andar de skate só assitindo video aula. Pratique! - Professor Gustavo Guanabara."
+
+- pular entre as questoes
+
+
+UNIVERSIDADE  UF  ANO  DIA
+
+Tema > Seção > Item > Subitem
+
+NÍVEL TIPO GRÁFICO TEORICA/CONTA 
 
 
 	Games:
 
-- tem um ccs exclusivo
 - jogo da balança
+- campo elétrico
 
 
 	Artigos:
 
-- recomendar artigos de um para o outro e em temas do conteúdo também.
-- article
-- colocar uma tag mulheres para deixar um sistema automatico sobre as historias das mulheres no dia/seman das mulheres
-
+    - article
 -> Categorias:
 	Tipo:
 		educação
@@ -133,10 +50,25 @@ Pratique:
 		construção
 		teoria
 
-		
+1. artigos:
+    - recomendar artigos de um para o outro e em temas do conteúdo também.
+        colocar uma tag mulheres para deixar um sistema automatico sobre as historias das mulheres no dia/seman das mulheres
+
+2. experimentos:
+
+
+
+
 	Sobre:
 
-- criar um email  profissional e montar o pix
+- montar o pix
+
+
+
+
+
+
+
 
 
 
