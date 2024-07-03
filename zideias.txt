@@ -8,7 +8,6 @@ aaaaaaaaaaaa
 
 - criar estatistica do temas que caem no vestibular
 
-
 	Home:
 
 - icone do site (raio azul)
