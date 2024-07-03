@@ -1,3 +1,5 @@
+bbbbbbbbbbb
+
 - propaganda do app
 
 - descrição de imagens para cegos
@@ -5,7 +7,6 @@
 - SEO - deixar o site mais rapido
 
 - criar estatistica do temas que caem no vestibular
-
 
 	Home:
 
