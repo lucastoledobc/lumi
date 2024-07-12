@@ -15,56 +15,102 @@
     <script src="/_scripts/script.js" defer></script>
     <script src="/_scripts/random.js" defer></script>
 </head>
-    <style>
-        .main {
-            display: grid;
-            grid-template-columns: 18rem auto;
-        }
-
-        .nav3 {
-            height: 100%;
-            /* display: block; */
-            
-        }
-
-        .jogos {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-        }
-
-        #nav03 {
+<style>
+    #nav03 {
             background: var(--cor4);
             color: white;
             padding:  0.3em 0.3em;
             transition: 0.3s;
-        }
+    }
 
-    </style>
+    .main {
+        display: grid;
+        grid-template-columns:170px auto;
+    }
+
+    .nav3 {
+        height: 100%;
+    }
+
+    fieldset {
+        display: flex;
+        flex-wrap:wrap;
+        margin: 0.3rem;
+    }
+
+    input {
+        margin-left: 3px;
+    }
+
+    label {
+        width: 115px;
+    }
+
+
+
+    .jogos {
+        display: flex;
+        flex-wrap: wrap;
+        /* align-items: center; */
+        /* justify-content: flex-start; */
+    }
+
+    .div {
+        width: 200px;
+        aspect-ratio: 1;
+        padding: 0.3em;
+        margin: 0.3em auto;
+
+        text-align: center;
+        text-decoration: underline;
+
+        border: 2px solid black;
+        border-radius: 5px;
+        box-shadow: 2px 2px rgba(0, 0, 0, 0.253);
+    }
+
+    img {
+        width: 150px;
+    }
+    
+
+
+</style>
 <body>
-    <header></header>
-    <main>
-        <div class="main" id="main">
-            <nav class="nav3" id="nav3">
-                <h3>Filtro</h3>
-                <fieldset>
-                    <legend>Tipo</legend>
-                    <input type="checkbox" name="cjogo" id="cjogo"> <label for="cjogo">Jogos</label>
-                    <input type="checkbox" name="clab" id="clab"><label for="clab">Lab. virtuais</label>
-                </fieldset>
-            </nav>
-            <div class="jogos" id="jogos">
-                <h3>Jogos</h3>
-                <div class="div"><img src="_midia/a.jpg" alt=""></div>
-                <div class="div"><img src="_midia/cb.webp" alt=""></div>
-                <div class="div"><img src="_midia/a.jpg" alt=""></div>
-                <div class="div"><img src="_midia/cb.webp" alt=""></div>
-                <div class="div"><img src="_midia/a.jpg" alt=""></div>
-            </div>
+<header></header>
+<main>
+    <div class="main" id="main">
+        <h2>Filtro</h2>
+        <h2>Jogos</h2>
+        <nav class="nav3" id="nav3">
+            <fieldset>
+                <legend>Tipo</legend>
+                <input type="checkbox" name="cjogo" id="cjogo"> <label for="cjogo">Jogos</label>
+                <input type="checkbox" name="clab" id="clab"><label for="clab">Lab. virtuais</label>
+            </fieldset>
+            <p></p>
+            <fieldset>
+                <legend>Tema</legend>
+                <input type="checkbox" name="c1" id="c1"> <label for="c1">Mecânica</label>
+                <input type="checkbox" name="c2" id="c2"> <label for="c2">Termologia</label>
+                <input type="checkbox" name="c3" id="c3"> <label for="c3">Eletromagnetismo</label>
+                <input type="checkbox" name="c4" id="c4"> <label for="c4">Mecânica</label>
+                <input type="checkbox" name="c5" id="c5"> <label for="c5">Moderna</label>
+            </fieldset>
+        </nav>
+        <div class="jogos" id="jogos">
+            <div class="div"><a href="3.1 sistema_solar/game.html"><img src="midia/Screenshot_1.png" alt="">Sistema Solar</a></div>
+            <div class="div"><img src="midia/cb.webp" alt=""></div>
+            <div class="div"><img src="midia/a.jpg" alt=""></div>
+            <div class="div"><img src="midia/cb.webp" alt=""></div>
+            <div class="div"><img src="midia/a.jpg" alt=""></div>
+            <div class="div"><img src="midia/cb.webp" alt=""></div>
+            <div class="div"><img src="midia/a.jpg" alt=""></div>
         </div>
-        <!-- <div id="ad1" class="ad"></div> -->
-        <div class="update">Última atualização: 20/06/2024</div>
-    </main>
-    <footer id="footer"></footer>
+    </div>
+    <!-- <div id="ad1" class="ad"></div> -->
+    <div class="update">Última atualização: 20/06/2024</div>
+</main>
+<footer id="footer"></footer>
 </body>
 </html>
