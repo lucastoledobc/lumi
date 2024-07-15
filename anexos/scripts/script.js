@@ -5,7 +5,11 @@ head.innerHTML += `
 <!-- importações -->
 <!-- 3 tracinhos - MENU e lupa-->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-`;
+<title>Lumi Física</title>
+    <meta name="description" content="Site de Física para ensino básico, ensino médio e ensino superior.">
+    <link rel="shortcut icon" href="/anexos/midias/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/anexos/estilos/style.css" media="all">
+    `;
 
 // Header
 const body = document.getElementsByTagName("body");
@@ -21,7 +25,7 @@ nav1.innerHTML = `
 <a href="/" id="nav01">Home</a>
 <a href="/02/" id="nav02">Conteúdo</a>
 <a href="/03/" id="nav03">Jogos</a>
-<a href="/04/" id="nav04">Artigos</a>
+<a href="/04/" id="nav04">Projetos</a>
 <a href="/05/" id="nav05">Sobre</a>
 
 <button id="lupa" onclick="lupa()"><span class="material-symbols-outlined">search</span></button>
