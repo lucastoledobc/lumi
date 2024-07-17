@@ -15,9 +15,19 @@ head.innerHTML += `
 const body = document.getElementsByTagName("body");
 const header = document.getElementsByTagName("header")[0];
 header.innerHTML = `
+    <button id="lupa" onclick="lupa()"><span class="material-symbols-outlined">search</span></button>
+
     <h1>Lumi Física</h1>
     <nav id="nav1" class="nav1"></nav>
     <div id="barra"></div>
+
+    <div id="search">
+        <form action="../_php/search.php">
+        <input type="text" placeholder="Procurar.." name="search">
+        <button type="submit"id="lupa"><span class="material-symbols-outlined" style="color: white;">search</span></button></button>
+        </form>
+        <button id="x" onclick="fecharlupa()">[fechar]</button>
+    </div>
 `;
 
 const nav1 = document.getElementById('nav1');
@@ -27,17 +37,7 @@ nav1.innerHTML = `
 <a href="/03/" id="nav03">Jogos</a>
 <a href="/04/" id="nav04">Projetos</a>
 <a href="/05/" id="nav05">Sobre</a>
-
-<button id="lupa" onclick="lupa()"><span class="material-symbols-outlined">search</span></button>
-
-<div id="search">
-    <form action="../_php/search.php">
-      <input type="text" placeholder="Procurar.." name="search">
-      <button type="submit"><span class="material-symbols-outlined" style="color: white;">search</span></button></button>
-    </form>
-    <button id="x" onclick="fecharlupa()">[fechar]</button>
-</div>
-    `;
+`;
     
 
 // Footer (criar ad aqui)

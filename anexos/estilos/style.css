@@ -1,17 +1,19 @@
 @charset "UTF-8";
 
-/* fontes */
+@font-face {
+    font-family: DynaPuff;
+    src: url(fonts/DynaPuff-VariableFont_wdth\,wght.ttf);
+}
 
+@font-face {
+    font-family: EBGaramond;
+    src: url(fonts/EBGaramond-VariableFont_wght.ttf);
+}
 
-@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
-
-/* 
-primeiro 07ADF5 
-shiny 0EA5FF
-twitter 1DA3F2
-*/
-
+@font-face {
+    font-family: Lato;
+    src: url(fonts/Lato-Regular.ttf);
+}
 :root {
     --cor1: #B7E8FD;
     --cor2: #5DCBFA;
@@ -20,9 +22,8 @@ twitter 1DA3F2
     --cor5: #023145;
 
     --fon1: DynaPuff;
-    --fon2: EB+Garamond;
+    --fon2: EBGaramond;
     --fon3: Lato;
-
 }
 
 * {
@@ -37,9 +38,8 @@ twitter 1DA3F2
 /* GERAL */
 
 html {
-    
     min-width: 350px;
-    background:var(--cor1) url(/_midias/fundo.svg) no-repeat center center;
+    background: var(--cor1) url(/_midias/fundo.svg) no-repeat center center;
     background-attachment: fixed;
     background-size: cover;
 }
@@ -49,12 +49,18 @@ body {
     max-width: 1600px;
     box-shadow: 1px 0px 20px 1px rgba(0, 0, 0, 0.486);
 }
+
 p {
     padding: 10px 20px;
     line-height: 25px;
     text-align: justify;
     text-indent: 1rem;
 }
+a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
 ul {
     list-style:none;
 }
@@ -63,9 +69,8 @@ button {
     border: none;
     cursor: pointer;
 }
-a {
-    text-decoration: none;
-}
+
+
 
 
 
@@ -91,7 +96,7 @@ h1 {
 }
 
 h2 {
-    font-family: DynaPuff;
+    font-family: var(--fon1);
     padding: 10px;
     color: var(--cor5);
     font-size: 1.2rem;
@@ -117,14 +122,14 @@ nav > a {
     font-size: 1em;
     text-decoration: none;
     color: black;
-    padding:  0.3em 0.3em;
+    padding:  0.1em 0.3em;
     border-radius: 9px 9px 0 0;
 }
 
 nav > a:hover {
     background: var(--cor4);
     color: white;
-    padding:  0.3em 0.3em;
+    padding:  0.1em 0.3em;
     transition: 0.3s;
 }
 
@@ -135,12 +140,20 @@ nav > a:hover {
 /* LUPA */
 
 button#lupa {
+    position: relative;
+    top: 5px;
+    right: 5px;
     aspect-ratio: 1;
-    width: px;
-    margin: 3px 10px 3px auto;
-    font-size: 0rem; /*ajuste da borda */
-    border: 2px solid var(--cor5);
-    border-radius: 4px;
+    padding: 2px;
+    margin-left: auto;
+
+    border: 3px solid white;
+    border-radius: 50%;
+    color: white;
+}
+
+button#lupa:hover {
+    size: 50px;
 }
 
 button#lupa:active {
@@ -155,7 +168,7 @@ div#search {
     left: 50%;
     transform: translate(-50%,-50%);
 
-    width: fit-content;
+    width: 55%;
     padding: 5px;
     background-color: var(--cor5);
     border-radius: 5px;
@@ -173,6 +186,8 @@ button#x {
 input[type='text'] {
     color: black;
     font-size: 20px;
+    width: 90%;
+    height: 40px;
 }
 
 div#search > form > button {

@@ -73,6 +73,11 @@ NÍVEL TIPO GRÁFICO TEORICA/CONTA
 
 
 lixeira:
+
+primeiro 07ADF5 
+shiny 0EA5FF
+twitter 1DA3F2
+
 <nav id="nav21" class="nav21" onclick="flexivel()"></nav>
 
 script:
