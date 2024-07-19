@@ -141,3 +141,52 @@ function flexivel() {
     }
     
 }
+
+/* NAV21 */
+
+.nav22 {
+    display: none;
+}
+
+.nav21 {
+    display: block;
+    position: fixed;
+    right: -200px;
+    top: 30px;
+    opacity: 0.9;
+}
+
+.bnav2 {
+    display: block;
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    color: white;
+}
+
+nav > ul > ul {
+    background-color: rgb(255, 255, 255);   
+}
+
+nav > ul > li {
+    background-color: rgb(110, 40, 40);
+    text-indent: 1em;  
+}
+
+nav > ul > ul > a {
+    display: block;
+    padding: 5px;
+    background-image: linear-gradient(to bottom, var(--cor1),var(--cor3));
+    color: white;
+    text-decoration: none;
+}
+
+nav > ul > ul > a:hover {
+    display: block;
+    padding: 5px;
+    background-image: linear-gradient(to bottom, var(--cor1),var(--cor3));
+    color: white;
+    text-decoration: none;
+    border-radius: 0px 150px 0 0;
+    transition: 0.5s;
+}

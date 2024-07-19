@@ -38,18 +38,40 @@
 /* GERAL */
 
 html {
-    min-width: 350px;
     background: var(--cor1) url(/_midias/fundo.svg) no-repeat center center;
     background-attachment: fixed;
     background-size: cover;
 }
 body {
     margin: auto;
-    min-width: 350px;
     max-width: 1600px;
     box-shadow: 1px 0px 20px 1px rgba(0, 0, 0, 0.486);
 }
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content:center; /*PC*/
 
+    font-size: clamp(75px, 13vw, 200px);
+    height: 240px;
+    text-align: center; /*cel*/
+
+    font-family: var(--fon1);
+    padding: 0 5%;
+    
+}
+h2 {
+    font-family: var(--fon1);
+    padding: 10px;
+    color: var(--cor5);
+    font-size: 1.2rem;
+    text-align: center;
+}
+h3 {
+    font-style: italic;
+    font-size: 1rem;
+    padding: 0.5em;
+}
 p {
     padding: 10px 20px;
     line-height: 25px;
@@ -58,7 +80,6 @@ p {
 }
 a {
     text-decoration: none;
-    font-weight: 600;
 }
 
 ul {
@@ -70,66 +91,48 @@ button {
     cursor: pointer;
 }
 
-
-
-
-
 /* HEADER */
-
 header {
     background-color: var(--cor3);
     color: white;
 }
 
-h1 {
+#cabe {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 30px 100fr 30px;
+}
+
+.space {
     display: flex;
-    align-items: center;
-    justify-content:center; /*PC*/
-
-    font-size: clamp(100px, 13vw, 200px);
-    height: 240px;
-    text-align: center; /*cel*/
-
-    font-family: var(--fon1);
-    padding: 0 5%;
-    
+    justify-content: end;
+    align-items: start;
 }
 
-h2 {
-    font-family: var(--fon1);
-    padding: 10px;
-    color: var(--cor5);
-    font-size: 1.2rem;
-    text-align: center;
-}
-
-h3 {
-    font-style: italic;
-    font-size: 1rem;
-    padding: 0.5em;
+.icon {
+    width: 3rem;
+    margin: auto; /* ajuste pq img tem margin diferente */
+    filter: invert(100%); /*preto fica branco*/
 }
 
 /* NAV */
-
 #nav1 {
-    font-size: 1.2rem;
     background-color: var(--cor1);
     display: flex;
+    gap: 0.1em;
+    font-weight: 600;
 }
 
 nav > a {
-    margin: auto 0;
-    font-size: 1em;
-    text-decoration: none;
+    padding: 0.1em 0.3em;
+    font-size: 1.3rem;
     color: black;
-    padding:  0.1em 0.3em;
     border-radius: 9px 9px 0 0;
 }
 
 nav > a:hover {
     background: var(--cor4);
     color: white;
-    padding:  0.1em 0.3em;
     transition: 0.3s;
 }
 
@@ -137,50 +140,18 @@ nav > a:hover {
     height: 2px;
     background-color: var(--cor4);
 }
-/* LUPA */
-
-button#lupa {
-    position: relative;
-    top: 5px;
-    right: 5px;
-    aspect-ratio: 1;
-    padding: 2px;
-    margin-left: auto;
-
-    border: 3px solid white;
-    border-radius: 50%;
-    color: white;
-}
-
-button#lupa:hover {
-    size: 50px;
-}
-
-button#lupa:active {
-    background-color: var(--cor2);
-}
-
-
+/* Search */
 div#search {
-    display: none;
     position: absolute;
-    top:50%;
+    top: -15%;
     left: 50%;
-    transform: translate(-50%,-50%);
-
-    width: 55%;
+    transform: translateX(-50%);
+    opacity: 0;
+    display: flex;
+    width: 75%;
     padding: 5px;
     background-color: var(--cor5);
-    border-radius: 5px;
-}
-
-button#x {
-    display: flex;
-    float: inline-end;
-    border:none;
-    background:none;
-    margin: 5px 0;
-    color: white;
+    border-radius: 0 0 5px 5px;
 }
 
 input[type='text'] {
@@ -190,67 +161,7 @@ input[type='text'] {
     height: 40px;
 }
 
-div#search > form > button {
-    display: flex;
-    float: inline-end;
-    border:none;
-    background:none;
-    font-size: 20px;
-}
-
-/* NAV21 */
-
-.nav22 {
-    display: none;
-}
-
-.nav21 {
-    display: block;
-    position: fixed;
-    right: -200px;
-    top: 30px;
-    opacity: 0.9;
-}
-
-.bnav2 {
-    display: block;
-    position: absolute;
-    top: 1%;
-    right: 1%;
-    color: white;
-}
-
-nav > ul > ul {
-    background-color: rgb(255, 255, 255);   
-}
-
-nav > ul > li {
-    background-color: rgb(110, 40, 40);
-    text-indent: 1em;  
-}
-
-nav > ul > ul > a {
-    display: block;
-    padding: 5px;
-    background-image: linear-gradient(to bottom, var(--cor1),var(--cor3));
-    color: white;
-    text-decoration: none;
-}
-
-nav > ul > ul > a:hover {
-    display: block;
-    padding: 5px;
-    background-image: linear-gradient(to bottom, var(--cor1),var(--cor3));
-    color: white;
-    text-decoration: none;
-    border-radius: 0px 150px 0 0;
-    transition: 0.5s;
-}
-
-
-
 /* NAV 3 */
-
 nav > ul > li > a {
     display: block;
     height: 20px;

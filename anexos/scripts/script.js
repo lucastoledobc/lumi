@@ -2,32 +2,35 @@
 
 const head = document.getElementsByTagName("head")[0];
 head.innerHTML += `
-<!-- importações -->
-<!-- 3 tracinhos - MENU e lupa-->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-<title>Lumi Física</title>
     <meta name="description" content="Site de Física para ensino básico, ensino médio e ensino superior.">
-    <link rel="shortcut icon" href="/anexos/midias/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/anexos/estilos/style.css" media="all">
+    <link rel="shortcut icon" href="/anexos/midias/CTRNF-WarpOrb.ico" type="image/x-icon">
+
     `;
 
 // Header
 const body = document.getElementsByTagName("body");
 const header = document.getElementsByTagName("header")[0];
-header.innerHTML = `
-    <button id="lupa" onclick="lupa()"><span class="material-symbols-outlined">search</span></button>
+header.innerHTML += `
+        <section id="cabe">
+            <div class="space"></div>
+            <h1>Lumi Física</h1>
+            <div id="space" class="space">
+                <button id="lupa" onclick="lupa()" class="lupa">
+                    <img id="ilupa" class="icon" src="/anexos/midias/icon-search-2.svg" alt="procurar">
+                </button>
+            </div>
+        </section>
+        <nav id="nav1" class="nav1"></nav>
+        <div id="barra"></div>
 
-    <h1>Lumi Física</h1>
-    <nav id="nav1" class="nav1"></nav>
-    <div id="barra"></div>
-
-    <div id="search">
-        <form action="../_php/search.php">
-        <input type="text" placeholder="Procurar.." name="search">
-        <button type="submit"id="lupa"><span class="material-symbols-outlined" style="color: white;">search</span></button></button>
-        </form>
-        <button id="x" onclick="fecharlupa()">[fechar]</button>
-    </div>
+        <div id="search">
+            <form action="../_php/search.php">
+                <input type="text" placeholder="Procurar.." name="search">
+                <button type="submit" id="lupa2" class="lupa">
+                    <img  id="ilupa" class="icon" src="/anexos/midias/icon-search-2.svg" alt="procurar">
+                </button>
+            </form>
+        </div>
 `;
 
 const nav1 = document.getElementById('nav1');
@@ -39,38 +42,40 @@ nav1.innerHTML = `
 <a href="/05/" id="nav05">Sobre</a>
 `;
     
-
 // Footer (criar ad aqui)
 let footer = document.getElementsByTagName("footer")[0];
 footer.innerHTML = `Site criado por Lucas Toledo.`;
 
-
-
+/*  */
 
 // Lupa
 let caixa = document.getElementById('search');
-let lup = document.getElementById('lupa');
+let space = document.getElementById('space');
 
 function lupa() {
-    if (caixa.style.display == 'block') {
-        caixa.style.display = 'none';
+    if (caixa.style.opacity == '1') {
+        caixa.style.top = '-10%';
+        caixa.style.opacity = '0';
+        caixa.style.transition = '0.5s';
+        space.innerHTML =`
+        <button id="lupa" onclick="lupa()" class="lupa">
+            <img id="ilupa" class="icon" src="/anexos/midias/icon-search-2.svg" alt="procurar">
+        </button>
+        `;
     }
     else {
-        caixa.style.display = 'block';
-        lup.style.display = 'block';
+        caixa.style.top = '0%';
+        caixa.style.opacity = '1';
+        caixa.style.transition = '0.5s';
+        space.innerHTML =`
+        <button id="lupa" onclick="lupa()" class="lupa">
+            <img id="ilupa" class="icon" src="/anexos/midias/icon-close-2.svg" alt="procurar">
+        </button>
+        `;
     }
 }
 
-function fecharlupa() {
-    if (caixa.style.display == 'block') {
-        caixa.style.display = 'none';
-    }
-}
-
-
-
-
-
+/*  */
 
 // Caixa de Dicas
 
@@ -94,5 +99,3 @@ function tip3() {
 function fechar3() {
     box3.style.display = 'none';
 }
-
-
