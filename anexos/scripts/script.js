@@ -24,7 +24,7 @@ header.innerHTML += `
         <div id="barra"></div>
 
         <div id="search">
-            <form action="../_php/search.php">
+            <form action="/php/search.php">
                 <input type="text" placeholder="Procurar.." name="search">
                 <button type="submit" id="lupa2" class="lupa">
                     <img  id="ilupa" class="icon" src="/anexos/midias/icon-search-2.svg" alt="procurar">
