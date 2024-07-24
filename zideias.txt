@@ -33,6 +33,15 @@ Tema > Seção > Item > Subitem
 
 NÍVEL TIPO GRÁFICO TEORICA/CONTA 
 
+nome ano valor uf
+
+área tema subtema assunto
+
+
+nivel
+
+tipo objetiva/discurssiva
+
 
 	Games:
 
@@ -62,6 +71,8 @@ NÍVEL TIPO GRÁFICO TEORICA/CONTA
 	Sobre:
 
 - montar o pix
+
+
 
 
 
