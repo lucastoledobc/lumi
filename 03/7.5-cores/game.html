@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Cores</title>
+    <link rel="stylesheet" href="/anexos/estilos/game.css">
+    <script src="/anexos/scripts/game.js" defer></script>
+    <style>
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        
+        .espectro {
+            width: 80%;
+            height: 100px;
+            max-width: 1000px;
+            border: 2px solid white;
+            border-radius: 5px;
+            padding: 10px;
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .led {
+            width: 1000px;
+            height: 100px;
+        }
+        #rosa {
+            width: 95px;
+            height: 100px;
+            border: 2px dashed white;
+            border-radius: 5px;
+            padding: 10px;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Cores</h1>
+    <main>
+        <div class="led" id="rosa" style="background-color:rgb(255, 0, 255)"></div>
+        <div class="espectro">
+            <div class="led" id="red" style="background-color: rgb(255, 0, 0);"></div>
+            <div class="led" id="oran" style="background-color: rgb(255, 127, 0);"></div>
+            <div class="led" id="yell" style="background-color: rgb(255, 255, 0);"></div>
+            <div class="led" id="fluo" style="background-color: rgb(127, 255,0);"></div>
+            <div class="led" id="green" style="background-color: rgb(0, 255, 0);"></div>
+            <div class="led" id="verde" style="background-color: rgb(0, 255, 127);"></div>
+            <div class="led" id="anil" style="background-color: rgb(0, 255, 255);"></div>
+            <div class="led" id="azul" style="background-color: rgb(0, 127, 255);"></div>
+            <div class="led" id = "blue" style="background-color: rgb(0, 0, 255);"></div>
+            <div class="led" id="roxo" style="background-color: rgb(127, 0, 255);"></div>
+        </div>
+        <div class="led" id="rosa" style="background-color:rgb(255, 0, 255)"></div>        
+        <section id="lampadas">
+            <div id="lred"></div>
+            <div id="lgreen"></div>
+            <div id="lblue"></div>
+        </section>
+        <section id="botoes">
+            <button type="button" id="bred"></button>
+            <button type="button" id="bred"></button>
+            <button type="button" id="bred"></button>
+        </section>
+    </main>
+    <section id="menu">
+            
+    </section>
+    <section id="icones"></section>
+</body>
+
+<script>
+    
+</script>
+
+</html>

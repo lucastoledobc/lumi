@@ -1,6 +1,6 @@
 //BOTOES
 
-let botoes = document.getElementById('botoes')
+let botoes = document.getElementById('icones')
 botoes.innerHTML = `
         <button type="button" id="back" class="button">
             <img src="/anexos/midias/icon-back.svg" id="iback" class="icon" alt="Voltar">
