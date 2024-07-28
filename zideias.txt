@@ -46,7 +46,7 @@ tipo objetiva/discurssiva
 	Games:
 
 - jogo da balança
-- campo elétrico
+- dioptro plano - mexer no angulo e no indice de refração
 
 
 	Artigos:
