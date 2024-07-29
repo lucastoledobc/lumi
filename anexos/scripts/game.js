@@ -85,4 +85,12 @@ function mini() {
         <img src="/anexos/midias/icon-maxi.svg" id="imaxi" class="icon" alt="Maximizar" onclick="maxi()">
         `;
     }
-    }  
+    } 
+
+
+const head = document.getElementsByTagName("head")[0];
+head.innerHTML += `
+    <meta name="description" content="Site de Física para ensino básico, ensino médio e ensino superior.">
+    <link rel="shortcut icon" href="/anexos/midias/CTRNF-WarpOrb.ico" type="image/x-icon">
+
+    `;

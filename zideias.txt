@@ -47,7 +47,7 @@ tipo objetiva/discurssiva
 
 - jogo da balança
 - dioptro plano - mexer no angulo e no indice de refração
-
+- botão i -> menu = info, som, mais jogos <a href="/03/index.html"></a>
 
 	Artigos:
 
