@@ -10,35 +10,27 @@
 	Home:
 
 - icone do site (raio azul)
+- fundo do site
 - lista de exercicios do mesmo temas
 - motor de busca
 
 	Conteudo:
 
--latex
+- latex
 
 - links de diferentes explicações e feedback do aluno
 
 
     Pratique:
 
-"Tentar aprender sem praticar é como tentar aprender a andar de skate só assitindo video aula. Pratique! - Professor Gustavo Guanabara."
-
 - pular entre as questoes
 
 
 UNIVERSIDADE  UF  ANO  DIA
 
-Tema > Seção > Item > Subitem
+Área > Tema > Seção > Item
 
 NÍVEL TIPO GRÁFICO TEORICA/CONTA 
-
-nome ano valor uf
-
-área tema subtema assunto
-
-
-nivel
 
 tipo objetiva/discurssiva
 
@@ -51,7 +43,6 @@ tipo objetiva/discurssiva
 
 	Artigos:
 
-    - article
 -> Categorias:
 	Tipo:
 		educação
