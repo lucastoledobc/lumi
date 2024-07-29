@@ -216,18 +216,11 @@ figcaption {
     display: block;
     font-size: 0.7rem;
     text-align: end;
-    margin: -10px 0 10px 0;
+    margin: -1rem 0 1rem 0;
 }
 
-.img {
-    height: 50px;
-    padding: 10px;
-    max-width: 80%;
-    margin: auto;
-}
-
-strong {
-    text-decoration: none;
+dica {
+    text-decoration: underline dashed;
     cursor: pointer;
 }
 
@@ -342,8 +335,6 @@ div.divres {
     width: 100%;
     margin-top: 10px;
 }
-
-
 .update {
     display: block;
     font-size: 0.8rem;
