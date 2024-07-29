@@ -30,7 +30,7 @@
     margin: 0px;
     padding: 0px;
     font-family: var(--fon2), var(--fon3), Helvetica, Arial, sans-serif;
-    /* font-size: 36px; */
+    font-size: 20px;
 }
 
 
@@ -198,10 +198,25 @@ main {
 
 
 /* CONTEÚDO */
-
+.p {
+    padding: 10px 20px;
+    line-height: 25px;
+    text-align: justify;
+    text-indent: 1rem;
+}
+figure {
+    width: fit-content;
+    margin: auto;
+}
 img {
     display: block;
     margin: 10px auto;
+}
+figcaption {
+    display: block;
+    font-size: 0.7rem;
+    text-align: end;
+    margin: -10px 0 10px 0;
 }
 
 .img {
@@ -210,6 +225,7 @@ img {
     max-width: 80%;
     margin: auto;
 }
+
 strong {
     text-decoration: none;
     cursor: pointer;
@@ -335,7 +351,7 @@ div.divres {
     padding-right: 0.1em;
 }
 footer {
-    font-size: 15px;
+    font-size: 0.8rem;
     width: 100%;
     background-color: var(--cor5);
     color: white;
