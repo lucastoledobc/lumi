@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Cores</title>
+    <link rel="stylesheet" href="/anexos/estilos/game.css">
+    <script src="/anexos/scripts/game.js" defer></script>
+    <style>
+        main {
+            height: 100%;
+        }
+        
+        section {
+            top: 20%;
+        }
+        .espectro {
+            aspect-ratio: 16/2;
+            width: 66%;
+            /* height: 10%; */
+            border: 2px solid white;
+            border-radius: 5px;
+            padding: 10px;
+            margin: auto;
+            position: relative;
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 5px;
+        }
+        .led {
+            width: 100%;
+            height: 100%;
+        }
+
+        .lampadas {
+            position: relative;
+            height: 40%;
+            border: 1px solid red;
+
+        }
+                
+        .botoes {
+            position: relative;
+            height: 20%;
+            border: 1px solid red;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        input {
+            display: none;            
+        }
+        label {
+            aspect-ratio: 1/1;
+            height: 50%;
+            border: 3px outset black;
+            border-radius: 50%;
+        }
+
+        label:hover {
+            background-color: rgba(187, 187, 187, 0.404);
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        label:active {
+            background-color: rgba(223, 223, 0, 0.062);
+            transition: 0.1s;
+        }
+        label:checked {
+            background-color: aliceblue;
+        }
+        .cred {
+            background-color: rgb(255, 0, 0);
+        }
+        .cgreen {
+            background-color: rgb(0, 255, 0);
+        }
+        .cblue {
+            background-color: rgb(0, 0, 255);
+        }
+    </style>
+</head>
+<body>
+    <h1>Cores</h1>
+    <main>
+        <section class="espectro">
+            <!-- <div class="led" id="rosa" style="background-color:rgb(255, 0, 255)"></div> -->
+            <div class="led" id="red" style="background-color: rgb(255, 0, 0);"></div>
+            <div class="led" id="orange" style="background-color: rgb(255, 127, 0);"></div>
+            <div class="led" id="yellow" style="background-color: rgb(255, 255, 0);"></div>
+            <div class="led" id="lima" style="background-color: rgb(127, 255,0);"></div>
+            <div class="led" id="green" style="background-color: rgb(0, 255, 0);"></div>
+            <div class="led" id="aqua" style="background-color: rgb(0, 255, 127);"></div>
+            <div class="led" id="ciano" style="background-color: rgb(0, 255, 255);"></div>
+            <div class="led" id="azul" style="background-color: rgb(0, 127, 255);"></div>
+            <div class="led" id = "blue" style="background-color: rgb(0, 0, 255);"></div>
+            <!-- <div class="led" id="roxo" style="background-color: rgb(127, 0, 255);"></div> -->
+        </section>
+        <section class="lampadas">aew
+            <div id="lred"></div>
+            <div id="lgreen"></div>
+            <div id="lblue"></div>
+        </section>
+        <section class="botoes">
+            <input type="checkbox" name="cred" id="cred" value="0">
+            <label for="cred" class="cred" value="0"></label>
+            <input type="checkbox" name="cgreen" id="cgreen">
+            <label for="cgreen" class="cgreen"></label>
+            <input type="checkbox" name="cblue" id="cblue">
+            <label for="cblue" class="cblue"></label>
+        </section>
+    </main>
+    <section id="menu">
+            
+    </section>
+    <section id="icones"></section>
+</body>
+
+<script>
+    
+</script>
+
+</html>
