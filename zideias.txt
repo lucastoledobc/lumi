@@ -10,7 +10,6 @@
 	Home:
 
 - icone do site (raio azul)
-- fundo do site
 - lista de exercicios do mesmo temas
 - motor de busca
 
@@ -42,6 +41,7 @@ tipo objetiva/discurssiva
 - botão i -> menu = info, som, mais jogos <a href="/03/index.html"></a>
 
 	Artigos:
+- o que é umidade, copo suado
 
 -> Categorias:
 	Tipo:
@@ -66,7 +66,13 @@ tipo objetiva/discurssiva
 
 
 
-
+fontes:
+a mão:
+Bryndan Write
+Core Bandi
+Xarrovv
+Comic Sans
+Pecita
 
 
 

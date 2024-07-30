@@ -38,7 +38,7 @@
 /* GERAL */
 
 html {
-    background: var(--cor1) url(/_midias/fundo.svg) no-repeat center center;
+    background: var(--cor1) url(/anexos/midias/fundo.png) no-repeat center center;
     background-attachment: fixed;
     background-size: cover;
 }
