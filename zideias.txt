@@ -1,11 +1,10 @@
-- propaganda do app
+
 
 - descrição de imagens para cegos
 
 - SEO - deixar o site mais rapido
 
 - criar estatistica do temas que caem no vestibular
-
 
 	Home:
 
@@ -14,8 +13,6 @@
 - motor de busca
 
 	Conteudo:
-
-- latex
 
 - links de diferentes explicações e feedback do aluno
 
