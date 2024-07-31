@@ -78,24 +78,9 @@ function lupa() {
 /*  */
 
 // Caixa de Dicas
-
 function tip1() {
     box1.style.display = 'block';
 }
-function fechar1() {
+function fechar() {
     box1.style.display = 'none';
-}
-
-function tip2() {
-    box2.style.display = 'block';
-}
-function fechar2() {
-    box2.style.display = 'none';
-}
-
-function tip3() {
-    box3.style.display = 'block';
-}
-function fechar3() {
-    box3.style.display = 'none';
 }

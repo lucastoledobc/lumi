@@ -1,64 +1,31 @@
 function gabarito() {
-    var opt = document.getElementsByName('opt');
-    var res = document.getElementById('res');
+    let opt = document.getElementsByName('opt');
+    let res = document.getElementById('res');
 
     for (c=10;c<40;c+=10) {
         document.getElementById(c).style.display = 'block';
-    }
+    } /* botoes de resposta aparecem */
 
-    for (c=0;c<4;c++) {
+    for (c=0;c<5;c++) {
         if (opt[c].checked) {
             document.getElementById(c+5).style.background = "red";
         }
     }
     
-    var selected = document.querySelector("input[name='opt']:checked").value;
+    let selected = document.querySelector("input[name='opt']:checked").value; /* pega o value da opção marcada */
     if (selected=='1') {
+        res.style.display = 'block';
         res.innerHTML = `Resposta Certa!`;
         res.style.color = 'green';
         let g = document.querySelector("input[name='opt']:checked").id;
         g = Number(g);
         document.getElementById(g+5).style.background = "green";
     } else {
+        res.style.display = 'block';
         res.innerHTML = `Resposta Errada!`;
-        res.style.color = 'red'
+        res.style.color = 'red';
     }
 }
-
-
-
-// Label ao dar check
-
-function check1() {
-    for (c=5; c<9; c++) {
-        document.getElementById(c).style.borderStyle = "outset";
-    }
-        document.getElementById(5).style.borderStyle = "inset";
-    }
-
-function check2() {
-    for (c=5; c<9; c++) {
-        document.getElementById(c).style.borderStyle = "outset";
-    }
-        document.getElementById(6).style.borderStyle = "inset";
-    }
-
-function check3() {
-    for (c=5; c<9; c++) {
-        document.getElementById(c).style.borderStyle = "outset";
-    }
-        document.getElementById(7).style.borderStyle = "inset";
-    }
-
-function check4() {
-    for (c=5; c<9; c++) {
-        document.getElementById(c).style.borderStyle = "outset";
-    }
-        document.getElementById(8).style.borderStyle = "inset";
-
-    }
-
-
 
 // Respostas
 

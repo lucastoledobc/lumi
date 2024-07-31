@@ -11,54 +11,62 @@
         <link rel="stylesheet" href="/anexos/estilos/style.css" media="all">
         <script src="/anexos/scripts/script.js" defer></script>
         <script src="/anexos/scripts/resposta.js" defer></script>
-        
+        <style>
+            #nav02 {
+            background: var(--cor4);
+            color: white;
+        }
+        </style>
     </head>
     <body>
         <header></header>
     <main>
         <div class="p">
-            UERJ - 2023 - 01) Na tirinha de Mauricio de Sousa, os personagens Cebolinha e Cascão fazem uma brincadeira utilizando duas latas e um barbante. Ao perceberem que o som pode ser transmitido através do barbante, resolvem alterar o comprimento do barbante para ficar cada vez mais extenso. As demais condições permaneceram inalteradas durante a brincadeira.
+            UERJ 2023 - 91) Na tirinha de Mauricio de Sousa, os personagens Cebolinha e Cascão fazem uma brincadeira utilizando duas latas e um barbante. Ao perceberem que o som pode ser transmitido através do barbante, resolvem alterar o comprimento do barbante para ficar cada vez mais extenso. As demais condições permaneceram inalteradas durante a brincadeira.
             <figure>
-                <img src="../../../midias/enem202301cebolinha.png" alt="Imagem cebolinha e cascão">
+                <img src="../../../midias/enem20239101-cebolinha.png" alt="Imagem cebolinha e cascão">
                 <figcaption>SOUSA, M. Disponível em: www.monica.com.br. Acesso em: 2 out. 2012 (adaptado).<br></figcaption>
             </figure>
-            Na prática, à medida que se aumenta o comprimento do barbante, ocorre a redução de qual característica da onda sonora?
+            Na prática, à medida que se <dica onclick="tip1()">aumenta o comprimento do barbante</dica>, ocorre a redução de qual característica da onda sonora?
         </div>
-            <div>
-                <input type="radio" name="opt" id="0" value="1">
-                <label for="0"  id="5" value="1" onclick="check1()">(A) Altura.</label>
+        <div id="box1" class="box">
+            <p>Eles estão ficando mais longe um do outro. O que acontece com o som ao percorrer longas distâncias?</p>
+            <button onclick="fechar()">Fechar</button>
+        </div>
+        <div>
+            <input type="radio" name="opt" id="0" value="0">
+            <label for="0"  id="5" value="0" onclick="check()">(A) Altura.</label>
 
-                <input type="radio" name="opt" id="1" value="0">
-                <label for="1"  id="6" value="0" onclick="check2()">(B) Período.</label>
+            <input type="radio" name="opt" id="1" value="0">
+            <label for="1"  id="6" value="0" onclick="check()">(B) Período.</label>
 
-                <input type="radio" name="opt" id="2" value="0">
-                <label for="2" id="7" value="0" onclick="check3()">(C) Amplitude.</label>
+            <input type="radio" name="opt" id="2" value="1">
+            <label for="2" id="7" value="1" onclick="check()">(C) Amplitude.</label>
 
-                <input type="radio" name="opt" id="3" value="0">
-                <label for="3" id="8" value="0" onclick="check4()">(D) Velocidade</label>
+            <input type="radio" name="opt" id="3" value="0">
+            <label for="3" id="8" value="0" onclick="check3()">(D) Velocidade.</label>
 
-                <input type="radio" name="opt" id="4" value="0">
-                <label for="4" id="9" value="0" onclick="check4()">(D) Comprimento de onda.</label>
-            </div>
-            <input type="button" value="Responder" onclick="gabarito()" class="botao">
+            <input type="radio" name="opt" id="4" value="0">
+            <label for="4" id="9" value="0" onclick="check()">(E) Comprimento de onda.</label>
+        </div>
+        <input type="button" value="Responder" onclick="gabarito()" class="botao">
         
-        <div id="res">
-            
-        </div>
-        <section id="10" class="resposta" onclick="abrir1()">
+        <div id="res"></div>
+
+        <section id="10" class="bresposta" onclick="abrir1()">
             Resposta Curta:
         </section>
         <div id="res1"  class="divres">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas eligendi, magnam sed officiis facilis dolorum assumenda provident sint deserunt doloremque? Esse nesciunt sint amet natus cupiditate labore magni id quod?
         </div>
-        <section id="20" class="resposta" onclick="abrir2()">
+        <section id="20" class="bresposta" onclick="abrir2()">
             Resposta Completa:
         </section>
         <div id="res2"  class="divres">
             Lorem ipsum dolor sit amet, <strong  id="tip3" onclick="tip3()">consectetur</strong> adipisicing elit. Nulla eum provident libero doloribus neque rerum maiores autem minima. Id, optio deleniti eum nulla repellendus sit beatae tempora iste. Ea, tempora.
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi esse quae eligendi ullam accusamus provident dicta at cumque nam aut sit corrupti et, amet sed dignissimos quibusdam tempora molestias quas.</p>
         </div>
-        <section id="30" class="resposta" onclick="abrir3()">
+        <section id="30" class="bresposta" onclick="abrir3()">
             Resposta em Vídeo:
         </section>
         <div id="res3" class="divres">
@@ -67,18 +75,8 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque eum explicabo labore mollitia asperiores totam minima ad rem nihil atque, illo nulla voluptatem culpa vero autem nemo quam quod iste.</p>
         </div>
 
-        <div id="box1" class="box">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam et esse nihil magnam debitis ipsum corporis, reiciendis numquam earum culpa? Non voluptatibus debitis pariatur architecto quisquam unde, quod enim eos!</p>
-            <button onclick="fechar1()">Fechar</button>
-        </div>
-        <div id="box2" class="box">
-            <p> ai ai ai ai</p>
-            <button onclick="fechar2()">Fechar</button>
-        </div>
-        <div id="box3" class="box">
-            <p>Aniduanbwdiouabhdioubaiwld</p>
-            <button onclick="fechar3()">Fechar</button>
-        </div>
+        
+
     </main>
     <footer></footer>
 </body>
