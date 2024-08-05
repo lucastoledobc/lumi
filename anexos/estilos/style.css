@@ -298,7 +298,22 @@ div.divres {
     border-radius: 3px;
 }
 
-
+/* 04 */
+.imgc {
+    aspect-ratio: 1;
+    height: 5rem;
+    margin: auto;
+}
+.imgm {
+    aspect-ratio: 16/9;
+    width: 50%;
+    margin: auto;
+}
+.imgl {
+    height: 3rem;
+    width:72%;
+    margin: auto;
+}
 
 
 /* FOOTER */
