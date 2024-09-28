@@ -8,7 +8,6 @@
 
 	Home:
 
-- icone do site (raio azul)
 - lista de exercicios do mesmo temas
 - motor de busca
 
@@ -58,7 +57,10 @@ tipo objetiva/discurssiva
 
 	Sobre:
 
-- adicionar links das redes
+
+
+
+
 
 
 

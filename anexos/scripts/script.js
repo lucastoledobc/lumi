@@ -11,6 +11,7 @@ head.innerHTML += `
 const body = document.getElementsByTagName("body");
 const header = document.getElementsByTagName("header")[0];
 header.innerHTML += `
+
         <section id="cabe">
             <div class="space"></div>
             <h1>Lumi Física</h1>
