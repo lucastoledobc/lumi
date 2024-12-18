@@ -15,6 +15,8 @@
 :root {
     --preto: #000000;
     --branco: #ffffff;
+    --fundo: #ffffff;
+    --shadow: #00000050;
 
     --cor1: #B7E8FD;
     --cor2: #5DCBFA;
@@ -30,19 +32,22 @@
     margin: 0px;
     padding: 0px;
     font-family: var(--fon2), var(--fon3), Helvetica, Arial, sans-serif;
-    font-size: 20px;
+    font-size: 1rem;
+    color: var(--preto);
+    background-color: #00000000;
 }
 
 /* GERAL */
 html {
-    background: var(--cor1) url(/anexos/midias/fundo.png) no-repeat center center;
+    background: var(--cor1) url(/anexos/midias/fundo3.png) no-repeat center center;
     background-attachment: fixed;
     background-size: cover;
 }
 body {
     margin: auto;
+    min-width: 300px;
     max-width: 1600px;
-    box-shadow: 1px 0px 20px 1px rgba(0, 0, 0, 0.486);
+    box-shadow: 0px 0px 20px 0px var(--shadow); /* x y blur-size solid-size */
 }
 h1 {
     display: flex;
@@ -54,8 +59,8 @@ h1 {
     text-align: center; /*cel*/
 
     font-family: var(--fon1);
+    color: #ffffff;
     padding: 0 5%;
-    
 }
 h2 {
     font-family: var(--fon1);
@@ -97,7 +102,7 @@ header {
 #cabe {
     display: grid;
     justify-content: center;
-    grid-template-columns: 30px 100fr 30px;
+    grid-template-columns: 3rem 100fr 3rem;
 }
 .space {
     display: flex;
@@ -105,12 +110,17 @@ header {
     align-items: start;
 }
 .icon {
-    width: 3rem;
+    width: 2rem;
     margin: auto; /* ajuste pq img tem margin diferente */
+    padding: 2px; /*controlar a borda do ícone */
     filter: invert(100%); /*preto fica branco*/
 }
 
-/* Search */
+.dark {
+    margin: 5px 5px 0 0;
+}
+
+/* Search - Caixa */
 div#search {
     position: absolute;
     top: -15%;
@@ -141,6 +151,9 @@ nav > a {
     font-weight: 600;
     color: var(--preto);
     border-radius: 9px 9px 0 0;
+    align-items: center;
+    justify-content: left;
+
 }
 nav > a:hover {
     background: var(--cor4);
@@ -177,7 +190,8 @@ nav > ul > li > a:hover {
 
 /* MAIN */
 main {
-    background-color: var(--branco);
+    background-color: var(--fundo);
+    padding-bottom: 1rem;
 }
 
 /* CONTEÚDO */
@@ -194,7 +208,9 @@ img {
     display: block;
     max-width: 100%;
     margin: auto;
-    padding: 1rem;
+}
+.img {
+    box-shadow: 2px 2px #07ADF5;
 }
 figcaption {
     font-size: 0.7rem;
@@ -305,7 +321,7 @@ div.divres {
     border-radius: 3px;
 }
 
-/* 04 */
+
 .imgc {
     aspect-ratio: 1;
     height: 5rem;
@@ -322,6 +338,12 @@ div.divres {
     margin: auto;
 }
 
+/* 05 */
+.ico5 {
+    filter: invert(0%);
+    display: inline;
+    width: 1rem;
+}
 
 /* FOOTER */
 /* FOOTER */
@@ -345,7 +367,8 @@ footer {
     font-size: 0.8rem;
     width: 100%;
     background-color: var(--cor5);
-    color: white;
+    color: branco;
     text-align: center;
     padding: 5px 0;
+    color: #ffffff;
 }
