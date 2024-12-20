@@ -2,20 +2,15 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Lumi Física</title>
-    <meta name="description" content="Site de Física para ensino básico, ensino médio e ensino superior.">
-    <link rel="shortcut icon" href="/anexos/midias/favicon.ico" type="image/x-icon">
+    
+    <title>Lumi</title>
     <link rel="stylesheet" href="/anexos/estilos/style.css" media="all">
     <script src="/anexos/scripts/script.js" defer></script>
     <style>
         #nav01 {
             background: var(--cor4);
-            color: white;
-            padding:  0.3em 0.3em;
-            transition: 0.3s;
+            color: var(--fundo);
         }
 
         .home {
@@ -23,16 +18,26 @@
             justify-content: center;
             align-items: center;
 
-            height: 50vh;
-            max-height: 500px;
-
-            font-family: DynaPuff;
-            color: #0EA5FF;
-        }
-
-        main > p {
             font-size: clamp(50px, 13vw, 150px);
+            height: 40vh;
+
+            font-family: var(--fon1);
+            color: var(--cor3);
         }
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--cor5);
+        }
+
+        icon {
+            font-family: var(--fon1);
+            font-weight: 600;
+        } /* inventei, ta ali embaixo */
+
+        
 
         main > section > ul > li {
             display: flex;
@@ -46,16 +51,18 @@
             max-width: 400px;
             text-align: center;
         }
-
+        
     </style>
 </head>
 <body>
-    <header></header>
-    <main>    
-        <p class="home">
-            Bem-vindo
-        </p>
-        <h3>Links abaixo</h3>
+    <header></header>    
+    <main>
+        <p class="home">Bem-vindo</p>
+        <div>
+            <icon>vvv</icon>
+            <h2>Links abaixo</h2>
+            <icon>vvv</icon>
+        </div>
         <section>
             <ul>
                 <li><a href="01/trilha/00.html" class="botao">"Não sei nada de Física"<h3>Clique aqui</h3></a></li>

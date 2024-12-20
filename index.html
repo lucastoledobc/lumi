@@ -2,77 +2,81 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Lumi</title>
-    <link rel="stylesheet" href="/anexos/estilos/style.css" media="all">
-    <script src="/anexos/scripts/script.js" defer></script>
+    <link rel="shortcut icon" href="anexos/midias/favicon-32x32.png" type="image/x-icon">
+    <title>Start</title>
     <style>
-        #nav01 {
-            background: var(--cor4);
-            color: var(--fundo);
+        * {
+            margin: 0px;
+            padding: 0px;
+            text-decoration: none;
+            background-position: center center;
+            background-size: cover;
         }
-
-        .home {
+        body {
+            background-color: black;
             display: flex;
+            vertical-align: center;
             justify-content: center;
-            align-items: center;
 
-            font-size: clamp(50px, 13vw, 150px);
-            height: 40vh;
-
-            font-family: var(--fon1);
-            color: var(--cor3);
+        }
+        .portal {
+            animation: por2tal 2s linear infinite;
+        }
+        @keyframes portal {
+            0% {transform: rotate(0deg);}
+            100% {transform: rotate(360deg);}
+            
         }
 
-        div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: var(--cor5);
+        .fundopreto {
+            animation: buraco 2s linear forwards;
         }
-
-        icon {
-            font-family: var(--fon1);
-            font-weight: 600;
-        } /* inventei, ta ali embaixo */
-
+        @keyframes buraco {
+            0% {opacity: 0;}
+            100% {opacity: 100;}
+        }
         
 
-        main > section > ul > li {
-            display: flex;
-            flex-wrap: wrap;
-            width: 70vh;
-            max-width: 400px;
-            margin: auto;
+        a {
+            position: absolute;
+            top: 80%;
+            font-size: 4rem;
+            padding: 2px 8px;
+            border: 2px solid #ffffff;
+            border-radius: 1rem;
+
+            opacity: 0;
+            color: rgba(255, 255, 255, 1);
         }
-        main > section > ul > li > a {
-            width: 80vh;
-            max-width: 400px;
-            text-align: center;
+        .a1 {
+            animation: ani1 2s linear forwards; 
+            animation-delay: 1s; 
+
         }
-        
+        .a2 {   
+            opacity: 0;         
+            animation: ani2 1.4s linear infinite; 
+            animation-delay: 2.7s; 
+        }
+
+        @keyframes ani1 {
+            0% {opacity: 0;}
+            50% {opacity: 1;}
+            100% {opacity: 0;}
+        }
+        @keyframes ani2 {
+            0% {opacity: 0.3;}
+            40% {opacity: 1;}
+            60% {opacity: 1;}
+            100% {opacity: 0.3;}
+        }
     </style>
 </head>
 <body>
-    <header></header>    
-    <main>
-        <p class="home">Bem-vindo</p>
-        <div>
-            <icon>vvv</icon>
-            <h2>Links abaixo</h2>
-            <icon>vvv</icon>
-        </div>
-        <section>
-            <ul>
-                <li><a href="01/trilha/00.html" class="botao">"Não sei nada de Física"<h3>Clique aqui</h3></a></li>
-                <li><a href="#" id="random" onclick="random()" class="botao">Curiosidade do dia</a></li>
-                <li><a href="" class="botao"  onclick="lupa()">Pesquise sua questão</a></li>
-                <li><a href="" class="botao">Monte sua lista de exercícios</a></li>
-            </ul>
-        </section>
-    </main>
-    <footer></footer>
+    <img class="portal"src="anexos/midias/magic-portal-8836944_1280.jpg" alt="">
+    <img class="fundopreto"src="anexos/midias/img.png" alt="">
+    <a href="/01/" class="a1">PLAY</a>
+    <a href="/01/" class="a2">PLAY</a>
 </body>
 </html>

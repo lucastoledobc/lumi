@@ -2,12 +2,9 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Sobre</title>
-    <meta name="description" content="Site de Física para ensino básico, ensino médio e ensino superior.">
-    <link rel="shortcut icon" href="/anexos/midias/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/anexos/estilos/style.css" media="all">
     <script src="/anexos/scripts/script.js" defer></script>
     <style>
@@ -15,12 +12,18 @@
             background: var(--cor4);
             color: var(--fundo);
         }
-        img {
-            width: 200px;
+
+        .link {
+            display: flex;
+            max-width: fit-content;
+            padding: 2px 8px;
+            border: 2px solid var(--preto);
             border-radius: 5px;
-            margin: auto;
-            padding: 0;
         }
+        .a {
+            text-decoration: underline;
+        }
+        
     </style>
 </head>
 <body>
@@ -32,11 +35,16 @@
         <p>(Esse email também é uma chave pix caso queira ajudar a manter o site)</p>
         <p>(Desesativando o adblock também me ajuda bastante)</p>
         <br>
-        <h3><a href="https://linktr.ee/lumifisica">Outros sites: </a></h3>
-        <p><a href="https://www.youtube.com/@LumiFisica" target="_blank"><img class="ico5" src="/anexos/midias/icon-youtube.svg" alt="Canal do Youtube" target="_blank">Youtube</a></p>
-        <p><a href="https://www.tiktok.com/@lumifisica?lang=pt-BR"><img class="ico5" src="/anexos/midias/icon-tiktok.svg" alt="Canal do Youtube">TikTok</a></p>
-        <p><a href="https://www.instagram.com/lumifisica/" target="_blank"><img class="ico5" src="/anexos/midias/icon-instagram.svg" alt="Canal do Youtube">Instagram</a></p>
+
+        <h3><a href="https://linktr.ee/lumifisica" target="_blank" class="a">Outros sites: </a></h3>
+
+        <p><a class="link" href="https://www.youtube.com/@LumiFisica" target="_blank"><img class="ico5" src="/anexos/midias/icon-youtube.svg" alt="Canal do Youtube" target="_blank">Youtube</a></p>
+
+        <p><a class="link" href="https://www.tiktok.com/@lumifisica?lang=pt-BR" target="_blank"><img class="ico5" src="/anexos/midias/icon-tiktok.svg" alt="Canal do Youtube">TikTok</a></p>
+
+        <p><a class="link" href="https://www.instagram.com/lumifisica/" target="_blank"><img class="ico5" src="/anexos/midias/icon-instagram.svg" alt="Canal do Youtube">Instagram</a></p>
         <br>
+
         <h3>Sobre mim</h3>
         <p>
             Olá, meu nome é Lucas Toledo, sou professor de Física (e acho que outras coisas também).
@@ -45,7 +53,7 @@
             Esse projeto começou com uma vontade natural e inexplicavél que tenho de ensinar. Fui formado pela UERJ<sup>❤</sup> e posso dizer que trabalho profissionalmente com ensino de Física desde 2014. Sempre pensei na parte divertida de aprender e notava como isso contagiava os alunos desde sempre.
         </p>
         <p>
-            Ainda que tivesse tanto carinho e vontade pelo ensino de Física, uma nuvem negra me assombrava que era "<a href="#">Por que ensinar Física?</a>". Foram anos depois, nas minhas aulas de mestrado, que eu consegui obter uma resposta satisfatória (e escrevo sobre ela <a href="#">aqui</a>). Hoje consigo ver a educação como uma ação transformadora e peça fundamental para a formação de cidadãos.
+            Ainda que tivesse tanto carinho e vontade pelo ensino de Física, uma nuvem negra me assombrava que era "Por que ensinar Física?". Foram anos depois, nas minhas aulas de mestrado, que eu consegui obter uma resposta satisfatória (e escrevo sobre ela <a href="#" class="a">aqui</a>). Hoje consigo ver a educação como uma ação transformadora e peça fundamental para a formação de cidadãos.
         </p>
         <p>
             Mas para mim ainda faltava uma peça final. Em 2023 passei por uma "crise" onde fiquei desempregado e decidi mudar de área, que foi a programação. Graças a essa mudança, esse projeto pode ganhar vida e estou extremamente feliz e orgulhoso com o resultado. Espero que esse site seja útil, divertido e te ajude na sua formação.
