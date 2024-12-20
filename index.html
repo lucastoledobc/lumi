@@ -6,42 +6,116 @@
     <link rel="shortcut icon" href="anexos/midias/favicon-32x32.png" type="image/x-icon">
     <title>Start</title>
     <style>
+        @font-face {
+            font-family: DynaPuff;
+            src: url(anexos/estilos/fonts/DynaPuff-VariableFont_wdth\,wght.ttf);
+        }
         * {
             margin: 0px;
             padding: 0px;
             text-decoration: none;
-            background-position: center center;
-            background-size: cover;
+            overflow: hidden;
+            color: #ffffff;
+            max-height: 100svh;
         }
         body {
             background-color: black;
             display: flex;
-            vertical-align: center;
-            justify-content: center;
-
+            align-items: center;
+            justify-content: center; /*horizontal*/
+            width: 100vw;
+            max-width: 100svw;
+            height: 100vh;
+            
         }
         .portal {
-            animation: por2tal 2s linear infinite;
+            background: black url(anexos/midias/portal.png) no-repeat center;
+            background-size: cover;
+ 
+            position: absolute;
+            width: 100vh;
+            height: 100vh;
+            animation: portal 3s linear infinite;
         }
         @keyframes portal {
             0% {transform: rotate(0deg);}
             100% {transform: rotate(360deg);}
-            
         }
-
-        .fundopreto {
+        .buraco {
+            background: rgba(255, 255, 255, 0) url(anexos/midias/img.png) no-repeat center;
+            background-size: cover;
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
             animation: buraco 2s linear forwards;
         }
         @keyframes buraco {
+            0% {background-color: #000000;}
+            100% {background-color: #00000000;}
+        }
+        
+        
+
+        .texto {
+            position: absolute;
+            width: 100vw;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+        .div1, .div2 {
+            opacity: 0;
+            text-align: center;
+            margin: auto;
+            min-height: 20vh;
+            
+            animation: opaco 3s linear forwards;
+            animation-delay: 1s;
+        }        
+
+        #h1 {
+            display: inline-block;
+            font-family: DynaPuff;
+            font-size: clamp(5rem,10vw,20vh);
+            font-weight: bolder;
+        }
+        @keyframes opaco {
             0% {opacity: 0;}
             100% {opacity: 100;}
         }
-        
+        .h1, .h5, .h9 {
+            animation: poping 1.5s linear infinite;
+            animation-delay: 0s;
+        }
+        .h2, .h6, .h10 {
+            animation: poping 1.5s linear infinite;
+            animation-delay: 0.33s;
+        }
+        .h3, .h7 {
+            animation: poping 1.5s linear infinite;
+            animation-delay: 0.66s;
+        }
+        .h4, .h8 {
+            animation: poping 1.5s linear infinite;
+            animation-delay: 1s;
+        }
+        @keyframes poping {
+            0% {
+                translate: 0 10px;
+            }
+            50% {
+                translate: 0 -20px;
+            }
+            100% {
+                translate: 0 10px;
+            }
+        }
+
+
 
         a {
             position: absolute;
             top: 80%;
-            font-size: 4rem;
+            font-size: clamp(3rem,5vw,10vh);
             padding: 2px 8px;
             border: 2px solid #ffffff;
             border-radius: 1rem;
@@ -62,7 +136,8 @@
 
         @keyframes ani1 {
             0% {opacity: 0;}
-            50% {opacity: 1;}
+            40% {opacity: 1;}
+            60% {opacity: 1;}
             100% {opacity: 0;}
         }
         @keyframes ani2 {
@@ -74,9 +149,25 @@
     </style>
 </head>
 <body>
-    <img class="portal"src="anexos/midias/magic-portal-8836944_1280.jpg" alt="">
-    <img class="fundopreto"src="anexos/midias/img.png" alt="">
-    <a href="/01/" class="a1">PLAY</a>
-    <a href="/01/" class="a2">PLAY</a>
+    <div class="portal"></div>
+    <div class="buraco"></div>
+    <div class="texto">
+        <div class="div1">
+            <div id="h1" class="h1">L</div id="h1"> 
+            <div id="h1" class="h2">U</div id="h1"> 
+            <div id="h1" class="h3">M</div id="h1" class="h4"> 
+            <div id="h1" class="h4">I</div id="h1">
+        </div>
+        <div class="div2">
+            <div id="h1" class="h5">F</div id="h1">
+            <div id="h1" class="h6">í</div id="h1"> 
+            <div id="h1" class="h7">s</div id="h1"> 
+            <div id="h1" class="h8">i</div id="h1"> 
+            <div id="h1" class="h9">c</div id="h1"> 
+            <div id="h1" class="h10">a</div id="h1">
+        </div>
+    </div>
+    <a href="/01/" class="a1">START</a>
+    <a href="/01/" class="a2">START</a>
 </body>
 </html>
