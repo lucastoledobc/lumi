@@ -6,7 +6,7 @@
 
 - criar estatistica do temas que caem no vestibular
 
-	Home:
+-> Home:
 
 - lista de exercicios do mesmo temas
 - motor de busca
@@ -16,9 +16,15 @@
 - links de diferentes explicações e feedback do aluno
 
 
-    Pratique:
+-> Pratique:
 
 - pular entre as questoes
+
+- botoes para as respostas: (stick para celular)
+
+simples completa vídeo (vertical/horizontal)
+
+
 
 
 UNIVERSIDADE  UF  ANO  DIA
@@ -30,7 +36,7 @@ NÍVEL TIPO GRÁFICO TEORICA/CONTA
 tipo objetiva/discurssiva
 
 
-	Games:
+-> Games:
 
 - jogo da balança
 - dioptro plano - mexer no angulo e no indice de refração
@@ -38,8 +44,9 @@ tipo objetiva/discurssiva
 
 	Artigos:
 - o que é umidade, copo suado
+- que horas é no polo norte/sul
 
--> Categorias:
+    Categorias:
 	Tipo:
 		educação
 		sequência didática
@@ -50,12 +57,14 @@ tipo objetiva/discurssiva
     - recomendar artigos de um para o outro e em temas do conteúdo também.
         colocar uma tag mulheres para deixar um sistema automatico sobre as historias das mulheres no dia/seman das mulheres
 
+        -fases da lua: que horas são no polo norte?
+
 2. experimentos:
 
 
 
 
-	Sobre:
+-> Sobre:
 
 
 

@@ -37,7 +37,12 @@
     background-color: #00000000;
 }
 
+
+
 /* GERAL */
+/* GERAL */
+/* GERAL */
+
 html {
     background: var(--cor1) url(/anexos/midias/fundo3.png) no-repeat center center;
     background-attachment: fixed;
@@ -74,10 +79,12 @@ h3 {
     font-size: 1rem;
     padding: 0.5em;
 }
+
 p {
     padding: 10px 20px;
     text-align: justify;
     text-indent: 1rem;
+    color: var(--preto);
 }
 a {
     text-decoration: none;
@@ -87,13 +94,19 @@ a {
 ul {
     list-style:none;
 }
+
 button {
     background: none;
     border: none;
     cursor: pointer;
 }
 
+
+
 /* HEADER */
+/* HEADER */
+/* HEADER */
+
 header {
     background-color: var(--cor3);
     color: var(--branco);
@@ -152,6 +165,7 @@ nav > a {
     border-radius: 9px 9px 0 0;
     align-items: center;
     justify-content: left;
+    color: var(--preto);
 
 }
 nav > a:hover {
@@ -165,29 +179,12 @@ nav > a:hover {
     background-color: var(--cor4);
 }
 
-/* NAV 3 */
-nav > ul > li > a {
-    display: block;
-    height: 20px;
-    padding: 5px;
-    background-color: var(--cor3);
-    color: var(--branco);
-    text-decoration: none;
 
-}
-
-nav > ul > li > a:hover {
-    display: block;
-    height: 20px;
-    padding: 5px;
-    background-image: linear-gradient(to bottom, var(--cor1),var(--cor3));
-    color: var(--branco);
-    text-decoration: none;
-    border-radius: 0px 150px 0 0;
-    transition: 0.5s;
-} 
 
 /* MAIN */
+/* MAIN */
+/* MAIN */
+
 main {
     background-color: var(--fundo);
     padding-bottom: 1rem;
@@ -339,12 +336,47 @@ div.divres {
     margin: auto;
 }
 
-/* 05 */
-.ico5 {
-    filter: invert(0%);
-    display: inline;
-    width: 1rem;
+
+
+/* 01 */
+
+
+
+/* 02 */
+
+
+
+/* 03 */
+
+/* NAV 3 */
+nav > ul > li > a {
+    display: block;
+    height: 20px;
+    padding: 5px;
+    background-color: var(--cor3);
+    color: var(--branco);
+    text-decoration: none;
+
 }
+
+nav > ul > li > a:hover {
+    display: block;
+    height: 20px;
+    padding: 5px;
+    background-image: linear-gradient(to bottom, var(--cor1),var(--cor3));
+    color: var(--branco);
+    text-decoration: none;
+    border-radius: 0px 150px 0 0;
+    transition: 0.5s;
+} 
+
+
+
+
+/* 05 */
+
+
+
 
 /* FOOTER */
 /* FOOTER */
