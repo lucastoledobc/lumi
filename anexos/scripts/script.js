@@ -48,7 +48,7 @@ nav1.innerHTML = `
 let footer = document.getElementsByTagName("footer")[0];
 footer.innerHTML = `Site criado por Lucas Toledo.`;
 
-/*  */
+/* MODO ESCURO */
 
 let root = document.querySelector(':root');
 root.style.setProperty('--branco', '#ffffff');

@@ -3,126 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/anexos/estilos/game.css">    
+    <script src="/anexos/scripts/game.js" defer></script>
     
     <title>Cores</title>
-    <link rel="stylesheet" href="/anexos/estilos/game.css">
-    <script src="/anexos/scripts/game.js" defer></script>
-    <style>
-        main {
-            height: 100%;
+    <meta name="description" content="Combinação de cores primárias RGB.">
+
+    <style>        
+        main > section {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
         }
         
-        section {
-            top: 20%;
+        .top {
+            height: 15svh;
         }
-        .espectro {
-            aspect-ratio: 16/2;
-            width: 66%;
-            /* height: 10%; */
-            border: 2px solid white;
+        .botao {
+            background-color: var(--trans);
+            color: var(--branco);            
+            font-size:  clamp(1rem,7vh,9vw);
             border-radius: 5px;
-            padding: 10px;
-            margin: auto;
-            position: relative;
-
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            gap: 5px;
-        }
-        .led {
-            width: 100%;
-            height: 100%;
+            padding: 0.1rem 1rem;
         }
 
-        .lampadas {
-            position: relative;
-            height: 40%;
-            border: 1px solid red;
+        .mid {
+            height: 25svh;
+        }
+        #barra {
+            height: 10svh;
+            width: 80%;
+            border: clamp(1px,0.4vh,1vw) solid var(--branco);
+            border-radius: 5px;
 
+            background: linear-gradient(to right,
+                rgb(var(--verm), 0, 0),
+                rgb(var(--verm), 0, 0),
+                rgb(var(--verm), var(--verd2), 0),
+                rgb(var(--verm), var(--verd), 0),
+                rgb(var(--verm2), var(--verd), 0),
+                rgb(0, var(--verd), 0),
+                rgb(0, var(--verd), var(--azul2)),
+                rgb(0, var(--verd), var(--azul)),
+                rgb(0, var(--verd2), var(--azul)),
+                rgb(0, 0, var(--azul)),
+                rgb(0,0,var(--azul))
+                );
         }
-                
-        .botoes {
-            position: relative;
-            height: 20%;
-            border: 1px solid red;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
+        #roda {
+            aspect-ratio: 1;
+            height: 25svh;
+            border: 3px solid var(--branco);
+            border-radius: 50%;
+            background: conic-gradient(
+                rgb(var(--verm), 0, 0),
+                rgb(var(--verm), var(--verd2), 0),
+                rgb(var(--verm), var(--verd), 0),
+                rgb(var(--verm2), var(--verd), 0),
+                rgb(0, var(--verd), 0),
+                rgb(0, var(--verd), var(--azul2)),
+                rgb(0, var(--verd), var(--azul)),
+                rgb(0, var(--verd2), var(--azul)),
+                rgb(0, 0, var(--azul)),
+                rgb(var(--verm2),0,var(--azul)),
+                rgb(var(--verm),0,var(--azul)),
+                rgb(var(--verm),0,var(--azul2)),
+                rgb(var(--verm), 0, 0)
+                );
         }
-
-        input {
-            display: none;            
+        
+        .bot {
+            height: 20svh;
+            margin-top: 10svh;
         }
-        label {
-            aspect-ratio: 1/1;
-            height: 50%;
-            border: 3px outset black;
+        .luz {
+            aspect-ratio: 1;
+            width: 25%;
+            max-width: 30svh;
             border-radius: 50%;
         }
-
-        label:hover {
-            background-color: rgba(187, 187, 187, 0.404);
-            cursor: pointer;
-            transition: 0.2s;
+        #lred {
+            background: conic-gradient(
+                rgb(var(--verm),0,0) 30deg, 
+                var(--trans) 30deg 330deg,
+                rgb(var(--verm),0,0) 330deg
+            );
+        }
+        #lgre {
+            background: conic-gradient(
+                rgb(0,var(--verd),0) 30deg, 
+                var(--trans) 30deg 330deg,
+                rgb(0,var(--verd),0) 330deg
+            );
+            
+        }
+        #lblu {
+            background: conic-gradient(
+                rgb(0,0,var(--azul)) 30deg, 
+                var(--trans) 30deg 330deg,
+                rgb(0,0,var(--azul)) 330deg
+            );
+        }
+        
+        
+        .range {
+            width: 15svw;
         }
 
-        label:active {
-            background-color: rgba(223, 223, 0, 0.062);
-            transition: 0.1s;
+        @media (orientation: portrait) {
+            .bot {
+            height: 15svh;
+            margin-top: 5svh;
+            }
+            .luz {
+                aspect-ratio: 1;
+                width: 15svh;
+                border-radius: 50%;
+                margin: 0 -10vh;
+            }
+            .range {
+                width: 100%;
+                max-width: 20svh;
+                rotate: -90deg;
+            }
+            .bot2 {
+                height: 15vh;
+            }
         }
-        label:checked {
-            background-color: aliceblue;
-        }
-        .cred {
-            background-color: rgb(255, 0, 0);
-        }
-        .cgreen {
-            background-color: rgb(0, 255, 0);
-        }
-        .cblue {
-            background-color: rgb(0, 0, 255);
-        }
+
     </style>
 </head>
 <body>
     <h1>Cores</h1>
     <main>
-        <section class="espectro">
-            <!-- <div class="led" id="rosa" style="background-color:rgb(255, 0, 255)"></div> -->
-            <div class="led" id="red" style="background-color: rgb(255, 0, 0);"></div>
-            <div class="led" id="orange" style="background-color: rgb(255, 127, 0);"></div>
-            <div class="led" id="yellow" style="background-color: rgb(255, 255, 0);"></div>
-            <div class="led" id="lima" style="background-color: rgb(127, 255,0);"></div>
-            <div class="led" id="green" style="background-color: rgb(0, 255, 0);"></div>
-            <div class="led" id="aqua" style="background-color: rgb(0, 255, 127);"></div>
-            <div class="led" id="ciano" style="background-color: rgb(0, 255, 255);"></div>
-            <div class="led" id="azul" style="background-color: rgb(0, 127, 255);"></div>
-            <div class="led" id = "blue" style="background-color: rgb(0, 0, 255);"></div>
-            <!-- <div class="led" id="roxo" style="background-color: rgb(127, 0, 255);"></div> -->
+        <section class="top">
+            <button class="botao" onclick="fechar1()">Linear</button>
+            <button class="botao" onclick="fechar2()">Círculo</button>                             
         </section>
-        <section class="lampadas">aew
-            <div id="lred"></div>
-            <div id="lgreen"></div>
-            <div id="lblue"></div>
+        <section class="mid">
+            <div id="barra"></div>
+            <div id="roda"></div>
         </section>
-        <section class="botoes">
-            <input type="checkbox" name="cred" id="cred" value="0">
-            <label for="cred" class="cred" value="0"></label>
-            <input type="checkbox" name="cgreen" id="cgreen">
-            <label for="cgreen" class="cgreen"></label>
-            <input type="checkbox" name="cblue" id="cblue">
-            <label for="cblue" class="cblue"></label>
+        <section class="bot">  
+            <div class="luz" id="lred"></div>
+            <div class="luz" id="lgre"></div>
+            <div class="luz" id="lblu"></div>
         </section>
+        <section class="bot2">
+            <input type="range" class="range" value="255" min="1" max="255" name="rred" id="rred">
+            <input type="range" class="range" value="255" min="1" max="255" name="rgre" id="rgre">            
+            <input type="range" class="range" value="255" min="1" max="255" name="rblu" id="rblu">
+        </section>        
     </main>
-    <section id="menu">
-            
-    </section>
+    
     <section id="icones"></section>
 </body>
 
 <script>
-    
+    //botao
+    let roda = document.getElementById('roda');
+    let barra = document.getElementById('barra');
+    roda.style.display = 'none';
+    function fechar1() {
+        roda.style.display = 'none';
+        barra.style.display = 'block';
+    }
+    function fechar2() {
+        barra.style.display = 'none';
+        roda.style.display = 'block';
+    }
+
+    // ranges
+    let main = document.querySelector('main');
+    main.style.setProperty('--verm', 255);
+    main.style.setProperty('--verm2', 255/2);
+    main.style.setProperty('--verd', 255);
+    main.style.setProperty('--verd2', 255/2);
+    main.style.setProperty('--azul', 255);
+    main.style.setProperty('--azul2', 255/2);
+
+    let rred = document.getElementById('rred');
+    rred.addEventListener("input", (event) => {
+        main.style.setProperty('--verm', rred.value);
+        main.style.setProperty('--verm2', rred.value/2);
+    })
+    let rgre = document.getElementById('rgre');
+    rgre.addEventListener("input", (event) => {
+    main.style.setProperty('--verd', rgre.value);
+    main.style.setProperty('--verd2', rgre.value/2);
+    })
+    let rblu = document.getElementById('rblu');
+    rblu.addEventListener("input", (event) => {
+    main.style.setProperty('--azul', rblu.value);
+    main.style.setProperty('--azul2', rblu.value/2);
+    })
 </script>
 
 </html>
