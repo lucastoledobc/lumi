@@ -9,21 +9,24 @@ head.innerHTML += `
 
     //BOTOES
 
-let botoes = document.getElementById('icones')
-botoes.innerHTML = `      
+let botoes = document.getElementById('botoes')
+botoes.innerHTML = `
     <button type="button" id="back" class="button">
         <a href="/03/"> 
         <img src="/anexos/midias/icon-back.svg" id="iback" class="icon" alt="Voltar">
         </a>
     </button>
-    <button type="button" onclick="info()" id="info" class="button">
-        <img src="/anexos/midias/icon-info.svg" id="iinfo" class="icon" alt="Informação" >
-    </button>
-    <div class="warn" id="warn">
-    </div>
-    <button type="button" onclick="dark()" id="dark" class="button">
+
+    <div class="warn" id="warn"></div>
+
+    <button type="button" id="dark" class="button" onclick="dark()">
         <img src="/anexos/midias/icon-dark1.svg" id="idark" class="icon" alt="Modo escuro">
     </button>
+
+    <button type="button" id="info" class="button" onclick="info()">
+        <img src="/anexos/midias/icon-info.svg" id="iinfo" class="icon" alt="Informação">
+    </button>
+
     <button type="button" id="maxi" class="button">
         <img src="/anexos/midias/icon-maxi.svg"id="imaxi" class="icon" onclick="maxi()" alt="Maximizar" >
     </button>
@@ -31,40 +34,89 @@ botoes.innerHTML = `
 
     // WARNING
 
-let war = document.getElementById("warn");
-war.innerHTML = `
+let warn = document.getElementById("warn");
+warn.innerHTML = `
     Caso esteja tendo problemas desative o adblock, pode ajudar.
     Para outros casos você pode me mandar uma mensagem descrevendo o problema abaixo.
     <form action="">
-        <label for="msg">Mensagem:</label><br>
         <input type="text" value="" placeholder="Descreva o problema aqui...">
     </form>
+    <button type="button" id="enviar">Enviar</button>
 `;
-
-
+warn.style.opacity = '0';
+warn.style.right = '0%';
+warn.style.visibility = 'collapse';
 
     // FUNÇÕES BOTÕES
-
-// BACK
-
-// document.getElementById("back").addEventListener("click", () => {
-//     history.back();
-// });
       
 // INFO
 
 function info() {
-    let img = document.getElementById("info");
-    if (warn.style.display != 'block') {
-        warn.style.display = 'block';
-        img.innerHTML = `
-        <img src="/anexos/midias/icon-close.svg" id="iinfo" class="icon" alt="Informação">
+    let info = document.getElementById('info');
+    let dark = document.getElementById('dark');
+
+    if (warn.style.opacity == '0') {
+        warn.style.visibility = 'visible';
+        warn.style.opacity = '100';
+        warn.style.right = 'clamp(1rem, 12vw, 6vh)';
+        warn.style.transition = '1s';
+
+        info.innerHTML = `
+        <img src="/anexos/midias/icon-close.svg" id="iinfo" class="icon" alt="Fechar">
         `;
+        
+        dark.style.top = 'clamp(2rem,12vw,6vh)';
+        dark.style.opacity = '100';
+        dark.style.transition = '1s';
+
+        let iinfo = document.getElementById('iinfo'); /* tem que ficar aqui dentro */
+        if (vdark==1) {
+            iinfo.style.filter = 'invert(100%)';
+        } else {
+            iinfo.style.filter = 'invert(0%)';
+        }
     } else {
-        warn.style.display = 'none';
-        img.innerHTML = `
+        warn.style.opacity = '0';
+        warn.style.right = '0%';
+        warn.style.transition = '1s';
+        warn.style.visibility = 'collapse';
+        
+        info.innerHTML = `
         <img src="/anexos/midias/icon-info.svg" id="iinfo" class="icon" alt="Informação">
         `;
+
+        dark.style.top = '10px';
+        dark.style.opacity = '0';
+        dark.style.transition = '1s';
+        if (vdark==1) {
+            iinfo.style.filter = 'invert(100%)';
+        } else {
+            iinfo.style.filter = 'invert(0%)';
+        }
+    }
+}
+
+// MODO ESCURO
+
+let root = document.querySelector(':root');
+let icon = document.getElementsByClassName('icon');
+let vdark = 1;
+
+function dark() {
+    if (getComputedStyle(root).getPropertyValue('--branco') == '#ffffff') {
+        root.style.setProperty('--branco', '#000000');
+        root.style.setProperty('--preto', '#ffffff');
+        for (let i = 0; i < icon.length; i++) {
+            console.dir(icon[i].style.filter = 'invert(0%)');
+        }
+        vdark = 0;
+    } else {
+        root.style.setProperty('--branco', '#ffffff');
+        root.style.setProperty('--preto', '#000000');
+        for (let i = 0; i < icon.length; i++) {
+            console.dir(icon[i].style.filter = 'invert(100%)');
+        }
+        vdark = 1;
     }
 }
 
@@ -105,27 +157,8 @@ function mini() {
     }
 } 
 
-// MODO ESCURO
+// BACK
 
-let root = document.querySelector(':root');
-let icon = document.getElementsByClassName('icon');
-for (let i = 0; i < icon.length; i++) {
-    console.dir(icon[i].style.filter = 'invert(100%)');
-}
-
-function dark() {
-    if (getComputedStyle(root).getPropertyValue('--branco') == '#ffffff') {
-        root.style.setProperty('--branco', '#000000');
-        root.style.setProperty('--preto', '#ffffff');
-        for (let i = 0; i < icon.length; i++) {
-            console.dir(icon[i].style.filter = 'invert(0%)');
-        }
-    } else {
-        root.style.setProperty('--branco', '#ffffff');
-        root.style.setProperty('--preto', '#000000');
-        for (let i = 0; i < icon.length; i++) {
-            console.dir(icon[i].style.filter = 'invert(100%)');
-        }
-    }
-}
-
+// document.getElementById("back").addEventListener("click", () => {
+//     history.back();
+// });
