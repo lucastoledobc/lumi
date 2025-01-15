@@ -9,20 +9,48 @@
     <title>Equilíbrio</title>
     <meta name="description" content="Nesse jogo descubra o peso necessário para manter o equilíbrio.">
     <style>
-        
+        body {
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            background-image: url(/anexos/midias/fundo-casa-vermelho.svg);
+        }
+        .nivel {
+            position: absolute;
+            top: 20%;
+            left: 10%;
+        }
 
     </style>
 </head>
 <body>
     <h1>Equilíbrio</h1>
-    <main>
-        
-    </main>
+    <main>        
+    </main>    
+    <nav class="nivel">
+        <select name="nivel" id="nivel">
+            <option value="1">Nível 1</option>
+            <option value="2">Nível 2</option>
+            <option value="3">Nível 3</option>
+        </select>
+    </nav>
+    <section id="menu"></section>
     <section id="botoes"></section>
 </body>
 
 <script>
-    
+    select = document.getElementById("nivel");
+    select.addEventListener("click", function() {
+        if (select.value == 1) {
+            document.body.style.backgroundImage = 'url(/anexos/midias/fundo-casa-vermelho.svg)';
+        }
+        else if (select.value == 2) {
+            document.body.style.backgroundImage = 'url(/anexos/midias/fundo-casa-amarelo.svg)';
+        } 
+        else if (select.value == 3) {
+            document.body.style.backgroundImage = 'url(/anexos/midias/fundo-casa-verde.svg)';
+        }
+    })
 </script>
 
 </html>

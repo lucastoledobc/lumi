@@ -156,9 +156,9 @@
             <div class="luz" id="lblu"></div>
         </section>
         <section class="bot2">
-            <input type="range" class="range" value="255" min="1" max="255" name="rred" id="rred">
-            <input type="range" class="range" value="255" min="1" max="255" name="rgre" id="rgre">            
-            <input type="range" class="range" value="255" min="1" max="255" name="rblu" id="rblu">
+            <input type="range" class="range" value="0" min="1" max="255" name="rred" id="rred">
+            <input type="range" class="range" value="0" min="1" max="255" name="rgre" id="rgre">            
+            <input type="range" class="range" value="0" min="1" max="255" name="rblu" id="rblu">
         </section>        
     </main>
     <section id="botoes"></section>
@@ -180,12 +180,17 @@
 
     // ranges
     let main = document.querySelector('main');
-    main.style.setProperty('--verm', 255);
-    main.style.setProperty('--verm2', 255/2);
-    main.style.setProperty('--verd', 255);
-    main.style.setProperty('--verd2', 255/2);
-    main.style.setProperty('--azul', 255);
-    main.style.setProperty('--azul2', 255/2);
+    main.style.setProperty('--verm', 0);
+    main.style.setProperty('--verm2', 0/2);
+    main.style.setProperty('--verd', 0);
+    main.style.setProperty('--verd2', 0/2);
+    main.style.setProperty('--azul', 0);
+    main.style.setProperty('--azul2', 0/2);
+
+    document.body.addEventListener("click", (event) => {
+        rred.value= 255;
+        rred.style.transition = '3s';
+    })
 
     let rred = document.getElementById('rred');
     rred.addEventListener("input", (event) => {

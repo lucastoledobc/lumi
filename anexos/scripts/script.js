@@ -1,15 +1,13 @@
 // Head
 
-const head = document.getElementsByTagName("head")[0];
-head.innerHTML += `
+document.head.innerHTML += `
     <meta name="description" content="Site de Física para ensino básico, ensino médio e ensino superior.">
     <link rel="shortcut icon" href="/anexos/midias/favicon-32x32.png" type="image/x-icon">
     `;
 
 // Header
-const body = document.getElementsByTagName("body");
 const header = document.getElementsByTagName("header")[0];
-header.innerHTML += `        
+header.innerHTML += `
         <section id="cabe">
             <div class="space">
                 <button type="submit" onclick="dark()" id="dark" class="dark">
@@ -45,7 +43,7 @@ nav1.innerHTML = `
 `;
     
 // Footer (criar ad aqui)
-let footer = document.getElementsByTagName("footer")[0];
+const footer = document.getElementsByTagName("footer")[0];
 footer.innerHTML = `Site criado por Lucas Toledo.`;
 
 /* MODO ESCURO */
