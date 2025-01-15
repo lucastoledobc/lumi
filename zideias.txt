@@ -8,12 +8,11 @@ FAZER:
 
 -> 02 Conteudo:
 
-- simples completa vídeo (vertical/horizontal)
+- simples - completa - vídeo (vertical/horizontal)
 
 
 -> 03 Games:
 
-- dioptro plano - mexer no angulo e no indice de refração
 
 
 -> 04 Artigos:

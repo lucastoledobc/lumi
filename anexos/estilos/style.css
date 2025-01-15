@@ -179,7 +179,11 @@ nav > a:hover {
     background-color: var(--cor4);
 }
 
-
+/* NAV2 */
+#nav2 {
+    background-color: linear-gradient(var(--cor1), var(--cor3));
+    display: flex;
+}
 
 /* MAIN */
 /* MAIN */
