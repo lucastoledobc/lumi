@@ -1,10 +1,33 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: DynaPuff;
+    src: url(fonts/DynaPuff-VariableFont_wdth\,wght.ttf);
+}
+@font-face {
+    font-family: EBGaramond;
+    src: url(fonts/EBGaramond-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Lato;
+    src: url(fonts/Lato-Regular.ttf);
+}
+
 :root {
     --preto: #000000;
     --branco: #ffffff;
     --trans:#00000000;
     --bm: 0.5vw;
+
+    --cor1: #B7E8FD;
+    --cor2: #5DCBFA;
+    --cor3: #07ADF5;
+    --cor4: #056F9C;
+    --cor5: #023145;
+
+    --fon1: DynaPuff;
+    --fon2: EBGaramond;
+    --fon3: Lato;
 }
 @media (orientation: portrait) {
     :root {
@@ -32,7 +55,7 @@ h1 {
     height: 10svh;
     font-size: clamp(1rem, 7vh, 7vw);
     text-wrap: balance;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-shadow: -0.1rem 0 var(--preto), 0.1rem 0 var(--preto), 0 -0.1rem var(--preto), 0 0.1rem var(--preto);
 }
 
 main {
@@ -113,6 +136,24 @@ input[type='text'] {
     top: 60px;
     border: 2px 2px var(--branco);
 }
+
+select {
+    border: 0;
+    font-family: var(--fon1), 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    color: white;
+
+    background-color: var(--cor3);
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+option {    
+    font-family: var(--fon1), 'Times New Roman', Times, serif;
+}
+
+
+
 
 footer {
     position: absolute;
