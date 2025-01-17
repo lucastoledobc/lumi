@@ -13,6 +13,7 @@ FAZER:
 
 -> 03 Games:
 
+- efeito de confeti quando ganha
 
 
 -> 04 Artigos:

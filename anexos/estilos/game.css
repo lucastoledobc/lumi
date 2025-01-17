@@ -55,9 +55,20 @@ h1 {
     height: 10svh;
     font-size: clamp(1rem, 7vh, 7vw);
     text-wrap: balance;
-    text-shadow: -0.1rem 0 var(--preto), 0.1rem 0 var(--preto), 0 -0.1rem var(--preto), 0 0.1rem var(--preto);
+    text-shadow: 
+    -0.1rem 0 var(--preto), 
+    0.1rem 0 var(--preto), 
+    0 -0.1rem var(--preto), 
+    0 0.1rem var(--preto);
 }
-
+h2 {
+    font-size: clamp(1rem, 5vh, 5vw);
+    text-shadow: 
+    -0.1rem 0 var(--preto), 
+    0.1rem 0 var(--preto), 
+    0 -0.1rem var(--preto), 
+    0 0.1rem var(--preto);
+}
 main {
     width: 100%;
     height: 90svh;

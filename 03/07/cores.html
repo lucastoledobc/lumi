@@ -17,9 +17,16 @@
         }
         
         .top {
-            height: 10svh;
-            margin-top: 5svh;
+            height: 20svh;
+            padding-top: 5svh;
         }
+        .key {
+            width: 10%;
+            aspect-ratio: 1;
+            background-color: rgb(var(--r), var(--g), var(--b));
+            border: 2px dashed var(--branco);
+        }
+
         .botao {
             background-color: var(--trans);
             color: var(--branco);
@@ -31,6 +38,11 @@
         .mid {
             height: 40svh;
         }
+        #play {
+            width: 30svh;
+            aspect-ratio: 1;
+            background-color: rgb(var(--verm), var(--verd), var(--azul));
+        }
         #barra {
             height: 10svh;
             width: 80%;
@@ -39,7 +51,6 @@
 
             background: linear-gradient(to right,
                 rgb(var(--verm), 0, 0),
-                rgb(var(--verm), 0, 0),
                 rgb(var(--verm), var(--verd2), 0),
                 rgb(var(--verm), var(--verd), 0),
                 rgb(var(--verm2), var(--verd), 0),
@@ -47,13 +58,12 @@
                 rgb(0, var(--verd), var(--azul2)),
                 rgb(0, var(--verd), var(--azul)),
                 rgb(0, var(--verd2), var(--azul)),
-                rgb(0, 0, var(--azul)),
-                rgb(0,0,var(--azul))
+                rgb(0, 0, var(--azul))
                 );
         }
         #roda {
             aspect-ratio: 1;
-            height: 35svh;
+            height: 33svh;
             border: 3px solid var(--branco);
             border-radius: 50%;
             background: conic-gradient(
@@ -74,7 +84,7 @@
         }
         
         
-        .bot {
+        .bot1 {
             height: 30svh;
         }
         .luz {
@@ -143,14 +153,26 @@
     <h1>Cores</h1>
     <main>
         <section class="top">
+            <div class="nivel">
+                <select name="nivel" id="nivel" value = '1'>
+                    <option value="1">Fácil</option>
+                    <option value="2">Médio</option>
+                    <option value="3">Difícil</option>
+                    <option value="4">Experimental</option>                    
+                    <option value="5">Impossível</option>
+                </select>
+            </div>
+            <h2>Adivinhe a cor</h2>
             <button class="botao" onclick="fechar1()">Linear</button>
-            <button class="botao" onclick="fechar2()">Círculo</button>                             
+            <button class="botao" onclick="fechar2()">Círculo</button>
+            <div class="key"></div>
         </section>
         <section class="mid">
+            <div id="play"></div>
             <div id="barra"></div>
             <div id="roda"></div>
         </section>
-        <section class="bot">  
+        <section class="bot1">  
             <div class="luz" id="lred"></div>
             <div class="luz" id="lgre"></div>
             <div class="luz" id="lblu"></div>
@@ -159,16 +181,125 @@
             <input type="range" class="range" value="0" min="1" max="255" name="rred" id="rred">
             <input type="range" class="range" value="0" min="1" max="255" name="rgre" id="rgre">            
             <input type="range" class="range" value="0" min="1" max="255" name="rblu" id="rblu">
-        </section>        
+        </section>
     </main>
+    <section class="menu" style="display: none;">
+    </section>
     <section id="botoes"></section>
 </body>
 
 <script>
+    // top
+    
+    select = document.getElementById("nivel");
+    select.addEventListener("change", function() {
+
+        h2.style.display = 'block';
+        bbarra.style.display = 'none';
+        broda.style.display = 'none';
+        roda.style.display = 'none';
+        barra.style.display = 'none';
+        play.style.display = 'block';
+
+        if (select.value == 1) {
+            r = Math.random();
+            if (r < 1) {
+                main.style.setProperty('--r', 0);
+                main.style.setProperty('--g', 0);
+                main.style.setProperty('--b', 0);
+            }
+            if (r < 0.8) {
+                main.style.setProperty('--r', 255);
+                main.style.setProperty('--g', 0);
+                main.style.setProperty('--b', 0);
+            }
+            if (r < 0.6) {
+                main.style.setProperty('--r', 0);
+                main.style.setProperty('--g', 255);
+                main.style.setProperty('--b', 0);
+            }
+            if (r < 0.4) {
+                main.style.setProperty('--r', 0);
+                main.style.setProperty('--g', 0);
+                main.style.setProperty('--b', 255);
+            }
+            if (r < 0.2) {
+                main.style.setProperty('--r', 255);
+                main.style.setProperty('--g', 255);
+                main.style.setProperty('--b', 255);
+            }
+
+        }
+        else if (select.value == 2) {
+            r = Math.random();    
+            g = Math.random();
+            b = Math.random();
+            if (r < 0.5) {
+                main.style.setProperty('--r', 0);
+            } else {
+                main.style.setProperty('--r', 255);
+            }
+            if (g < 0.5) {
+                main.style.setProperty('--g', 0);
+            } else {
+                main.style.setProperty('--g', 255);
+            }
+            if (b < 0.5) {
+                main.style.setProperty('--b', 0);
+            } else {
+                main.style.setProperty('--b', 255);
+            }
+        }
+        
+        else if (select.value == 3) {
+            r = Math.random();    
+            g = Math.random();
+            b = Math.random();
+            if (r < 0.5) {
+                main.style.setProperty('--r', 0);
+            } else {
+                main.style.setProperty('--r', 255);
+            }
+            if (g < 0.5) {
+                main.style.setProperty('--g', 0);
+            } else {
+                main.style.setProperty('--g', 255);
+            }
+            if (b < 0.5) {
+                main.style.setProperty('--b', 0);
+            } else {
+                main.style.setProperty('--b', 255);
+            }
+        }
+        else if (select.value == 4) {
+            h2.style.display = 'none';
+            bbarra.style.display = 'block';
+            broda.style.display = 'block';
+            play.style.display = 'none';
+            barra.style.display = 'block';
+        }
+        else if (select.value == 5) {
+            main.style.setProperty('--r', Math.random()*255);
+            main.style.setProperty('--g', Math.random()*255);
+            main.style.setProperty('--b', Math.random()*255);
+            }
+        }
+    )
+
     //botao
+    let h2 = document.getElementsByTagName('h2')[0];
+    let bbarra = document.getElementsByClassName('botao')[0];
+    let broda = document.getElementsByClassName('botao')[1];
     let roda = document.getElementById('roda');
     let barra = document.getElementById('barra');
+    let key = document.getElementById('key');
+    let play = document.getElementById('play');
+
     roda.style.display = 'none';
+    barra.style.display = 'none';
+    bbarra.style.display = 'none';
+    broda.style.display = 'none';
+
     function fechar1() {
         roda.style.display = 'none';
         barra.style.display = 'block';
@@ -180,18 +311,13 @@
 
     // ranges
     let main = document.querySelector('main');
-    main.style.setProperty('--verm', 0);
-    main.style.setProperty('--verm2', 0/2);
-    main.style.setProperty('--verd', 0);
-    main.style.setProperty('--verd2', 0/2);
-    main.style.setProperty('--azul', 0);
-    main.style.setProperty('--azul2', 0/2);
-
-    document.body.addEventListener("click", (event) => {
-        rred.value= 255;
-        rred.style.transition = '3s';
-    })
-
+    main.style.setProperty('--verm', 255);
+    main.style.setProperty('--verm2', 255/2);
+    main.style.setProperty('--verd', 255);
+    main.style.setProperty('--verd2', 255/2);
+    main.style.setProperty('--azul', 255);
+    main.style.setProperty('--azul2', 255/2);
+    
     let rred = document.getElementById('rred');
     rred.addEventListener("input", (event) => {
         main.style.setProperty('--verm', rred.value);
