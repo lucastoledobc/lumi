@@ -39,21 +39,64 @@
     margin: 0;
     padding: 0;
 }
-
 body {
     width: 100%;
     background-color: var(--preto);    
     color: var(--branco);
 }
 
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 1rem;
+
+    background-color: var(--preto);
+    border: 3px solid var(--branco);
+    border-radius: 10px;
+
+    font-family: var(--fon1);
+    font-size: large;
+
+    justify-items: center;
+}
+#ajuda {    
+    display: block;
+    width: 90%;
+    height: 80%;
+}
+
+#ajuda > p {
+    color: var(--branco);
+    padding: 1rem;
+}
+#start {
+    display: flex;
+    justify-content: center;
+}
+.popup > div > button {
+    font-family: var(--fon1);
+    font-size: 2rem;
+    color: var(--branco);
+    background-color: var(--preto);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    width: fit-content;
+    text-wrap: nowrap;
+}
+
+
 h1 {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 5svh;
-    font-size: clamp(1rem, 5vh, 5vw);
+    height: 10svh;
+    font-size: clamp(1rem, 5vh, 2rem);
     text-wrap: balance;
+    font-family: var(--fon1);
+    color: var(--branco);
     text-shadow:
     -0.1rem 0 var(--preto),
     0.1rem 0 var(--preto),
@@ -61,7 +104,8 @@ h1 {
     0 0.1rem var(--preto);
 }
 h2 {
-    font-size: clamp(2rem, 5vh, 5vw);
+    font-size: clamp(1rem, 5vw, 2rem);
+    padding: 0.5rem;
     text-shadow:
     -0.1rem 0 var(--preto),
     0.1rem 0 var(--preto),
@@ -70,7 +114,7 @@ h2 {
 }
 main {
     width: 100%;
-    height: 95svh;
+    height: 90svh;
     overflow: clip;
 }
 
@@ -82,31 +126,27 @@ main {
 }
 
 .icon {
-    width: clamp(1rem, 7vw, 5vh);
+    width: clamp(1rem, 7vw, 2rem);
     filter: invert(100%);
 }
 
-#back {
+#bback {
     left: var(--bm);
     top: var(--bm);
 }
 
-#info, #dark {
+#binfo, #bajuda, #bdark {
     top: var(--bm);
     right: var(--bm);
 }
 
-#fechar {
-    top: 30%;
-    right: 0%;
-}
-
-#warn {
+#info {
     position: absolute;
     color: white;
     text-align: justify;
 
     max-width: clamp(1rem, 70vw, 50vh);
+    min-width: 40%;
     padding: 0.4rem;
     top: var(--bm);
 
@@ -114,7 +154,6 @@ main {
     border-radius: 0.5rem;
     background-color: red;
 }
-
 input[type='text'] {
     margin: 0.3rem 0;
     width: 100%;
@@ -122,34 +161,15 @@ input[type='text'] {
     height: min-content;
 }
 
-#close {
-    display: block;
-    position: static;
-    float: right;
-    margin: -5px -5px 0 10px;
-}
-
-#iclose { /* i = icone do close */
-    width: 20px;
-    background-color: var(--branco);
-}
-
-#maxi {
+#bmaxi {
     bottom: var(--bm);
     right: var(--bm);
     opacity: 50%;
 }
 
-#menu {
-    position: absolute;
-    right: 20px;
-    top: 60px;
-    border: 2px 2px var(--branco);
-}
-
 select {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 5vw, 2rem);
     color: var(--branco);
     cursor: pointer;
 
@@ -163,6 +183,6 @@ select {
 
 footer {
     position: absolute;
-    bottom: 2px;
-    left: 2px;
+    bottom: var(--bm);
+    left: var(--bm);
 }

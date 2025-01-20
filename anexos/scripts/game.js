@@ -4,37 +4,42 @@ document.head.innerHTML += `
     <link rel="shortcut icon" href="/anexos/midias/favicon-32x32.png" type="image/x-icon">
 `;
  
-
-
+ganhar = document.getElementById('ganhar');
+ganhar.innerHTML = `<h1>Você acertou!</h1>
+<div id="start">
+            <button onclick="fstart()">Jogar de novo</button>
+        </div>
+`;
     //BOTOES
 
-let botoes = document.getElementById('botoes');
+botoes = document.getElementById('botoes');
 botoes.innerHTML = `
-    <button type="button" id="back" class="button">
+    <button type="button" id="bback" class="button">
         <a href="/03/"> 
         <img src="/anexos/midias/icon-back.svg" id="iback" class="icon" alt="Voltar">
         </a>
     </button>
 
-    <div class="warn" id="warn"></div>
-
-    <button type="button" id="dark" class="button" onclick="dark()">
+    <div class="info" id="info"></div>
+    <button type="button" id="bdark" class="button" onclick="fdark()">
         <img src="/anexos/midias/icon-dark1.svg" id="idark" class="icon" alt="Modo escuro">
     </button>
-
-    <button type="button" id="info" class="button" onclick="info()">
+    <button type="button" id="bajuda" class="button" onclick="fajuda()">
+        <img src="/anexos/midias/icon-help.svg" id="iajuda" class="icon" alt="Ajuda">
+    </button>
+    <button type="button" id="binfo" class="button" onclick="finfo()">
         <img src="/anexos/midias/icon-info.svg" id="iinfo" class="icon" alt="Informação">
     </button>
 
-    <button type="button" id="maxi" class="button">
-        <img src="/anexos/midias/icon-maxi.svg"id="imaxi" class="icon" onclick="maxi()" alt="Maximizar" >
+    <button type="button" id="bmaxi" class="button">
+        <img src="/anexos/midias/icon-maxi.svg"id="imaxi" class="icon" onclick="fmaxi()" alt="Maximizar">
     </button>
 `;
 
-    // WARNING
+    // info
 
-let warn = document.getElementById("warn");
-warn.innerHTML = `
+info = document.getElementById("info");
+info.innerHTML = `
     Caso esteja tendo problemas desative o adblock, pode ajudar.
     Para outros casos você pode me mandar uma mensagem descrevendo o problema abaixo.
     <form action="">
@@ -42,52 +47,63 @@ warn.innerHTML = `
     </form>
     <button type="button" id="enviar">Enviar</button>
 `;
-warn.style.opacity = '0';
-warn.style.right = '0%';
-warn.style.visibility = 'collapse';
+info.style.opacity = '0';
+info.style.right = '0%';
+info.style.visibility = 'collapse';
 
     // FUNÇÕES BOTÕES
       
 // INFO
 
-function info() {
-    let info = document.getElementById('info');
-    let dark = document.getElementById('dark');
+function finfo() {
+    binfo = document.getElementById('binfo');
+    bajuda = document.getElementById('bajuda');
+    bdark = document.getElementById('bdark');
 
-    if (warn.style.opacity == '0') {
-        warn.style.visibility = 'visible';
-        warn.style.opacity = '100';
-        warn.style.right = 'clamp(1rem, 13vw, 7vh)';
-        warn.style.transition = '1s';
+    if (info.style.opacity == '0') {
+        info.style.visibility = 'visible';
+        info.style.opacity = '100';
+        info.style.right = 'calc(var(--bm) * 2 + clamp(1rem, 7vw, 2rem) + 4px)';
+        info.style.transition = '1s';
 
-        info.innerHTML = `
+        binfo.innerHTML = `
         <img src="/anexos/midias/icon-close.svg" id="iinfo" class="icon" alt="Fechar">
         `;
         
-        dark.style.top = 'clamp(2rem,13vw,7vh)';
-        dark.style.opacity = '100';
-        dark.style.transition = '1s';
+        bajuda.style.top = 'calc(var(--bm) * 2 + clamp(1rem, 7vw, 2rem) + 4px)';
+        bajuda.style.opacity = '100';
+        bajuda.style.transition = '1s';
 
-        let iinfo = document.getElementById('iinfo'); /* tem que ficar aqui dentro */
-        if (vdark==1) {
+        bdark.style.top = 'calc(var(--bm) * 3 + clamp(1rem, 7vw, 2rem) * 2 + 4px * 2)';
+        bdark.style.opacity = '100';
+        bdark.style.transition = '1s';
+
+        iinfo = document.getElementById('iinfo');
+        if (vdark == 1) {
             iinfo.style.filter = 'invert(100%)';
         } else {
             iinfo.style.filter = 'invert(0%)';
         }
     } else {
-        warn.style.opacity = '0';
-        warn.style.right = '0%';
-        warn.style.transition = '1s';
-        warn.style.visibility = 'collapse';
+        info.style.opacity = '0';
+        info.style.right = '0%';
+        info.style.transition = '1s';
+        info.style.visibility = 'collapse';
         
-        info.innerHTML = `
+        binfo.innerHTML = `
         <img src="/anexos/midias/icon-info.svg" id="iinfo" class="icon" alt="Informação">
         `;
 
-        dark.style.top = '10px';
-        dark.style.opacity = '0';
-        dark.style.transition = '1s';
-        if (vdark==1) {
+        bajuda.style.top = '10px';
+        bajuda.style.opacity = '0';
+        bajuda.style.transition = '1s';
+
+        bdark.style.top = '10px';
+        bdark.style.opacity = '0';
+        bdark.style.transition = '1s';
+
+        iinfo = document.getElementById('iinfo');
+        if (vdark == 1) {
             iinfo.style.filter = 'invert(100%)';
         } else {
             iinfo.style.filter = 'invert(0%)';
@@ -95,13 +111,19 @@ function info() {
     }
 }
 
+//ajuda
+function fajuda() {
+    ajuda = document.getElementById('ajuda');
+    ajuda.style.display = 'block';
+}
+
 // MODO ESCURO
 
-let root = document.querySelector(':root');
-let icon = document.getElementsByClassName('icon');
-let vdark = 1;
+root = document.querySelector(':root');
+icon = document.getElementsByClassName('icon');
+vdark = 1;
 
-function dark() {
+function fdark() {
     if (getComputedStyle(root).getPropertyValue('--branco') == '#ffffff') {
         root.style.setProperty('--branco', '#000000');
         root.style.setProperty('--preto', '#ffffff');
@@ -121,37 +143,37 @@ function dark() {
 
 // TELA CHEIA
 
-function maxi() {
-    let img = document.getElementById("maxi");
+function fmaxi() {
+    let img = document.getElementById("bmaxi");
     let tela = document.documentElement;
     if (tela.requestFullscreen) {
         tela.requestFullscreen(), img.innerHTML = `
-        <img src="/anexos/midias/icon-mini.svg" id="imaxi" class="icon" alt="Minimizar" onclick="mini()">
+        <img src="/anexos/midias/icon-mini.svg" id="imaxi" class="icon" alt="Minimizar" onclick="fmini()">
         `;
       } else if (tela.webkitRequestFullscreen) { /* Safari */
         tela.webkitRequestFullscreen(), img.innerHTML = `
-        <img src="/anexos/midias/icon-mini.svg" id="imaxi" class="icon" alt="Minimizar" onclick="mini()">
+        <img src="/anexos/midias/icon-mini.svg" id="imaxi" class="icon" alt="Minimizar" onclick="fmini()">
         `;
       } else if (tela.msRequestFullscreen) { /* IE11 */
         tela.msRequestFullscreen(), img.innerHTML = `
-        <img src="/anexos/midias/icon-mini.svg" id="imaxi" class="icon" alt="Minimizar" onclick="mini()">
+        <img src="/anexos/midias/icon-mini.svg" id="imaxi" class="icon" alt="Minimizar" onclick="fmini()">
         `;
       }
 }
 
-function mini() {
-    let img = document.getElementById("maxi");
+function fmini() {
+    let img = document.getElementById("bmaxi");
     if (document.exitFullscreen) {
         document.exitFullscreen(), img.innerHTML = `
-        <img src="/anexos/midias/icon-maxi.svg" id="imaxi" class="icon" alt="Maximizar" onclick="maxi()">
+        <img src="/anexos/midias/icon-maxi.svg" id="imaxi" class="icon" alt="Maximizar" onclick="fmaxi()">
         `;
     } else if (document.webkitExitFullscreen) { /* Safari */
         document.webkitExitFullscreen(), img.innerHTML = `
-        <img src="/anexos/midias/icon-maxi.svg" id="imaxi" class="icon" alt="Maximizar" onclick="maxi()">
+        <img src="/anexos/midias/icon-maxi.svg" id="imaxi" class="icon" alt="Maximizar" onclick="fmaxi()">
         `;
     } else if (document.msExitFullscreen) { /* IE11 */
         document.msExitFullscreen(), img.innerHTML = `
-        <img src="/anexos/midias/icon-maxi.svg" id="imaxi" class="icon" alt="Maximizar" onclick="maxi()">
+        <img src="/anexos/midias/icon-maxi.svg" id="imaxi" class="icon" alt="Maximizar" onclick="fmaxi()">
         `;
     }
 } 
@@ -165,7 +187,6 @@ function mini() {
 
 // FUNÇÕES
 
-function ganhar() {
-    h1 = document.getElementsByTagName('h1')[0];
-    h1.innerHTML = `Você ganhou!`;
+function fganhar() {
+    ganhar.style.display = 'block';
 }
