@@ -1,15 +1,14 @@
     // HEAD
 
-let head = document.getElementsByTagName("head")[0];
-head.innerHTML += `
+document.head.innerHTML += `
     <link rel="shortcut icon" href="/anexos/midias/favicon-32x32.png" type="image/x-icon">
 `;
-    
+ 
 
 
     //BOTOES
 
-let botoes = document.getElementById('botoes')
+let botoes = document.getElementById('botoes');
 botoes.innerHTML = `
     <button type="button" id="back" class="button">
         <a href="/03/"> 
@@ -58,14 +57,14 @@ function info() {
     if (warn.style.opacity == '0') {
         warn.style.visibility = 'visible';
         warn.style.opacity = '100';
-        warn.style.right = 'clamp(1rem, 12vw, 6vh)';
+        warn.style.right = 'clamp(1rem, 13vw, 7vh)';
         warn.style.transition = '1s';
 
         info.innerHTML = `
         <img src="/anexos/midias/icon-close.svg" id="iinfo" class="icon" alt="Fechar">
         `;
         
-        dark.style.top = 'clamp(2rem,12vw,6vh)';
+        dark.style.top = 'clamp(2rem,13vw,7vh)';
         dark.style.opacity = '100';
         dark.style.transition = '1s';
 
@@ -162,3 +161,11 @@ function mini() {
 // document.getElementById("back").addEventListener("click", () => {
 //     history.back();
 // });
+
+
+// FUNÇÕES
+
+function ganhar() {
+    h1 = document.getElementsByTagName('h1')[0];
+    h1.innerHTML = `Você ganhou!`;
+}

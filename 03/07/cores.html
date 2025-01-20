@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/anexos/estilos/game.css">    
+    <link rel="stylesheet" href="/anexos/estilos/game.css"> 
     <script src="/anexos/scripts/game.js" defer></script>
     
     <title>Cores</title>
@@ -20,13 +20,17 @@
             height: 20svh;
             padding-top: 5svh;
         }
-        .key {
-            width: 10%;
+        #key {
+            width: 15svh;
             aspect-ratio: 1;
             background-color: rgb(var(--r), var(--g), var(--b));
             border: 2px dashed var(--branco);
         }
-
+        .play {
+            width: 15svh;
+            aspect-ratio: 1;
+            background-color: rgb(var(--verm), var(--verd), var(--azul));
+        }
         .botao {
             background-color: var(--trans);
             color: var(--branco);
@@ -36,12 +40,10 @@
         }
 
         .mid {
-            height: 40svh;
+            height: 30svh;
         }
-        #play {
-            width: 30svh;
-            aspect-ratio: 1;
-            background-color: rgb(var(--verm), var(--verd), var(--azul));
+        #play1 {
+            width: 20svh;
         }
         #barra {
             height: 10svh;
@@ -63,9 +65,10 @@
         }
         #roda {
             aspect-ratio: 1;
-            height: 33svh;
+            height: 25svh;
             border: 3px solid var(--branco);
             border-radius: 50%;
+            rotate: 240deg;
             background: conic-gradient(
                 rgb(var(--verm), 0, 0),
                 rgb(var(--verm), var(--verd2), 0),
@@ -85,12 +88,12 @@
         
         
         .bot1 {
-            height: 30svh;
+            height: 20svh;
         }
         .luz {
             aspect-ratio: 1;
             width: 25%;
-            max-width: 30svh;
+            max-width: 20svh;
             border-radius: 50%;
         }
         #lred {
@@ -126,7 +129,7 @@
 
         @media (orientation: portrait) {
             .bot {
-                height: 15svh;
+                height: 10svh;
                 margin-top: 5svh;
                 position: relative;
                 top:-5%;
@@ -139,7 +142,7 @@
             }
             .range {
                 width: 100%;
-                max-width: 20svh;
+                max-width: 15svh;
                 rotate: -90deg;
             }
             .bot2 {
@@ -150,8 +153,9 @@
     </style>
 </head>
 <body>
-    <h1>Cores</h1>
+    <h1 id="h1">Cores</h1>
     <main>
+
         <section class="top">
             <div class="nivel">
                 <select name="nivel" id="nivel" value = '1'>
@@ -165,10 +169,12 @@
             <h2>Adivinhe a cor</h2>
             <button class="botao" onclick="fechar1()">Linear</button>
             <button class="botao" onclick="fechar2()">Círculo</button>
-            <div class="key"></div>
+            <div id="key"></div>
+            <div class="play" id="play2"></div>
         </section>
+
         <section class="mid">
-            <div id="play"></div>
+            <div class="play" id="play1"></div>
             <div id="barra"></div>
             <div id="roda"></div>
         </section>
@@ -178,9 +184,9 @@
             <div class="luz" id="lblu"></div>
         </section>
         <section class="bot2">
-            <input type="range" class="range" value="0" min="1" max="255" name="rred" id="rred">
-            <input type="range" class="range" value="0" min="1" max="255" name="rgre" id="rgre">            
-            <input type="range" class="range" value="0" min="1" max="255" name="rblu" id="rblu">
+            <input type="range" class="range" value="255" min="1" max="255" name="rred" id="rred">
+            <input type="range" class="range" value="255" min="1" max="255" name="rgre" id="rgre">            
+            <input type="range" class="range" value="255" min="1" max="255" name="rblu" id="rblu">
         </section>
     </main>
     <section class="menu" style="display: none;">
@@ -188,117 +194,148 @@
     <section id="botoes"></section>
 </body>
 
-<script>
-    // top
-    
+<script id="script">
     select = document.getElementById("nivel");
+    h2 = document.getElementsByTagName('h2')[0];
+    bbarra = document.getElementsByClassName('botao')[0];
+    broda = document.getElementsByClassName('botao')[1];
+    key = document.getElementById('key');
+    play1 = document.getElementById('play1');
+    play2 = document.getElementById('play2');
+    roda = document.getElementById('roda');
+    barra = document.getElementById('barra');
+    
+    // top
+    play2.style.display = 'none';
+
     select.addEventListener("change", function() {
 
         h2.style.display = 'block';
+        key.style.display = 'block';
         bbarra.style.display = 'none';
         broda.style.display = 'none';
+        play2.style.display = 'none';
         roda.style.display = 'none';
         barra.style.display = 'none';
-        play.style.display = 'block';
+        play1.style.display = 'block';
+        
+        let r = Math.random();
+        let g = Math.random();
+        let b = Math.random();
 
         if (select.value == 1) {
-            r = Math.random();
             if (r < 1) {
-                main.style.setProperty('--r', 0);
-                main.style.setProperty('--g', 0);
-                main.style.setProperty('--b', 0);
-            }
+                r1 = 1;
+                g1 = 1;
+                b1 = 1; 
+                main.style.setProperty('--r', r1);
+                main.style.setProperty('--g', g1);
+                main.style.setProperty('--b', b1);
+            }            
             if (r < 0.8) {
-                main.style.setProperty('--r', 255);
-                main.style.setProperty('--g', 0);
-                main.style.setProperty('--b', 0);
+                r1 = 255;
+                g1 = 1;
+                b1 = 1;
+                main.style.setProperty('--r', r1);
+                main.style.setProperty('--g', g1);
+                main.style.setProperty('--b', b1);
             }
             if (r < 0.6) {
-                main.style.setProperty('--r', 0);
-                main.style.setProperty('--g', 255);
-                main.style.setProperty('--b', 0);
+                r1 = 1;
+                g1 = 255;
+                b1 = 1;
+                main.style.setProperty('--r', r1);
+                main.style.setProperty('--g', g1);
+                main.style.setProperty('--b', b1);
             }
             if (r < 0.4) {
-                main.style.setProperty('--r', 0);
-                main.style.setProperty('--g', 0);
-                main.style.setProperty('--b', 255);
+                r1 = 1;
+                g1 = 1;
+                b1 = 255;
+                main.style.setProperty('--r', r1);
+                main.style.setProperty('--g', g1);
+                main.style.setProperty('--b', b1);
             }
             if (r < 0.2) {
-                main.style.setProperty('--r', 255);
-                main.style.setProperty('--g', 255);
-                main.style.setProperty('--b', 255);
+                r1 = 255;
+                g1 = 255;
+                b1 = 255;
+                main.style.setProperty('--r', r1);
+                main.style.setProperty('--g', g1);
+                main.style.setProperty('--b', b1);
             }
-
         }
         else if (select.value == 2) {
-            r = Math.random();    
-            g = Math.random();
-            b = Math.random();
             if (r < 0.5) {
-                main.style.setProperty('--r', 0);
+                r1 = 1;
+                main.style.setProperty('--r', r1);
             } else {
-                main.style.setProperty('--r', 255);
+                r1 = 255;
+                main.style.setProperty('--r', r1);
             }
             if (g < 0.5) {
-                main.style.setProperty('--g', 0);
+                g1 = 1;
+                main.style.setProperty('--g', g1);
             } else {
-                main.style.setProperty('--g', 255);
+                g1 = 255;
+                main.style.setProperty('--g', g1);
             }
             if (b < 0.5) {
-                main.style.setProperty('--b', 0);
+                b1 = 1;
+                main.style.setProperty('--b', b1);
             } else {
-                main.style.setProperty('--b', 255);
+                b1 = 255;
+                main.style.setProperty('--b', b1);
             }
         }
         
         else if (select.value == 3) {
-            r = Math.random();    
-            g = Math.random();
-            b = Math.random();
             if (r < 0.5) {
-                main.style.setProperty('--r', 0);
+                r1 = 1;
+                main.style.setProperty('--r', r1);
             } else {
-                main.style.setProperty('--r', 255);
+                main.style.setProperty('--r', r1);
             }
             if (g < 0.5) {
-                main.style.setProperty('--g', 0);
+                g1 = 1;
+                main.style.setProperty('--g', g1);
             } else {
-                main.style.setProperty('--g', 255);
+                g1 = 255;
+                main.style.setProperty('--g', g1);
             }
             if (b < 0.5) {
-                main.style.setProperty('--b', 0);
+                b1 = 1;
+                main.style.setProperty('--b', b1);
             } else {
-                main.style.setProperty('--b', 255);
+                b1 = 255;
+                main.style.setProperty('--b', b1);
             }
         }
         else if (select.value == 4) {
             h2.style.display = 'none';
             bbarra.style.display = 'block';
             broda.style.display = 'block';
-            play.style.display = 'none';
+            key.style.display = 'none';
+            play2.style.display = 'block';
+            play1.style.display = 'none';
             barra.style.display = 'block';
         }
         else if (select.value == 5) {
-            main.style.setProperty('--r', Math.random()*255);
-            main.style.setProperty('--g', Math.random()*255);
-            main.style.setProperty('--b', Math.random()*255);
+                r1 = r*255;
+                g1 = g*255;
+                b1 = b*255;
+            main.style.setProperty('--r', r1);
+            main.style.setProperty('--g', g1);
+            main.style.setProperty('--b', b1);
             }
         }
     )
 
     //botao
-    let h2 = document.getElementsByTagName('h2')[0];
-    let bbarra = document.getElementsByClassName('botao')[0];
-    let broda = document.getElementsByClassName('botao')[1];
-    let roda = document.getElementById('roda');
-    let barra = document.getElementById('barra');
-    let key = document.getElementById('key');
-    let play = document.getElementById('play');
-
-    roda.style.display = 'none';
-    barra.style.display = 'none';
     bbarra.style.display = 'none';
     broda.style.display = 'none';
+    barra.style.display = 'none';
+    roda.style.display = 'none';
 
     function fechar1() {
         roda.style.display = 'none';
@@ -310,7 +347,7 @@
     }
 
     // ranges
-    let main = document.querySelector('main');
+    const main = document.querySelector('main');
     main.style.setProperty('--verm', 255);
     main.style.setProperty('--verm2', 255/2);
     main.style.setProperty('--verd', 255);
@@ -318,21 +355,29 @@
     main.style.setProperty('--azul', 255);
     main.style.setProperty('--azul2', 255/2);
     
-    let rred = document.getElementById('rred');
+    const rred = document.getElementById('rred');
     rred.addEventListener("input", (event) => {
         main.style.setProperty('--verm', rred.value);
         main.style.setProperty('--verm2', rred.value/2);
     })
-    let rgre = document.getElementById('rgre');
+    const rgre = document.getElementById('rgre');
     rgre.addEventListener("input", (event) => {
     main.style.setProperty('--verd', rgre.value);
     main.style.setProperty('--verd2', rgre.value/2);
     })
-    let rblu = document.getElementById('rblu');
+    const rblu = document.getElementById('rblu');
     rblu.addEventListener("input", (event) => {
     main.style.setProperty('--azul', rblu.value);
     main.style.setProperty('--azul2', rblu.value/2);
     })
+
+    select.addEventListener("input", function() {
+        if (rred.value == r1 && rgre.value == g1 && rblu.value == b1) {
+            ganhar();
+        }
+    })
+    
+    
 </script>
 
 </html>
