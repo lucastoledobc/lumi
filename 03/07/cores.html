@@ -21,7 +21,7 @@
             padding-top: 5svh;
         }
         #key {
-            width: 15svh;
+            width: 10svh;
             aspect-ratio: 1;
             background-color: rgb(var(--r), var(--g), var(--b));
             border: 2px dashed var(--branco);      
@@ -36,7 +36,6 @@
         .play {
             width: 15svh;
             aspect-ratio: 1;
-            background-color: rgb(var(--verm), var(--verd), var(--azul));
         }
         .botao {
             background-color: var(--trans);
@@ -57,18 +56,6 @@
             width: 80%;
             border: clamp(1px,0.4vh,1vw) solid var(--branco);
             border-radius: 5px;
-
-            background: linear-gradient(to right,
-                rgb(var(--verm), 0, 0),
-                rgb(var(--verm), var(--verd2), 0),
-                rgb(var(--verm), var(--verd), 0),
-                rgb(var(--verm2), var(--verd), 0),
-                rgb(0, var(--verd), 0),
-                rgb(0, var(--verd), var(--azul2)),
-                rgb(0, var(--verd), var(--azul)),
-                rgb(0, var(--verd2), var(--azul)),
-                rgb(0, 0, var(--azul))
-                );
         }
         #roda {
             aspect-ratio: 1;
@@ -76,21 +63,6 @@
             border: 3px solid var(--branco);
             border-radius: 50%;
             rotate: 300deg;
-            background: conic-gradient(
-                rgb(var(--verm), 0, 0),
-                rgb(var(--verm),0,var(--azul2)),
-                rgb(var(--verm),0,var(--azul)),
-                rgb(var(--verm2),0,var(--azul)),
-                rgb(0, 0, var(--azul)),
-                rgb(0, var(--verd2), var(--azul)),
-                rgb(0, var(--verd), var(--azul)),
-                rgb(0, var(--verd), var(--azul2)),
-                rgb(0, var(--verd), 0),
-                rgb(var(--verm2), var(--verd), 0),
-                rgb(var(--verm), var(--verd), 0),
-                rgb(var(--verm), var(--verd2), 0),
-                rgb(var(--verm), 0, 0)
-                );
         }
         
         
@@ -103,28 +75,6 @@
             max-width: 20svh;
             border-radius: 50%;
         }
-        #lred {
-            background: conic-gradient(
-                rgb(var(--verm),0,0) 30deg, 
-                var(--trans) 30deg 330deg,
-                rgb(var(--verm),0,0) 330deg
-            );
-        }
-        #lgre {
-            background: conic-gradient(
-                rgb(0,var(--verd),0) 30deg, 
-                var(--trans) 30deg 330deg,
-                rgb(0,var(--verd),0) 330deg
-            );
-            
-        }
-        #lblu {
-            background: conic-gradient(
-                rgb(0,0,var(--azul)) 30deg, 
-                var(--trans) 30deg 330deg,
-                rgb(0,0,var(--azul)) 330deg
-            );
-        }
         
         .bot2 {
             position: relative;
@@ -132,6 +82,7 @@
         }
         .range {
             width: 15svw;
+            cursor: pointer;
             animation: ani2 2s linear forwards;
             animation-delay: 0s;
         }
@@ -157,13 +108,11 @@
             .range {
                 width: 100%;
                 max-width: 15svh;
-                rotate: -90deg;
             }
             .bot2 {
                 height: 25vh;
             }
         }
-
     </style>
 </head>
 
@@ -201,7 +150,6 @@
             <div class="luz" id="lblu"></div>
         </section>
         <section class="bot2">
-            <input id="loop" onchange="amount.value=rangeInput.value" oninput="amount.value=rangeInput.value" type="range" min="0" max="200" name="rangeInput" />
             <input type="range" class="range" value="0" min="1" max="255" name="rred" id="rred">
             <input type="range" class="range" value="0" min="1" max="255" name="rgre" id="rgre">
             <input type="range" class="range" value="0" min="1" max="255" name="rblu" id="rblu">
@@ -215,7 +163,6 @@
         <div id="start">
             <button onclick="fstart()">Começar</button>
         </div>
-        <footer>*Creditos: </footer>
     </dialog>
     <dialog class="popup" id="ganhar"></dialog>
 </body>
@@ -223,7 +170,6 @@
 
 
 <script id="script">
-
     ajuda = document.getElementById("ajuda");
     ganhar = document.getElementById("ganhar");
 
@@ -238,16 +184,11 @@
     roda = document.getElementById('roda');
     barra = document.getElementById('barra');
 
-    main = document.querySelector('main');
-    main.style.setProperty('--verm', 255);
-    main.style.setProperty('--verm2', 255/2);
-    main.style.setProperty('--verd', 255);
-    main.style.setProperty('--verd2', 255/2);
-    main.style.setProperty('--azul', 255);
-    main.style.setProperty('--azul2', 255/2);
-
+    var r1 = 1;
+    var g1 = 1;
+    var b1 = 1;
+    
     function fstart() {
-
         bbarra.style.display = 'none';
         broda.style.display = 'none';
         play2.style.display = 'none';
@@ -297,14 +238,6 @@
             }
         }
     }
-    function rotar() {
-    var slider = document.getElementById("loop");                             
-    var num = 1;
-    setInterval(function(){
-    slider.value = num++;
-    }, 500);
-    };
-
     
     // top
 
@@ -438,26 +371,25 @@
     rred = document.getElementById('rred');
     rgre = document.getElementById('rgre');
     rblu = document.getElementById('rblu');
+    lred = document.getElementById('lred');
+    lgre = document.getElementById('lgre');
+    lblu = document.getElementById('lblu');
+    
+    document.body.addEventListener("input", (event) => {
+        play1.style.backgroundColor = 'rgb('+rred.value+', '+rgre.value+', '+rblu.value+')';
 
-    rred.addEventListener("input", (event) => {
-        main.style.setProperty('--verm', rred.value);
-        main.style.setProperty('--verm2', rred.value/2);
-    })
-    rgre.addEventListener("input", (event) => {
-    main.style.setProperty('--verd', rgre.value);
-    main.style.setProperty('--verd2', rgre.value/2);
-    })
-    rblu.addEventListener("input", (event) => {
-    main.style.setProperty('--azul', rblu.value);
-    main.style.setProperty('--azul2', rblu.value/2);
-    })
+        barra.style.background = 'linear-gradient(to right, rgb('+rred.value+', 0, 0), rgb('+rred.value+', '+rgre.value/2+', 0), rgb('+rred.value+', '+rgre.value+', 0), rgb('+rred.value/2+', '+rgre.value+', 0), rgb(0, '+rgre.value+', 0), rgb(0, '+rgre.value+', '+rblu.value/2+'), rgb(0, '+rgre.value+', '+rblu.value+'), rgb(0, '+rgre.value/2+', '+rblu.value+'), rgb(0, 0, '+rblu.value+'))';
 
-    select.addEventListener("input", function() {
+        roda.style.background = 'conic-gradient(rgb('+rred.value+', 0, 0), rgb('+rred.value+',0,'+rblu.value/2+'), rgb('+rred.value+',0,'+rblu.value+'), rgb('+rred.value/2+',0,'+rblu.value+'), rgb(0, 0, '+rblu.value+'), rgb(0, '+rgre.value/2+', '+rblu.value+'), rgb(0, '+rgre.value+', '+rblu.value+'), rgb(0, '+rgre.value+', '+rblu.value/2+'), rgb(0, '+rgre.value+', 0), rgb('+rred.value/2+', '+rgre.value+', 0), rgb('+rred.value+', '+rgre.value+', 0), rgb('+rred.value+', '+rgre.value/2+', 0), rgb('+rred.value+', 0, 0) )';
+
+        lred.style.background = 'conic-gradient(rgb('+rred.value+',0,0) 30deg, var(--trans) 30deg 330deg,rgb('+rred.value+',0,0) 330deg)';
+        lgre.style.background = 'conic-gradient(rgb(0,'+rgre.value+',0) 30deg, var(--trans) 30deg 330deg,rgb(0,'+rgre.value+',0) 330deg)';
+        lblu.style.background = 'conic-gradient(rgb(0,0,'+rblu.value+') 30deg, var(--trans) 30deg 330deg,rgb(0,0,'+rblu.value+') 330deg)';
+
         if (rred.value == r1 && rgre.value == g1 && rblu.value == b1) {
             fganhar();
         }
-    })    
-    
+    })
 </script>
 
 </html>
