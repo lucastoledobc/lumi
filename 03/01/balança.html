@@ -9,19 +9,13 @@
     <title>Equilíbrio</title>
     <meta name="description" content="Nesse jogo descubra o peso necessário para manter o equilíbrio.">
     <style>
-        body {
+        /* body {
             background-attachment: fixed;
             background-position: center;
             background-size: cover;
             background-image: url(/anexos/midias/fundo-casa-vermelho.svg);
-        }
-        .fundo {
-            position: absolute;
-            bottom: 0%;
-            height: 36svh;
-            width: 100vw;
-        }
-        #barra {
+        } */
+        /* #barra {
             height: 6svh;
             background-image: repeating-linear-gradient(                
                 #023145 0 2svh,
@@ -35,17 +29,17 @@
                 #B7E8FD 0 2vw,
                 #023145 2vw 4vw
             );
-        }
+        } */
 
-        .select {
-            position: absolute;
-            top: 20%;
-            left: 10%;
+        .mid {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 90svh;
         }
-
         .triangulo {
             position: absolute;
-            top: 55%;
+            top: 50%;
             left: 50%;
             transform: translate(-50%,0);
             width: 0; 
@@ -55,22 +49,18 @@
             border-right: var(--x) solid transparent;
             border-bottom: var(--x) solid rgb(255, 0, 0);
         }
-        .center {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 90svh;
-        }
         .barra {
             width: clamp(1rem, 60vw, 220vh);
             max-width: 80vw;
             height: 2svh;
             background-color: red;
+            position: absolute;
+            top: 50%;
+            left: calc(50% - clamp(1rem, 60vw, 220vh) / 2);
         }
         #bag {
             position: relative;
             width: 10%;
-            z-index: 1;
         }
 
         .pad {
@@ -81,30 +71,56 @@
         #pad {
             width: 30%;
         }
-        /*botoes em cima da balança */
+        
+        /* #b0 {
+            animation: ani1 5s linear infinite;
+        }
+        @keyframes ani1 {
+            0% {rotate: 0;}
+            25% {rotate: 20deg;}
+            50% {rotate: 0;}
+            75% {rotate: -20deg;}
+            100% {rotate: 0;}
+        } */
     </style>
 </head>
 <body>
     <h1>Equilíbrio</h1>
     <main>
-        <div class="fundo"> <div id="barra"></div> <div id="resto"></div> </div>
-        <div class="triangulo"></div>
-        <div class="center">
+        <section class="top">
+            <div class="nivel">
+                <select name="nivel" id="nivel" value = '1'>
+                    <option value="1">Fácil</option>
+                    <option value="2">Médio</option>
+                    <option value="3">Difícil</option>
+                    <option value="4">Experimental</option>                    
+                    <option value="5">Impossível</option>
+                </select>
+            </div>
+        </section>
+        <section class="mid">
+            <div class="triangulo"></div>
             <div class="barra"><img src="/anexos/midias/bag.svg" alt="bolsa" id="bag"></div>
-        </div>
+        </section>
+        <section class="bot">
+
+        </section>
     </main>
-    <section class="select">
-        <select name="nivel" id="nivel">
-            <option value="1">Nível 1</option>
-            <option value="2">Nível 2</option>
-            <option value="3">Nível 3</option>
-        </select>
-    </section>
     <section class="pad">
         <input type="number" name="pad" id="pad" placeholder="10">
     </section>
-    <section id="menu"></section>
     <section id="botoes"></section>
+    <!-- <dialog class="popup" id="ajuda">
+        <h1>Jogo da Balança</h1>
+        <p>Coloque o peso no lugar certo para equilibra a balança.</p>
+        <div>
+            <div class="triangulo"></div>
+            <div class="barra" id="b0"></div>
+
+        </div>
+        <button onclick="fjogar()">Jogar</button>
+    </dialog> -->
+    <dialog class="popup" id="ganhar"></dialog>
 </body>
 
 <script>
@@ -122,8 +138,9 @@
     })
 
     barra = document.getElementsByClassName('barra')[0];
-    // barra.style.rotate = '-20deg';
-    // barra.style.transition = '2s';
+    barra.style.rotate = '20deg';
+    barra.style.rotate = '-20deg';
+    barra.style.transition = '2s';
 </script>
 
 </html>

@@ -23,7 +23,6 @@
         #key {
             width: 10svh;
             aspect-ratio: 1;
-            background-color: rgb(var(--r), var(--g), var(--b));
             border: 2px dashed var(--branco);      
             animation: ani1 2s linear infinite;
             animation-delay: 0s;
@@ -50,6 +49,7 @@
         }
         #play1 {
             width: 20svh;
+            background-color: white;
         }
         #barra {
             height: 10svh;
@@ -93,6 +93,9 @@
         }        
 
         @media (orientation: portrait) {
+            #play2 {
+                display: none;
+            }
             .bot {
                 height: 10svh;
                 margin-top: 5svh;
@@ -150,9 +153,9 @@
             <div class="luz" id="lblu"></div>
         </section>
         <section class="bot2">
-            <input type="range" class="range" value="0" min="1" max="255" name="rred" id="rred">
-            <input type="range" class="range" value="0" min="1" max="255" name="rgre" id="rgre">
-            <input type="range" class="range" value="0" min="1" max="255" name="rblu" id="rblu">
+            <input type="range" class="range" value="255" min="1" max="255" name="rred" id="rred">
+            <input type="range" class="range" value="255" min="1" max="255" name="rgre" id="rgre">
+            <input type="range" class="range" value="255" min="1" max="255" name="rblu" id="rblu">
         </section>
     </main>
     
@@ -160,9 +163,7 @@
     <dialog class="popup" id="ajuda">
         <h1>Jogo das Cores</h1>
         <p>Tente desenhar a cor que vai aparecer clicando nos controladores abaixo.</p>
-        <div id="start">
-            <button onclick="fstart()">Começar</button>
-        </div>
+            <button onclick="fjogar()">Jogar</button>
     </dialog>
     <dialog class="popup" id="ganhar"></dialog>
 </body>
@@ -188,7 +189,7 @@
     var g1 = 1;
     var b1 = 1;
     
-    function fstart() {
+    function fjogar() {
         bbarra.style.display = 'none';
         broda.style.display = 'none';
         play2.style.display = 'none';
@@ -198,58 +199,9 @@
 
         ajuda.style.display = 'none';
         ganhar.style.display = 'none';
-
-        r = Math.random();
-        g = Math.random();
-        b = Math.random();
-
-        if (select.value == 1) {
-            if (r < 1) {
-                r1 = 255;
-                g1 = 255;
-                b1 = 255; 
-                main.style.setProperty('--r', r1);
-                main.style.setProperty('--g', g1);
-                main.style.setProperty('--b', b1);
-            }            
-            if (r < 0.75) {
-                r1 = 255;
-                g1 = 1;
-                b1 = 1;
-                main.style.setProperty('--r', r1);
-                main.style.setProperty('--g', g1);
-                main.style.setProperty('--b', b1);
-            }
-            if (r < 0.5) {
-                r1 = 1;
-                g1 = 255;
-                b1 = 1;
-                main.style.setProperty('--r', r1);
-                main.style.setProperty('--g', g1);
-                main.style.setProperty('--b', b1);
-            }
-            if (r < 0.25) {
-                r1 = 1;
-                g1 = 1;
-                b1 = 255;
-                main.style.setProperty('--r', r1);
-                main.style.setProperty('--g', g1);
-                main.style.setProperty('--b', b1);
-            }
-        }
-    }
-    
-    // top
-
-    select.addEventListener("input", function() {
-
+        
         h2.style.display = 'block';
         key.style.display = 'block';
-        bbarra.style.display = 'none';
-        broda.style.display = 'none';
-        play2.style.display = 'none';
-        roda.style.display = 'none';
-        barra.style.display = 'none';
         play1.style.display = 'block';
         
         r = Math.random();
@@ -260,104 +212,87 @@
             if (r < 1) {
                 r1 = 255;
                 g1 = 255;
-                b1 = 255; 
-                main.style.setProperty('--r', r1);
-                main.style.setProperty('--g', g1);
-                main.style.setProperty('--b', b1);
+                b1 = 255;
             }            
             if (r < 0.75) {
                 r1 = 255;
                 g1 = 1;
                 b1 = 1;
-                main.style.setProperty('--r', r1);
-                main.style.setProperty('--g', g1);
-                main.style.setProperty('--b', b1);
             }
             if (r < 0.5) {
                 r1 = 1;
                 g1 = 255;
                 b1 = 1;
-                main.style.setProperty('--r', r1);
-                main.style.setProperty('--g', g1);
-                main.style.setProperty('--b', b1);
             }
             if (r < 0.25) {
                 r1 = 1;
                 g1 = 1;
                 b1 = 255;
-                main.style.setProperty('--r', r1);
-                main.style.setProperty('--g', g1);
-                main.style.setProperty('--b', b1);
             }
         }
         else if (select.value == 2) {
             if (r < 0.5) {
                 r1 = 1;
-                main.style.setProperty('--r', r1);
             } else {
                 r1 = 255;
-                main.style.setProperty('--r', r1);
             }
             if (g < 0.5) {
                 g1 = 1;
-                main.style.setProperty('--g', g1);
             } else {
                 g1 = 255;
-                main.style.setProperty('--g', g1);
             }
             if (b < 0.5) {
                 b1 = 1;
-                main.style.setProperty('--b', b1);
             } else {
                 b1 = 255;
-                main.style.setProperty('--b', b1);
             }
         }
         
         else if (select.value == 3) {
             if (r < 0.5) {
                 r1 = 1;
-                main.style.setProperty('--r', r1);
             } else {
-                main.style.setProperty('--r', r1);
+                r1=255;
             }
             if (g < 0.5) {
                 g1 = 1;
-                main.style.setProperty('--g', g1);
             } else {
                 g1 = 255;
-                main.style.setProperty('--g', g1);
             }
             if (b < 0.5) {
                 b1 = 1;
-                main.style.setProperty('--b', b1);
             } else {
                 b1 = 255;
-                main.style.setProperty('--b', b1);
             }
         }
         else if (select.value == 4) {
             h2.style.display = 'none';
+            key.style.display = 'none';
+            play1.style.display = 'none';
+
             bbarra.style.display = 'block';
             broda.style.display = 'block';
-            key.style.display = 'none';
             play2.style.display = 'block';
-            play1.style.display = 'none';
             barra.style.display = 'block';
         }
         else if (select.value == 5) {
-                r1 = r*255;
-                g1 = g*255;
-                b1 = b*255;
-            main.style.setProperty('--r', r1);
-            main.style.setProperty('--g', g1);
-            main.style.setProperty('--b', b1);
+                r1 = Math.trunc(r*255);
+                g1 = Math.trunc(g*255);
+                b1 = Math.trunc(b*255);
             }
+        if (rred.value == r1 && rgre.value == g1 && rblu.value == b1) {
+            fjogar();
+        } else {
+            key.style.background = 'rgb('+r1+','+g1+','+b1+')';
         }
-    )
+    }    
+    
+    // top
+    select.addEventListener("input", function() {
+        fjogar();
+    })
 
     //botao
-
     function ffechar1() {
         roda.style.display = 'none';
         barra.style.display = 'block';
@@ -377,6 +312,7 @@
     
     document.body.addEventListener("input", (event) => {
         play1.style.backgroundColor = 'rgb('+rred.value+', '+rgre.value+', '+rblu.value+')';
+        play2.style.backgroundColor = 'rgb('+rred.value+', '+rgre.value+', '+rblu.value+')';
 
         barra.style.background = 'linear-gradient(to right, rgb('+rred.value+', 0, 0), rgb('+rred.value+', '+rgre.value/2+', 0), rgb('+rred.value+', '+rgre.value+', 0), rgb('+rred.value/2+', '+rgre.value+', 0), rgb(0, '+rgre.value+', 0), rgb(0, '+rgre.value+', '+rblu.value/2+'), rgb(0, '+rgre.value+', '+rblu.value+'), rgb(0, '+rgre.value/2+', '+rblu.value+'), rgb(0, 0, '+rblu.value+'))';
 
@@ -391,5 +327,4 @@
         }
     })
 </script>
-
 </html>

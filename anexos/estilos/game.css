@@ -165,15 +165,25 @@ input[type='text'] {
     display: flex;
     justify-content: center;
 }
-.popup > div > button {
+.popup > button {
     font-family: var(--fon1);
     font-size: 2rem;
-    color: var(--branco);
     background-color: var(--preto);
     padding: 0.5rem;
     border-radius: 1rem;
-    width: fit-content;
     text-wrap: nowrap;
+
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#ganhar{
+    top: 30%;
+}
+#ganhar > button {
+    position: relative;
 }
 
 footer {
