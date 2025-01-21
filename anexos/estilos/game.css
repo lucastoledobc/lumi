@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 @font-face {
     font-family: DynaPuff;
     src: url(fonts/DynaPuff-VariableFont_wdth\,wght.ttf);
@@ -38,13 +37,104 @@
 * {
     margin: 0;
     padding: 0;
+    color: var(--branco);
 }
 body {
     width: 100%;
-    background-color: var(--preto);    
-    color: var(--branco);
+    background-color: var(--preto);
 }
 
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10svh;
+    font-size: clamp(1rem, 5vh, 2rem);
+    text-wrap: balance;
+    font-family: var(--fon1);
+    text-shadow:
+    -0.1rem 0 var(--preto),
+    0.1rem 0 var(--preto),
+    0 -0.1rem var(--preto),
+    0 0.1rem var(--preto);
+}
+h2 {
+    font-size: clamp(1rem, 5vw, 2rem);
+    padding: 0.5rem;
+    text-shadow:
+    -0.1rem 0 var(--preto),
+    0.1rem 0 var(--preto),
+    0 -0.1rem var(--preto),
+    0 0.1rem var(--preto);
+}
+
+main {
+    width: 100%;
+    height: 90svh;
+    overflow: clip;
+}
+
+select {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(1rem, 5vw, 2rem);
+    cursor: pointer;
+
+    padding: 0.5rem;
+    background-color: var(--preto);
+    border: 2px solid var(--branco);
+    border-radius: 10px;
+}
+
+
+
+/* BOTOES */
+.button {
+    position: absolute;
+    aspect-ratio: 1;
+    background-color: var(--preto);
+    border-radius: 10%;
+}
+.icon {
+    width: clamp(1rem, 7vw, 2rem);
+    filter: invert(100%);
+}
+#bback {
+    left: var(--bm);
+    top: var(--bm);
+}
+#binfo, #bajuda, #bdark {
+    top: var(--bm);
+    right: var(--bm);
+}
+#info {
+    position: absolute;
+    text-align: justify;
+
+    max-width: clamp(1rem, 70vw, 50vh);
+    min-width: 40%;
+    padding: 0.4rem;
+    top: var(--bm);
+
+    border: 0.2rem solid var(--branco);
+    border-radius: 0.5rem;
+    background-color: red;
+}
+input[type='text'] {
+    margin: 0.3rem 0;
+    width: 100%;
+    text-wrap: wrap;
+    height: min-content;
+}
+#bmaxi {
+    bottom: var(--bm);
+    right: var(--bm);
+    opacity: 50%;
+}
+
+
+
+/* POP UP */
 .popup {
     position: absolute;
     top: 50%;
@@ -68,7 +158,6 @@ body {
 }
 
 #ajuda > p {
-    color: var(--branco);
     padding: 1rem;
 }
 #start {
@@ -85,101 +174,6 @@ body {
     width: fit-content;
     text-wrap: nowrap;
 }
-
-
-h1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 10svh;
-    font-size: clamp(1rem, 5vh, 2rem);
-    text-wrap: balance;
-    font-family: var(--fon1);
-    color: var(--branco);
-    text-shadow:
-    -0.1rem 0 var(--preto),
-    0.1rem 0 var(--preto),
-    0 -0.1rem var(--preto),
-    0 0.1rem var(--preto);
-}
-h2 {
-    font-size: clamp(1rem, 5vw, 2rem);
-    padding: 0.5rem;
-    text-shadow:
-    -0.1rem 0 var(--preto),
-    0.1rem 0 var(--preto),
-    0 -0.1rem var(--preto),
-    0 0.1rem var(--preto);
-}
-main {
-    width: 100%;
-    height: 90svh;
-    overflow: clip;
-}
-
-.button {
-    position: absolute;
-    aspect-ratio: 1;
-    background-color: var(--preto);
-    border-radius: 10%;
-}
-
-.icon {
-    width: clamp(1rem, 7vw, 2rem);
-    filter: invert(100%);
-}
-
-#bback {
-    left: var(--bm);
-    top: var(--bm);
-}
-
-#binfo, #bajuda, #bdark {
-    top: var(--bm);
-    right: var(--bm);
-}
-
-#info {
-    position: absolute;
-    color: white;
-    text-align: justify;
-
-    max-width: clamp(1rem, 70vw, 50vh);
-    min-width: 40%;
-    padding: 0.4rem;
-    top: var(--bm);
-
-    border: 0.2rem solid var(--branco);
-    border-radius: 0.5rem;
-    background-color: red;
-}
-input[type='text'] {
-    margin: 0.3rem 0;
-    width: 100%;
-    text-wrap: wrap;
-    height: min-content;
-}
-
-#bmaxi {
-    bottom: var(--bm);
-    right: var(--bm);
-    opacity: 50%;
-}
-
-select {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: clamp(1rem, 5vw, 2rem);
-    color: var(--branco);
-    cursor: pointer;
-
-    padding: 0.5rem;
-    background-color: var(--preto);
-    border: 2px solid var(--branco);
-    border-radius: 10px;
-}
-
-
 
 footer {
     position: absolute;

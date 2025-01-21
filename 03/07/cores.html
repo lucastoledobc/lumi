@@ -132,7 +132,14 @@
         }
         .range {
             width: 15svw;
+            animation: ani2 2s linear forwards;
+            animation-delay: 0s;
         }
+        @keyframes ani2 {
+            0% {initial-value: 0;}
+            50% {initial-value: 255;}
+            100% {initial-value: 0;}
+        }        
 
         @media (orientation: portrait) {
             .bot {
@@ -159,6 +166,9 @@
 
     </style>
 </head>
+
+
+
 <body>
     <h1 id="h1">Cores</h1>
     <main>
@@ -184,19 +194,20 @@
             <div id="barra"></div>
             <div id="roda"></div>
         </section>
+
         <section class="bot1">  
             <div class="luz" id="lred"></div>
             <div class="luz" id="lgre"></div>
             <div class="luz" id="lblu"></div>
         </section>
         <section class="bot2">
-            <input type="range" class="range" min="1" max="255" name="rred" id="rred">
-            <input type="range" class="range" min="1" max="255" name="rgre" id="rgre">
-            <input type="range" class="range" min="1" max="255" name="rblu" id="rblu">
+            <input id="loop" onchange="amount.value=rangeInput.value" oninput="amount.value=rangeInput.value" type="range" min="0" max="200" name="rangeInput" />
+            <input type="range" class="range" value="0" min="1" max="255" name="rred" id="rred">
+            <input type="range" class="range" value="0" min="1" max="255" name="rgre" id="rgre">
+            <input type="range" class="range" value="0" min="1" max="255" name="rblu" id="rblu">
         </section>
     </main>
-    <section class="menu" style="display: none;">
-    </section>
+    
     <section id="botoes"></section>
     <dialog class="popup" id="ajuda">
         <h1>Jogo das Cores</h1>
@@ -204,10 +215,12 @@
         <div id="start">
             <button onclick="fstart()">Começar</button>
         </div>
+        <footer>*Creditos: </footer>
     </dialog>
     <dialog class="popup" id="ganhar"></dialog>
-
 </body>
+
+
 
 <script id="script">
 
@@ -284,6 +297,13 @@
             }
         }
     }
+    function rotar() {
+    var slider = document.getElementById("loop");                             
+    var num = 1;
+    setInterval(function(){
+    slider.value = num++;
+    }, 500);
+    };
 
     
     // top

@@ -63,18 +63,18 @@ function finfo() {
     if (info.style.opacity == '0') {
         info.style.visibility = 'visible';
         info.style.opacity = '100';
-        info.style.right = 'calc(var(--bm) * 2 + clamp(1rem, 7vw, 2rem) + 4px)';
+        info.style.right = 'calc(var(--bm) * 2 + clamp(1rem, 7vw, 2rem))';
         info.style.transition = '1s';
 
         binfo.innerHTML = `
         <img src="/anexos/midias/icon-close.svg" id="iinfo" class="icon" alt="Fechar">
         `;
         
-        bajuda.style.top = 'calc(var(--bm) * 2 + clamp(1rem, 7vw, 2rem) + 4px)';
+        bajuda.style.top = 'calc(var(--bm) * 2 + clamp(1rem, 7vw, 2rem))';
         bajuda.style.opacity = '100';
         bajuda.style.transition = '1s';
 
-        bdark.style.top = 'calc(var(--bm) * 3 + clamp(1rem, 7vw, 2rem) * 2 + 4px * 2)';
+        bdark.style.top = 'calc(var(--bm) * 3 + clamp(1rem, 7vw, 2rem) * 2)';
         bdark.style.opacity = '100';
         bdark.style.transition = '1s';
 
