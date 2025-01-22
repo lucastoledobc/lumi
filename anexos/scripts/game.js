@@ -60,7 +60,7 @@ function finfo() {
 
     if (info.style.opacity == '0') {
         info.style.visibility = 'visible';
-        info.style.opacity = '100';
+        info.style.opacity = '1';
         info.style.right = 'calc(var(--bm) * 2 + clamp(1rem, 7vw, 2rem))';
         info.style.transition = '1s';
 
@@ -69,11 +69,11 @@ function finfo() {
         `;
         
         bajuda.style.top = 'calc(var(--bm) * 2 + clamp(1rem, 7vw, 2rem))';
-        bajuda.style.opacity = '100';
+        bajuda.style.opacity = '1';
         bajuda.style.transition = '1s';
 
         bdark.style.top = 'calc(var(--bm) * 3 + clamp(1rem, 7vw, 2rem) * 2)';
-        bdark.style.opacity = '100';
+        bdark.style.opacity = '1';
         bdark.style.transition = '1s';
 
         iinfo = document.getElementById('iinfo');

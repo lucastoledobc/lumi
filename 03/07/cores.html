@@ -25,7 +25,6 @@
             aspect-ratio: 1;
             border: 2px dashed var(--branco);      
             animation: ani1 2s linear infinite;
-            animation-delay: 0s;
         }
         @keyframes ani1 {
             0% {border: 2px dashed var(--branco);}
@@ -74,6 +73,29 @@
             width: 25%;
             max-width: 20svh;
             border-radius: 50%;
+            opacity: 50;
+        }
+        #lred {
+            background: conic-gradient(
+                rgb(255,0,0) 30deg, 
+                var(--trans) 30deg 330deg,
+                rgb(255,0,0) 330deg
+            );
+        }
+        #lgre {
+            background: conic-gradient(
+                rgb(0,255,0) 30deg, 
+                var(--trans) 30deg 330deg,
+                rgb(0,255,0) 330deg
+            );
+            
+        }
+        #lblu {
+            background: conic-gradient(
+                rgb(0,0,255) 30deg, 
+                var(--trans) 30deg 330deg,
+                rgb(0,0,255) 330deg
+            );
         }
         
         .bot2 {
@@ -83,13 +105,6 @@
         .range {
             width: 15svw;
             cursor: pointer;
-            animation: ani2 2s linear forwards;
-            animation-delay: 0s;
-        }
-        @keyframes ani2 {
-            0% {initial-value: 0;}
-            50% {initial-value: 255;}
-            100% {initial-value: 0;}
         }        
 
         @media (orientation: portrait) {
@@ -153,9 +168,9 @@
             <div class="luz" id="lblu"></div>
         </section>
         <section class="bot2">
-            <input type="range" class="range" value="255" min="1" max="255" name="rred" id="rred">
-            <input type="range" class="range" value="255" min="1" max="255" name="rgre" id="rgre">
-            <input type="range" class="range" value="255" min="1" max="255" name="rblu" id="rblu">
+            <input type="range" class="range" value="0" min="1" max="255" name="rred" id="rred">
+            <input type="range" class="range" value="0" min="1" max="255" name="rgre" id="rgre">
+            <input type="range" class="range" value="0" min="1" max="255" name="rblu" id="rblu">
         </section>
     </main>
     
@@ -163,7 +178,8 @@
     <dialog class="popup" id="ajuda">
         <h1>Jogo das Cores</h1>
         <p>Tente desenhar a cor que vai aparecer clicando nos controladores abaixo.</p>
-            <button onclick="fjogar()">Jogar</button>
+        <img src="/anexos/midias/Captura de tela 2025-01-21 212246.png" alt="">
+            <button onclick="fjogar()" onfocus="fstart()">Jogar</button>
     </dialog>
     <dialog class="popup" id="ganhar"></dialog>
 </body>
@@ -185,9 +201,34 @@
     roda = document.getElementById('roda');
     barra = document.getElementById('barra');
 
-    var r1 = 1;
-    var g1 = 1;
-    var b1 = 1;
+    rred.value = 0;
+    rgre.value = 0;
+    rblu.value = 0;
+    play1.style.backgroundColor = 'rgb('+rred.value+', '+rgre.value+', '+rblu.value+')';
+    lred.style.opacity = rred.value / 255;
+    lgre.style.opacity = rgre.value / 255;
+    lblu.style.opacity = rblu.value / 255;
+
+    i = 1
+    function fstart() {
+        setTimeout(function() {
+            rred.value = Number(rred.value) + 5;
+            rgre.value = Number(rgre.value) + 5;
+            rblu.value = Number(rblu.value) + 5;
+            i += 5;
+            
+            play1.style.backgroundColor = 'rgb('+rred.value+', '+rgre.value+', '+rblu.value+')';
+            lred.style.opacity = rred.value / 255;
+            lgre.style.opacity = rgre.value / 255;
+            lblu.style.opacity = rblu.value / 255;
+            
+            if (i < 255)  {
+                fstart();
+                console.log(i);
+            }
+        }, 20)
+    }
+
     
     function fjogar() {
         bbarra.style.display = 'none';
@@ -285,7 +326,7 @@
         } else {
             key.style.background = 'rgb('+r1+','+g1+','+b1+')';
         }
-    }    
+    }
     
     // top
     select.addEventListener("input", function() {
@@ -303,14 +344,15 @@
     }
 
     // ranges
+
     rred = document.getElementById('rred');
     rgre = document.getElementById('rgre');
     rblu = document.getElementById('rblu');
     lred = document.getElementById('lred');
     lgre = document.getElementById('lgre');
     lblu = document.getElementById('lblu');
-    
-    document.body.addEventListener("input", (event) => {
+
+    document.body.addEventListener("input", (event) => {        
         play1.style.backgroundColor = 'rgb('+rred.value+', '+rgre.value+', '+rblu.value+')';
         play2.style.backgroundColor = 'rgb('+rred.value+', '+rgre.value+', '+rblu.value+')';
 
@@ -318,9 +360,9 @@
 
         roda.style.background = 'conic-gradient(rgb('+rred.value+', 0, 0), rgb('+rred.value+',0,'+rblu.value/2+'), rgb('+rred.value+',0,'+rblu.value+'), rgb('+rred.value/2+',0,'+rblu.value+'), rgb(0, 0, '+rblu.value+'), rgb(0, '+rgre.value/2+', '+rblu.value+'), rgb(0, '+rgre.value+', '+rblu.value+'), rgb(0, '+rgre.value+', '+rblu.value/2+'), rgb(0, '+rgre.value+', 0), rgb('+rred.value/2+', '+rgre.value+', 0), rgb('+rred.value+', '+rgre.value+', 0), rgb('+rred.value+', '+rgre.value/2+', 0), rgb('+rred.value+', 0, 0) )';
 
-        lred.style.background = 'conic-gradient(rgb('+rred.value+',0,0) 30deg, var(--trans) 30deg 330deg,rgb('+rred.value+',0,0) 330deg)';
-        lgre.style.background = 'conic-gradient(rgb(0,'+rgre.value+',0) 30deg, var(--trans) 30deg 330deg,rgb(0,'+rgre.value+',0) 330deg)';
-        lblu.style.background = 'conic-gradient(rgb(0,0,'+rblu.value+') 30deg, var(--trans) 30deg 330deg,rgb(0,0,'+rblu.value+') 330deg)';
+        lred.style.opacity = rred.value / 255;
+        lgre.style.opacity = rgre.value / 255;
+        lblu.style.opacity = rblu.value / 255;
 
         if (rred.value == r1 && rgre.value == g1 && rblu.value == b1) {
             fganhar();

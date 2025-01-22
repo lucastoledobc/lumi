@@ -161,9 +161,12 @@ input[type='text'] {
 #ajuda > p {
     padding: 1rem;
 }
-#start {
-    display: flex;
-    justify-content: center;
+#ajuda > img {
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 30vh;
 }
 .popup > button {
     font-family: var(--fon1);
