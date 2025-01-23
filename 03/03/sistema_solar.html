@@ -28,7 +28,7 @@
             border-radius: 50%;
         }
         #eixo1 {
-            width: clamp(1rem, 65vw, 65vh);
+            width: clamp(1rem, 60vw, 60vh);
             border-bottom: 2px solid var(--branco);
             border-radius: 50%;
             /* border-bottom: 0px solid rgb(255, 255, 255); */
@@ -96,13 +96,20 @@
     </main>
     
     <section id="botoes"></section>
-    <footer>
-        Créditos: divLoda (youtube)
-    </footer>
+    <dialog class="popup" id="ajuda">
+        <h1>Sistema solar simplificado</h1>
+        <p>Sistema Sol-Terra-Lua</p>
+            <button onclick="fjogar()" onfocus="fstart()">Jogar</button>
+            <footer>Agradecimentos: Canal <a href="https://youtu.be/gYQ2uLA3EW0?si=-qGQTnAKb4UJ81Iy" target="_blank">divLoda (youtube)</a> que teve a ideia original.</footer>
+    </dialog>
+    <dialog class="popup" id="ganhar"></dialog>
 </body>
 
 <script>
-    
+    ajuda = document.getElementById('ajuda');
+    function fstart() {
+        ajuda.style.display='none';
+    }
 </script>
 
 </html>
