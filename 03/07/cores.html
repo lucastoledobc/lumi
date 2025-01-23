@@ -9,7 +9,7 @@
     <title>Cores</title>
     <meta name="description" content="Combinação de cores primárias RGB.">
 
-    <style>        
+    <style>
         main > section {
             display: flex;
             align-items: center;
@@ -38,7 +38,7 @@
         .botao {
             background-color: var(--trans);
             color: var(--branco);
-            font-size:  clamp(1rem, 6vw, 2rem);
+            font-size: clamp(1rem, 6vw, 2rem);
             border-radius: 5px;
             padding: 0.1rem 1rem;
         }
@@ -49,6 +49,7 @@
         #play1 {
             width: 20svh;
             background-color: white;
+            border: 2px dashed var(--branco); 
         }
         #barra {
             height: 10svh;
@@ -251,10 +252,10 @@
 
         if (select.value == 1) {
             if (r < 1) {
-                r1 = 255;
-                g1 = 255;
-                b1 = 255;
-            }            
+                r1 = 1;
+                g1 = 1;
+                b1 = 1;
+            }
             if (r < 0.75) {
                 r1 = 255;
                 g1 = 1;

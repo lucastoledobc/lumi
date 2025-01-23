@@ -44,6 +44,7 @@
 /* GERAL */
 
 html {
+    color-scheme: light dark;
     background: var(--cor1) url(/anexos/midias/fundo3.png) no-repeat center center;
     background-attachment: fixed;
     background-size: cover;

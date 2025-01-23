@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/anexos/estilos/game.css">
+    <link rel="shortcut icon" href="/anexos/midias/favicon-32x32.png" type="image/x-icon">
+    <title>Jogos Lumi Física</title>
+    <meta name="description" content="Jogos de Física">
+    <style>
+        main {
+            overflow: scroll !important;
+            margin: auto;
+        }
+        section {
+            height: 3rem;
+            overflow-y: clip;
+            border: thick double var(--branco);
+            border-radius: 1rem;
+            margin: 1.5rem;
+        }
+        button {
+            display: block;
+            width: 100%;
+            background-color: var(--trans);
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            padding: 0.5rem 1rem 1rem 1rem;
+        }
+        h3 {
+            display: inline-block;
+            font-size: 1.5rem;
+            text-decoration: underline;
+        }
+        button > img {
+            width: 2rem;
+            float: right;
+            filter: invert(100%);
+            border-radius: 5px;
+        }
+        .jogo {
+            display: inline-block;
+            padding: 0.5rem;
+            margin: 1rem;
+            border: 2px solid var(--branco);
+            border-radius: 5px;
+            text-decoration: underline;
+            text-align: center;
+        }
+        .img {
+            width: 5rem;
+            aspect-ratio: 1;
+        }
+        a {
+            font-size: 1.5rem;
+        }
+        #cores {
+            background: conic-gradient(
+            hsl(360 100% 50%),
+            hsl(315 100% 50%),
+            hsl(270 100% 50%),
+            hsl(225 100% 50%),
+            hsl(180 100% 50%),
+            hsl(135 100% 50%),
+            hsl(90 100% 50%),
+            hsl(45 100% 50%),
+            hsl(0 100% 50%));
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Lista de Jogos</h1>
+    <main>
+        <section class="section" id="s0">
+            <button class="botao"><h3>Matemática</h3><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
+
+        </section>
+        <section class="section" id="s1">
+            <button class="botao"><h3>Teoria e Conceitos</h3><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
+            
+
+        </section>
+
+        <section class="section" id="s2">
+            <button class="botao"><h3>Mecânica de Sólidos</h3><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
+            
+
+        </section>
+
+        <section class="section" id="s3">
+            <button class="botao"><h3>Mecânica de Fluídos</h3><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
+            
+            
+        </section>
+
+        <section class="section" id="s4">
+            <button class="botao"><h3>Astronomia</h3><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
+            
+
+        </section>
+
+        <section class="section" id="s5">
+            <button class="botao"><h3>Termologia</h3><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
+            
+
+        </section>
+
+        <section class="section" id="s6">
+            <button class="botao"><h3>Ondulatória</h3><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
+            
+
+        </section>
+
+        <section class="section" id="s7">
+            <button class="botao"><h3>Óptica</h3><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
+
+            <div class="jogo">
+                <a href="07/cores.html">
+                <div class="img" id="cores"></div>
+                Cores</a>
+            </div>
+            <div class="jogo">
+                <a href="07/cores.html">
+                <div class="img" id="cores"></div>
+                Cores</a>
+            </div>
+            <div class="jogo">
+                <a href="07/cores.html">
+                <div class="img" id="cores"></div>
+                Cores</a>
+            </div>
+            <div class="jogo">
+                <a href="07/cores.html">
+                <div class="img" id="cores"></div>
+                Cores</a>
+            </div>
+        </section>
+
+        <section class="section" id="s8">
+            <button class="botao"><h3>Eletromagntismo</h3><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
+            
+
+        </section>
+        <section class="section" id="s9">
+            <button class="botao"><h3>Moderna</h3><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
+            
+
+        </section>
+    </main>
+    <section id="botoes"></section>
+</body>
+
+<script>
+    
+botaos = document.getElementsByClassName("botao");
+botao = document.querySelector("button");
+section = document.getElementsByClassName("section");
+
+for (let i = 0; i<10; i++) {
+    botaos[i].addEventListener("click", () => {
+        button = document.getElementById("s"+i);
+        if (section["s"+i].style.height != 'auto') {
+            section["s"+i].style.height = 'auto';
+        } else {
+            section["s"+i].style.height = '3rem';
+        }
+    });
+}
+</script>
+
+</html>

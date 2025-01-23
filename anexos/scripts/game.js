@@ -13,7 +13,7 @@ ganhar.innerHTML = `<h1>Você acertou!</h1>
 botoes = document.getElementById('botoes');
 botoes.innerHTML = `
     <button type="button" id="bback" class="button">
-        <a href="/03/"> 
+        <a href="/03/index2.html"> 
         <img src="/anexos/midias/icon-back.svg" id="iback" class="icon" alt="Voltar">
         </a>
     </button>
