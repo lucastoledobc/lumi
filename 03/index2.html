@@ -8,16 +8,43 @@
     <title>Jogos Lumi Física</title>
     <meta name="description" content="Jogos de Física">
     <style>
+        #x1 {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+            height: 3rem;
+        }
+        #x2 {
+            width: fit-content;
+            padding: 0.5rem;
+            float: right;
+            display: flex;
+            font-weight: bold;
+            cursor: pointer;
+            color: var(--preto);
+            filter: invert(100%);
+            border: 1px solid;
+            border-radius: 1rem;
+
+        }
+        #x2 > img {
+            width: 1.5rem;
+            padding: 0 0 0 0.5rem;
+        }
         main {
             overflow: scroll !important;
-            margin: auto;
+            margin: 0 auto;
+            max-width: 1000px;
+            scrollbar-width: none;
         }
-        section {
-            height: 3rem;
+        .section {
+            max-height: 3rem;
             overflow-y: clip;
+            transition: height 1s;
             border: thick double var(--branco);
             border-radius: 1rem;
-            margin: 1.5rem;
+            margin: 1.5rem 0;
+            transition: max-height 1s;
         }
         button {
             display: block;
@@ -39,37 +66,85 @@
             filter: invert(100%);
             border-radius: 5px;
         }
-        .jogos {            
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+        .jogos {
+            padding: 0 1rem 1rem 1rem;
         }
-        .jogo {
+        a {
             display: inline-block;
+            width: 5rem;
             padding: 0.5rem;
             margin: 1rem;
+            font-size: 1.5rem;
             border: 2px solid var(--branco);
             border-radius: 5px;
             text-decoration: underline;
             text-align: center;
         }
         .img {
-            width: 5rem;
             aspect-ratio: 1;
         }
-        a {
-            font-size: 1.5rem;
+
+        /* JOGOS */
+
+        /* 03 */
+        #sss {
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+        #eixo2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 5rem;
+            aspect-ratio: 1;
+            border-bottom: 1px solid var(--branco);
+            border-radius: 50%;
+            animation: girar 10s linear infinite;
+        }
+        @keyframes girar {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        #terra {
+            aspect-ratio: 1;
+            width: 2rem;            
+            background: rgb(0, 81, 255);
+            box-shadow: 0 0 20px rgba(82, 82, 252, 0.733);
+            border-radius: 50%;
+        }
+        #lua {
+            position: relative;
+            aspect-ratio: 1;
+            width: 0.5rem;
+
+            background: rgb(255, 255, 255);
+            border: 1px solid var(--branco);
+            box-shadow: 0 0 30px rgb(255, 255, 255);
+            border-radius: 50%;
+            right: 87%;
+            top: 53%;
+        }
+
+        /* 07 */
         #cores {
             background: conic-gradient(
             hsl(360 100% 50%),
-            hsl(315 100% 50%),
+            hsl(330 100% 50%),
+            hsl(300 100% 50%),
             hsl(270 100% 50%),
-            hsl(225 100% 50%),
+            hsl(240 100% 50%),
+            hsl(210 100% 50%),
             hsl(180 100% 50%),
-            hsl(135 100% 50%),
+            hsl(150 100% 50%),
+            hsl(120 100% 50%),
             hsl(90 100% 50%),
-            hsl(45 100% 50%),
+            hsl(60 100% 50%),
+            hsl(30 100% 50%),
             hsl(0 100% 50%));
         }
 
@@ -77,10 +152,15 @@
 </head>
 <body>
     <h1>Lista de Jogos</h1>
+    <div id="x1"> 
+        <div id="x2" onclick="fexpandir()">
+        Expandir todos <img src="/anexos/midias/icon-mais.svg" alt="Expandir">
+        </div>        
+    </div>
     <main>
         <section class="section" id="s0">
             <button class="botao"><h3>Matemática</h3><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
-
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde id rem possimus, in pariatur dolore eveniet tempore veniam porro molestiae quidem quibusdam error officia harum, ullam facere odit. In, consectetur.</p>
         </section>
         <section class="section" id="s1">
             <button class="botao"><h3>Teoria e Conceitos</h3><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
@@ -102,8 +182,16 @@
 
         <section class="section" id="s4">
             <button class="botao"><h3>Astronomia</h3><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
-            
-
+            <div class="jogos">
+                <a href="03/sistema_solar.html">
+                    <div class="img" id="sss">
+                        <div id="eixo2"><div id="terra"><div id="lua"></div>
+                            </div>
+                        </div>
+                    </div>
+                    Sistema Solar
+                </a>
+            </div>
         </section>
 
         <section class="section" id="s5">
@@ -121,21 +209,10 @@
         <section class="section" id="s7">
             <button class="botao"><h3>Óptica</h3><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
         <div class="jogos">
-            <div class="jogo">
                 <a href="07/cores.html">
                 <div class="img" id="cores"></div>
-                Cores</a>
-            </div>
-            <div class="jogo">
-                <a href="07/cores.html">
-                <div class="img" id="cores"></div>
-                Cores</a>
-            </div>
-            <div class="jogo">
-                <a href="07/cores.html">
-                <div class="img" id="cores"></div>
-                Cores</a>
-            </div>
+                Cores
+                </a>
         </div>
         </section>
 
@@ -154,7 +231,6 @@
 </body>
 
 <script>
-    
 botaos = document.getElementsByClassName("botao");
 botao = document.querySelector("button");
 section = document.getElementsByClassName("section");
@@ -162,13 +238,28 @@ section = document.getElementsByClassName("section");
 for (let i = 0; i<10; i++) {
     botaos[i].addEventListener("click", () => {
         button = document.getElementById("s"+i);
-        if (section["s"+i].style.height != 'auto') {
-            section["s"+i].style.height = 'auto';
+        if (section["s"+i].style.maxHeight != "200rem") {
+            section["s"+i].style.maxHeight = "200rem";
         } else {
-            section["s"+i].style.height = '3rem';
+            section["s"+i].style.maxHeight = '3rem';
         }
     });
 }
+
+x = document.getElementById('x2');
+function fexpandir() {
+    if (x.innerHTML != `Encolher todos <img src="/anexos/midias/icon-menos.svg" alt="Encolher">`) {
+        x.innerHTML = `Encolher todos <img src="/anexos/midias/icon-menos.svg" alt="Encolher">`;
+        for (let i = 0; i<10; i++) {
+            section["s"+i].style.maxHeight = "200rem";
+        }
+    } else {
+        x.innerHTML = `Expandir todos <img src="/anexos/midias/icon-mais.svg" alt="Expandir">`;
+        for (let i = 0; i<10; i++) {
+            section["s"+i].style.maxHeight = "3rem";
+        }        
+    }
+};
 </script>
 
 </html>
