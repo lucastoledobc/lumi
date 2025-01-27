@@ -6,7 +6,7 @@ document.head.innerHTML += `
  
 ganhar = document.getElementById('ganhar');
 ganhar.innerHTML = `<h1>Você acertou!</h1>
-            <button onclick="fjogar()">Jogar de novo</button>
+            <button class="botao" onclick="fjogar()">Jogar de novo</button>
 `;
     //BOTOES
 

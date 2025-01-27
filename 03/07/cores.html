@@ -18,7 +18,9 @@
         
         .top {
             height: 20svh;
-            padding-top: 5svh;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
         }
         #key {
             width: 10svh;
@@ -34,13 +36,7 @@
         .play {
             width: 15svh;
             aspect-ratio: 1;
-        }
-        .botao {
-            background-color: var(--trans);
-            color: var(--branco);
-            font-size: clamp(1rem, 6vw, 2rem);
-            border-radius: 5px;
-            padding: 0.1rem 1rem;
+            border: 2px dashed var(--branco); 
         }
 
         .mid {
@@ -48,8 +44,6 @@
         }
         #play1 {
             width: 20svh;
-            background-color: white;
-            border: 2px dashed var(--branco); 
         }
         #barra {
             height: 10svh;
@@ -74,7 +68,7 @@
             width: 25%;
             max-width: 20svh;
             border-radius: 50%;
-            opacity: 50;
+            opacity: 0;
         }
         #lred {
             background: conic-gradient(
@@ -110,7 +104,7 @@
 
         @media (orientation: portrait) {
             #play2 {
-                display: none;
+                width: clamp(1rem, 15vw, 3rem);
             }
             .bot {
                 height: 10svh;
@@ -146,13 +140,13 @@
                     <option value="1">Fácil</option>
                     <option value="2">Médio</option>
                     <option value="3">Difícil</option>
-                    <option value="4">Experimental</option>                    
-                    <option value="5">Impossível</option>
+                    <option value="4">Sobrevivência</option>
+                    <option value="5">Experimental</option>                    
+                    <option value="6">Impossível</option>
                 </select>
             </div>
-            <h2>Adivinhe a cor</h2>
-            <button class="botao" onclick="ffechar1()">Linear</button>
-            <button class="botao" onclick="ffechar2()">Círculo</button>
+            <h2>Adivinhe a cor -></h2>
+            <button class="botao" onclick="ftrocar()">Trocar</button>
             <div id="key"></div>
             <div class="play" id="play2"></div>
         </section>
@@ -169,205 +163,212 @@
             <div class="luz" id="lblu"></div>
         </section>
         <section class="bot2">
-            <input type="range" class="range" value="0" min="1" max="255" name="rred" id="rred">
-            <input type="range" class="range" value="0" min="1" max="255" name="rgre" id="rgre">
-            <input type="range" class="range" value="0" min="1" max="255" name="rblu" id="rblu">
+            <input type="range" class="range" min="1" max="255" id="rred">
+            <input type="range" class="range" min="1" max="255" id="rgre">
+            <input type="range" class="range" min="1" max="255" id="rblu">
         </section>
     </main>
     
     <section id="botoes"></section>
     <dialog class="popup" id="ajuda">
         <h1>Jogo das Cores</h1>
-        <p>Tente desenhar a cor que vai aparecer clicando nos controladores abaixo.</p>
-        <img src="/anexos/midias/Captura de tela 2025-01-21 212246.png" alt="">
-            <button onclick="fjogar()" onfocus="fstart()">Jogar</button>
+        <h3>Use os controladores na parte de baixo para pintar a cor exata que aparece em cima.</h3>
+        <p>-> Fácil: apenas cores primárias.
+        <br>-> Médio: cores primárias e secundárias.
+        <br>-> Difícil: diferentes cores e tons.
+        <br>-> Sobrevivência: acerte o maior número em 10 segundos.
+        <br>-> Experimental: fique livre para ver o comportamento das cores.
+        <br>-> Impossível: Acerte a cor exata dentre 16 581 375 possibilidades.</p>
+        <div id="jogar"><button class="botao" onclick="fstart()">Jogar</button></div>
     </dialog>
     <dialog class="popup" id="ganhar"></dialog>
 </body>
 
 
 
-<script id="script">
-    ajuda = document.getElementById("ajuda");
-    ganhar = document.getElementById("ganhar");
+<script>
+ajuda = document.getElementById("ajuda");
+ganhar = document.getElementById("ganhar");
 
-    select = document.getElementById("nivel");
-    h2 = document.getElementsByTagName('h2')[0];
-    bbarra = document.getElementsByClassName('botao')[0];
-    broda = document.getElementsByClassName('botao')[1];
-    key = document.getElementById('key');
-    play1 = document.getElementById('play1');
+select = document.getElementById("nivel");
+h2 = document.getElementsByTagName('h2')[0];
+btrocar = document.getElementsByClassName('botao')[0];
+key = document.getElementById('key');
+play1 = document.getElementById('play1');
 
-    play2 = document.getElementById('play2');
-    roda = document.getElementById('roda');
-    barra = document.getElementById('barra');
+play2 = document.getElementById('play2');
+roda = document.getElementById('roda');
+barra = document.getElementById('barra');
 
-    rred.value = 0;
-    rgre.value = 0;
-    rblu.value = 0;
-    play1.style.backgroundColor = 'rgb('+rred.value+', '+rgre.value+', '+rblu.value+')';
-    lred.style.opacity = rred.value / 255;
-    lgre.style.opacity = rgre.value / 255;
-    lblu.style.opacity = rblu.value / 255;
+/*SETs*/
+btrocar.style.display = 'none';
+play2.style.display = 'none';
 
-    i = 1
-    function fstart() {
-        setTimeout(function() {
-            rred.value = Number(rred.value) + 5;
-            rgre.value = Number(rgre.value) + 5;
-            rblu.value = Number(rblu.value) + 5;
-            i += 5;
-            
-            play1.style.backgroundColor = 'rgb('+rred.value+', '+rgre.value+', '+rblu.value+')';
-            lred.style.opacity = rred.value / 255;
-            lgre.style.opacity = rgre.value / 255;
-            lblu.style.opacity = rblu.value / 255;
-            
-            if (i < 255)  {
-                fstart();
-                console.log(i);
-            }
-        }, 20)
-    }
+barra.style.display = 'none';
+roda.style.display = 'none';
 
-    
-    function fjogar() {
-        bbarra.style.display = 'none';
-        broda.style.display = 'none';
-        play2.style.display = 'none';
+rred.value = 0;
+rgre.value = 0;
+rblu.value = 0;
+play1.style.backgroundColor = 'rgb('+rred.value+', '+rgre.value+', '+rblu.value+')';
 
-        barra.style.display = 'none';
-        roda.style.display = 'none';
-
+i = 1;
+function fstart() {
+    setTimeout(function() {
         ajuda.style.display = 'none';
-        ganhar.style.display = 'none';
+        rred.value = Number(rred.value) + 5;
+        rgre.value = Number(rgre.value) + 5;
+        rblu.value = Number(rblu.value) + 5;
+        i += 5;
         
-        h2.style.display = 'block';
-        key.style.display = 'block';
-        play1.style.display = 'block';
-        
-        r = Math.random();
-        g = Math.random();
-        b = Math.random();
-
-        if (select.value == 1) {
-            if (r < 1) {
-                r1 = 1;
-                g1 = 1;
-                b1 = 1;
-            }
-            if (r < 0.75) {
-                r1 = 255;
-                g1 = 1;
-                b1 = 1;
-            }
-            if (r < 0.5) {
-                r1 = 1;
-                g1 = 255;
-                b1 = 1;
-            }
-            if (r < 0.25) {
-                r1 = 1;
-                g1 = 1;
-                b1 = 255;
-            }
-        }
-        else if (select.value == 2) {
-            if (r < 0.5) {
-                r1 = 1;
-            } else {
-                r1 = 255;
-            }
-            if (g < 0.5) {
-                g1 = 1;
-            } else {
-                g1 = 255;
-            }
-            if (b < 0.5) {
-                b1 = 1;
-            } else {
-                b1 = 255;
-            }
-        }
-        
-        else if (select.value == 3) {
-            if (r < 0.5) {
-                r1 = 1;
-            } else {
-                r1=255;
-            }
-            if (g < 0.5) {
-                g1 = 1;
-            } else {
-                g1 = 255;
-            }
-            if (b < 0.5) {
-                b1 = 1;
-            } else {
-                b1 = 255;
-            }
-        }
-        else if (select.value == 4) {
-            h2.style.display = 'none';
-            key.style.display = 'none';
-            play1.style.display = 'none';
-
-            bbarra.style.display = 'block';
-            broda.style.display = 'block';
-            play2.style.display = 'block';
-            barra.style.display = 'block';
-        }
-        else if (select.value == 5) {
-                r1 = Math.trunc(r*255);
-                g1 = Math.trunc(g*255);
-                b1 = Math.trunc(b*255);
-            }
-        if (rred.value == r1 && rgre.value == g1 && rblu.value == b1) {
-            fjogar();
-        } else {
-            key.style.background = 'rgb('+r1+','+g1+','+b1+')';
-        }
-    }
-    
-    // top
-    select.addEventListener("input", function() {
-        fjogar();
-    })
-
-    //botao
-    function ffechar1() {
-        roda.style.display = 'none';
-        barra.style.display = 'block';
-    }
-    function ffechar2() {
-        barra.style.display = 'none';
-        roda.style.display = 'block';
-    }
-
-    // ranges
-
-    rred = document.getElementById('rred');
-    rgre = document.getElementById('rgre');
-    rblu = document.getElementById('rblu');
-    lred = document.getElementById('lred');
-    lgre = document.getElementById('lgre');
-    lblu = document.getElementById('lblu');
-
-    document.body.addEventListener("input", (event) => {        
         play1.style.backgroundColor = 'rgb('+rred.value+', '+rgre.value+', '+rblu.value+')';
-        play2.style.backgroundColor = 'rgb('+rred.value+', '+rgre.value+', '+rblu.value+')';
-
-        barra.style.background = 'linear-gradient(to right, rgb('+rred.value+', 0, 0), rgb('+rred.value+', '+rgre.value/2+', 0), rgb('+rred.value+', '+rgre.value+', 0), rgb('+rred.value/2+', '+rgre.value+', 0), rgb(0, '+rgre.value+', 0), rgb(0, '+rgre.value+', '+rblu.value/2+'), rgb(0, '+rgre.value+', '+rblu.value+'), rgb(0, '+rgre.value/2+', '+rblu.value+'), rgb(0, 0, '+rblu.value+'))';
-
-        roda.style.background = 'conic-gradient(rgb('+rred.value+', 0, 0), rgb('+rred.value+',0,'+rblu.value/2+'), rgb('+rred.value+',0,'+rblu.value+'), rgb('+rred.value/2+',0,'+rblu.value+'), rgb(0, 0, '+rblu.value+'), rgb(0, '+rgre.value/2+', '+rblu.value+'), rgb(0, '+rgre.value+', '+rblu.value+'), rgb(0, '+rgre.value+', '+rblu.value/2+'), rgb(0, '+rgre.value+', 0), rgb('+rred.value/2+', '+rgre.value+', 0), rgb('+rred.value+', '+rgre.value+', 0), rgb('+rred.value+', '+rgre.value/2+', 0), rgb('+rred.value+', 0, 0) )';
-
         lred.style.opacity = rred.value / 255;
         lgre.style.opacity = rgre.value / 255;
         lblu.style.opacity = rblu.value / 255;
 
-        if (rred.value == r1 && rgre.value == g1 && rblu.value == b1) {
-            fganhar();
+        if (i < 255)  {
+            fstart();
+        } else {
+            fjogar();
         }
-    })
+    }, 20)
+}
+
+function fjogar() {
+    btrocar.style.display = 'none';
+    play2.style.display = 'none';
+
+    barra.style.display = 'none';
+    roda.style.display = 'none';
+
+    ajuda.style.display = 'none';
+    ganhar.style.display = 'none';
+    
+    h2.style.display = 'block';
+    key.style.display = 'block';
+    play1.style.display = 'block';
+    
+    r = Math.random();
+    g = Math.random();
+    b = Math.random();
+
+    rred.step = 127;
+    rgre.step = 127;
+    rblu.step = 127;
+
+    if (select.value == 1) {
+        if (r < 1)    {r1 = 255; g1 = 255; b1 = 255;}
+        if (r < 0.75) {r1 = 255; g1 = 1; b1 = 1;}
+        if (r < 0.5)  {r1 = 1; g1 = 255; b1 = 1;}
+        if (r < 0.25) {r1 = 1; g1 = 1; b1 = 255;}
+    }
+    else if (select.value == 2) {
+        if (r < 0.5) {r1 = 1;} 
+        else {r1 = 255;}
+
+        if (g < 0.5) {g1 = 1;} 
+        else {g1 = 255;}
+
+        if (b < 0.5) {b1 = 1;} 
+        else {b1 = 255;}
+    }
+    
+    else if (select.value == 3) {
+        if (r < 1) {r1 = 255;} 
+        if (r < 0.67) {r1 = 128;} 
+        if (r < 0.33) {r1 = 1;}
+        
+        if (g < 1) {g1 = 255;} 
+        if (g < 0.67) {g1 = 128;} 
+        if (g < 0.33) {g1 = 1;}
+        
+        if (g < 1) {b1 = 255;} 
+        if (g < 0.67) {b1 = 128;} 
+        if (g < 0.33) {b1 = 1;}
+        
+    }
+    else if (select.value == 4) {
+        rred.step = 1;
+        rgre.step = 1;
+        rblu.step = 1;
+        r1=256;
+        g1=256;
+        b1=256;
+    }
+    else if (select.value == 5) {
+        h2.style.display = 'none';
+        key.style.display = 'none';
+        play1.style.display = 'none';
+
+        btrocar.style.display = 'block';
+        play2.style.display = 'block';
+        barra.style.display = 'block';
+
+        rred.step = 1;
+        rgre.step = 1;
+        rblu.step = 1;
+        r1=256;
+        g1=256;
+        b1=256;
+    }
+    else if (select.value == 6) {
+            rred.step = 1;
+            rgre.step = 1;
+            rblu.step = 1;
+
+            r1 = Math.trunc(r*255);
+            g1 = Math.trunc(g*255);
+            b1 = Math.trunc(b*255);
+        }
+
+        /* repetir caso repita a cor */
+    if (rred.value == r1 && rgre.value == g1 && rblu.value == b1) {
+        fjogar(); 
+    } else {
+        key.style.background = 'rgb('+r1+','+g1+','+b1+')';
+    }
+}
+
+// top
+select.addEventListener("input", function() {
+    fjogar();
+})
+
+//botao
+function ftrocar() {
+    if (barra.style.display != 'block') {
+        roda.style.display = 'none';
+        barra.style.display = 'block';
+    } else {
+        barra.style.display = 'none';
+        roda.style.display = 'block';
+    }
+}
+
+// ranges
+
+rred = document.getElementById('rred');
+rgre = document.getElementById('rgre');
+rblu = document.getElementById('rblu');
+lred = document.getElementById('lred');
+lgre = document.getElementById('lgre');
+lblu = document.getElementById('lblu');
+
+document.body.addEventListener("input", (event) => {        
+    play1.style.backgroundColor = 'rgb('+rred.value+', '+rgre.value+', '+rblu.value+')';
+    play2.style.backgroundColor = 'rgb('+rred.value+', '+rgre.value+', '+rblu.value+')';
+
+    barra.style.background = 'linear-gradient(to right, rgb('+rred.value+', 0, 0), rgb('+rred.value+', '+rgre.value/2+', 0), rgb('+rred.value+', '+rgre.value+', 0), rgb('+rred.value/2+', '+rgre.value+', 0), rgb(0, '+rgre.value+', 0), rgb(0, '+rgre.value+', '+rblu.value/2+'), rgb(0, '+rgre.value+', '+rblu.value+'), rgb(0, '+rgre.value/2+', '+rblu.value+'), rgb(0, 0, '+rblu.value+'))';
+
+    roda.style.background = 'conic-gradient(rgb('+rred.value+', 0, 0), rgb('+rred.value+',0,'+rblu.value/2+'), rgb('+rred.value+',0,'+rblu.value+'), rgb('+rred.value/2+',0,'+rblu.value+'), rgb(0, 0, '+rblu.value+'), rgb(0, '+rgre.value/2+', '+rblu.value+'), rgb(0, '+rgre.value+', '+rblu.value+'), rgb(0, '+rgre.value+', '+rblu.value/2+'), rgb(0, '+rgre.value+', 0), rgb('+rred.value/2+', '+rgre.value+', 0), rgb('+rred.value+', '+rgre.value+', 0), rgb('+rred.value+', '+rgre.value/2+', 0), rgb('+rred.value+', 0, 0) )';
+
+    lred.style.opacity = rred.value / 255;
+    lgre.style.opacity = rgre.value / 255;
+    lblu.style.opacity = rblu.value / 255;
+
+    if (rred.value == r1 && rgre.value == g1 && rblu.value == b1) {
+        fganhar();
+    }
+})
 </script>
 </html>

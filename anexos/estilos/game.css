@@ -39,9 +39,10 @@
     padding: 0;
     color: var(--branco);
     font-family: var(--fon2), var(--fon3), 'Times New Roman', Times, serif;
+    font-size: clamp(1rem, 5vw, 1.2rem);
 }
 html {
-    color-scheme: light dark;
+    /* color-scheme: light dark; */
     background: fixed url(/anexos/midias/fundo-star.gif) center;
     overflow: clip;
 }
@@ -74,9 +75,13 @@ h2 {
     0 -0.1rem var(--preto),
     0 0.1rem var(--preto);
 }
+h3 {
+    text-align: center;
+    padding: 0.3rem;
+}
 p {
-    padding: 0.5rem;
     text-align: justify;
+    line-height: 2rem;
 }
 main {
     width: 90%;
@@ -84,9 +89,12 @@ main {
     padding: 0 5vw;
     overflow: clip;
 }
-
+button {
+    cursor: pointer;
+    background-color: var(--preto);
+    border-radius: 5px;
+}
 select {
-    font-family: 'Times New Roman', Times, serif;
     font-size: clamp(1rem, 5vw, 2rem);
     cursor: pointer;
 
@@ -99,11 +107,15 @@ select {
 
 
 /* BOTOES */
+.botao {
+    font-family: var(--fon1);
+    font-size: clamp(1rem, 5vw, 2rem);
+    text-wrap: nowrap;
+    padding: 0.5rem;
+}
 .button {
     position: absolute;
     aspect-ratio: 1;
-    background-color: var(--preto);
-    border-radius: 10%;
 }
 .icon {
     width: clamp(1rem, 7vw, 2rem);
@@ -150,11 +162,11 @@ input[type='text'] {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    padding: 1rem;
+    padding: 15px;
 
     background-color: var(--preto);
     border: 3px solid var(--branco);
-    border-radius: 10px;
+    border-radius: 1rem;
 
     font-family: var(--fon1);
     font-size: large;
@@ -167,35 +179,19 @@ input[type='text'] {
     height: 80%;
 }
 
-#ajuda > p {
-    padding: 1rem;
-}
 #ajuda > img {
     position: absolute;
-    margin: auto;
     left: 50%;
     transform: translateX(-50%);
-    height: 30vh;
 }
-.popup > button {
-    font-family: var(--fon1);
-    font-size: 2rem;
-    background-color: var(--preto);
-    padding: 0.5rem;
-    border-radius: 1rem;
-    text-wrap: nowrap;
-
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
+.popup > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #ganhar{
     top: 30%;
-}
-#ganhar > button {
-    position: relative;
 }
 
 footer {

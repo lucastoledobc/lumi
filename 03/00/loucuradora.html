@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/anexos/estilos/game.css">    
+    <script src="/anexos/scripts/game.js" defer></script>
+    
+    <title>Loucuradora</title>
+    <meta name="description" content="Tente adivinhar onde está o erro na conta.">
+    <style>
+        main > section {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .top {
+            height: 20svh;
+            padding-top: 5svh;
+        }
+        .mid {
+            display: flex;
+            height: 90%;
+            align-items: center;
+            justify-content: center;
+        }
+        .numero {
+            font-size: 3rem;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Loucuradora</h1>
+    <main>
+        <section class="top"><div class="nivel">
+            <select name="nivel" id="nivel" value = '1'>
+                <option value="1">Fácil</option>
+                <option value="2">Médio</option>
+                <option value="3">Difícil</option>
+                <option value="4">Experimental</option>                    
+                <option value="5">Impossível</option>
+            </select>
+            <h2>Teste teste</h2>
+        </section>
+        <section class="mid">            
+        <div class="numero" id="nume1">1</div>
+        <div class="numero" id="oper1">+</div>
+        <div class="numero" id="nume2">2</div>
+        <div class="numero" id="oper2">=</div>
+        <div class="numero" id="resu">3</div>
+        </section>
+        <section class="bot">
+            <button onclick="fverificar()">Verificar</button>
+        </section>
+    </main>
+    <section id="botoes"></section>
+    <dialog class="popup" id="ajuda">
+        <h1>Jogo das Cores</h1>
+        <p>A operação está errada? Olhe com atenção e conserte se necessário.</p>
+            <button onclick="fjogar()">Jogar</button>
+    </dialog>
+    <dialog class="popup" id="ganhar"></dialog>
+</body>
+
+<script>
+ajuda = document.getElementById("ajuda");
+ganhar = document.getElementById("ganhar");
+
+nume1 = document.getElementById('nume1');
+oper1 = document.getElementById('oper1');
+nume2 = document.getElementById('nume2');
+oper2 = document.getElementById('oper2');
+resu = document.getElementById('resu');
+
+function fjogar() {
+    ajuda.style.display = 'none';
+    ganhar.style.display = 'none';
+
+    x1 = Math.trunc(Math.random()*10);
+    x2 = Math.trunc(Math.random()*10);
+
+    n1 = Math.trunc(Math.random()*3);
+    if (n1==0) {
+        nume1.innerHTML = `2`;
+        nume2.innerHTML = `2`;
+        r1 = x1+x2;
+    }
+}
+
+</script>
+
+</html>

@@ -13,7 +13,7 @@ FAZER:
 
 -> 03 Games:
 
-- efeito de confeti quando ganha
+- 07 cores: modo sobrevivencia;
 
 
 -> 04 Artigos:
