@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/anexos/estilos/game.css">
-    <link rel="shortcut icon" href="/anexos/midias/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="/anexos/estilos/game.css"> 
+    <script src="/anexos/scripts/game.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
     <title>Jogos Lumi Física</title>
     <meta name="description" content="Jogos de Física">
     <style>
@@ -46,7 +48,7 @@
             margin: 1.5rem 0;
             transition: max-height 1s;
         }
-        button {
+        .botao {
             display: block;
             width: 100%;
             background-color: var(--trans);
@@ -69,7 +71,7 @@
         .jogos {
             padding: 0 1rem 1rem 1rem;
         }
-        a {
+        .link-jogo {
             display: inline-block;
             width: 5rem;
             padding: 0.5rem;
@@ -183,7 +185,7 @@
         <section class="section" id="s4">
             <button class="botao"><h3>Astronomia</h3><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
             <div class="jogos">
-                <a href="03/sistema_solar.html">
+                <a class="link-jogo" href="03/sistema_solar.html">
                     <div class="img" id="sss">
                         <div id="eixo2"><div id="terra"><div id="lua"></div>
                             </div>
@@ -209,7 +211,7 @@
         <section class="section" id="s7">
             <button class="botao"><h3>Óptica</h3><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
         <div class="jogos">
-                <a href="07/cores.html">
+                <a class="link-jogo" href="07/cores.html">
                 <div class="img" id="cores"></div>
                 Cores
                 </a>
@@ -228,13 +230,30 @@
         </section>
     </main>
     <section id="botoes"></section>
+    <dialog class="popup" id="ajuda">
+        <h1>Jogos Lumi Física</h1>
+        <h3>Seja bem-vindo!</h3>
+        <p>Professor(a), quase todos jogos possuem uma sala experimental, aproveite. </p>
+        <div id="jogar"><button class="botao" onclick="fstart()">Fechar</button></div>
+        <footer>
+            *Agradecimentos:
+            <br>- Professor Gustavo Guanabara: criador do curso em vídeo. Se você quer aprender a fazer sites ou programação em geral, mas não sabe nada, <a href="https://www.cursoemvideo.com/">curso em vídeo</a> é o lugar.
+            <br>- Kiril Vatev: criador do efeito de <button onclick="confetti()">confetes</button>. Se quiser adicionar no seu site ou saber mais <a href="https://www.npmjs.com/package/canvas-confetti?activeTab=readme">clique aqui</a>.
+        </footer>
+    </dialog>
+    <dialog class="popup" id="ganhar"></dialog>
 </body>
 
 <script>
 botaos = document.getElementsByClassName("botao");
 botao = document.querySelector("button");
 section = document.getElementsByClassName("section");
+ajuda = document.getElementById('ajuda');
 
+ajuda.style.display='none';
+function fstart() {
+    ajuda.style.display='none';
+}
 for (let i = 0; i<10; i++) {
     botaos[i].addEventListener("click", () => {
         button = document.getElementById("s"+i);
