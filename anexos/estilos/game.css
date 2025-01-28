@@ -125,7 +125,7 @@ select {
     left: var(--bm);
     top: var(--bm);
 }
-#binfo, #bajuda, #bdark {
+#binfo, #bajuda, #bvolu, #bdark {
     top: var(--bm);
     right: var(--bm);
 }
@@ -194,6 +194,14 @@ input[type='text'] {
     top: 30%;
 }
 
+.popup > h1 {
+    text-wrap: nowrap;
+}
+.popup > button {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
 footer {
     position: absolute;
     bottom: var(--bm);

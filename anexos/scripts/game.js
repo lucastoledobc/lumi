@@ -7,6 +7,7 @@ document.head.innerHTML += `
 ganhar = document.getElementById('ganhar');
 ganhar.innerHTML = `<h1>Você acertou!</h1>
             <button class="botao" onclick="fjogar()">Jogar de novo</button>
+    <audio src="/anexos/midias/sound/erro1.wav"></audio>
 `;
     //BOTOES
 
@@ -21,6 +22,9 @@ botoes.innerHTML = `
     <div class="info" id="info"></div>
     <button type="button" id="bdark" class="button" onclick="fdark()">
         <img src="/anexos/midias/icon-dark1.svg" id="idark" class="icon" alt="Modo escuro">
+    </button>
+    <button type="button" id="bvolu" class="button" onclick="fvolu()">
+        <img src="/anexos/midias/icon-volume-3.svg" id="ivolu" class="icon" alt="Mute">
     </button>
     <button type="button" id="bajuda" class="button" onclick="fajuda()">
         <img src="/anexos/midias/icon-help.svg" id="iajuda" class="icon" alt="Ajuda">
@@ -56,6 +60,7 @@ info.style.visibility = 'collapse';
 function finfo() {
     binfo = document.getElementById('binfo');
     bajuda = document.getElementById('bajuda');
+    bvolu = document.getElementById('bvolu');
     bdark = document.getElementById('bdark');
 
     if (info.style.opacity == '0') {
@@ -72,7 +77,11 @@ function finfo() {
         bajuda.style.opacity = '1';
         bajuda.style.transition = '1s';
 
-        bdark.style.top = 'calc(var(--bm) * 3 + clamp(1rem, 7vw, 2rem) * 2)';
+        bvolu.style.top = 'calc(var(--bm) * 3 + clamp(1rem, 7vw, 2rem) * 2)';
+        bvolu.style.opacity = '1';
+        bvolu.style.transition = '1s';
+
+        bdark.style.top = 'calc(var(--bm) * 4 + clamp(1rem, 7vw, 2rem) * 3)';
         bdark.style.opacity = '1';
         bdark.style.transition = '1s';
 
@@ -95,6 +104,10 @@ function finfo() {
         bajuda.style.top = '10px';
         bajuda.style.opacity = '0';
         bajuda.style.transition = '1s';
+        
+        bvolu.style.top = '10px';
+        bvolu.style.opacity = '0';
+        bvolu.style.transition = '1s';
 
         bdark.style.top = '10px';
         bdark.style.opacity = '0';
@@ -113,6 +126,17 @@ function finfo() {
 function fajuda() {
     ajuda = document.getElementById('ajuda');
     ajuda.style.display = 'block';
+}
+
+// Volume
+function fvolu() {
+    if (bvolu.innerHTML != `<img src="/anexos/midias/icon-volume-mute.svg" id="ivolu" class="icon" alt="Volume">`) {
+            document.querySelectorAll("video, audio").forEach((elem) => elem.volume=0);
+            bvolu.innerHTML = `<img src="/anexos/midias/icon-volume-mute.svg" id="ivolu" class="icon" alt="Volume">`;
+        } else {
+            document.querySelectorAll("video, audio").forEach((elem) => elem.volume=1);
+            bvolu.innerHTML = `<img src="/anexos/midias/icon-volume-3.svg" id="ivolu" class="icon" alt="Mute">`;
+    }
 }
 
 // MODO ESCURO
@@ -187,4 +211,6 @@ function fmini() {
 
 function fganhar() {
     ganhar.style.display = 'block';
+    audio = document.getElementsByTagName('audio')[0];
+    audio.play();
 }
