@@ -11,23 +11,22 @@
     <meta name="description" content="Jogos de Física">
     <style>
         #x1 {
+            display: none;
             width: 90%;
             max-width: 1000px;
             margin: auto;
-            height: 3rem;
+            height: 5svh;
         }
         #x2 {
             width: fit-content;
             padding: 0.5rem;
             float: right;
             display: flex;
-            font-weight: bold;
             cursor: pointer;
             color: var(--preto);
             filter: invert(100%);
             border: 1px solid;
-            border-radius: 1rem;
-
+            border-radius: 20px;
         }
         #x2 > img {
             width: 1.5rem;
@@ -227,27 +226,23 @@
 
         </section>
     </main>
+    
     <section id="botoes"></section>
+
     <dialog class="popup" id="ajuda">
         <h1 class="h1-ajuda">Jogos Lumi Física</h1>
         <section class="mid-ajuda">
             <h2 class="h2-ajuda">Seja bem-vindo!</h2>
             <p>Professor(a), quase todos jogos possuem uma sala experimental, aproveite. </p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis eos eaque ipsam aliquam magnam quae itaque, ab ad ea architecto commodi sequi alias totam vel sunt excepturi dolores ullam recusandae!
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sunt asperiores voluptatibus perferendis ut laudantium, esse ipsam porro ipsum mollitia minima amet expedita, autem sint quis quas, rem illum architecto.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, quos aspernatur sit placeat quis minima alias, assumenda sapiente mollitia maiores deserunt in earum voluptatum animi delectus ipsa, ipsum labore sunt?</p>
         </section>
-        <section class="bot-ajuda">
-            <div id="jogar"><button class="botao" onclick="fstart()">Fechar</button></div>
-            <footer>
-                *Agradecimentos:
-                <br>- Professor Gustavo Guanabara: criador do curso em vídeo. Se você quer aprender a fazer sites ou programação em geral, mas não sabe nada, <a href="https://www.cursoemvideo.com/" target="_blank">curso em vídeo</a> é o lugar.
-                <br>- Kiril Vatev: criador do efeito de <button onclick="confetti()">confetes</button>. Se quiser adicionar no seu site ou saber mais <a href="https://www.npmjs.com/package/canvas-confetti?activeTab=readme" target="_blank">clique aqui</a>.
-            </footer>
-
+        <div class="botao-ajuda"><button class="botao2" onclick="fstart()">Fechar</button></div>
+        <section class="bot-ajuda"><button class="agradecimento">Agradecimentos</button>
         </section>
     </dialog>
-    <dialog class="popup" id="ganhar"></dialog>
+    <dialog class="popup" id="agradecimento">
+        <br>- Professor Gustavo Guanabara: criador do curso em vídeo. Se você quer aprender a fazer sites ou programação em geral, mas não sabe nada, <a href="https://www.cursoemvideo.com/" target="_blank">curso em vídeo</a> é o lugar.
+        <br>- Kiril Vatev: criador do efeito de <button onclick="confetti()">confetes</button>. Se quiser adicionar no seu site ou saber mais <a href="https://www.npmjs.com/package/canvas-confetti?activeTab=readme" target="_blank">clique aqui</a>.
+    </dialog>
 </body>
 
 <script>
@@ -256,7 +251,7 @@ botao = document.querySelector("button");
 section = document.getElementsByClassName("section");
 ajuda = document.getElementById('ajuda');
 
-// ajuda.style.display='none';
+ajuda.style.display='none';
 function fstart() {
     ajuda.style.display='none';
 }

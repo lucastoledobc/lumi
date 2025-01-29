@@ -5,35 +5,38 @@ document.head.innerHTML += `
 `;
  
 ganhar = document.getElementById('ganhar');
-ganhar.innerHTML = `<h1 class="h1-ganhar">Você acertou!</h1>
-            <button class="botao" onclick="fjogar()">Jogar de novo</button>
-    <audio src="/anexos/midias/sound/erro1.wav"></audio>
-`;
+if (ganhar != null) {
+    ganhar.innerHTML = `<h1 class="h1-ganhar">Você acertou!</h1>
+                <button class="botao" onclick="fjogar()">Jogar de novo</button>
+        <audio src="/anexos/midias/sound/erro1.wav"></audio>
+    `;
+}
+
     //BOTOES
 
 botoes = document.getElementById('botoes');
 botoes.innerHTML = `
-    <button type="button" id="bback" class="button">
+    <button type="button" id="bback" class="botao-icone">
         <a href="/03/index2.html"> 
         <img src="/anexos/midias/icon-back.svg" id="iback" class="icon" alt="Voltar">
         </a>
     </button>
 
     <div class="info" id="info"></div>
-    <button type="button" id="bdark" class="button" onclick="fdark()">
+    <button type="button" id="bdark" class="botao-icone" onclick="fdark()">
         <img src="/anexos/midias/icon-dark1.svg" id="idark" class="icon" alt="Modo escuro">
     </button>
-    <button type="button" id="bvolu" class="button" onclick="fvolu()">
+    <button type="button" id="bvolu" class="botao-icone" onclick="fvolu()">
         <img src="/anexos/midias/icon-volume-3.svg" id="ivolu" class="icon" alt="Mute">
     </button>
-    <button type="button" id="bajuda" class="button" onclick="fajuda()">
+    <button type="button" id="bajuda" class="botao-icone" onclick="fajuda()">
         <img src="/anexos/midias/icon-help.svg" id="iajuda" class="icon" alt="Ajuda">
     </button>
-    <button type="button" id="binfo" class="button" onclick="finfo()">
+    <button type="button" id="binfo" class="botao-icone" onclick="finfo()">
         <img src="/anexos/midias/icon-info.svg" id="iinfo" class="icon" alt="Informação">
     </button>
 
-    <button type="button" id="bmaxi" class="button">
+    <button type="button" id="bmaxi" class="botao-icone">
         <img src="/anexos/midias/icon-maxi.svg"id="imaxi" class="icon" onclick="fmaxi()" alt="Maximizar">
     </button>
 `;

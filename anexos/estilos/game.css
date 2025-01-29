@@ -107,11 +107,10 @@ select {
 /* BOTOES */
 .botao {
     font-family: var(--fon1);
-    font-size: clamp(1rem, 5vw, 2rem);
     text-wrap: nowrap;
     padding: 0.5rem;
 }
-.button {
+.botao-icone {
     position: absolute;
     aspect-ratio: 1;
 }
@@ -160,50 +159,45 @@ input[type='text'] {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    padding: 1rem;
+    padding: 0 1rem;
 
     background-color: var(--preto);
     border: 3px solid var(--branco);
     border-radius: 15px;
 }
-#ajuda {    
+#ajuda {
     display: block;
-    width: 90%;
+    width: 80%;
     height: 80%;
 }
+
 
 .h1-ajuda {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 10%;
-    font-size: clamp(1rem, 5vh, 2rem);
+    font-size: clamp(1rem, 7vw, 2rem);
+    text-align: center;
     text-wrap: balance;
     font-family: var(--fon1);
-    text-shadow:
-    -0.1rem 0 var(--preto),
-    0.1rem 0 var(--preto),
-    0 -0.1rem var(--preto),
-    0 0.1rem var(--preto);
 }
 .mid-ajuda {
-    height: 60%;
+    height: 75%;
     overflow: scroll;
-    border: 2px solid var(--branco);
 }
 
-.bot-ajuda {
-    height: 30%;
-    overflow: scroll;
+.botao-ajuda {
+    height: 15%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-footer {
+.bot-ajuda {
     position: absolute;
     bottom: var(--bm);
     left: var(--bm);
 }
-footer , footer * {
+.bot-ajuda , .bot-ajuda * {
     font-size: 1rem;
 }
