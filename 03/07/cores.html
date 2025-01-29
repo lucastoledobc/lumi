@@ -26,7 +26,7 @@
         #key {
             width: 10svh;
             aspect-ratio: 1;
-            border: 2px dashed var(--branco);      
+            border: 2px dashed var(--branco);
             animation: ani1 2s linear infinite;
         }
         @keyframes ani1 {
@@ -133,7 +133,7 @@
 
 
 <body>
-    <h1 id="h1">Cores</h1>
+    <h1 class="h1">Cores</h1>
     <main>
         <section class="top">
             <div class="nivel">
@@ -171,18 +171,23 @@
     </main>
     
     <section id="botoes"></section>
+    
     <dialog class="popup" id="ajuda">
-        <h1>Jogo das Cores</h1>
-        <h3>Use os controladores na parte de baixo para pintar a cor exata que aparece em cima.</h3>
-        <p>-> Fácil: apenas cores primárias.
-        <br>-> Médio: cores primárias e secundárias.
-        <br>-> Difícil: diferentes cores e tons.
-        <br>-> Sobrevivência: acerte o maior número em 10 segundos.
-        <br>-> Experimental: fique livre para ver o comportamento das cores.
-        <br>-> Impossível: Acerte a cor exata dentre 16 581 375 possibilidades.</p>
-        <div id="jogar"><button class="botao" onclick="fstart()">Jogar</button></div>
-    </dialog>
-    <dialog class="popup" id="ganhar"></dialog>
+        <h1 class="h1-ajuda">Jogo das Cores</h1>
+        <section class="mid-ajuda">
+            <h2 class="h2-ajuda">Use os controladores na parte de baixo para pintar a cor exata que aparece em cima.</h2>
+            <p>-> Fácil: apenas cores primárias.
+            <br>-> Médio: cores primárias e secundárias.
+            <br>-> Difícil: diferentes cores e tons.
+            <br>-> Sobrevivência: acerte o maior número em 10 segundos.
+            <br>-> Experimental: fique livre para ver o comportamento das cores.
+            <br>-> Impossível: Acerte a cor exata dentre 16 581 375 possibilidades.</p>
+        </section>
+        <section class="bot-ajuda">
+            <div id="jogar"><button class="botao" onclick="fstart()">Jogar</button></div>
+        </dialog>
+        <dialog class="popup" id="ganhar"></dialog>
+        </section>
 </body>
 
 

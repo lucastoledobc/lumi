@@ -5,7 +5,7 @@ document.head.innerHTML += `
 `;
  
 ganhar = document.getElementById('ganhar');
-ganhar.innerHTML = `<h1>Você acertou!</h1>
+ganhar.innerHTML = `<h1 class="h1-ganhar">Você acertou!</h1>
             <button class="botao" onclick="fjogar()">Jogar de novo</button>
     <audio src="/anexos/midias/sound/erro1.wav"></audio>
 `;
