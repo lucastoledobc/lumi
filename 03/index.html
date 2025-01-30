@@ -10,6 +10,9 @@
     <title>Jogos Lumi Física</title>
     <meta name="description" content="Jogos de Física">
     <style>
+        #ajuda {
+            display: none;
+        }
         #x1 {
             display: none;
             width: 90%;
@@ -43,7 +46,9 @@
             border: thick double var(--branco);
             border-radius: 1rem;
             margin: 1.5rem 0;
-            transition: max-height 1s;
+            transform: translate(-100%);
+            opacity: 0;
+            transition: max-height 1s, transform 1s, opacity 1s;
         }
         .botao-index {
             display: block;
@@ -78,6 +83,8 @@
             border-radius: 5px;
             text-decoration: underline;
             text-align: center;
+            opacity: 0;
+            transition: opacity 2s;
         }
         .img {
             aspect-ratio: 1;
@@ -182,7 +189,7 @@
         <section class="section" id="s4">
             <button class="botao-index"><h2 class="h2-index">Astronomia</h2><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
             <div class="jogos">
-                <a class="link-jogo" href="03/sistema_solar.html">
+                <a class="link-jogo js4" href="03/sistema_solar.html">
                     <div class="img" id="sss">
                         <div id="eixo2"><div id="terra"><div id="lua"></div>
                             </div>
@@ -208,7 +215,7 @@
         <section class="section" id="s7">
             <button class="botao-index"><h2 class="h2-index">Óptica</h2><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
         <div class="jogos">
-                <a class="link-jogo" href="07/cores.html">
+                <a class="link-jogo js7" href="07/cores.html">
                 <div class="img" id="cores"></div>
                 Cores
                 </a>
@@ -246,41 +253,71 @@
 </body>
 
 <script>
-botaos = document.getElementsByClassName("botao-index");
-botao = document.querySelector("button");
-section = document.getElementsByClassName("section");
 ajuda = document.getElementById('ajuda');
+x = document.getElementById('x2');
+section = document.getElementsByClassName("section");
+botoes = document.getElementsByClassName("botao-index");
 
-ajuda.style.display='none';
+
+
 function fstart() {
     ajuda.style.display='none';
 }
-for (let i = 0; i<10; i++) {
+
+
+
+i = 0
+finicio();
+function finicio() {
+    setTimeout(function() {
+        section["s"+i].style.transform = 'translate(0%)';
+        section["s"+i].style.opacity = '1';
+        i+=1;
+            if (i<10) {
+                finicio();
+            }
+    }, 100)
+}
+
+
+
+for (let i = 0, j = section.length; i<j; i++) {
     section["s"+i].style.maxHeight = '3rem';
-    botaos[i].addEventListener("click", () => {
+    botoes[i].addEventListener("click", () => {
         button = document.getElementById("s"+i);
+        jogos = document.getElementsByClassName("js"+i);
         if (section["s"+i].style.maxHeight == '3rem') {
             section["s"+i].style.maxHeight = '100rem';
+
+            for(let k of jogos){
+                k.style.opacity = '1';
+            }
+
             setTimeout(function() {
-            section["s"+i].style.maxHeight = section["s"+i].offsetHeight+'px';
-    }, 200)
-        } else if (section["s"+i].offsetHeight > 20) {
+            section["s"+i].style.maxHeight = section["s"+i].offsetHeight+'px';    
+            }, 200)
+        }        
+        else if (section["s"+i].offsetHeight > 20) {
+            for(let k of jogos){
+                k.style.opacity = '0';
+            }
             section["s"+i].style.maxHeight = '3rem';
         }
     });
 }
 
-x = document.getElementById('x2');
+
+
 function fexpandir() {
     if (x.innerHTML != `Encolher todos <img src="/anexos/midias/icon-menos.svg" alt="Encolher">`) {
         x.innerHTML = `Encolher todos <img src="/anexos/midias/icon-menos.svg" alt="Encolher">`;
-        for (let i = 0; i<10; i++) {
-            section["s"+i].style.maxHeight = "100rem";
+        for (let i of section) {
+            i.style.maxHeight = "100rem";
         }
     } else {
         x.innerHTML = `Expandir todos <img src="/anexos/midias/icon-mais.svg" alt="Expandir">`;
-        for (let i = 0; i<10; i++) {
-            section["s"+i].style.maxHeight = "3rem";
+        for (let i of section) {
+            i.style.maxHeight = "3rem";
         }        
     }
 };
