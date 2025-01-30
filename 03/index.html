@@ -165,29 +165,29 @@
     </div>
     <main>
         <section class="section" id="s0">
-            <button class="botao-index"><h2 class="h2-index">Matemática</h2><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
+            <button class="botao-index"><h2 class="h2-index">Matemática</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde id rem possimus, in pariatur dolore eveniet tempore veniam porro molestiae quidem quibusdam error officia harum, ullam facere odit. In, consectetur.</p>
         </section>
         <section class="section" id="s1">
-            <button class="botao-index"><h2 class="h2-index">Teoria e Conceitos</h2><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
+            <button class="botao-index"><h2 class="h2-index">Teoria e Conceitos</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
 
         </section>
 
         <section class="section" id="s2">
-            <button class="botao-index"><h2 class="h2-index">Mecânica de Sólidos</h2><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
+            <button class="botao-index"><h2 class="h2-index">Mecânica de Sólidos</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
 
         </section>
 
         <section class="section" id="s3">
-            <button class="botao-index"><h2 class="h2-index">Mecânica de Fluídos</h2><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
+            <button class="botao-index"><h2 class="h2-index">Mecânica de Fluídos</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
             
         </section>
 
         <section class="section" id="s4">
-            <button class="botao-index"><h2 class="h2-index">Astronomia</h2><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
+            <button class="botao-index"><h2 class="h2-index">Astronomia</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             <div class="jogos">
                 <a class="link-jogo js4" href="03/sistema_solar.html">
                     <div class="img" id="sss">
@@ -201,19 +201,19 @@
         </section>
 
         <section class="section" id="s5">
-            <button class="botao-index"><h2 class="h2-index">Termologia</h2><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
+            <button class="botao-index"><h2 class="h2-index">Termologia</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
 
         </section>
 
         <section class="section" id="s6">
-            <button class="botao-index"><h2 class="h2-index">Ondulatória</h2><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
+            <button class="botao-index"><h2 class="h2-index">Ondulatória</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
 
         </section>
 
         <section class="section" id="s7">
-            <button class="botao-index"><h2 class="h2-index">Óptica</h2><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
+            <button class="botao-index"><h2 class="h2-index">Óptica</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
         <div class="jogos">
                 <a class="link-jogo js7" href="07/cores.html">
                 <div class="img" id="cores"></div>
@@ -223,12 +223,12 @@
         </section>
 
         <section class="section" id="s8">
-            <button class="botao-index"><h2 class="h2-index">Eletromagntismo</h2><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
+            <button class="botao-index"><h2 class="h2-index">Eletromagntismo</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
 
         </section>
         <section class="section" id="s9">
-            <button class="botao-index"><h2 class="h2-index">Moderna</h2><img src="/anexos/midias/icon-down-outline.svg" alt="Abrir"></button>
+            <button class="botao-index"><h2 class="h2-index">Moderna</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
 
         </section>
@@ -249,6 +249,7 @@
     <dialog class="popup" id="agradecimento">
         <br>- Professor Gustavo Guanabara: criador do curso em vídeo. Se você quer aprender a fazer sites ou programação em geral, mas não sabe nada, <a href="https://www.cursoemvideo.com/" target="_blank">curso em vídeo</a> é o lugar.
         <br>- Kiril Vatev: criador do efeito de <button onclick="confetti()">confetes</button>. Se quiser adicionar no seu site ou saber mais <a href="https://www.npmjs.com/package/canvas-confetti?activeTab=readme" target="_blank">clique aqui</a>.
+        <br>- Devro LABS: empresa que redireciona os emais gratuitamente.
     </dialog>
 </body>
 
@@ -257,6 +258,7 @@ ajuda = document.getElementById('ajuda');
 x = document.getElementById('x2');
 section = document.getElementsByClassName("section");
 botoes = document.getElementsByClassName("botao-index");
+imgbotao = document.getElementsByClassName("imgbotao");
 
 
 
@@ -286,8 +288,10 @@ for (let i = 0, j = section.length; i<j; i++) {
     botoes[i].addEventListener("click", () => {
         button = document.getElementById("s"+i);
         jogos = document.getElementsByClassName("js"+i);
+        
         if (section["s"+i].style.maxHeight == '3rem') {
             section["s"+i].style.maxHeight = '100rem';
+            imgbotao[i].src = '/anexos/midias/icon-seta-baixo-outline.svg';
 
             for(let k of jogos){
                 k.style.opacity = '1';
@@ -302,6 +306,7 @@ for (let i = 0, j = section.length; i<j; i++) {
                 k.style.opacity = '0';
             }
             section["s"+i].style.maxHeight = '3rem';
+            imgbotao[i].src = '/anexos/midias/icon-seta-direita-outline.svg';
         }
     });
 }

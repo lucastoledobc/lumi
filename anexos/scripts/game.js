@@ -45,12 +45,12 @@ botoes.innerHTML = `
 
 info = document.getElementById("info");
 info.innerHTML = `
-    Caso esteja tendo problemas desative o adblock, pode ajudar.
-    Para outros casos você pode me mandar uma mensagem descrevendo o problema abaixo.
-    <form action="">
-        <input type="text" value="" placeholder="Descreva o problema aqui...">
+    Dúvidas? Sugestões? Envie para o email <address><a href="mailto:lumifisica@gmail.com">lumifisica@gmail.com</a></address> ou escreva abaixo.
+    <form action="https://formsubmit.co/lumifisica@gmail.com" method="POST">
+        <input type="email" name="email" placeholder="Seu email aqui" required>
+        <textarea name="message" placeholder="Descreva o problema aqui..." required></textarea>
+    <button type="submit" id="enviar">Enviar</button>
     </form>
-    <button type="button" id="enviar">Enviar</button>
 `;
 info.style.opacity = '0';
 info.style.right = '0%';

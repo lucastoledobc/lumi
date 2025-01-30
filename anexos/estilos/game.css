@@ -139,7 +139,8 @@ select {
     border-radius: 0.5rem;
     background-color: red;
 }
-input[type='text'] {
+input[type='email'], textarea {
+    color: black;
     margin: 0.3rem 0;
     width: 100%;
     text-wrap: wrap;
