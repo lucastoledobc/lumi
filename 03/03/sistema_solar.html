@@ -3,18 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/anexos/estilos/game.css">    
-    <script src="/anexos/scripts/game.js" defer></script>
+    <link rel="stylesheet" href="/anexos/estilos/style.css">    
+    <script src="/anexos/scripts/script.js" defer></script>
     
     <title>Sistema Solar</title>
     <meta name="description" content="Sistema Sol-Terra-Lua.">
     <style>
-        main {
-            display: flex;
-            align-items: center; /*vertical*/
-            justify-content: center; /*horizontal*/
-        }
-
         main * {
             position: absolute;
             aspect-ratio: 1;
@@ -82,8 +76,8 @@
     </style>
 </head>
 <body>
-    <h1>Sistema Solar</h1>
-    <main>
+    <h1 class="h103 flex">Sistema Solar</h1>
+    <main class="main03 flex">
         <div id="sol"></div>
 
         <div id="eixo1">
@@ -96,10 +90,11 @@
     </main>
     
     <section id="botoes"></section>
+    
     <dialog class="popup" id="ajuda">
         <h1>Sistema solar simplificado</h1>
         <p>Sistema Sol-Terra-Lua</p>
-            <button onclick="fjogar()" onfocus="fstart()">Jogar</button>
+            <button onclick="fstart()">Jogar</button>
             <footer>Agradecimentos: Canal <a href="https://youtu.be/gYQ2uLA3EW0?si=-qGQTnAKb4UJ81Iy" target="_blank">divLoda (youtube)</a> que teve a ideia original.</footer>
     </dialog>
     <dialog class="popup" id="ganhar"></dialog>

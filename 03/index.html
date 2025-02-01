@@ -3,14 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/anexos/estilos/game.css"> 
-    <script src="/anexos/scripts/game.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="/anexos/estilos/style.css"> 
+    <script src="/anexos/scripts/script.js" defer></script>
 
     <title>Jogos Lumi Física</title>
     <meta name="description" content="Jogos de Física">
     <style>
         /* JOGOS */
+        #ajuda {
+            display: none;
+        }
+
+        main {
+            overflow: scroll !important;
+            margin: 0 auto;
+            max-width: 1000px;
+            scrollbar-width: none;
+        }
+
+        .botao03 {
+            display: block;
+            width: 100%;
+            background-color: var(--trans);
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            padding: 0.5rem 1rem 1rem 1rem;
+        }
+        
+        button > img {
+            width: 2rem;
+            float: right;
+            filter: invert(100%);
+            border-radius: 5px;
+        }
+        .jogos {
+            padding: 0 1rem 1rem 1rem;
+        }
+        .link-jogo {
+            display: inline-block;
+            width: 5rem;
+            padding: 0.5rem;
+            margin: 1rem;
+            font-size: 1.5rem;
+            border: 2px solid var(--branco);
+            border-radius: 5px;
+            text-decoration: underline;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 2s;
+        }
+        .img03 {
+            aspect-ratio: 1;
+        }
 
         /* 03 */
         #sss {
@@ -77,40 +122,35 @@
     </style>
 </head>
 <body>
-    <h1 class="h1">Lista de Jogos</h1>
-    <div id="x1"> 
-        <div id="x2" onclick="fexpandir()">
-        Expandir todos <img src="/anexos/midias/icon-mais.svg" alt="Expandir">
-        </div>        
-    </div>
-    <main>
-        <section class="section-game" id="s0">
-            <button class="botao-index"><h2 class="h2-index">Matemática</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
+    <h1 class="h103 flex">Lista de Jogos</h1>
+    <main class="main03">
+        <section class="section3" id="s0">
+            <button class="botao03"><h2 class="h203">Matemática</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde id rem possimus, in pariatur dolore eveniet tempore veniam porro molestiae quidem quibusdam error officia harum, ullam facere odit. In, consectetur.</p>
         </section>
-        <section class="section-game" id="s1">
-            <button class="botao-index"><h2 class="h2-index">Teoria e Conceitos</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
+        <section class="section3" id="s1">
+            <button class="botao03"><h2 class="h203">Teoria e Conceitos</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
 
         </section>
 
-        <section class="section-game" id="s2">
-            <button class="botao-index"><h2 class="h2-index">Mecânica de Sólidos</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
+        <section class="section3" id="s2">
+            <button class="botao03"><h2 class="h203">Mecânica de Sólidos</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
 
         </section>
 
-        <section class="section-game" id="s3">
-            <button class="botao-index"><h2 class="h2-index">Mecânica de Fluídos</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
+        <section class="section3" id="s3">
+            <button class="botao03"><h2 class="h203">Mecânica de Fluídos</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
             
         </section>
 
-        <section class="section-game" id="s4">
-            <button class="botao-index"><h2 class="h2-index">Astronomia</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
+        <section class="section3" id="s4">
+            <button class="botao03"><h2 class="h203">Astronomia</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             <div class="jogos">
                 <a class="link-jogo js4" href="03/sistema_solar.html">
-                    <div class="img" id="sss">
+                    <div class="img03" id="sss">
                         <div id="eixo2"><div id="terra"><div id="lua"></div>
                             </div>
                         </div>
@@ -120,35 +160,35 @@
             </div>
         </section>
 
-        <section class="section-game" id="s5">
-            <button class="botao-index"><h2 class="h2-index">Termologia</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
+        <section class="section3" id="s5">
+            <button class="botao03"><h2 class="h203">Termologia</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
 
         </section>
 
-        <section class="section-game" id="s6">
-            <button class="botao-index"><h2 class="h2-index">Ondulatória</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
+        <section class="section3" id="s6">
+            <button class="botao03"><h2 class="h203">Ondulatória</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
 
         </section>
 
-        <section class="section-game" id="s7">
-            <button class="botao-index"><h2 class="h2-index">Óptica</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
+        <section class="section3" id="s7">
+            <button class="botao03"><h2 class="h203">Óptica</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
         <div class="jogos">
                 <a class="link-jogo js7" href="07/cores.html">
-                <div class="img" id="cores"></div>
+                <div class="img03" id="cores"></div>
                 Cores
                 </a>
         </div>
         </section>
 
-        <section class="section-game" id="s8">
-            <button class="botao-index"><h2 class="h2-index">Eletromagntismo</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
+        <section class="section3" id="s8">
+            <button class="botao03"><h2 class="h203">Eletromagntismo</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
 
         </section>
-        <section class="section-game" id="s9">
-            <button class="botao-index"><h2 class="h2-index">Moderna</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
+        <section class="section3" id="s9">
+            <button class="botao03"><h2 class="h203">Moderna</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
 
         </section>
@@ -175,9 +215,8 @@
 
 <script>
 ajuda = document.getElementById('ajuda');
-x = document.getElementById('x2');
-section = document.getElementsByClassName("section");
-botoes = document.getElementsByClassName("botao-index");
+section = document.getElementsByClassName("section3");
+botoes03 = document.getElementsByClassName("botao03");
 imgbotao = document.getElementsByClassName("imgbotao");
 
 
@@ -205,7 +244,7 @@ function finicio() {
 
 for (let i = 0, j = section.length; i<j; i++) {
     section["s"+i].style.maxHeight = '3rem';
-    botoes[i].addEventListener("click", () => {
+    botoes03[i].addEventListener("click", () => {
         button = document.getElementById("s"+i);
         jogos = document.getElementsByClassName("js"+i);
         
@@ -230,21 +269,5 @@ for (let i = 0, j = section.length; i<j; i++) {
         }
     });
 }
-
-
-
-function fexpandir() {
-    if (x.innerHTML != `Encolher todos <img src="/anexos/midias/icon-menos.svg" alt="Encolher">`) {
-        x.innerHTML = `Encolher todos <img src="/anexos/midias/icon-menos.svg" alt="Encolher">`;
-        for (let i of section) {
-            i.style.maxHeight = "100rem";
-        }
-    } else {
-        x.innerHTML = `Expandir todos <img src="/anexos/midias/icon-mais.svg" alt="Expandir">`;
-        for (let i of section) {
-            i.style.maxHeight = "3rem";
-        }        
-    }
-};
 </script>
 </html>

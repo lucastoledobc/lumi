@@ -224,3 +224,55 @@ nav > ul > ul > a:hover {
     border-radius: 0px 150px 0 0;
     transition: 0.5s;
 }
+
+
+expandir todos 03
+
+
+
+        #x1 {
+            display: none;
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+            height: 5svh;
+        }
+        #x2 {
+            width: fit-content;
+            padding: 0.5rem;
+            float: right;
+            display: flex;
+            cursor: pointer;
+            color: var(--preto);
+            filter: invert(100%);
+            border: 1px solid;
+            border-radius: 20px;
+        }
+        #x2 > img {
+            width: 1.5rem;
+            padding: 0 0 0 0.5rem;
+        }
+
+        
+    <div id="x1"> 
+        <div id="x2" onclick="fexpandir()">
+        Expandir todos <img src="/anexos/midias/icon-mais.svg" alt="Expandir">
+        </div>        
+    </div>
+
+    
+x = document.getElementById('x2');
+
+function fexpandir() {
+    if (x.innerHTML != `Encolher todos <img src="/anexos/midias/icon-menos.svg" alt="Encolher">`) {
+        x.innerHTML = `Encolher todos <img src="/anexos/midias/icon-menos.svg" alt="Encolher">`;
+        for (let i of section) {
+            i.style.maxHeight = "100rem";
+        }
+    } else {
+        x.innerHTML = `Expandir todos <img src="/anexos/midias/icon-mais.svg" alt="Expandir">`;
+        for (let i of section) {
+            i.style.maxHeight = "3rem";
+        }        
+    }
+};

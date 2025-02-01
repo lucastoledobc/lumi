@@ -57,8 +57,17 @@ img {
     display: block;
     margin: auto;
 }
-.section {
+.section1 {
     padding: 0.5rem 0;
+}
+.section3 {
+    overflow-y: clip;
+    border: thick double var(--branco);
+    border-radius: 1rem;
+    margin: 1.5rem 0;
+    transform: translate(-100%);
+    opacity: 0;
+    transition: max-height 1s, transform 1s, opacity 1s;
 }
 
 .img {
@@ -76,20 +85,24 @@ img {
 .botao-icone {
     position: absolute;
     aspect-ratio: 1;
+    cursor: pointer;
+    background-color: var(--preto);
+    border-radius: 5px;
 }
 .icon-botoes {
     width: clamp(1rem, 7vw, 2rem);
     filter: invert(100%);
+    background-color: var(--branco);
 }
-#bbotao {
+#bback {
     left: var(--bm);
     top: var(--bm);
 }
-#binfo, #bajuda, #bvolu, #bdark {
+#bconf, #bajuda, #bvolu, #bdark {
     top: var(--bm);
     right: var(--bm);
 }
-#info {
+#aviso {
     position: absolute;
     text-align: justify;
 
@@ -224,6 +237,7 @@ label:active {
     font-size: clamp(1rem, 5vh, 2rem);
     text-align: center;
     text-wrap: balance;
+    height: 10svh;
     text-shadow:
     -0.1rem 0 var(--preto),
     0.1rem 0 var(--preto),
@@ -238,8 +252,8 @@ label:active {
 }
 
 .h203 {
+    display: inline-block;
     font-size: clamp(1.2rem, 5vw, 1.4rem);
-    padding: 0.5rem 0.3rem;
     text-decoration: underline;
 }
 
