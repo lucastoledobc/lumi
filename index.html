@@ -3,26 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="anexos/midias/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="anexos/estilos/style.css">
     <title>Start</title>
     <style>
-        @font-face {
-            font-family: DynaPuff;
-            src: url(anexos/estilos/fonts/DynaPuff-VariableFont_wdth\,wght.ttf);
-        }
         * {
-            margin: 0px;
-            padding: 0px;
-            text-decoration: none;
             overflow: hidden;
-            color: #ffffff;
             max-height: 100svh;
         }
         body {
             background-color: black;
-            display: flex;
-            align-items: center;
-            justify-content: center; /*horizontal*/
             width: 100vw;
             max-width: 100svw;
             height: 100vh;
@@ -72,7 +61,7 @@
             animation-delay: 1s;
         }        
 
-        #h1 {
+        .h1 {
             display: inline-block;
             font-family: DynaPuff;
             font-size: clamp(5rem,10vw,20vh);
@@ -82,19 +71,19 @@
             0% {opacity: 0;}
             100% {opacity: 100;}
         }
-        .h1, .h5, .h9 {
+        .l1 {
             animation: poping 1.5s linear infinite;
             animation-delay: 0s;
         }
-        .h2, .h6, .h10 {
+        .l2 {
             animation: poping 1.5s linear infinite;
             animation-delay: 0.33s;
         }
-        .h3, .h7 {
+        .l3 {
             animation: poping 1.5s linear infinite;
             animation-delay: 0.66s;
         }
-        .h4, .h8 {
+        .l4 {
             animation: poping 1.5s linear infinite;
             animation-delay: 1s;
         }
@@ -112,7 +101,7 @@
 
 
 
-        a {
+        .a {
             position: absolute;
             top: 80%;
             font-size: clamp(3rem,5vw,10vh);
@@ -148,26 +137,26 @@
         }
     </style>
 </head>
-<body>
+<body class="flex">
     <div class="portal"></div>
     <div class="buraco"></div>
     <div class="texto">
         <div class="div1">
-            <div id="h1" class="h1">L</div id="h1"> 
-            <div id="h1" class="h2">U</div id="h1"> 
-            <div id="h1" class="h3">M</div id="h1" class="h4"> 
-            <div id="h1" class="h4">I</div id="h1">
+            <div class="h1 l1">L</div> 
+            <div class="h1 l2">U</div> 
+            <div class="h1 l3">M</div> 
+            <div class="h1 l4">I</div>
         </div>
         <div class="div2">
-            <div id="h1" class="h5">F</div id="h1">
-            <div id="h1" class="h6">í</div id="h1"> 
-            <div id="h1" class="h7">s</div id="h1"> 
-            <div id="h1" class="h8">i</div id="h1"> 
-            <div id="h1" class="h9">c</div id="h1"> 
-            <div id="h1" class="h10">a</div id="h1">
+            <div class="h1 l1">F</div>
+            <div class="h1 l2">í</div> 
+            <div class="h1 l3">s</div> 
+            <div class="h1 l4">i</div> 
+            <div class="h1 l1">c</div> 
+            <div class="h1 l2" >a</div>
         </div>
     </div>
-    <a href="/01/" class="a1">START</a>
-    <a href="/01/" class="a2">START</a>
+    <a href="/01/" class="a a1">START</a>
+    <a href="/01/" class="a a2">START</a>
 </body>
 </html>

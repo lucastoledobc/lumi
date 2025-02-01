@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/anexos/estilos/game.css">    
+    <script src="/anexos/scripts/game.js" defer></script>
+    
+    <title>Lançamentos</title>
+    <meta name="description" content="Tente acertar o alvo.">
+    <style>
+        .alvo {
+            border-radius: 50%;
+            background: radius-gradient();
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="h1">Lançamentos</h1>
+    <main>
+        <section class="top">
+            <div class="nivel">
+                <select name="nivel" id="nivel" value = '1'>
+                    <option value="1">Fácil</option>
+                    <option value="2">Médio</option>
+                    <option value="3">Difícil</option>
+                    <option value="4">Sobrevivência</option>
+                    <option value="5">Experimental</option>
+                </select>
+            </div>
+            <h2>Pinte abaixo essa cor -></h2>
+            <button class="botao" onclick="ftrocar()">Trocar</button>
+            <div id="key"></div>
+            <div class="play" id="play2"></div>
+        </section>
+
+        <section class="mid">
+            <div class="distancia alvo"></div>
+            <div class="altura alvo"></div>
+            <div class="altura play"></div>
+            <div class="box" id="box" onkeydown="move(event)"></div>
+            <div class="alvo"></div>
+        </section>
+
+        <section class="bot">  
+            <div class="pad" id="w"></div>
+            <div class="pad" id="a"></div>
+            <div class="pad" id="s"></div>
+            <div class="pad" id="d"></div>
+            <button class="botao verificar" onclick="fverificar()">Atirar</button>
+        </section>      
+    </main>
+    <section id="botoes"></section>
+    <dialog class="popup" id="ajuda">
+        <h1 class="h1-ajuda">Título</h1>
+        <p>Tente acertar o alvo. Nesse jogo é melhor jogar com o celular na horizontal.
+        <br>Você pode se mover usando w,a,s,d ou as setas do teclado.</p>
+        <p>-> Fácil: Fique livre para mover em qualquer direção.
+        <br>-> Médio: só pode se mover ou controlar o ângulo e força.
+        <br>-> Difícil: só pode controlar uma variável.
+        <br>-> Sobrevivência: acerte o maior número em 10 segundos.
+        <br>-> Experimental: fique livre para ver o comportamento de diferentes lançamentos.</p>
+            <button onclick="fjogar()" onfocus="fstart()">Jogar</button>
+    </dialog>
+    <dialog class="popup" id="ganhar"></dialog>
+</body>
+
+<script>
+    ajuda = document.getElementById("ajuda");
+    ganhar = document.getElementById("ganhar");
+
+    box=document.getElementById('box');
+
+    box.style.background = 'red';
+
+    posx = '50px';
+    posy = '50px';
+
+    box.style.left = posx;
+    box.style.bottom = posy;
+
+
+    function myFunction(event) {
+        let key = event.key;
+        // document.getElementById("demo").innerHTML = "The key was: " + key;
+        if (key == "w" || key == "ArrowUp" ) {
+            posy = parseInt(posy) + 10 + "px";
+            box.style.bottom = posy;
+    }   if (key == "s" || key == "ArrowDown") {
+            posy = parseInt(posy) - 10 + "px";
+            box.style.bottom = posy;
+    }   if (key == "d" || key == "ArrowRight") {
+            posx = parseInt(posx) + 10 + "px";
+            box.style.left = posx;
+    }   if (key == "a" || key == "ArrowLeft") {
+            posx = parseInt(posx) - 10 + "px";
+            box.style.left = posx;
+    }
+}
+    
+</script>
+
+</html>

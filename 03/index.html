@@ -10,86 +10,6 @@
     <title>Jogos Lumi Física</title>
     <meta name="description" content="Jogos de Física">
     <style>
-        #ajuda {
-            display: none;
-        }
-        #x1 {
-            display: none;
-            width: 90%;
-            max-width: 1000px;
-            margin: auto;
-            height: 5svh;
-        }
-        #x2 {
-            width: fit-content;
-            padding: 0.5rem;
-            float: right;
-            display: flex;
-            cursor: pointer;
-            color: var(--preto);
-            filter: invert(100%);
-            border: 1px solid;
-            border-radius: 20px;
-        }
-        #x2 > img {
-            width: 1.5rem;
-            padding: 0 0 0 0.5rem;
-        }
-        main {
-            overflow: scroll !important;
-            margin: 0 auto;
-            max-width: 1000px;
-            scrollbar-width: none;
-        }
-        .section {
-            overflow-y: clip;
-            border: thick double var(--branco);
-            border-radius: 1rem;
-            margin: 1.5rem 0;
-            transform: translate(-100%);
-            opacity: 0;
-            transition: max-height 1s, transform 1s, opacity 1s;
-        }
-        .botao-index {
-            display: block;
-            width: 100%;
-            background-color: var(--trans);
-            border: none;
-            cursor: pointer;
-            text-align: left;
-            padding: 0.5rem 1rem 1rem 1rem;
-        }
-        .h2-index {
-            display: inline-block;
-            font-size: 1.5rem;
-            text-decoration: underline;
-        }
-        button > img {
-            width: 2rem;
-            float: right;
-            filter: invert(100%);
-            border-radius: 5px;
-        }
-        .jogos {
-            padding: 0 1rem 1rem 1rem;
-        }
-        .link-jogo {
-            display: inline-block;
-            width: 5rem;
-            padding: 0.5rem;
-            margin: 1rem;
-            font-size: 1.5rem;
-            border: 2px solid var(--branco);
-            border-radius: 5px;
-            text-decoration: underline;
-            text-align: center;
-            opacity: 0;
-            transition: opacity 2s;
-        }
-        .img {
-            aspect-ratio: 1;
-        }
-
         /* JOGOS */
 
         /* 03 */
@@ -164,29 +84,29 @@
         </div>        
     </div>
     <main>
-        <section class="section" id="s0">
+        <section class="section-game" id="s0">
             <button class="botao-index"><h2 class="h2-index">Matemática</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde id rem possimus, in pariatur dolore eveniet tempore veniam porro molestiae quidem quibusdam error officia harum, ullam facere odit. In, consectetur.</p>
         </section>
-        <section class="section" id="s1">
+        <section class="section-game" id="s1">
             <button class="botao-index"><h2 class="h2-index">Teoria e Conceitos</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
 
         </section>
 
-        <section class="section" id="s2">
+        <section class="section-game" id="s2">
             <button class="botao-index"><h2 class="h2-index">Mecânica de Sólidos</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
 
         </section>
 
-        <section class="section" id="s3">
+        <section class="section-game" id="s3">
             <button class="botao-index"><h2 class="h2-index">Mecânica de Fluídos</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
             
         </section>
 
-        <section class="section" id="s4">
+        <section class="section-game" id="s4">
             <button class="botao-index"><h2 class="h2-index">Astronomia</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             <div class="jogos">
                 <a class="link-jogo js4" href="03/sistema_solar.html">
@@ -200,19 +120,19 @@
             </div>
         </section>
 
-        <section class="section" id="s5">
+        <section class="section-game" id="s5">
             <button class="botao-index"><h2 class="h2-index">Termologia</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
 
         </section>
 
-        <section class="section" id="s6">
+        <section class="section-game" id="s6">
             <button class="botao-index"><h2 class="h2-index">Ondulatória</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
 
         </section>
 
-        <section class="section" id="s7">
+        <section class="section-game" id="s7">
             <button class="botao-index"><h2 class="h2-index">Óptica</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
         <div class="jogos">
                 <a class="link-jogo js7" href="07/cores.html">
@@ -222,12 +142,12 @@
         </div>
         </section>
 
-        <section class="section" id="s8">
+        <section class="section-game" id="s8">
             <button class="botao-index"><h2 class="h2-index">Eletromagntismo</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
 
         </section>
-        <section class="section" id="s9">
+        <section class="section-game" id="s9">
             <button class="botao-index"><h2 class="h2-index">Moderna</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
 

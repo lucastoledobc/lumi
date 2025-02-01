@@ -1,36 +1,54 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Lumi</title>
+    <title>Home</title>
     <link rel="stylesheet" href="/anexos/estilos/style.css">
     <script src="/anexos/scripts/script.js" defer></script>
     <style>
-        #nav01 {
-            background: var(--cor4);
-            color: var(--preto);
+        * {
+            opacity: 0;
+            animation: ani1 0.3s forwards;
+        }
+        @keyframes ani1 {
+            0% {opacity: 0}
+            100% {opacity: 1}
         }
 
-        .home {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        body {
+            background-color: var(--preto);
+            animation: ani2 1s forwards;
+        }
+        @keyframes ani2 {
+            0% {background-color: var(--preto);}
+            100% {background-color: var(--trans);}
+        }
+        .fundopreto {
+            border-radius: 50%;
 
-            font-size: clamp(50px, 13vw, 150px);
-            height: 40vh;
+        }
 
-            font-family: var(--fon1);
-            color: var(--cor3);
+    
+        .link {
+            font-family: var(--font2), var(--font2), 'Times New Roman', Times, serif;
+        }
+        .link:hover {
+            font-size: clamp(1.1rem, 6vw, 1.2.rem);
         }
     </style>
 </head>
 <body>
-    <header></header>    
-    <main>
-        <p class="home">Bem-vindo</p>
-    </main>
-    <footer></footer>
+    <div class="fundopreto">
+        <main>
+            <h1>Lumi Física</h1>
+            <a href="/01/trilha/" class="link">Começar do zero</a>
+            <a href="/02/" class="link">Conteúdo</a>
+            <a href="/03/" class="link">Jogos</a>
+            <a href="/04/" class="link">Projetos</a>
+            <a href="/05/" class="link">Sobre</a>
+        </main>
+        <section class="botoes"></section>
+    </div>    
 </body>
 </html>
