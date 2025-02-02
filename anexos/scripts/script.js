@@ -63,7 +63,7 @@ function fconf() {
         aviso.style.transition = '1s';
 
         bconf.innerHTML = `
-        <img src="/anexos/midias/icon-close.svg" class="icon" id="iconf" alt="Fechar">
+        <img src="/anexos/midias/icon-close.svg" class="icon-botoes" id="iconf" alt="Fechar">
         `;
         
         bajuda.style.top = 'calc(var(--bm) * 2 + clamp(1rem, 7vw, 2rem))';
@@ -123,12 +123,12 @@ function fajuda() {
 
 // Volume
 function fvolu() {
-    if (bvolu.innerHTML != `<img src="/anexos/midias/icon-volume-mute.svg" class="icon" id="ivolu" alt="Volume">`) {
+    if (bvolu.innerHTML != `<img src="/anexos/midias/icon-volume-mute.svg" class="icon-botoes" id="ivolu" alt="Volume">`) {
             document.querySelectorAll("video, audio").forEach((elem) => elem.volume = 0);
-            bvolu.innerHTML = `<img src="/anexos/midias/icon-volume-mute.svg" class="icon" id="ivolu" alt="Volume">`;
+            bvolu.innerHTML = `<img src="/anexos/midias/icon-volume-mute.svg" class="icon-botoes" id="ivolu" alt="Volume">`;
         } else {
             document.querySelectorAll("video, audio").forEach((elem) => elem.volume = 1);
-            bvolu.innerHTML = `<img src="/anexos/midias/icon-volume-3.svg" class="icon" id="ivolu" alt="Mute">`;
+            bvolu.innerHTML = `<img src="/anexos/midias/icon-volume-3.svg" class="icon-botoes" id="ivolu" alt="Mute">`;
     }
 }
 
