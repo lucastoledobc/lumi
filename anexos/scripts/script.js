@@ -5,9 +5,76 @@ document.head.innerHTML += `
     <link rel="shortcut icon" href="/anexos/midias/favicon-32x32.png" type="image/x-icon">
 `;
 
+
+/* 02 */
+
+function gabarito() {
+    opt = document.getElementsByName('opt');
+    res = document.getElementById('res');
+
+    for (c = 10; c < 40; c += 10) {
+        botaoRes = document.getElementsByClassName('bresposta');
+        for (i of botaoRes) {
+            i.style.display = 'block';
+        }
+    } /* botoes de resposta aparecem */
+
+    for (c = 0; c < 5; c++) {
+        if (opt[c].checked) {
+            document.getElementById(c+5).style.background = "red";
+        }
+    }
+    
+    selected = document.querySelector("input[name='opt']:checked").value; /* pega o valor da opção marcada */
+    if (selected == '1') {
+        res.style.display = 'block';
+        res.innerHTML = `Resposta Certa!`;
+        res.style.color = 'green';
+        
+        g = document.querySelector("input[name='opt']:checked").id; /* pega o label da opção certa */
+        g = Number(g);
+        document.getElementById(g+5).style.background = "green";
+    } else {
+        res.style.display = 'block';
+        res.innerHTML = `Resposta Errada!`;
+        res.style.color = 'red';
+    }
+}
+
+// Respostas
+function fabrir(x) {
+    resposta = document.getElementsByClassName('divres');
+    for (i of resposta) {
+        i.style.opacity = '0';
+        i.style.visibility = 'collapse';
+        i.style.maxHeight='0';
+    }
+    resposta[x].style.opacity = '1';
+    resposta[x].style.visibility = 'visible';
+    resposta[x].style.maxHeight='1000rem';
+}
+
+// Caixa de Dicas
+function fdica(x) {
+    dica = document.getElementsByClassName('dica');
+    if (dica[x].style.display != 'block') {
+        dica[x].style.display = 'block';
+    }
+    else {
+        dica[x].style.display = 'none';
+    }
+}
+
+footer = document.getElementsByTagName("footer")[0];
+footer.innerHTML = `Site criado por Lucas Toledo.`;
+
+
+/* 03 */
+
     //BOTOES
 
 botoes = document.getElementById('botoes');
+if (botoes != null) {
 botoes.innerHTML = `
     <button type="button" class="botao-icone" id="bback">
         <a href="/03/index.html"> 
@@ -40,6 +107,7 @@ botoes.innerHTML = `
         <img src="/anexos/midias/icon-maxi.svg" class="icon-botoes" id="imaxi" alt="Maximizar">
     </button>
 `;
+
 
 // Aviso
 
@@ -192,87 +260,9 @@ function fmini() {
         `;
     }
 } 
-
+}
     
-
-/* 02 */
-
-function gabarito() {
-    opt = document.getElementsByName('opt');
-    res = document.getElementById('res');
-
-    for (c = 10; c < 40; c += 10) {
-        botaoRes = document.getElementsByClassName('bresposta');
-        for (i of botaoRes) {
-            i.style.display = 'block';
-        }
-    } /* botoes de resposta aparecem */
-
-    for (c = 0; c < 5; c++) {
-        if (opt[c].checked) {
-            document.getElementById(c+5).style.background = "red";
-        }
-    }
-    
-    selected = document.querySelector("input[name='opt']:checked").value; /* pega o valor da opção marcada */
-    if (selected == '1') {
-        res.style.display = 'block';
-        res.innerHTML = `Resposta Certa!`;
-        res.style.color = 'green';
-        
-        g = document.querySelector("input[name='opt']:checked").id; /* pega o label da opção certa */
-        g = Number(g);
-        document.getElementById(g+5).style.background = "green";
-    } else {
-        res.style.display = 'block';
-        res.innerHTML = `Resposta Errada!`;
-        res.style.color = 'red';
-    }
-}
-
-// Respostas
-
-function fabrir(x) {
-    resposta = document.getElementsByClassName('divres');
-    for (i of resposta) {
-        i.style.visibility = 'collapse';
-    }
-    resposta[x].style.visibility = 'visible';
-}
-
-function abrir1() {
-    resp.document.getElementsByClassName('divres');
-    for (i = 0; i < 3; i++) {
-        resp[i].style.display='none';
-    }
-    document.getElementById('resp1').style.display = 'block';
-}
-function abrir2() {
-    resp.document.getElementsByClassName('divres');
-    for (i = 0; i < 3; i++) {
-        resp[i].style.display='none';
-    }
-    document.getElementById('resp2').style.display = 'block';
-}
-function abrir3() {
-    resp.document.getElementsByClassName('divres');
-    for (i = 0; i < 3; i++) {
-        resp[i].style.display='none';
-    }
-    document.getElementById('resp3').style.display = 'block';
-}
-// Caixa de Dicas
-function tip1() {
-    box1.style.display = 'block';
-}
-function fechar() {
-    box1.style.display = 'none';
-}
-
-
-
-/* 03 */
-
+// FUNÇÕES
  
 ganhar = document.getElementById('ganhar');
 if (ganhar != null) {
