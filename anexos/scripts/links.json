@@ -1,0 +1,31 @@
+[
+  {
+    "Categoria": "Questão",
+    "Vestibular": "ENEM",
+    "UF": "RJ",
+    "Ano": "2024",
+    "Prova": {
+      "tipo": "ENEM",
+      "dia": "1",
+      "cor": "azul",
+      "número": "91"
+    },
+    "Enunciado": "Em uma tirinha...",
+    "Área": {
+      "Tema": "ENEM",
+      "dia": "1",
+      "cor": "azul",
+      "número": "91"
+    },
+    "Nível": "2",
+    "Tipo": "Discurssiva"
+  }
+]
+
+UNIVERSIDADE  UF  ANO  DIA
+
+Área > Tema > Seção > Item
+
+NÍVEL TIPO GRÁFICO TEORICA/CONTA 
+
+tipo objetiva/discurssiva

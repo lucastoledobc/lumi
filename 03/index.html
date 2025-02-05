@@ -21,7 +21,7 @@
             scrollbar-width: none;
         }
 
-        .botao03 {
+        .botao-barra {
             display: block;
             width: 100%;
             background-color: var(--trans);
@@ -125,29 +125,29 @@
     <h1 class="h103 flex">Lista de Jogos</h1>
     <main class="main03">
         <section class="section3" id="s0">
-            <button class="botao03"><h2 class="h203">Matemática</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
+            <button class="botao-barra"><h2 class="h203">Matemática</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde id rem possimus, in pariatur dolore eveniet tempore veniam porro molestiae quidem quibusdam error officia harum, ullam facere odit. In, consectetur.</p>
         </section>
         <section class="section3" id="s1">
-            <button class="botao03"><h2 class="h203">Teoria e Conceitos</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
+            <button class="botao-barra"><h2 class="h203">Teoria e Conceitos</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
 
         </section>
 
         <section class="section3" id="s2">
-            <button class="botao03"><h2 class="h203">Mecânica de Sólidos</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
+            <button class="botao-barra"><h2 class="h203">Mecânica de Sólidos</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
 
         </section>
 
         <section class="section3" id="s3">
-            <button class="botao03"><h2 class="h203">Mecânica de Fluídos</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
+            <button class="botao-barra"><h2 class="h203">Mecânica de Fluídos</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
             
         </section>
 
         <section class="section3" id="s4">
-            <button class="botao03"><h2 class="h203">Astronomia</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
+            <button class="botao-barra"><h2 class="h203">Astronomia</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             <div class="jogos">
                 <a class="link-jogo js4" href="03/sistema_solar.html">
                     <div class="img03" id="sss">
@@ -161,19 +161,19 @@
         </section>
 
         <section class="section3" id="s5">
-            <button class="botao03"><h2 class="h203">Termologia</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
+            <button class="botao-barra"><h2 class="h203">Termologia</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
 
         </section>
 
         <section class="section3" id="s6">
-            <button class="botao03"><h2 class="h203">Ondulatória</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
+            <button class="botao-barra"><h2 class="h203">Ondulatória</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
 
         </section>
 
         <section class="section3" id="s7">
-            <button class="botao03"><h2 class="h203">Óptica</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
+            <button class="botao-barra"><h2 class="h203">Óptica</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
         <div class="jogos">
                 <a class="link-jogo js7" href="07/cores.html">
                 <div class="img03" id="cores"></div>
@@ -183,18 +183,18 @@
         </section>
 
         <section class="section3" id="s8">
-            <button class="botao03"><h2 class="h203">Eletromagntismo</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
+            <button class="botao-barra"><h2 class="h203">Eletromagntismo</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
 
         </section>
         <section class="section3" id="s9">
-            <button class="botao03"><h2 class="h203">Moderna</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
+            <button class="botao-barra"><h2 class="h203">Moderna</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
 
         </section>
     </main>
     
-    <section id="botoes"></section>
+    <section id="botoes-icones"></section>
 
     <dialog class="popup" id="ajuda">
         <h1 class="h1-ajuda">Jogos Lumi Física</h1>
@@ -216,7 +216,7 @@
 <script>
 ajuda = document.getElementById('ajuda');
 section = document.getElementsByClassName("section3");
-botoes03 = document.getElementsByClassName("botao03");
+botaoBarra = document.getElementsByClassName("botao-barra");
 imgbotao = document.getElementsByClassName("imgbotao");
 
 
@@ -244,7 +244,7 @@ function finicio() {
 
 for (let i = 0, j = section.length; i<j; i++) {
     section["s"+i].style.maxHeight = '3rem';
-    botoes03[i].addEventListener("click", () => {
+    botaoBarra[i].addEventListener("click", () => {
         button = document.getElementById("s"+i);
         jogos = document.getElementsByClassName("js"+i);
         

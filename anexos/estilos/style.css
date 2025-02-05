@@ -82,6 +82,12 @@ img {
 }
 
 
+/* 01 */
+
+.card {
+    border: 2px solid black;
+}
+
 
 /* 02 */
 .header02, .main02, .footer02 {
@@ -258,7 +264,7 @@ label:active {
     background-color: var(--preto);
     border-radius: 5px;
 }
-.icon-botoes {
+.icon-botao {
     width: clamp(1rem, 7vw, 2rem);
     filter: invert(100%);
     background-color: var(--branco);

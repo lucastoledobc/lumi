@@ -44,7 +44,6 @@ IDEIAS:
 
 - trilha inicial
 - lista de exercicios do mesmo temas
-- motor de busca
 - curiosidade do dia
 
 
@@ -59,13 +58,6 @@ IDEIAS:
 - botoes para as respostas: (stick para celular)
 
 
-UNIVERSIDADE  UF  ANO  DIA
-
-Área > Tema > Seção > Item
-
-NÍVEL TIPO GRÁFICO TEORICA/CONTA 
-
-tipo objetiva/discurssiva
 
 
 -> Games:
