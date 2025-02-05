@@ -6,11 +6,17 @@ document.head.innerHTML += `
 `;
 
 
+
 /* 01 */
+/* 01 */
+/* 01 */
+
 // Search
+pesquisar = document.getElementById('pesquisar');
+if (pesquisar != null) {
+footer = document.getElementsByTagName("footer")[0];
 userCardTemplate = document.querySelector('template');
 pesquisaResultado = document.querySelector('[result]');
-pesquisar = document.getElementById('pesquisar');
 users = [];
 
 pesquisar.addEventListener('input', e => {
@@ -38,39 +44,38 @@ fetch('/anexos/scripts/users.json')
         }
     })
 })
+}
+
+
 
 /* 02 */
+/* 02 */
+/* 02 */
 
-function gabarito() {
-    opt = document.getElementsByName('opt');
-    res = document.getElementById('res');
+function fgabarito() {
+    document.getElementsByClassName('gabarito')[0].style.display = 'block';
 
-    for (c = 10; c < 40; c += 10) {
-        botaoRes = document.getElementsByClassName('bresposta');
-        for (i of botaoRes) {
-            i.style.display = 'block';
-        }
-    } /* botoes de resposta aparecem */
+    const opt = document.getElementsByName('opt');
+    const resposta = document.getElementById('resposta');
+
 
     for (c = 0; c < 5; c++) {
         if (opt[c].checked) {
-            document.getElementById(c+5).style.background = "red";
+            document.getElementById('label'+c).style.background = "red";
         }
     }
     
     selected = document.querySelector("input[name='opt']:checked").value; /* pega o valor da opção marcada */
     if (selected == '1') {
-        res.style.display = 'block';
-        res.innerHTML = `Resposta Certa!`;
-        res.style.color = 'green';
+        resposta.textContent = `Resposta Certa!<p>10 = 5.4</p>
+            <p>Note que agora não faz sentido.</p>`;
+        resposta.style.color = 'green';
         
-        g = document.querySelector("input[name='opt']:checked").id; /* pega o label da opção certa */
-        g = Number(g);
-        document.getElementById(g+5).style.background = "green";
+        g = document.querySelector("input[name='opt']:checked").id; /* pega o id da opção certa */
+        document.getElementById('label'+g).style.background = "green";
     } else {
-        res.style.display = 'block';
-        res.innerHTML = `Resposta Errada!`;
-        res.style.color = 'red';
+        resposta.textContent = `Resposta Errada!`;
+        resposta.style.color = 'red';
     }
 }
 
@@ -80,7 +85,8 @@ function fabrir(x) {
     for (i of resposta) {
         i.style.opacity = '0';
         i.style.visibility = 'collapse';
-        i.style.maxHeight='0';
+        i.style.maxHeight='0rem';
+        i.style.transition = 'opacity 1s, max-height 0.5s';
     }
     resposta[x].style.opacity = '1';
     resposta[x].style.visibility = 'visible';
@@ -104,9 +110,12 @@ if (footer != null) {
 }
 
 
+
+/* 03 */
+/* 03 */
 /* 03 */
 
-    //BOTOES
+//BOTOES
 
 botoesIcones = document.getElementById('botoes-icones');
 if (botoesIcones != null) {
@@ -137,7 +146,6 @@ if (botoesIcones != null) {
     <button type="button" class="botao-icone" id="bconf" onclick="fconf()">
         <img src="/anexos/midias/icon-conf-outline.svg" class="icon-botao" id="iconf" alt="Configuração">
     </button>
-
     <button type="button" class="botao-icone" id="bmaxi" onclick="fmaxi()">
         <img src="/anexos/midias/icon-maxi.svg" class="icon-botao" id="imaxi" alt="Maximizar">
     </button>
@@ -348,10 +356,14 @@ fire(0.1, {
 });
 }
 
+
+
+/* 04 */
+/* 04 */
 /* 04 */
 
 function curiosidade (url) {
-    var urls = new Array();
+    const urls = new Array();
     urls[0] = "http://learninginhand.com";
     urls[1] = "http://learninginhand.com/about";
     urls[2] = "http://learninginhand.com/contact";

@@ -18,7 +18,7 @@
             </search> -->
         </header>
     <main class="main02">
-        <div class="enunciado">
+        <section class="enunciado">
             UERJ 2023 - 91) Na tirinha de Mauricio de Sousa, os personagens Cebolinha e Cascão fazem uma brincadeira utilizando duas latas e um barbante. Ao perceberem que o som pode ser transmitido através do barbante, resolvem alterar o comprimento do barbante para ficar cada vez mais extenso. As demais condições permaneceram inalteradas durante a brincadeira.
 
             <figure class="figure">
@@ -27,41 +27,48 @@
             </figure>
 
             Na prática, à medida que se <span class="link-dica" onclick="fdica(0)">aumenta o comprimento do barbante</span>, ocorre a redução de qual característica da onda sonora?
-        </div>
+
         <div class="dica">
             <p>Eles estão ficando mais longe um do outro. O que acontece com o som ao percorrer longas distâncias?</p>
             <button onclick="fdica(0)">Fechar</button>
         </div>
-        <div>
+
+        <div class="opções">
             <input type="radio" name="opt" id="0" value="0">
-            <label for="0"  id="1" value="0">(A) Altura.</label>
+            <label for="0"  id="label0" value="0">(A) Altura.</label>
 
-            <input type="radio" name="opt" id="2" value="0">
-            <label for="1"  id="3" value="0">(B) Período.</label>
+            <input type="radio" name="opt" id="1" value="0">
+            <label for="1"  id="label1" value="0">(B) Período.</label>
 
-            <input type="radio" name="opt" id="4" value="1">
-            <label for="2" id="5" value="1">(C) Amplitude.</label>
+            <input type="radio" name="opt" id="2" value="1">
+            <label for="2" id="label2" value="1">(C) Amplitude.</label>
 
-            <input type="radio" name="opt" id="6" value="0">
-            <label for="3" id="7" value="0" >(D) Velocidade.</label>
+            <input type="radio" name="opt" id="3" value="0">
+            <label for="3" id="label3" value="0" >(D) Velocidade.</label>
 
-            <input type="radio" name="opt" id="8" value="0">
-            <label for="4" id="9" value="0">(E) Comprimento de onda.</label>
+            <input type="radio" name="opt" id="4" value="0">
+            <label for="4" id="label4" value="0">(E) Comprimento de onda.</label>
         </div>
-        <input type="button" value="Responder" onclick="gabarito()" class="botao">
         
-        <div id="resp"></div>
+        <button class="bresponder" onclick="fgabarito()">Responder</button>
+        
+        </section>
 
-        <section class="resposta">
-        <button class="bresp" id="10" onclick="fabrir(0)">
-            Resposta Curta
-        </button>
-        <button class="bresp" id="20" onclick="fabrir(1)">
-            Resposta Completa
-        </button>        
-        <button class="bresp" id="30" onclick="fabrir(2)">
-            Resposta em Vídeo
-        </button>
+        <section class="gabarito">
+
+        <div class="flex" id="resposta"></div>
+
+        <div class="flex">
+            <button class="bresp" id="10" onclick="fabrir(0)">
+                Resposta Curta
+            </button>
+            <button class="bresp" id="20" onclick="fabrir(1)">
+                Resposta Completa
+            </button>        
+            <button class="bresp" id="30" onclick="fabrir(2)">
+                Resposta em Vídeo
+            </button>
+        </div>
 
         <div id="resp1"  class="divres">
             Som é uma onda que vai ficando mais “fraca” com a distância, o que significa a amplitude. Uma pessoa de longe pode gritar para aumentar a amplitude e assim ser ouvida.
@@ -77,18 +84,12 @@
             <p>E) Aqui a resposta é matemática, não tem jeito. Comprimento de onda depende da velocidade e da frequência
             v = l.f
             Como a velocidade é constante e a frequência é constante, o comprimento de onda também é constante. 
-            Imagine que a velocidade é 10 m/s, frequência 5 Hz e o comprimento de onda vale 2 m.
-
-            10 = 5.2
-
-            Veja que essa equação faz sentido.
-
-            Porém, vamos mudar o comprimento de onda para 4 m.
-
-            10 = 5.4
-
-            Note que agora não faz sentido.</p>
-
+            Imagine que a velocidade é 10 m/s, frequência 5 Hz e o comprimento de onda vale 2 m.</p>
+            <p>10 = 5.2</p>
+            <p>Veja que essa equação faz sentido.</p>
+            <p>Porém, vamos mudar o comprimento de onda para 4 m.</p>
+            <p>10 = 5.4</p>
+            <p>Note que agora não faz sentido.</p>
         </div>
         <div id="resp3" class="divres">
             <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/--XQesl7YHw?si=qSsheHBwh-Bub2X2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
