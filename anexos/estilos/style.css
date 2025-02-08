@@ -17,7 +17,6 @@
     --branco: #ffffff;
     --trans: #00000000;
     --fundo: #f2f2f2;
-    --bm: 0.5vw;
 
     --cor1: #B7E8FD;
     --cor2: #5DCBFA;
@@ -28,6 +27,8 @@
     --fon1: DynaPuff;
     --fon2: EBGaramond;
     --fon3: Lato;
+
+    --bm: 0.5vw;
 }
 
 * {
@@ -40,12 +41,12 @@ html {
     background: var(--preto) url(/anexos/midias/fundo-star.gif) fixed center;
 }
 body {    
-    background: #00000075;
+    background: #00000088;
 }
 h1 {
     font-family: var(--fon1);
 }
-a {
+a, address {
     text-decoration: none;
 }
 p {

@@ -126,14 +126,6 @@ if (botoesIcones != null) {
         </a>
     </button>
 
-    <div id="aviso">
-        Dúvidas? Sugestões? Envie para o email <address><a href="mailto:lumifisica@gmail.com">lumifisica@gmail.com</a></address> ou escreva abaixo.
-        <form action="https://formsubmit.co/lumifisica@gmail.com" method="POST">
-            <input type="email" name="email" placeholder="Seu email aqui" required>
-            <textarea name="message" placeholder="Descreva o problema aqui..." required></textarea>
-        <button type="submit" id="enviar">Enviar</button>
-        </form>
-    </div>
     <button type="button" class="botao-icone" id="bdark" onclick="fdark()">
         <img src="/anexos/midias/icon-dark1.svg" class="icon-botao" id="idark" alt="Modo escuro">
     </button>
@@ -146,18 +138,11 @@ if (botoesIcones != null) {
     <button type="button" class="botao-icone" id="bconf" onclick="fconf()">
         <img src="/anexos/midias/icon-conf-outline.svg" class="icon-botao" id="iconf" alt="Configuração">
     </button>
+
     <button type="button" class="botao-icone" id="bmaxi" onclick="fmaxi()">
         <img src="/anexos/midias/icon-maxi.svg" class="icon-botao" id="imaxi" alt="Maximizar">
     </button>
 `;
-
-
-// Aviso
-
-aviso = document.getElementById('aviso');
-aviso.style.opacity = '0';
-aviso.style.right = '0%';
-aviso.style.visibility = 'collapse';
 
 // INFO
 
@@ -167,12 +152,7 @@ function fconf() {
     bvolu = document.getElementById('bvolu');
     bdark = document.getElementById('bdark');
 
-    if (aviso.style.opacity == '0') {
-        aviso.style.visibility = 'visible';
-        aviso.style.right = 'calc(var(--bm) * 2 + clamp(1rem, 7vw, 2rem))';
-        aviso.style.opacity = '1';
-        aviso.style.transition = '1s';
-
+    if (bconf.innerHTML == '<img src="/anexos/midias/icon-close.svg" class="icon-botao" id="iconf" alt="Fechar">') {
         bconf.innerHTML = `
         <img src="/anexos/midias/icon-close.svg" class="icon-botao" id="iconf" alt="Fechar">
         `;
@@ -286,7 +266,6 @@ function fmaxi() {
         `;
         }
 }
-
 function fmini() {
     let img = document.getElementById("bmaxi");
     if (document.exitFullscreen) {

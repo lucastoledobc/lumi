@@ -8,45 +8,62 @@
     <script src="/anexos/scripts/script.js" defer></script>
     <style>
         * {
-            opacity: 0;
-            animation: ani1 0.3s forwards;
+            color: var(--branco);
+        }
+        .fundopreto {
+            height: 100svh;
+            background-color: var(--preto);
+            animation: ani1 2s forwards;
         }
         @keyframes ani1 {
-            0% {opacity: 0}
-            100% {opacity: 1}
-        }
-
-        body {
-            background-color: var(--preto);
-            animation: ani2 1s forwards;
-        }
-        @keyframes ani2 {
             0% {background-color: var(--preto);}
             100% {background-color: var(--trans);}
         }
-        .fundopreto {
-            border-radius: 50%;
+
+        .h1 {
+            height: 40svh;
+        }
+        .h101 {
+            font-size: clamp(1.3rem, 13vw, 6rem);
+            text-align: center;
 
         }
 
+        ul {
+            display: grid;
+            height: 50svh;
+        }
     
         .link {
             font-family: var(--font2), var(--font2), 'Times New Roman', Times, serif;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            background-color: #ffffff63;
+            padding: 1rem;
+            width: 13rem;
+            text-align: center;
         }
         .link:hover {
-            font-size: clamp(1.1rem, 6vw, 1.2.rem);
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            padding: 1rem;
+            font-size: clamp(1.1rem, 6vw, 1.2rem);
+            background-color: var(--branco);
         }
     </style>
 </head>
 <body>
     <div class="fundopreto">
         <main>
-            <h1>Lumi Física</h1>
-            <a href="/01/trilha/" class="link">Começar do zero</a>
-            <a href="/02/" class="link">Conteúdo</a>
-            <a href="/03/" class="link">Jogos</a>
-            <a href="/04/" class="link">Projetos</a>
-            <a href="/05/" class="link">Sobre</a>
+            <div class="h1 flex">
+                <h1 class="h101">Lumi Física</h1>
+            </div>
+            <ul>
+                <a href="/01/trilha/" class="link">Começar do zero</a>
+                <a href="/02/" class="link">Conteúdo</a>
+                <a href="/03/" class="link">Jogos</a>
+                <a href="/04/" class="link">Projetos</a>
+                <a href="/05/" class="link">Sobre</a>
+                <a href="/06/" class="link">Contato</a>
+            </ul>
         </main>
         <section class="botoes"></section>
     </div>    
