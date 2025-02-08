@@ -1,7 +1,6 @@
     // HEAD
 
-document.head.innerHTML += `
-    <meta name="description" content="Site de Física para ensino básico, ensino médio e ensino superior.">
+document.head.innerHTML += `    
     <link rel="shortcut icon" href="/anexos/midias/favicon-32x32.png" type="image/x-icon">
 `;
 

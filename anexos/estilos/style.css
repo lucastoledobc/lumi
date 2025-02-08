@@ -42,6 +42,7 @@ html {
 }
 body {    
     background: #00000088;
+    height: 100svh;
 }
 h1 {
     font-family: var(--fon1);
