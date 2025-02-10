@@ -15,10 +15,11 @@
             color: var(--branco)
         }
 
-        main {
-            margin: 0 auto;
-            max-width: 1000px;
+        main {            
+            width: clamp(300px, 90%, 1200px);
+            overflow-y: scroll;
             scrollbar-width: none;
+            height: 90svh;
         }
 
         .botao-barra {
@@ -97,7 +98,7 @@
             border: 1px solid var(--branco);
             box-shadow: 0 0 30px rgb(255, 255, 255);
             border-radius: 50%;
-            right: 87%;
+            right: 125%;
             top: 53%;
         }
 
@@ -123,31 +124,30 @@
 </head>
 <body>
     <h1 class="h103 flex">Lista de Jogos</h1>
-    <main class="main03">
+    <main>
         <section class="section3" id="s0">
             <button class="botao-barra"><h2 class="h203">Matemática</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
+
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde id rem possimus, in pariatur dolore eveniet tempore veniam porro molestiae quidem quibusdam error officia harum, ullam facere odit. In, consectetur.</p>
         </section>
+
         <section class="section3" id="s1">
             <button class="botao-barra"><h2 class="h203">Teoria e Conceitos</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
-            
 
         </section>
 
         <section class="section3" id="s2">
             <button class="botao-barra"><h2 class="h203">Mecânica de Sólidos</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
-            
 
         </section>
 
         <section class="section3" id="s3">
-            <button class="botao-barra"><h2 class="h203">Mecânica de Fluídos</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
-            
-            
+            <button class="botao-barra"><h2 class="h203">Mecânica de Fluídos</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>            
         </section>
 
         <section class="section3" id="s4">
             <button class="botao-barra"><h2 class="h203">Astronomia</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
+
             <div class="jogos">
                 <a class="link-jogo js4" href="03/sistema_solar.html">
                     <div class="img03" id="sss">
@@ -163,17 +163,16 @@
         <section class="section3" id="s5">
             <button class="botao-barra"><h2 class="h203">Termologia</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
-
         </section>
 
         <section class="section3" id="s6">
             <button class="botao-barra"><h2 class="h203">Ondulatória</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
-            
 
         </section>
 
         <section class="section3" id="s7">
             <button class="botao-barra"><h2 class="h203">Óptica</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
+
         <div class="jogos">
                 <a class="link-jogo js7" href="07/cores.html">
                 <div class="img03" id="cores"></div>
@@ -184,9 +183,9 @@
 
         <section class="section3" id="s8">
             <button class="botao-barra"><h2 class="h203">Eletromagntismo</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
-            
 
         </section>
+        
         <section class="section3" id="s9">
             <button class="botao-barra"><h2 class="h203">Moderna</h2><img class="imgbotao" src="/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
             
@@ -233,8 +232,8 @@ function finicio() {
     setTimeout(function() {
         section["s"+i].style.transform = 'translate(0%)';
         section["s"+i].style.opacity = '1';
-        i+=1;
-            if (i<10) {
+        i += 1;
+            if (i < 10) {
                 finicio();
             }
     }, 100)
