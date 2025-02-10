@@ -39,13 +39,18 @@
 }
 html {
     background: var(--preto) url(/anexos/midias/fundo-star.gif) fixed center;
+    overflow: clip;
 }
-body {    
+body {
     background: #00000088;
     height: 100svh;
+    overflow: clip;
 }
 h1 {
     font-family: var(--fon1);
+}
+main {    
+    overflow: scroll;
 }
 a, address {
     text-decoration: none;
@@ -114,7 +119,7 @@ button {
 .main02 {
     width: clamp(400px, 90%, 1200px);
     background-color: var(--fundo);
-    overflow: clip;
+    overflow: scroll;
 }
 
 .enunciado {
@@ -223,6 +228,8 @@ input[type="radio"]:checked ~ label{
 
 
 
+/* 03 */
+/* 03 */
 /* 03 */
 
 .h103 {

@@ -5,7 +5,6 @@ document.head.innerHTML += `
 `;
 
 
-
 /* 01 */
 /* 01 */
 /* 01 */
@@ -66,8 +65,7 @@ function fgabarito() {
     
     selected = document.querySelector("input[name='opt']:checked").value; /* pega o valor da opção marcada */
     if (selected == '1') {
-        resposta.textContent = `Resposta Certa!<p>10 = 5.4</p>
-            <p>Note que agora não faz sentido.</p>`;
+        resposta.textContent = `Resposta Certa!`;
         resposta.style.color = 'green';
         
         g = document.querySelector("input[name='opt']:checked").id; /* pega o id da opção certa */
@@ -120,7 +118,7 @@ botoesIcones = document.getElementById('botoes-icones');
 if (botoesIcones != null) {
     botoesIcones.innerHTML = `
     <button type="button" class="botao-icone" id="bback">
-        <a href="/03/index.html"> 
+        <a href="/01/index.html"> 
         <img src="/anexos/midias/icon-back.svg" class="icon-botao" id="iback" alt="Voltar">
         </a>
     </button>
