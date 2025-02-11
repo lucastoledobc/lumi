@@ -86,6 +86,9 @@ button {
 }
 
 
+
+/* 01 */
+/* 01 */
 /* 01 */
 
 .card {
@@ -93,10 +96,13 @@ button {
 }
 
 
+
 /* 02 */
+/* 02 */
+/* 02 */
+
 .header02, .main02, .footer02 {
-    width: clamp(400px, 90%, 1200px);
-    padding: 0.2rem;
+    width: clamp(300px, 90%, 1200px);
 }
 .header02 {
     width: clamp(400px, 90%, 1200px);
@@ -114,9 +120,9 @@ button {
     right: 0;
 }
 .main02 {
-    width: clamp(400px, 90%, 1200px);
     background: white url(/anexos/midias/fundo-1.png) fixed center;
     overflow: scroll;
+    height: 90svh;
 }
 
 .main02 * {
@@ -165,7 +171,7 @@ button {
 input[type="radio"] {
     display: none;
 }
-label {
+.label-opt {
     display: block;
     margin: 0.2rem 0;
     border: 1px outset var(--preto);
@@ -174,16 +180,16 @@ label {
     padding: 0.3rem;
     font-size: 1.2rem;
 }
-label:hover {
+.label-opt:hover {
     background-color: var(--cor1);
     cursor: pointer;
     transition: 0.2s;
 }
-label:active {
+.label-opt:active {
     background-color: var(--cor2);
     transition: 0.1s;
 }
-input[type="radio"]:checked ~ label{
+.enunciado input[type="radio"]:checked + label{
     background-color: #FAcb5d;
 }
 
@@ -199,16 +205,73 @@ input[type="radio"]:checked ~ label{
 }
 .gabarito {
     display: none;
+    padding: 1rem;
 }
 #resposta {
     padding: 1rem;
     font-family: var(--fon1);
 }
 
-.bresp {
-    padding: 0.2rem 0.5rem;
+.bsresp * {
+    z-index: 2;
 }
-.divres {
+.bsreso {
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15), 0 6px 12px 0 rgba(24, 94, 224, 0.15);
+    padding: 0.75rem;
+    border-radius: 3rem;
+}
+
+.label-breso {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 50px;
+    font-size: .8rem;
+    color: black;
+    font-weight: 500;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: 0.25s ease-in;
+}
+
+.gabarito input[type="radio"]:checked + label {
+    color: var(--branco);
+    background-color: var(--cor5);
+}
+
+.gabarito input[id="rc"]:checked ~ .glider {
+    transform: translateX(0);
+}
+
+.gabarito input[id="rl"]:checked ~ .glider {
+    transform: translateX(100%);
+}
+
+.gabarito input[id="vdo"]:checked ~ .glider {
+    transform: translateX(200%);
+    color: red;
+}
+
+.glider {
+    position: absolute;
+    display: flex;
+    width: 50px;
+    background-color: #e6eef9;
+    z-index: 1;
+    border-radius: 99px;
+    transition: 0.25s ease-out;
+}
+
+@media (max-width: 700px) {
+    .gabarito {
+        transform: scale(0.6);
+    }
+}
+
+.reso {
     max-height: 0rem;
     opacity: 0;
     visibility: collapse;

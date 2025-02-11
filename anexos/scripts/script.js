@@ -78,16 +78,23 @@ function fgabarito() {
 
 // Respostas
 function fabrir(x) {
-    resposta = document.getElementsByClassName('divres');
+    resposta = document.getElementsByClassName('reso');
     for (i of resposta) {
         i.style.opacity = '0';
         i.style.visibility = 'collapse';
         i.style.maxHeight='0rem';
-        i.style.transition = 'opacity 1s, max-height 0.5s';
+        i.style.transition = 'opacity 1s linear 1s, max-height 0.5s';
     }
     resposta[x].style.opacity = '1';
     resposta[x].style.visibility = 'visible';
-    resposta[x].style.maxHeight='1000rem';
+    resposta[x].style.maxHeight='10rem';
+}
+function fvdo(x) {
+    video = document.getElementsByClassName('video');
+    for (i of video) {
+        i.style.display = 'none';
+    }
+    video[x].style.display = 'block';
 }
 
 // Caixa de Dicas

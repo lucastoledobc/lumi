@@ -10,6 +10,10 @@
         <meta name="description" content="Site de Física para ensino básico, ensino médio e ensino superior.">
     </head>
     <body>
+        <section class="title">
+            
+        </section>
+    <main class="main02">
         <header class="header02 flex">
             <nav class="nav02">
                 <a href="/index.html">Lumi Física</a>
@@ -18,7 +22,6 @@
                 <input type="text" name="search" id="search">
             </search> -->
         </header>
-    <main class="main02">
         <section class="enunciado">
             UERJ 2023 - 91) Na tirinha de Mauricio de Sousa, os personagens Cebolinha e Cascão fazem uma brincadeira utilizando duas latas e um barbante. Ao perceberem que o som pode ser transmitido através do barbante, resolvem alterar o comprimento do barbante para ficar cada vez mais extenso. As demais condições permaneceram inalteradas durante a brincadeira.
 
@@ -36,45 +39,47 @@
 
         <div class="opções">
             <input type="radio" name="opt" id="0" value="0">
-            <label for="0"  id="label0" value="0">(A) Altura.</label>
+            <label for="0" class="label-opt" id="label0" value="0">(A) Altura.</label>
 
             <input type="radio" name="opt" id="1" value="0">
-            <label for="1"  id="label1" value="0">(B) Período.</label>
+            <label for="1" class="label-opt" id="label1" value="0">(B) Período.</label>
 
             <input type="radio" name="opt" id="2" value="1">
-            <label for="2" id="label2" value="1">(C) Amplitude.</label>
+            <label for="2" class="label-opt" id="label2" value="1">(C) Amplitude.</label>
 
             <input type="radio" name="opt" id="3" value="0">
-            <label for="3" id="label3" value="0" >(D) Velocidade.</label>
+            <label for="3" class="label-opt" id="label3" value="0" >(D) Velocidade.</label>
 
             <input type="radio" name="opt" id="4" value="0">
-            <label for="4" id="label4" value="0">(E) Comprimento de onda.</label>
+            <label for="4" class="label-opt" id="label4" value="0">(E) Comprimento de onda.</label>
         </div>
         
-        <button class="bresponder" onclick="fgabarito()">Responder</button>
+        <button class="bresponder" onclick="fgabarito()">Responder</button>        
         
         </section>
+
+
 
         <section class="gabarito">
 
         <div class="flex" id="resposta"></div>
 
-        <div class="flex">
-            <button class="bresp" id="10" onclick="fabrir(0)">
-                Resposta Curta
-            </button>
-            <button class="bresp" id="20" onclick="fabrir(1)">
-                Resposta Completa
-            </button>        
-            <button class="bresp" id="30" onclick="fabrir(2)">
-                Resposta em Vídeo
-            </button>
+        <div class="bsreso">
+            <input type="radio" name="breso" class="breso" id="rc" onclick="fabrir(0)" checked>
+            <label for="rc" class="label-breso" id="labelrc">Resposta Curta</label>
+
+            <input type="radio" name="breso" class="breso" id="rl" onclick="fabrir(1)">
+            <label for="rl" class="label-breso" id="labelrl">Resposta Completa</label>
+
+            <input type="radio" name="breso" class="breso" id="vdo" onclick="fabrir(2)">
+            <label for="vdo" class="label-breso" id="labelvdo">Resposta em Vídeo</label>
+            <span class="glider"></span>
         </div>
 
-        <div id="resp1"  class="divres">
+        <div class="reso" id="resp1" style="visibility: visible; opacity: 1">
             Som é uma onda que vai ficando mais “fraca” com a distância, o que significa a amplitude. Uma pessoa de longe pode gritar para aumentar a amplitude e assim ser ouvida.
         </div>
-        <div id="resp2"  class="divres">
+        <div class="reso" id="resp2">
            <p>Se eu gritar no seu ouvido o som vai ter uma grande amplitude, mas se eu sussurrar a amplitude vai ser bem menor. A questão pergunta qual das características vai diminuir se Cebolinha e Cascão se afastarem, é a amplitude porque quanto mais longe você está de uma fonte sonora, menor é a amplitude do som quando você escuta ele.</p>
 
             <p>A) Frequência mede o quão agudo ou grave é o som, mas o som não fica mais agudo ou grave por estar longe. Só se estiver em movimento, mas isso é o efeito Doppler.</p>
@@ -92,8 +97,17 @@
             <p>10 = 5.4</p>
             <p>Note que agora não faz sentido.</p>
         </div>
-        <div id="resp3" class="divres">
-            <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/--XQesl7YHw?si=qSsheHBwh-Bub2X2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="reso" id="resp3">
+            <div class="bsreso">
+                <input type="radio" name="bvdo" class="breso" id="hori" onclick="fvdo(0)"  checked>
+                <label class="label-breso" for="hori">Horizontal</label>
+                <input type="radio" name="bvdo" class="breso" id="vert" onclick="fvdo(1)">
+                <label class="label-breso" for="vert">Vertical</label>
+                <span class="glider"></span>
+            </div>
+            <iframe class="video" id="vdo1" width="560" height="315" src="https://www.youtube.com/embed/--XQesl7YHw?si=qSsheHBwh-Bub2X2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
+            <iframe class="video" id="vdo2" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         </section>
     </main>
