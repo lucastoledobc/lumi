@@ -81,13 +81,10 @@ function fabrir(x) {
     resposta = document.getElementsByClassName('reso');
     for (i of resposta) {
         i.style.opacity = '0';
-        i.style.visibility = 'collapse';
         i.style.maxHeight='0rem';
-        i.style.transition = 'opacity 1s linear 1s, max-height 0.5s';
     }
     resposta[x].style.opacity = '1';
-    resposta[x].style.visibility = 'visible';
-    resposta[x].style.maxHeight='10rem';
+    resposta[x].style.maxHeight='100rem';
 }
 function fvdo(x) {
     video = document.getElementsByClassName('video');
