@@ -79,10 +79,14 @@ function fgabarito() {
 // Respostas
 function fabrir(x) {
     resposta = document.getElementsByClassName('reso');
-    for (i of resposta) {
-        i.style.display = 'none';
+    for (i = 0; i < 3; i++) {
+        if (i != x) {
+            resposta[i].style.display = 'none';
+        } else {
+            resposta[i].style.display = 'block';
+            
+        }
     }
-    resposta[x].style.display = 'block';
 }
 function fvdo(x) {
     video = document.getElementsByClassName('video');
