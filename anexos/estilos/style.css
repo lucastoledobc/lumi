@@ -328,33 +328,40 @@ math {
 /* 03 */
 /* 03 */
 /* 03 */
+.body03 * {
+    color: #fff;
+}
 
 .h103 {
     font-family: var(--fon1);
-    font-size: clamp(1rem, 5vh, 2rem);
+    font-size: clamp(1rem, 3vh, 2rem);
     text-align: center;
     text-wrap: balance;
     height: 10svh;
+    padding: 0 1rem;
+    overflow: clip;
     text-shadow:
     -0.1rem 0 var(--preto),
     0.1rem 0 var(--preto),
     0 -0.1rem var(--preto),
     0 0.1rem var(--preto);
 }
+.h203 {
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+    text-align: center;
+    text-decoration: underline;
+    padding: 0.5rem;
+}
+
 .main03 {
-    width: 90%;
+    width: calc(90% - 10vw);
     height: 90svh;
     padding: 0 5vw;
     overflow: clip;
 }
 
-.h203 {
-    display: inline-block;
-    font-size: clamp(1.2rem, 5vw, 1.4rem);
-    text-decoration: underline;
-}
 
-.button03 {
+.botao03 {
     cursor: pointer;
     background-color: var(--preto);
     border-radius: 5px;
@@ -455,7 +462,7 @@ math {
 /* 05 */
 /* 06 */
 .main05 {
-    background: url(/anexos/midias/fundo-1.png) fixed center;
+    background: url(/anexos/midias/fundo-2.png) fixed center;
     position: relative;
     height: calc(100svh - 2rem);
     overflow-y: scroll;

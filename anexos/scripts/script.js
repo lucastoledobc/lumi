@@ -124,7 +124,7 @@ botoesIcones = document.getElementById('botoes-icones');
 if (botoesIcones != null) {
     botoesIcones.innerHTML = `
     <button type="button" class="botao-icone" id="bback">
-        <a href="/01/index.html"> 
+        <a href="/03/index.html"> 
         <img src="/anexos/midias/icon-back.svg" class="icon-botao" id="iback" alt="Voltar">
         </a>
     </button>
@@ -153,37 +153,18 @@ function fconf() {
     bconf = document.getElementById('bconf');
     bajuda = document.getElementById('bajuda');
     bvolu = document.getElementById('bvolu');
-    bdark = document.getElementById('bdark');
 
-    if (bconf.innerHTML == '<img src="/anexos/midias/icon-close.svg" class="icon-botao" id="iconf" alt="Fechar">') {
-        bconf.innerHTML = `
-        <img src="/anexos/midias/icon-close.svg" class="icon-botao" id="iconf" alt="Fechar">
-        `;
+    if (bconf.innerHTML != '<img src="/anexos/midias/icon-close.svg" class="icon-botao" id="iconf" alt="Fechar">') {
+        bconf.innerHTML = `<img src="/anexos/midias/icon-close.svg" class="icon-botao" id="iconf" alt="Fechar">`;
         
-        bajuda.style.top = 'calc(var(--bm) * 2 + clamp(1rem, 7vw, 2rem))';
+        bajuda.style.top = 'calc(var(--bm) * 4 + clamp(1rem, 7vw, 2rem))';
         bajuda.style.opacity = '1';
         bajuda.style.transition = '1s';
 
-        bvolu.style.top = 'calc(var(--bm) * 3 + clamp(1rem, 7vw, 2rem) * 2)';
+        bvolu.style.top = 'calc(var(--bm) * 7 + clamp(1rem, 7vw, 2rem) * 2)';
         bvolu.style.opacity = '1';
         bvolu.style.transition = '1s';
-
-        bdark.style.top = 'calc(var(--bm) * 4 + clamp(1rem, 7vw, 2rem) * 3)';
-        bdark.style.opacity = '1';
-        bdark.style.transition = '1s';
-
-        iconf = document.getElementById('iconf');
-        if (vdark == 1) {
-            iconf.style.filter = 'invert(100%)';
-        } else {
-            iconf.style.filter = 'invert(0%)';
-        }
-    } else {
-        aviso.style.opacity = '0';
-        aviso.style.right = '0%';
-        aviso.style.transition = '1s';
-        aviso.style.visibility = 'collapse';
-        
+    } else {        
         bconf.innerHTML = `
         <img src="/anexos/midias/icon-conf-outline.svg" class="icon-botao" id="iconf" alt="Configuração">
         `;
@@ -195,17 +176,6 @@ function fconf() {
         bvolu.style.top = '10px';
         bvolu.style.opacity = '0';
         bvolu.style.transition = '1s';
-
-        bdark.style.top = '10px';
-        bdark.style.opacity = '0';
-        bdark.style.transition = '1s';
-
-        iconf = document.getElementById('iconf');
-        if (vdark == 1) {
-            iconf.style.filter = 'invert(100%)';
-        } else {
-            iconf.style.filter = 'invert(0%)';
-        }
     }
 }
 
@@ -223,30 +193,6 @@ function fvolu() {
         } else {
             document.querySelectorAll("video, audio").forEach((elem) => elem.volume = 1);
             bvolu.innerHTML = `<img src="/anexos/midias/icon-volume-3.svg" class="icon-botao" id="ivolu" alt="Mute">`;
-    }
-}
-
-// MODO ESCURO
-
-root = document.querySelector(':root');
-icon = document.getElementsByClassName('icon');
-vdark = 1;
-
-function fdark() {
-    if (getComputedStyle(root).getPropertyValue('--branco') == '#ffffff') {
-        root.style.setProperty('--branco', '#000000');
-        root.style.setProperty('--preto', '#ffffff');
-        for (let i = 0; i < icon.length; i++) {
-            console.dir(icon[i].style.filter = 'invert(0%)');
-        }
-        vdark = 0;
-    } else {
-        root.style.setProperty('--branco', '#ffffff');
-        root.style.setProperty('--preto', '#000000');
-        for (let i = 0; i < icon.length; i++) {
-            console.dir(icon[i].style.filter = 'invert(100%)');
-        }
-        vdark = 1;
     }
 }
 
