@@ -9,117 +9,115 @@
     <title>Jogos Lumi Física</title>
     <meta name="description" content="Jogos de Física">
     <style>
-        /* JOGOS */
+* {
+    color: var(--branco);
+}
 
-        * {
-            color: var(--branco)
-        }
+main {            
+    width: clamp(300px, 90%, 1200px);
+    overflow-y: scroll;
+    height: 90svh;
+}
 
-        main {            
-            width: clamp(300px, 90%, 1200px);
-            overflow-y: scroll;
-            scrollbar-width: none;
-            height: 90svh;
-        }
+.botao-barra {
+    cursor: pointer;
+    text-align: left;
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem 1rem 1rem;
+    background-color: var(--trans);
+    border: none;
+}
 
-        .botao-barra {
-            display: block;
-            width: 100%;
-            background-color: var(--trans);
-            border: none;
-            cursor: pointer;
-            text-align: left;
-            padding: 0.5rem 1rem 1rem 1rem;
-        }
-        
-        button > img {
-            width: 2rem;
-            float: right;
-            filter: invert(100%);
-            border-radius: 5px;
-        }
-        .jogos {
-            padding: 0 1rem 1rem 1rem;
-        }
-        .link-jogo {
-            display: inline-block;
-            width: 5rem;
-            padding: 0.5rem;
-            margin: 1rem;
-            font-size: 1.5rem;
-            border: 2px solid var(--branco);
-            border-radius: 5px;
-            text-decoration: underline;
-            text-align: center;
-            opacity: 0;
-            transition: opacity 2s;
-        }
-        .img03 {
-            aspect-ratio: 1;
-        }
+button > img {
+    width: 2rem;
+    float: right;
+    filter: invert(100%);
+    border-radius: 5px;
+}
+.jogos {
+    padding: 0 1rem 1rem 1rem;
+}
+.link-jogo {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-align: center;
+    display: inline-block;
+    width: 5rem;
+    padding: 0.5rem;
+    margin: 1rem;
+    border: 2px solid var(--branco);
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 2s;
+}
+.img03 {
+    aspect-ratio: 1;
+}
 
-        /* 03 */
-        #sss {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        #eixo2 {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 5rem;
-            aspect-ratio: 1;
-            border-bottom: 1px solid var(--branco);
-            border-radius: 50%;
-            animation: girar 10s linear infinite;
-        }
-        @keyframes girar {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-        #terra {
-            aspect-ratio: 1;
-            width: 2rem;            
-            background: rgb(0, 81, 255);
-            box-shadow: 0 0 20px rgba(82, 82, 252, 0.733);
-            border-radius: 50%;
-        }
-        #lua {
-            position: relative;
-            aspect-ratio: 1;
-            width: 0.5rem;
+/* JOGOS */
 
-            background: rgb(255, 255, 255);
-            border: 1px solid var(--branco);
-            box-shadow: 0 0 30px rgb(255, 255, 255);
-            border-radius: 50%;
-            right: 125%;
-            top: 53%;
-        }
+/* 03 */
+#sss {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#eixo2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    aspect-ratio: 1;
+    border-bottom: 1px solid var(--branco);
+    border-radius: 50%;
+    animation: girar 10s linear infinite;
+}
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+#terra {
+    aspect-ratio: 1;
+    width: 2rem;            
+    background: rgb(0, 81, 255);
+    box-shadow: 0 0 20px rgba(82, 82, 252, 0.733);
+    border-radius: 50%;
+}
+#lua {
+    position: relative;
+    aspect-ratio: 1;
+    width: 0.5rem;
 
-        /* 07 */
-        #cores {
-            background: conic-gradient(
-            hsl(360 100% 50%),
-            hsl(330 100% 50%),
-            hsl(300 100% 50%),
-            hsl(270 100% 50%),
-            hsl(240 100% 50%),
-            hsl(210 100% 50%),
-            hsl(180 100% 50%),
-            hsl(150 100% 50%),
-            hsl(120 100% 50%),
-            hsl(90 100% 50%),
-            hsl(60 100% 50%),
-            hsl(30 100% 50%),
-            hsl(0 100% 50%));
-        }
+    background: rgb(255, 255, 255);
+    border: 1px solid var(--branco);
+    box-shadow: 0 0 30px rgb(255, 255, 255);
+    border-radius: 50%;
+    right: 125%;
+    top: 53%;
+}
 
+/* 07 */
+#cores {
+    background: conic-gradient(
+    hsl(360 100% 50%),
+    hsl(330 100% 50%),
+    hsl(300 100% 50%),
+    hsl(270 100% 50%),
+    hsl(240 100% 50%),
+    hsl(210 100% 50%),
+    hsl(180 100% 50%),
+    hsl(150 100% 50%),
+    hsl(120 100% 50%),
+    hsl(90 100% 50%),
+    hsl(60 100% 50%),
+    hsl(30 100% 50%),
+    hsl(0 100% 50%));
+}
     </style>
 </head>
 <body>
@@ -204,11 +202,6 @@
         <div class="botao-ajuda"><button class="botao2" onclick="fstart()">Fechar</button></div>
         <section class="bot-ajuda"><button class="agradecimento">Agradecimentos</button>
         </section>
-    </dialog>
-    <dialog class="popup" id="agradecimento">
-        <br>- Professor Gustavo Guanabara: criador do curso em vídeo. Se você quer aprender a fazer sites ou programação em geral, mas não sabe nada, <a href="https://www.cursoemvideo.com/" target="_blank">curso em vídeo</a> é o lugar.
-        <br>- Kiril Vatev: criador do efeito de <button onclick="confetti()">confetes</button>. Se quiser adicionar no seu site ou saber mais <a href="https://www.npmjs.com/package/canvas-confetti?activeTab=readme" target="_blank">clique aqui</a>.
-        <br>- Devro LABS: empresa que redireciona os emais gratuitamente.
     </dialog>
 </body>
 

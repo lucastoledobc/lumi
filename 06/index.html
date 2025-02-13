@@ -5,27 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/anexos/estilos/style.css"> 
     <script src="/anexos/scripts/script.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 
     <title>Contato</title>
-    <meta name="description" content="Contato Lumi Física">
+    <meta name="description" content="Contato com Lumi Física">
+    <style>
+input[type='email'], textarea {
+    margin: 0.3rem 0;
+    width: 100%;
+    text-wrap: wrap;
+    field-sizing: content;
+}
+    </style>
 </head>
 <body>
-    <h1>Contato</h1>
-    <main>
-        <section class="section">
+    <main class="main05">
+        <section class="section05">
             <h2 class="h2">Dúvidas e Sugestões</h2>
-            <p>Não tenha medo ou vergonha de tirar dúvidas. Pode mandar para o email abaixo que respondo assim que puder.</p>
-            <p>email: <address><a href="mailto:lumifisica@gmail.com">lumifisica@gmail.com</a></address></p>
-            <p>(Esse email também é uma chave pix caso queira ajudar a manter o site)</p>
-            <p>(Desesativando o adblock também me ajuda bastante)</p>
+            <p>
+                Não tenha medo ou vergonha de tirar dúvidas. Pode mandar para o email abaixo que respondo assim que puder.
+            </p>
+            <address><a href="mailto:lumifisica@gmail.com">lumifisica@gmail.com</a></address>
+            
+            <p>(Esse email também é uma chave pix caso queira ajudar a manter o site).</p>
+            <p>(Desesativando o adblock também me ajuda bastante).</p>
         </section>
-    Dúvidas? Sugestões? Envie para o email ou escreva abaixo.
-        <form action="https://formsubmit.co/lumifisica@gmail.com" method="POST">
-            <input type="email" name="email" placeholder="Seu email aqui" required>
-            <textarea name="message" placeholder="Descreva o problema aqui..." required></textarea>
-        <button type="submit" id="enviar">Enviar</button>
-        </form>
+        <section class="section05">
+            <h2 class="h2">Contato</h2>
+            <form action="https://formsubmit.co/lumifisica@gmail.com" method="POST">
+                <input type="email" name="email" placeholder="Seu email aqui" required>
+                <textarea name="message" placeholder="Escreva a mensagem aqui..." required></textarea>
+            <button type="submit" id="enviar">Enviar</button>
+            </form>
+        </section>
+        <button type="button" class="botao05"><a href="/01/index.html">Voltar</a></button>
     </main>
 </body>
 </html>

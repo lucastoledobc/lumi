@@ -7,141 +7,125 @@
     <title>Start</title>
     <meta name="description" content="Site de Física para ensino básico, ensino médio e ensino superior.">
     <style>
-        * {
-            overflow: hidden;
-            max-height: 100svh;
-            color: white;
-        }
-        body {
-            background-color: black;
-            width: 100vw;
-            max-width: 100svw;
-            height: 100vh;
-            
-        }
-        .portal {
-            background: black url(anexos/midias/fundo-portal.png) no-repeat center;
-            background-size: cover;
- 
-            position: absolute;
-            width: 100vh;
-            height: 100vh;
-            animation: portal 3s linear infinite;
-        }
-        @keyframes portal {
-            0% {transform: rotate(0deg);}
-            100% {transform: rotate(360deg);}
-        }
-        .buraco {
-            background: rgba(255, 255, 255, 0) url(anexos/midias/fundo-escuro.png) no-repeat center;
-            background-size: cover;
-            position: absolute;
-            width: 100vw;
-            height: 100vh;
-            animation: buraco 2s linear forwards;
-        }
-        @keyframes buraco {
-            0% {background-color: #000000;}
-            100% {background-color: #00000000;}
-        }
-        
-        
+* {
+    overflow: clip;
+    color: #fff;
+}
 
-        .texto {
-            position: absolute;
-            width: 100vw;
-            top: 50%;
-            transform: translate(0, -50%);
-        }
-        .div1, .div2 {
-            opacity: 0;
-            text-align: center;
-            margin: auto;
-            min-height: 20vh;
-            
-            animation: opaco 3s linear forwards;
-            animation-delay: 1s;
-        }        
+body {
+    background-color: black;
+    width: 100vw;
+    max-width: 100svw;
+    height: 100vh;            
+}
+.portal {
+    background: black url(anexos/midias/fundo-portal.png) no-repeat center;
+    background-size: cover;
 
-        .h1 {
-            display: inline-block;
-            font-family: DynaPuff;
-            font-size: clamp(5rem,10vw,20vh);
-            font-weight: bolder;
-        }
-        @keyframes opaco {
-            0% {opacity: 0;}
-            100% {opacity: 100;}
-        }
-        .l1 {
-            animation: poping 1.5s linear infinite;
-            animation-delay: 0s;
-        }
-        .l2 {
-            animation: poping 1.5s linear infinite;
-            animation-delay: 0.33s;
-        }
-        .l3 {
-            animation: poping 1.5s linear infinite;
-            animation-delay: 0.66s;
-        }
-        .l4 {
-            animation: poping 1.5s linear infinite;
-            animation-delay: 1s;
-        }
-        @keyframes poping {
-            0% {
-                translate: 0 10px;
-            }
-            50% {
-                translate: 0 -20px;
-            }
-            100% {
-                translate: 0 10px;
-            }
-        }
+    position: absolute;
+    width: 100vh;
+    height: 100vh;
+    animation: portal 3s linear infinite;
+}
+@keyframes portal {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+.buraco {
+    background: #000 url(anexos/midias/fundo-escuro.png) no-repeat center;
+    background-size: cover;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    animation: buraco 2s linear forwards;
+}
+@keyframes buraco {
+    0% {background-color: #000000ff;}
+    100% {background-color: #00000000;}
+}
 
 
 
-        .a {
-            position: absolute;
-            top: 80%;
-            font-size: clamp(3rem,5vw,10vh);
-            padding: 2px 8px;
-            border: 2px solid #ffffff;
-            border-radius: 1rem;
+.div1, .div2 {
+    text-align: center;
+    text-shadow:
+    -0.01rem 0 #000,
+    0.01rem 0 #000,
+    0 -0.01rem #000,
+    0 0.01rem #000;
+    margin: auto;
+    min-height: 20vh;
+    
+    opacity: 0;
+    animation: opaco 3s linear forwards 1s;
+}        
 
-            opacity: 0;
-        }
-        .a1 {
-            animation: ani1 2s linear forwards; 
-            animation-delay: 1s; 
+.h1 {
+    font-family: var(--fon1);
+    font-size: clamp(5rem, 10vw, 20vh);
+    font-weight: bolder;
+    display: inline-block;
+}
+@keyframes opaco {
+    0% {opacity: 0;}
+    100% {opacity: 100;}
+}
+.l1 {
+    animation: poping 1.5s linear infinite;
+}
+.l2 {
+    animation: poping 1.5s linear infinite 0.33s;
+}
+.l3 {
+    animation: poping 1.5s linear infinite 0.66s;
+}
+.l4 {
+    animation: poping 1.5s linear infinite 1s;
+}
+@keyframes poping {
+    0% {translate: 0 10px;}
+    50% {translate: 0 -20px;}
+    100% {translate: 0 10px;}
+}
 
-        }
-        .a2 {   
-            opacity: 0;         
-            animation: ani2 1.4s linear infinite; 
-            animation-delay: 2.7s; 
-        }
 
-        @keyframes ani1 {
-            0% {opacity: 0;}
-            40% {opacity: 1;}
-            60% {opacity: 1;}
-            100% {opacity: 0;}
-        }
-        @keyframes ani2 {
-            0% {opacity: 0.3;}
-            40% {opacity: 1;}
-            60% {opacity: 1;}
-            100% {opacity: 0.3;}
-        }
+
+.start {
+    font-size: clamp(3rem, 5vw, 10vh);
+    position: absolute;
+    top: 80%;
+    padding: 2px 8px;
+    border: 2px solid #fff;
+    border-radius: 1rem;
+
+    opacity: 0;
+}
+.a1 {
+    animation: ani1 2s linear forwards 1s;
+
+}
+.a2 {   
+    opacity: 0;         
+    animation: ani2 1.4s linear infinite 2.7s;
+}
+@keyframes ani1 {
+    0% {opacity: 0;}
+    40% {opacity: 1;}
+    60% {opacity: 1;}
+    100% {opacity: 0;}
+}
+@keyframes ani2 {
+    0% {opacity: 0.3;}
+    40% {opacity: 1;}
+    60% {opacity: 1;}
+    100% {opacity: 0.3;}
+}
     </style>
 </head>
 <body class="flex">
     <div class="portal"></div>
     <div class="buraco"></div>
-    <div class="texto">
+    <div class="divtitulo">
         <div class="div1">
             <div class="h1 l1">L</div> 
             <div class="h1 l2">U</div> 
@@ -154,10 +138,10 @@
             <div class="h1 l3">s</div> 
             <div class="h1 l4">i</div> 
             <div class="h1 l1">c</div> 
-            <div class="h1 l2" >a</div>
+            <div class="h1 l2">a</div>
         </div>
     </div>
-    <a href="/01/" class="a a1">START</a>
-    <a href="/01/" class="a a2">START</a>
+    <a href="/01/" class="start a1">START</a>
+    <a href="/01/" class="start a2">START</a>
 </body>
 </html>

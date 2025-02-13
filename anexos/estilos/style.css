@@ -24,6 +24,12 @@
     --cor4: #056F9C;
     --cor5: #023145;
 
+    --cori1: #FDE8B7;
+    --cori2: #FACB5D;
+    --cori3: #F5AD07;
+    --cori4: #9C6F05;
+    --cori5: #453102;
+
     --fon1: DynaPuff;
     --fon2: EBGaramond;
     --fon3: Lato;
@@ -32,10 +38,11 @@
 }
 
 * {
-    margin: auto;
-    padding: 0;
     font-family: var(--fon2), var(--fon3), 'Times New Roman', Times, serif;
     font-size: clamp(1rem, 5vw, 1.1rem);
+    padding: 0;
+    margin: 0 auto;
+    scrollbar-width: none;
 }
 html {
     background: var(--preto) url(/anexos/midias/fundo-star.gif) fixed center;
@@ -124,7 +131,7 @@ math {
 }
 .main02 {
     display: block;
-    background: white url(/anexos/midias/fundo-1.png) fixed center;
+    background: #fff url(/anexos/midias/fundo-1.png) fixed center;
 }
 
 .main02 * {
@@ -295,10 +302,6 @@ input[type="radio"] {
     transition: 1s;
     animation: aparecer 1s;    
 }
-@keyframes aparecer {
-    from {opacity: 0}
-    to {opacity: 1}
-}
 
 #reso2, #reso3, #vdo2 {
     display: none;
@@ -390,26 +393,6 @@ math {
     top: var(--bm);
     right: var(--bm);
 }
-#aviso {
-    position: absolute;
-    text-align: justify;
-
-    max-width: clamp(1rem, 70vw, 50vh);
-    min-width: 40%;
-    padding: 0.4rem;
-    top: var(--bm);
-
-    border: 0.2rem solid var(--branco);
-    border-radius: 0.5rem;
-    background-color: red;
-}
-input[type='email'], textarea {
-    color: black;
-    margin: 0.3rem 0;
-    width: 100%;
-    text-wrap: wrap;
-    field-sizing: content;
-}
 #bmaxi {
     bottom: var(--bm);
     right: var(--bm);
@@ -467,3 +450,51 @@ input[type='email'], textarea {
     font-size: 1rem;
 }
 
+
+
+/* 05 */
+/* 06 */
+.main05 {
+    background: url(/anexos/midias/fundo-1.png) fixed center;
+    position: relative;
+    height: calc(100svh - 2rem);
+    overflow-y: scroll;
+    padding: 1rem;
+    animation: 1s entrar forwards;
+}
+@keyframes entrar {
+    from {left: -100%}
+    to {left: 0%}
+}
+
+.section05 {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    opacity: 0;
+    animation: 1s aparecer forwards 1s;
+}
+@keyframes aparecer {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+.h205 {    
+    padding-bottom: 1rem;
+}
+.link-sub {
+    text-decoration: underline;
+}
+address {
+    display: inline-block;
+}
+
+.botao05 {
+    opacity: 0;
+    animation: 1s aparecer forwards 1s;
+}
+.botao05 > a {
+    color: #000;
+    padding: 0.3rem;
+}
