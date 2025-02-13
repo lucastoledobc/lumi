@@ -80,11 +80,9 @@ function fgabarito() {
 function fabrir(x) {
     resposta = document.getElementsByClassName('reso');
     for (i of resposta) {
-        i.style.opacity = '0';
-        i.style.maxHeight='0rem';
+        i.style.display = 'none';
     }
-    resposta[x].style.opacity = '1';
-    resposta[x].style.maxHeight='100rem';
+    resposta[x].style.display = 'block';
 }
 function fvdo(x) {
     video = document.getElementsByClassName('video');
