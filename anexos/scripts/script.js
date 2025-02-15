@@ -50,6 +50,24 @@ fetch('/anexos/scripts/users.json')
 /* 02 */
 /* 02 */
 
+function flink(x) {
+    descri = document.getElementById('descri');
+    descri.style.height = ' calc(19.99svh - 2rem)';
+    descri.style.opacity = '0.99';
+    if (x == 0) {
+        descri.textContent = `Selecione um.`;
+    }   
+    if (x == 1) {
+        descri.textContent = `Encontre textos e vídeos sobre conteúdos de física, como cinemática, lei de Ohm e mais.`;
+    }
+    if (x == 2) {
+        descri.textContent = `Encontre exercícios e questões de vestibulares sobre física, como ENEM, UERJ e mais.`;
+    }
+    if (x == 3) {
+        descri.textContent = `Busque por um tema ou uma questão em específico.`;
+    }
+}
+
 function fgabarito() {
     document.getElementsByClassName('gabarito')[0].style.display = 'block';
 

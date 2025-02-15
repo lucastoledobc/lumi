@@ -3,33 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Conteúdos</title>
     <link rel="stylesheet" href="/anexos/estilos/style.css">
     <script src="/anexos/scripts/script.js" defer></script>
     <meta name="description" content="Conteúdo e questões de Física para ensino básico, ensino médio e ensino superior.">
     <style>
+* {
+    color: #fff;
+}
+body {
+    background: #000000ff;
+    animation: ani1 3s forwards 1s;
+}
+@keyframes ani1 {
+    0% {background: #000000ff;}
+    100% {background: #000000cc;}
+}
+
+.h1 {
+    height: 20svh;
+    animation: ani2 2s forwards;
+}
+@keyframes ani2 {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.h101 {
+    font-size: clamp(1.3rem, 13vw, 6rem);
+    text-align: center;
+}
+
+main {
+    overflow-y: scroll;
+    height: 80svh;
+}
+
+.botoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 50svh;
+}
+.link {
+    display: inline-block;
+    font-family: var(--font2), var(--font2), 'Times New Roman', Times, serif;
+    color: #000;
+    font-weight: 500;
+    text-align: center;
+    width: 8rem;
+    padding: 1rem;
+    margin: 0.3rem;
+    clip-path: polygon(15% 5%, 85% 5%, 100% 50%, 85% 95%, 15% 95%, 0% 50%);
+    transition: 0.5s;
+    background-size: 600%;
+    background-image: linear-gradient(
+        325deg,
+        var(--cor4) 30%,
+        var(--branco) 50%,
+        var(--cor4) 70%
+    );
+    animation: ani3 4s infinite, ani4 2s forwards 0.5s;
+}
+@keyframes ani3 {
+    0% {background-position: 0%;}
+    100% {background-position: 100%;}
+}
+@keyframes ani4 {
+    0% {color: #000;}
+    100% { color: #fff;}
+}
+
+.link:hover {
+    font-weight: bold;
+    background-image: linear-gradient(
+        325deg,
+        var(--cori3) 30%,
+        var(--branco) 50%,
+        var(--cori3) 70%
+    );
+}
+
+#descri {
+    color: #00000000;
+    width: clamp(200px, 80%, 1000px);
+    height: 0svh;
+    padding: 1rem;
+    border: thick double var(--branco);
+    border-radius: 1rem;
+    transition: 1s;
+    animation: altura 1s forwards 0.5s, cor 1s forwards 1.5s;
+}
+@keyframes altura {
+    0%{height: 0svh;}
+    100%{height: calc(20svh - 2rem);}
+}
+@keyframes cor {
+    0%{color: #00000000;}
+    100%{color: #ffffffff;}
+}
     </style>
 </head>
 <body>
+    <div class="h1 flex">
+        <h1 class="h101">Conteúdo</h1>
+    </div>
     <main>
-        <a href="01_teoria/">Teoria</a>
-        <a href="01_teoria/">Prática</a>
-        <a href="01_teoria/">Buscar</a>
-        <section class="descri">
-            <div class="desc1">
-                <p>
-                    Encontre textos e vídeos sobre conteúdos de física, como cinemática, lei de Ohm e mais.
-                </p>
-            </div>
-            <div class="desc2">
-                
-                <p>
-                    Encontre exercícios e questões de vestibulares sobre física, como ENEM, UERJ e mais.
-                </p>
-            </div>
-            <div class="desc3">
-                Busque por uma questão ou tema em específico.
-            </div>
+        <div class="botoes">
+            <a href="01_teoria/" class="link" onmouseenter="flink(1)" onmouseleave="flink(0)">Teoria</a>
+            <a href="01_teoria/" class="link" onmouseenter="flink(2)" onmouseleave="flink(0)">Prática</a>
+            <a href="01_teoria/" class="link" onmouseenter="flink(3)" onmouseleave="flink(0)">Buscar</a>
+        </div>
+        <section id="descri">
+                Selecione um.
         </section>
     </main>
 </body>
