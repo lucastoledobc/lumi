@@ -3,17 +3,32 @@ FAZER:
 -> 00 Geral:
 
 - ad da plataforma
-- nova barra
+- SEO - deixar o site mais rapido
+
+
+
+-> 01 Home:
+
+- criar estatistica do temas que caem no vestibular
+- trilha inicial
+- curiosidade do dia
+
 
 
 -> 02 Conteudo:
 
 - simples - completa - vídeo (vertical/horizontal)
+- pular entre as questoes
+- botoes para as respostas: (stick para celular)
+- lista de exercicios do mesmo temas
+- links de diferentes explicações e feedback do aluno
+
 
 
 -> 03 Games:
 
 - Tabela de record?
+
 
 
 -> 04 Artigos:
@@ -22,249 +37,15 @@ FAZER:
 - Porque o copo sua?
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-IDEIAS:
-
-- SEO - deixar o site mais rapido
-- criar estatistica do temas que caem no vestibular
-
-
--> Home:
-
-- trilha inicial
-- lista de exercicios do mesmo temas
-- curiosidade do dia
-
-
--> Conteudo:
-
-- links de diferentes explicações e feedback do aluno
-
-
--> Pratique:
-
-- pular entre as questoes
-- botoes para as respostas: (stick para celular)
-
-
-
-
--> Games:
-
--> Artigos:
-
-Categorias:
+- Categorias:
 	Tipo:
 		educação
 		sequência didática
 		construção
 		teoria
 
-    - recomendar artigos de um para o outro e em temas do conteúdo também.
+- recomendar artigos de um para o outro e em temas do conteúdo também.
         colocar uma tag mulheres para deixar um sistema automatico sobre as historias das mulheres no dia/seman das mulheres      
 
-2. experimentos:
 
-
-
-
--> Sobre:
-
-
-
-OUTROS:
-
-fontes:
-a mão:
-Bryndan Write
-Core Bandi
-Xarrovv
-Comic Sans
-Pecita
-
-
-
-
-
-
-
-lixeira:
-
-primeiro 07ADF5 
-shiny 0EA5FF
-
-<nav id="nav21" class="nav21" onclick="flexivel()"></nav>
-
-script:
-const nav21 = document.getElementById('nav21');
-nav21.innerHTML = `
-    <ul>
-        <ul><a href="">Mecânica</a></ul>
-            <li><a href="">Cinemática</a></li>
-            <li><a href="">Dinâmica</a></li>
-        <ul><a href="">Termologia</a></ul>
-            <li><a href="">Calor</a></li>
-            <li><a href="">Calorimetria</a></li>
-            <li><a href="">Fluxo de Calor</a></li>
-        <ul><a href="">Ondulatória</a></ul>
-            <li><a href="">Ondas</a></li>
-            <li><a href="">Acústica</a></li>
-            <li><a href="">Eq. de Onda</a></li>
-        <ul><a href="">Eletromagnetismo</a></ul>
-            <li><a href="">Eletricidade</a></li>
-            <li><a href="">Magnetismo</a></li>
-            <li><a href="">Eletromagnetismo</a></li>
-        <ul><a href="">Moderna</a></ul>
-            <li><a href="">Relatividade</a></li>
-            <li><a href="">Física Quântica</a></li>
-    </ul>
-`;
-
-const nav22 = document.getElementById('nav22')
-nav22.innerHTML = `
-    <ul>
-        <ul><a href="">Mecânica</a></ul>
-            <li><a href="">Cinemática</a></li>
-            <li><a href="">Dinâmica</a></li>
-        <ul><a href="">Termologia</a></ul>
-            <li><a href="">Calor</a></li>
-            <li><a href="">Calorimetria</a></li>
-            <li><a href="">Fluxo de Calor</a></li>
-        <ul><a href="">Ondulatória</a></ul>
-            <li><a href="">Ondas</a></li>
-            <li><a href="">Acústica</a></li>
-            <li><a href="">Eq. de Onda</a></li>
-        <ul><a href="">Eletromagnetismo</a></ul>
-            <li><a href="">Eletricidade</a></li>
-            <li><a href="">Magnetismo</a></li>
-            <li><a href="">Eletromagnetismo</a></li>
-        <ul><a href="">Moderna</a></ul>
-            <li><a href="">Relatividade</a></li>
-            <li><a href="">Física Quântica</a></li>
-    </ul>
-    <div id="ad2" class="ad"></div>
-`;
-
-function flexivel() {
-    let nav21 = document.getElementById('nav21');
-    if (nav21.style.right != '0px') {
-        nav21.style.right = '0px';
-        nav21.style.transition = '0.5s';
-        
-    } else {
-        nav21.style.right = '-200px';
-    }
-    
-}
-
-/* NAV21 */
-
-.nav22 {
-    display: none;
-}
-
-.nav21 {
-    display: block;
-    position: fixed;
-    right: -200px;
-    top: 30px;
-    opacity: 0.9;
-}
-
-.bnav2 {
-    display: block;
-    position: absolute;
-    top: 1%;
-    right: 1%;
-    color: white;
-}
-
-nav > ul > ul {
-    background-color: rgb(255, 255, 255);   
-}
-
-nav > ul > li {
-    background-color: rgb(110, 40, 40);
-    text-indent: 1em;  
-}
-
-nav > ul > ul > a {
-    display: block;
-    padding: 5px;
-    background-image: linear-gradient(to bottom, var(--cor1),var(--cor3));
-    color: white;
-    text-decoration: none;
-}
-
-nav > ul > ul > a:hover {
-    display: block;
-    padding: 5px;
-    background-image: linear-gradient(to bottom, var(--cor1),var(--cor3));
-    color: white;
-    text-decoration: none;
-    border-radius: 0px 150px 0 0;
-    transition: 0.5s;
-}
-
-
-expandir todos 03
-
-
-
-        #x1 {
-            display: none;
-            width: 90%;
-            max-width: 1000px;
-            margin: auto;
-            height: 5svh;
-        }
-        #x2 {
-            width: fit-content;
-            padding: 0.5rem;
-            float: right;
-            display: flex;
-            cursor: pointer;
-            color: var(--preto);
-            filter: invert(100%);
-            border: 1px solid;
-            border-radius: 20px;
-        }
-        #x2 > img {
-            width: 1.5rem;
-            padding: 0 0 0 0.5rem;
-        }
-
-        
-    <div id="x1"> 
-        <div id="x2" onclick="fexpandir()">
-        Expandir todos <img src="/anexos/midias/icon-mais.svg" alt="Expandir">
-        </div>        
-    </div>
-
-    
-x = document.getElementById('x2');
-
-function fexpandir() {
-    if (x.innerHTML != `Encolher todos <img src="/anexos/midias/icon-menos.svg" alt="Encolher">`) {
-        x.innerHTML = `Encolher todos <img src="/anexos/midias/icon-menos.svg" alt="Encolher">`;
-        for (let i of section) {
-            i.style.maxHeight = "100rem";
-        }
-    } else {
-        x.innerHTML = `Expandir todos <img src="/anexos/midias/icon-mais.svg" alt="Expandir">`;
-        for (let i of section) {
-            i.style.maxHeight = "3rem";
-        }        
-    }
-};
+-> 05 Sobre:
