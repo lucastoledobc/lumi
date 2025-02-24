@@ -17,7 +17,11 @@ FAZER:
 
 -> 02 Conteudo:
 
-- simples - completa - vídeo (vertical/horizontal)
+Teoria:
+- a cada pergunta colocar 2 botoes: multipla escolha e seguir
+- usar template?
+
+Prática:
 - pular entre as questoes
 - botoes para as respostas: (stick para celular)
 - lista de exercicios do mesmo temas
@@ -46,6 +50,7 @@ FAZER:
 
 - recomendar artigos de um para o outro e em temas do conteúdo também.
         colocar uma tag mulheres para deixar um sistema automatico sobre as historias das mulheres no dia/seman das mulheres      
+
 
 
 -> 05 Sobre:
