@@ -50,6 +50,20 @@ fetch('/anexos/scripts/users.json')
 /* 02 */
 /* 02 */
 
+header02 = document.getElementsByClassName("header02")[0];
+if (header02 != null) {
+    header02.innerHTML += `
+                <nav class="nav02">
+                    <a href="/index.html">Lumi Física</a>
+                </nav>
+                <search class="pesquisar">
+                    <input type="text" name="search" id="search" placeholder="Pesquisar">
+                </search>
+    `;
+}
+
+
+
 function flink(x) {
     descri = document.getElementById('descri');
     descri.style.height = ' calc(19.99svh - 2rem)';
@@ -125,7 +139,7 @@ function fdica(x) {
     }
 }
 
-footer = document.getElementsByTagName("footer")[0];
+footer = document.getElementsByClassName("footer02")[0];
 if (footer != null) {
     footer.innerHTML = `Site criado por Lucas Toledo.`;
 }

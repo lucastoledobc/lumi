@@ -104,24 +104,31 @@ math {
 .card {
     border: 2px solid black;
 }
+#search {
+    padding: 0.1rem;
+    border-radius: 0.5rem;
+}
 
 
 
 /* 02 */
 /* 02 */
 /* 02 */
+.body02 {
+    background: var(--preto) url(/anexos/midias/fundo-1.png) fixed center;
+    width: 100%;
+}
 
 .header02, .main02, .footer02 {
     width: clamp(300px, 100%, 1200px);
+    padding: 0.2rem 0;
 }
 .header02 {
-    background-color: var(--cor3);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    background-color: var(--cor2);
 }
 .nav02 > a {
     font-family: var(--fon1);
+    font-size: 1.5rem;
     font-weight: bold;
     color: var(--branco);
 }
@@ -130,10 +137,8 @@ math {
     right: 0;
 }
 .main02 {
-    display: block;
-    background: #fff url(/anexos/midias/fundo-1.png) fixed center;
+    min-height: 95svh;
 }
-
 .main02 * {
     background: white;
 }
@@ -267,6 +272,7 @@ input[type="radio"] {
 .gabarito {
     display: none;
     padding: 1rem;
+    animation: aparecer 0.2s;
 }
 #resposta {
     padding: 1rem;
@@ -275,17 +281,20 @@ input[type="radio"] {
 
 .bsreso {
     display: flex;
-    width: 80%;
-    box-shadow: 0 0 1px 0 var(--cor1), 0 6px 12px 0 var(--cor5);
-    padding: 0.8rem;
-    margin: 1rem auto;
+    width: 90%;
+    padding: 0.8rem 1rem;
     border-radius: 3rem;
+    margin: 1rem auto;
+    box-shadow: 0 0 1px 0 var(--cor1), 0 6px 12px 0 var(--cor5);
 }
 
 .label-breso {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 0.4rem 0.8rem;
-    border-radius: 99px;
+    padding: 0.4rem 1rem;
+    border-radius: 3rem;
     cursor: pointer;
     transition: 0.25s ease-in;
 }
@@ -300,7 +309,7 @@ input[type="radio"] {
 .reso {
     padding: 1rem;
     transition: 1s;
-    animation: aparecer 1s;    
+    animation: aparecer 1s;
 }
 
 #reso2, #reso3, #vdo2 {
@@ -312,13 +321,21 @@ math {
 }
 .video {
     display: block;
+    width: 80%;
     margin: 1rem auto;
-    max-width: 100%;
+    animation: aparecer 1s;
+}
+#vdo1 {
+    aspect-ratio: 16/9;
+}
+#vdo2 {
+    aspect-ratio: 9/16;
+    max-height: 500px;
 }
 
 .footer02 {
-    font-size: 0.8rem;
     background-color: var(--cor5);
+    font-size: 0.8rem;
     text-align: center;
     color: var(--branco);
 }
@@ -459,10 +476,20 @@ math {
 
 
 
+/* 04 */
+/* 04 */
+/* 04 */
+.main04 * {
+    background: #fff url(/anexos/midias/fundo-2.png);
+}
+
+
+
+
 /* 05 */
 /* 06 */
 .main05 {
-    background: url(/anexos/midias/fundo-2.png) fixed center;
+    background: url(/anexos/midias/fundo-3.png) fixed center;
     position: relative;
     height: calc(100svh - 2rem);
     overflow-y: scroll;
