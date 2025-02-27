@@ -54,3 +54,16 @@ Prática:
 
 
 -> 05 Sobre:
+
+
+math
+
+<mn> = numero
+<mi> = variavel
+<mo> = operador
+<ms> = letra
+<msup>
+<msqrt>
+<mrow>
+<table>
+<mtr>
