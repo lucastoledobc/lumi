@@ -16,7 +16,7 @@
     --preto: #000000;
     --branco: #ffffff;
     --trans: #00000000;
-    --fundo: #f2f2f2;
+    --fundo: #f5f5f5;
 
     --cor1: #B7E8FD;
     --cor2: #5DCBFA;
@@ -30,6 +30,9 @@
     --cori4: #9C6F05;
     --cori5: #453102;
 
+    --corc: #07F507;
+    --core: #F50707;
+
     --fon1: DynaPuff;
     --fon2: EBGaramond;
     --fon3: Lato;
@@ -42,7 +45,6 @@
     font-size: clamp(1rem, 5vw, 1.1rem);
     padding: 0;
     margin: 0 auto;
-    scrollbar-width: none;
 }
 html {
     background: var(--preto) url(/anexos/midias/fundo-star.gif) fixed center;
@@ -104,10 +106,6 @@ math {
 .card {
     border: 2px solid black;
 }
-#search {
-    padding: 0.1rem;
-    border-radius: 0.5rem;
-}
 
 
 
@@ -116,31 +114,36 @@ math {
 /* 02 */
 .body02 {
     background: var(--preto) url(/anexos/midias/fundo-1.png) fixed center;
-    width: 100%;
 }
 
 .header02, .main02, .footer02 {
     width: clamp(300px, 100%, 1200px);
-    padding: 0.2rem 0;
 }
 .header02 {
-    background-color: var(--cor2);
+    background: linear-gradient(-30deg, var(--cor4), var(--cor1), var(--cor4));
+    height: 5svh;
 }
 .nav02 > a {
     font-family: var(--fon1);
     font-size: 1.5rem;
     font-weight: bold;
+    text-align: center;
+    text-wrap: nowrap;
     color: var(--branco);
 }
-.pesquisar {
-    position: relative;
-    right: 0;
+#search02 {
+    padding: 0.1rem;
+    border-radius: 0.5rem;
+    width: clamp(50px, 90%, 700px);
+    height: 3svh;
 }
+
 .main02 {
-    min-height: 95svh;
+    min-height: 93svh;
+    background: var(--fundo);
 }
 .main02 * {
-    background: white;
+    background: var(--fundo);
 }
 
 .enunciado {
@@ -200,11 +203,11 @@ input[type="radio"] {
     transition: 0.2s;
 }
 .label-opt:active {
-    background-color: var(--cor2);
+    background-color: var(--cor3);
     transition: 0.1s;
 }
 .enunciado input[type="radio"]:checked + label{
-    background-color: #FAcb5d;
+    background-color: var(--cor2);
 }
 
 .link-dica {
@@ -272,11 +275,13 @@ input[type="radio"] {
 .gabarito {
     display: none;
     padding: 1rem;
-    animation: aparecer 0.2s;
+    animation: aparecer 0.5s;
 }
 #resposta {
-    padding: 1rem;
     font-family: var(--fon1);
+    font-size: 1.5rem;
+    font-weight: 600;
+    /* background: radial-gradient(#00000055 10%, #00000000 50%); */
 }
 
 .bsreso {
@@ -312,7 +317,7 @@ input[type="radio"] {
     animation: aparecer 1s;
 }
 
-#reso2, #reso3, #vdo2 {
+#reso1, #reso2, #reso3, #vdo2 {
     display: none;
 }
 
@@ -338,6 +343,7 @@ math {
     font-size: 0.8rem;
     text-align: center;
     color: var(--branco);
+    padding: 0.2rem 0;
 }
 
 

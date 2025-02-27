@@ -56,8 +56,8 @@ if (header02 != null) {
                 <nav class="nav02">
                     <a href="/index.html">Lumi Física</a>
                 </nav>
-                <search class="pesquisar">
-                    <input type="text" name="search" id="search" placeholder="Pesquisar">
+                <search class="pesquisar flex">
+                    <input type="text" name="search" id="search02" placeholder="Pesquisar">
                 </search>
     `;
 }
@@ -91,20 +91,20 @@ function fgabarito() {
 
     for (c = 0; c < 5; c++) {
         if (opt[c].checked) {
-            document.getElementById('label'+c).style.background = "red";
+            document.getElementById('label'+c).style.background = "var(--core)";
         }
     }
     
     selected = document.querySelector("input[name='opt']:checked").value; /* pega o valor da opção marcada */
     if (selected == '1') {
         resposta.textContent = `Resposta Certa!`;
-        resposta.style.color = 'green';
+        resposta.style.color = 'var(--corc)';
         
         g = document.querySelector("input[name='opt']:checked").id; /* pega o id da opção certa */
-        document.getElementById('label'+g).style.background = "green";
+        document.getElementById('label'+g).style.background = "var(--corc)";
     } else {
         resposta.textContent = `Resposta Errada!`;
-        resposta.style.color = 'red';
+        resposta.style.color = 'var(--core)';
     }
 }
 
