@@ -63,6 +63,9 @@ math
 <mo> = operador
 <ms> = letra
 <msup>
+<msub>
+<mover>
+<munder>
 <msqrt>
 <mrow>
 <table>

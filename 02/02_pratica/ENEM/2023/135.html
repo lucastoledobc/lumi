@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>ENEM 2023) Uma concessionária é responsável</title>
+        <link rel="stylesheet" href="/anexos/estilos/style.css">
+        <script src="/anexos/scripts/script.js" defer></script>
+        <meta name="description" content="Site de Física para ensino básico, ensino médio e ensino superior.">
+    </head>
+    <body>
+    <header class="header02 flex"></header>
+    <main class="main02">
+        <section class="enunciado">
+            <p>ENEM 2023) Uma concessionária é responsável por um trecho de 480 quilômetros de uma rodovia. Nesse trecho, foram construídas 10 praças de pedágio, onde funcionários recebem os pagamentos nas cabines de cobrança. Também existe o serviço automático, em que os veículos providos de um dispositivo passam por uma cancela, que se abre automaticamente, evitando filas e diminuindo o tempo de viagem. Segundo a concessionária, o tempo médio para efetuar a passagem em uma cabine é de 3 minutos, e as velocidades máximas permitidas na rodovia são 100 km/h, para veículos leves, e 80 km/h, para veículos de grande porte. </p>            
+            <p>Considere um carro e um caminhão viajando, ambos com velocidades constantes e iguais às máximas permitidas, e que somente o caminhão tenha o serviço automático de cobrança.</p>
+            <p>Comparado ao caminhão, quantos minutos a menos o carro leva para percorrer toda a rodovia?</p>  
+
+        <div class="opções">
+            <input type="radio" name="opt" id="0" value="0">
+            <label for="0" class="label-opt" id="label0">(A) 30</label>
+
+            <input type="radio" name="opt" id="1" value="1">
+            <label for="1" class="label-opt" id="label1">(B) 42</label>
+
+            <input type="radio" name="opt" id="2" value="0">
+            <label for="2" class="label-opt" id="label2">(C) 72</label>
+
+            <input type="radio" name="opt" id="3" value="0">
+            <label for="3" class="label-opt" id="label3">(D) 288</label>
+
+            <input type="radio" name="opt" id="4" value="0">
+            <label for="4" class="label-opt" id="label4">(E) 360</label>
+        </div>
+        
+        <button class="bresponder" onclick="fgabarito()">Responder</button>
+          
+        </section>
+
+
+
+        <section class="gabarito">
+
+        <div class="flex" id="resposta"></div>
+
+        <div class="bsreso">
+            <input type="radio" name="breso" class="breso" id="rc" onclick="fabrir(0)">
+            <label for="rc" class="label-breso" id="labelrc">Resposta Curta</label>
+
+            <input type="radio" name="breso" class="breso" id="rl" onclick="fabrir(1)">
+            <label for="rl" class="label-breso" id="labelrl">Resposta Completa</label>
+
+            <input type="radio" name="breso" class="breso" id="vdo" onclick="fabrir(2)">
+            <label for="vdo" class="label-breso" id="labelvdo">Resposta em Vídeo</label>
+        </div>
+
+        <div class="reso" id="reso1" style="visibility: visible; opacity: 1">
+            <ul><li>Carro</li></ul>
+
+            <ul type="circle"><li>Tempo de viagem</li></ul>
+
+            <math display="block">
+                <mi>v</mi><mo>=</mo>
+            <mfrac>
+                <mrow><mi>d</mi></mrow>
+                <mrow><mi>t</mi></mrow>
+            </mfrac>
+            </math>
+            
+            <math display="block">
+                <mn>100</mn><mo>=</mo>
+            <mfrac>
+                <mrow><mn>480</mn></mrow>
+                <mrow><mi>t</mi></mrow>
+            </mfrac>
+            </math>
+            
+            <math display="block">
+                <mi>t</mi><mo>=</mo><mn>4,8</mn><mo>h</mo><mo>=</mo><mn>288</mn><mo>min</mo>
+            </math>
+
+            <ul type="circle"><li>Tempo de paradas</li></ul>
+            
+            <math display="block">
+                <mi>3</mi><mo>min</mo><mo>*</mo><mn>10</mn><mo>=</mo><mn>30</mn><mo>min</mo>
+            </math>
+            
+            <p>Tempo total = 318 min.</p>
+
+            <hr>
+            <ul><li>Caminhão</li></ul>
+
+            <math display="block">
+                <mi>v</mi><mo>=</mo>
+            <mfrac>
+                <mrow><mi>d</mi></mrow>
+                <mrow><mi>t</mi></mrow>
+            </mfrac>
+            </math>
+            
+            <math display="block">
+                <mn>80</mn><mo>=</mo>
+            <mfrac>
+                <mrow><mn>480</mn></mrow>
+                <mrow><mi>t</mi></mrow>
+            </mfrac>
+            </math>
+
+            <math display="block">
+                <mi>t</mi><mo>=</mo><mn>6</mn><mo>h</mo><mo>=</mo><mn>360</mn><mo>min</mo>
+            </math>
+            
+            <hr>
+            <p>Diferença = 360 - 318 = 42 min.</p>
+            
+            <p>Gabarito: B) 42</p>
+        </div>
+
+        <div class="reso" id="reso2">
+            <p>Nessa questão temos um carro que percorre 100 km/h e um caminhão percorre 80 km/h numa rodovia, logicamente o carro atravessa mais rápido. Porém, o carro tem que ficar parando para pagar pedágio manualmente 10 vezes nessa rodovia. Então quem vai mais rápido?</p>
+
+            <p>Vamos começar calculando o tempo do caminhão que segue constantemente sem parar.</p>
+
+            <ul><li>Caminhão</li></ul>
+
+            <math display="block">
+                <mi>v</mi><mo>=</mo>
+            <mfrac>
+                <mrow><mi>d</mi></mrow>
+                <mrow><mi>t</mi></mrow>
+            </mfrac>
+            </math>
+            
+            <math display="block">
+                <mn>80</mn><mo>=</mo>
+            <mfrac>
+                <mrow><mn>480</mn></mrow>
+                <mrow><mi>t</mi></mrow>
+            </mfrac>
+            </math>
+
+            <math display="block">
+                <mi>t</mi><mo>=</mo><mn>6</mn><mo>h</mo>
+            </math>
+
+            <p>O tempo está em horas porque a velocidade está em km/<strong>h</strong>.</p>
+
+            <p>Para converter para minutos, vamos multiplicar por 60 porque 1 h = 60 min.</p>
+
+            <math display="block">
+                <mi>6</mi><mo>*</mo><mn>60</mn><mo>=</mo><mn>360</mn><mo>min</mo>
+            </math>
+
+            <p>O caminhão demora 360 min no total.</p>
+
+            <hr>
+            <ul><li>Carro</li></ul>
+
+            <math display="block">
+                <mi>v</mi><mo>=</mo>
+            <mfrac>
+                <mrow><mi>d</mi></mrow>
+                <mrow><mi>t</mi></mrow>
+            </mfrac>
+            </math>
+            
+            <math display="block">
+                <mn>100</mn><mo>=</mo>
+            <mfrac>
+                <mrow><mn>480</mn></mrow>
+                <mrow><mi>t</mi></mrow>
+            </mfrac>
+            </math>
+            
+            <math display="block">
+                <mi>t</mi><mo>=</mo><mn>4,8</mn><mo>h</mo>
+            </math>
+
+            <math display="block">
+                <mi>t</mi><mo>=</mo><mi>4,8</mi><mo>*</mo><mn>60</mn><mo>=</mo><mn>288</mn><mo>min</mo>
+            </math>
+
+            <p>Mas lembre-se do tempo de parada, são 10 paradas de 3 minutos, ou seja, 30 minutos parados.</p>
+
+            <p>Tempo total = 288 + 30 = 318 min.</p>
+
+            <p>Então o carro leva menos tempo, mesmo parando. A diferença entre eles será:</p>
+            
+            <math display="block">
+                <mn>360</mn><mo>-</mo><mn>318</mn><mo>=</mo><mn>42</mn><mo>min</mo>
+            </math>
+        </div>            
+
+        <div class="reso" id="reso3">
+            <div class="bsreso">
+                <input type="radio" name="bvdo" class="breso" id="hori" onclick="fvdo(0)"  checked>
+                <label class="label-breso" for="hori">Horizontal</label>
+                <input type="radio" name="bvdo" class="breso" id="vert" onclick="fvdo(1)">
+                <label class="label-breso" for="vert">Vertical</label>
+            </div>
+            <iframe class="video" id="vdo1" src="https://www.youtube.com/embed/r1_fJN1UBYI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
+            <iframe class="video" id="vdo2" src="https://www.youtube.com/embed/ZxGaN20j2bk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        </section>
+    </main>
+    <footer class="footer02"></footer>
+</body>
+</html>

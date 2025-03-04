@@ -59,7 +59,7 @@ h1 {
 }
 p {
     line-height: 1.8rem;
-    /* padding: 0.2rem 0; */
+    text-align: justify;
 }
 a, address {
     text-decoration: none;
@@ -121,7 +121,6 @@ img {
 
 .main02 {
     min-height: 93svh;
-    background: var(--fundo);
 }
 
 /* ENUNCIADO */
@@ -141,9 +140,13 @@ img {
     border: 1px solid var(--preto);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.33);
 }
-.figure * {
+.figure *, .caption, .caption * {
     font-size: 0.8rem;
     text-align: end;
+}
+.caption {    
+    width: 80%;
+    margin: 0 0 1rem auto;
 }
 
 .dica {
@@ -196,6 +199,10 @@ input[type="radio"] {
 }
 .enunciado input[type="radio"]:checked + label{
     background-color: var(--cor2);
+}
+.imgopt {
+    width: 16rem;
+    margin: 0 1.5rem;
 }
 
 .bresponder {
@@ -299,14 +306,17 @@ input[type="radio"] {
     transition: 1s;
     animation: aparecer 1s;
 }
-
 #reso1, #reso2, #reso3, #vdo2 {
     display: block;
 }
 
+.reso > p {
+    padding: 0.3rem;
+}
 math {
     padding: 0.5rem;
 }
+
 .video {
     display: block;
     width: 80%;
