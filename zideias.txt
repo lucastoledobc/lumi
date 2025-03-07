@@ -19,7 +19,13 @@ FAZER:
 
 Teoria:
 - a cada pergunta colocar 2 botoes: multipla escolha e seguir
-- usar template?
+- adicionar niveis na explicação
+	1. basico
+	2. medio (com conta)
+	3. dificil (contas complicadas)
+	4. avançado
+- botão "pq to aprendendo isso?"
+
 
 Prática:
 - pular entre as questoes
@@ -31,7 +37,7 @@ Prática:
 
 -> 03 Games:
 
-- Tabela de record?
+- Tabela de record? Sim!
 
 
 
@@ -39,7 +45,7 @@ Prática:
 
 - fases da lua: que horas são no polo norte?
 - Porque o copo sua?
-
+- Tem varias ideias nos livros de física.
 
 - Categorias:
 	Tipo:
@@ -55,6 +61,7 @@ Prática:
 
 -> 05 Sobre:
 
+- fundo branco
 
 math
 
