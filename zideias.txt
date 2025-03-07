@@ -10,22 +10,26 @@ FAZER:
 -> 01 Home:
 
 - criar estatistica do temas que caem no vestibular
-- trilha inicial
 - curiosidade do dia
 
+- trilha inicial
+- mapa jogavel
+	- 1 estrela = resposta inicial
+	- 2 estrelas = responder no final
+	- 3 estrelas = exercícios de fização
 
 
 -> 02 Conteudo:
 
 Teoria:
 - a cada pergunta colocar 2 botoes: multipla escolha e seguir
-- adicionar niveis na explicação
+- adicionar indicadores de dificuldade do tema
 	1. basico
 	2. medio (com conta)
 	3. dificil (contas complicadas)
 	4. avançado
 - botão "pq to aprendendo isso?"
-
+- botão "Quero mais detalhes".
 
 Prática:
 - pular entre as questoes
