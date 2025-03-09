@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/anexos/estilos/style1.css">
+    <script src="/anexos/scripts/script1.js" defer></script>
+    <meta name="description" content="Site de Física para ensino básico, ensino médio e ensino superior.">
+    <style>
+        * {
+            margin: 0;
+            scroll-behavior: smooth;
+            /* scrollbar-width: none; */
+        }
+        html {
+            background: #000;
+            width: 100svw;
+            height: 100svh;
+            overflow: clip;
+        }
+        html * {
+            position: relative;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            margin: 0;
+            cursor: pointer;
+        }
+        
+        #universo {
+            background: url(/anexos/midias/fundo-star.gif) fixed center;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.733);
+            width: 300vw;
+            border: thick double var(--branco);
+            transform: translate(1%,1%);
+        }
+        div {
+            width: 20%;
+        }
+        div:hover {
+            background-color: rgba(255, 255, 255, 0.200);
+        }
+
+        .conglomerado {
+            border: 1px solid blue;
+            width: 40vw;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        #moderna {
+            left: 40%;
+        }
+        
+
+        .galaxia {
+            border: 1px solid green;
+        }
+
+        .sistema {
+            width: 1rem;
+            background: rgb(255, 255, 255);
+            box-shadow: 0 0 20px rgba(82, 82, 252, 0.733);
+            border: 1px solid yellow;
+        }
+
+        .planeta {            
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body id="body">
+    <section id="universo">
+        <div class="conglomerado" id="mecanica"><a href="#mecanica">
+            <div class="galaxia" id="cinematica">
+                <div class="sistema" id="mu"></div>
+                <div class="sistema" id="muv"></div>
+                <div class="sistema" id="lançamento">
+                    <div class="planeta" id="vertical"></div>
+                    <div class="planeta" id="oblicuo"></div>
+                </div>
+            </div>
+            <div class="galaxia" id="dinamica"></div>
+            <div class="galaxia" id="fluidos"></div>
+        </a></div>
+        <div class="conglomerado" id="termologia"><a href="#termologia">
+            <div class="galaxia" id="temperatura"></div>
+            <div class="galaxia" id="calorimetria"></div>
+            <div class="galaxia" id="termodinamica"></div>
+        </a></div>
+        <div class="conglomerado" id="eletromagnetismo"><a href="#eletromagnetismo">
+            <div class="galaxia" id="eletrostática"></div>
+            <div class="galaxia" id="eletrodinâmica"></div>
+            <div class="galaxia" id="magnetismo"></div>
+        </a></div>
+        <div class="conglomerado" id="moderna"><a href="#moderna">
+            <div class="galaxia" id="estrutura"></div>
+            <div class="galaxia" id="quantica"></div>
+        </a></div>
+    </section>
+</body>
+</html>

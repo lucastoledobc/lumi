@@ -16,7 +16,7 @@
     --preto: #000000;
     --branco: #ffffff;
     --trans: #00000000;
-    --fundo: #f5f5f5;
+    --fundo: #f6f6f6;
 
     --cor1: #B7E8FD;
     --cor2: #5DCBFA;
@@ -30,8 +30,10 @@
     --cori4: #9C6F05;
     --cori5: #453102;
 
-    --corc: #07F507;
-    --core: #F50707;
+    --corc1: #1be41b;
+    --corc2: #1b9c1b;
+    --core1: #E40909;
+    --core2: #9c1b1b;
 
     --fon1: DynaPuff;
     --fon2: EBGaramond;
@@ -44,6 +46,8 @@
     font-family: var(--fon2), var(--fon3), 'Times New Roman', Times, serif;
     font-size: clamp(1rem, 5vw, 1.1rem);
     margin: 0 auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 html {
     background: var(--preto) url(/anexos/midias/fundo-star.gif) fixed center;
@@ -94,14 +98,14 @@ img {
 /* 02 */
 /* 02 */
 .body02 {
-    background: var(--preto) url(/anexos/midias/fundo-1.png) fixed center;
+    background: var(--branco) url(/anexos/midias/fundo-1.png) fixed center;
 }
 
 .header02, .main02, .footer02 {
     width: clamp(300px, 100%, 1200px);
 }
 .header02 {
-    background: linear-gradient(-30deg, var(--cor4), var(--cor1), var(--cor4));
+    background: linear-gradient(-30deg, var(--cor5), var(--cor1), var(--cor5));
     height: 5svh;
 }
 .nav02 > a {
@@ -119,18 +123,13 @@ img {
     height: 3svh;
 }
 
-.main02 {
-    min-height: 93svh;
+.main02 * {
+    background-color: var(--fundo);
 }
 
 /* ENUNCIADO */
 .enunciado {
-    text-align: justify;
     padding: 0.5rem;
-}
-.link-dica {
-    text-decoration: 2px underline var(--cori2);
-    cursor: pointer;
 }
 .figure {
     width: 90%;
@@ -147,6 +146,10 @@ img {
 .caption {    
     width: 80%;
     margin: 0 0 1rem auto;
+}
+.link-dica {
+    text-decoration: 2px underline var(--cori2);
+    cursor: pointer;
 }
 
 .dica {
@@ -287,6 +290,7 @@ input[type="radio"] {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--branco);
     text-align: center;
     padding: 0.4rem 1rem;
     border-radius: 3rem;
@@ -307,7 +311,7 @@ input[type="radio"] {
     animation: aparecer 1s;
 }
 #reso1, #reso2, #reso3, #vdo2 {
-    display: block;
+    display: none;
 }
 
 .reso > p {
