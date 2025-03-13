@@ -34,3 +34,8 @@ function dragElement(elmnt) {
         document.onmousemove = null;
     }
 }
+
+function fclick() {
+    univ = document.getElementById('universo');
+    univ.style.width = '600vw';
+}

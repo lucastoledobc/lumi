@@ -11,8 +11,7 @@
         * {
             margin: 0;
             scroll-behavior: smooth;
-            scrollbar-width: none;
-            color: #fff;
+            /* scrollbar-width: none; */
         }
         html {
             background: #000;
@@ -20,43 +19,23 @@
             height: 100svh;
             overflow: clip;
         }
-        main {
-            background-color: #000;
-            width: 80vw;
-            border: thick double var(--branco);
-            
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            z-index: 1;
-        }
-        #game{
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            top: 50%;
-            left: 50%;
+        html * {
+            position: relative;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            margin: 0;
+            cursor: pointer;
         }
         
         #universo {
             background: url(/anexos/midias/fundo-star.gif) fixed center;
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.733);
-            width: 200vw;
+            width: 300vw;
             border: thick double var(--branco);
-            cursor: pointer;
-
-            position: relative;
-            aspect-ratio: 1;
-            border-radius: 50%;
-            transform: translate(-25%,1%);
+            transform: translate(1%,1%);
         }
         div {
             width: 20%;
-            position: relative;
-            aspect-ratio: 1;
-            border-radius: 50%;
-            cursor: pointer;
         }
         div:hover {
             background-color: rgba(255, 255, 255, 0.200);
@@ -92,15 +71,8 @@
     </style>
 </head>
 <body id="body">
-    <main>
-        <p>Bem-vindo</p>
-        <p>Vamos iniciar um novo jogo, deseja criar uma conta para poder salvar seu progresso?</p>
-        <a href="#">Criar conta</a>
-        <a href="#game.html">Jogar</a>
-    </main>
     <section id="universo">
-        <section id="game"></section>
-        <div class="conglomerado" id="mecanica" onclick="fclick()"><a href="#mecanica">
+        <div class="conglomerado" id="mecanica"><a href="#mecanica">
             <div class="galaxia" id="cinematica">
                 <div class="sistema" id="mu"></div>
                 <div class="sistema" id="muv"></div>
