@@ -43,8 +43,7 @@
 }
 
 * {
-    font-family: var(--fon2), var(--fon3), 'Times New Roman', Times, serif;
-    font-size: clamp(1rem, 5vw, 1.1rem);
+    font: clamp(1rem, 5vw, 1.1rem) var(--fon2), var(--fon3), 'Times New Roman', Times, serif;
     margin: 0 auto;
     scroll-behavior: smooth;
     scrollbar-width: none;
@@ -109,9 +108,7 @@ img {
     height: 5svh;
 }
 .nav02 > a {
-    font-family: var(--fon1);
-    font-size: 1.5rem;
-    font-weight: bold;
+    font: bold 1.5rem var(--fon1);
     text-align: center;
     text-wrap: nowrap;
     color: var(--branco);
@@ -166,14 +163,11 @@ img {
     padding: 0.5rem;
 }
 .dica > button {
+    color: var(--preto);
     display: block;
+    background-color: var(--fundo);
     border-radius: 5px;
     padding: 0.2rem;
-    background-color: var(--fundo);
-
-    font-family: var(--fon1);
-    color: var(--preto);
-
 }
 
 /* OPÇÕES */
@@ -181,9 +175,9 @@ input[type="radio"] {
     display: none;
 }
 .label-opt {
+    font-size: 1.2rem;
     display: block;
     background-color: var(--branco);
-    font-size: 1.2rem;
     padding: 0.3rem;
     border: 1px outset var(--preto);
     border-radius: 5px;
@@ -211,8 +205,7 @@ input[type="radio"] {
 .bresponder {
     position: relative;
     background: transparent;
-    font-family: var(--fon1);
-    font-weight: 400;
+    font: 400 1.1rem var(--fon1);
     padding: 0.5rem 1rem;
     border: 1px solid rgb(61, 106, 255);
     border-radius: 0.5rem;
@@ -271,14 +264,12 @@ input[type="radio"] {
     animation: aparecer 0.5s;
 }
 #resposta {
-    font-family: var(--fon1);
-    font-size: 1.5rem;
-    font-weight: 600;
+    font: bold 1.5rem var(--fon1);
 }
 
 .bsreso {
-    display: flex;
     background-color: var(--branco);
+    display: flex;
     width: 90%;
     padding: 0.8rem 1rem;
     border-radius: 3rem;
@@ -287,11 +278,11 @@ input[type="radio"] {
 }
 
 .label-breso {
+    background-color: var(--branco);
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--branco);
-    text-align: center;
     padding: 0.4rem 1rem;
     border-radius: 3rem;
     cursor: pointer;
@@ -301,8 +292,8 @@ input[type="radio"] {
     background-color: var(--cor1);
 }
 .gabarito input[type="radio"]:checked + label {
-    color: var(--branco);
     background-color: var(--cor5);
+    color: var(--branco);
 }
 
 .reso {
@@ -390,34 +381,33 @@ math {
 }
 
 .botao03 {
-    cursor: pointer;
     background-color: var(--preto);
-    border-radius: 5px;
     font-family: var(--fon1);
     text-wrap: nowrap;
     padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
 }
 .select03 {
-    font-size: clamp(1rem, 5vw, 2rem);
-    cursor: pointer;
-
-    padding: 0.5rem;
     background-color: var(--preto);
+    font-size: clamp(1rem, 5vw, 2rem);
+    padding: 0.5rem;
     border: 2px solid var(--branco);
     border-radius: 10px;
+    cursor: pointer;
 }
 
 /* BOTOES */
 .botao-icone {
     position: absolute;
-    aspect-ratio: 1;
     background-color: var(--preto);
+    aspect-ratio: 1;
     border-radius: 5px;
 }
 .icon-botao {
+    background-color: var(--branco);
     width: clamp(1rem, 7vw, 2rem);
     filter: invert(100%);
-    background-color: var(--branco);
 }
 #bback {
     left: var(--bm);
@@ -439,9 +429,9 @@ math {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    padding: 0 1rem;
 
     background-color: var(--preto);
+    padding: 0 1rem;
     border: 3px solid var(--branco);
     border-radius: 15px;
 }
@@ -452,14 +442,13 @@ math {
 }
 
 .h1-ajuda {
+    font: clamp(1rem, 7vw, 2rem) var(--fon1);
+    text-align: center;
+    text-wrap: balance;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 10%;
-    font-size: clamp(1rem, 7vw, 2rem);
-    text-align: center;
-    text-wrap: balance;
-    font-family: var(--fon1);
 }
 .mid-ajuda {
     height: 75%;
@@ -495,11 +484,11 @@ math {
 /* 05 */
 /* 06 */
 .main05 {
-    background: url(/anexos/midias/fundo-3.png) fixed center;
     position: relative;
+    background: url(/anexos/midias/fundo-3.png) fixed center;
     height: calc(100svh - 2rem);
-    overflow-y: scroll;
     padding: 1rem;
+    overflow-y: scroll;
     animation: 1s entrar forwards;
 }
 @keyframes entrar {
@@ -510,8 +499,8 @@ math {
 .section05 {
     background-color: #f0f0f0;
     padding: 1rem;
-    margin-bottom: 1rem;
     border-radius: 1rem;
+    margin-bottom: 1rem;
     opacity: 0;
     animation: 1s aparecer forwards 1s;
 }
