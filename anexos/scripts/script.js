@@ -91,20 +91,20 @@ function fgabarito() {
 
     for (c = 0; c < 5; c++) {
         if (opt[c].checked) {
-            document.getElementById('label'+c).style.background = "var(--core1)";
+            document.getElementById('label'+c).style.background = "var(--verm1)";
         }
     }
     
     selected = document.querySelector("input[name='opt']:checked").value; /* pega o valor da opção marcada */
     if (selected == '1') {
         resposta.textContent = `Resposta Certa!`;
-        resposta.style.color = 'var(--corc2)';
+        resposta.style.color = 'var(--verd2)';
         
         g = document.querySelector("input[name='opt']:checked").id; /* pega o id da opção certa */
-        document.getElementById('label'+g).style.background = "var(--corc1)";
+        document.getElementById('label'+g).style.background = "var(--verd1)";
     } else {
         resposta.textContent = `Resposta Errada!`;
-        resposta.style.color = 'var(--core2)';
+        resposta.style.color = 'var(--verm2)';
     }
 }
 
