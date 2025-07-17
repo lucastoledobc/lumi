@@ -8,81 +8,53 @@
     <script src="/anexos/scripts/script.js" defer></script>
     <meta name="description" content="Conteúdo teórico de Física para ensino básico, ensino médio e ensino superior.">
     <style>
-        * {
-            scrollbar-width: none;
-        }
-body {
-    background: #000000ff;
-    animation: ani1 9s forwards 2s;
-}
-@keyframes ani1 {
-    0% {background: #000000ff;}
-    100% {background: #00000000;}
-}
-.f1 {
-    height: 5svh;
-}
-.linha {
-    position: absolute;
-    top: 5%;
-    width: 95%;
-    border: 1px solid white;
-    animation: ani2 1s forwards;
-}
-@keyframes ani2 {
-    0% {left: -100%;}
-    100% {left: 0%; display: none;}
-}
-
 main {
     background: url(/anexos/midias/fundo-1.png);
     width: clamp(300px, 90%, 1200px);
     overflow-y: scroll;
-    scrollbar-width: none;
-    height: 90svh;
-    border: 1px solid white;
-}
-.fundopreto2 {            
-    position: absolute;
-    top: 0%;
-    width: 100%;
-    height: 100svh;
-    background-color: black;
+    border: 1px solid #ffffff;
     animation: ani3 1s forwards 1s;
+    height: 0%;
+    opacity: 0;
 }
 @keyframes ani3 {
-    0% {top: 0%;}
-    100% {top: 100%; visibility: collapse;}
+    0% {height: 0%; opacity: 0;}
+    1% {opacity: 1;}
+    100% {height: 90%;opacity: 1;}
+}
+.grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.t {
+    border-radius: 1rem;
 }
     </style>
 </head>
 <body>
-    <nav></nav>
-    <div class="f1"></div>
-    <main class="main02">
-        <h3>"Tentar aprender sem praticar é como tentar aprender a andar de skate só assitindo video aula. Pratique! - Professor Gustavo Guanabara."</h3>
-        <div id="main" class="main">
-            <section class="t">
-                <h2>Teoria</h2>
-                <ul type="none">
-                    <li><a href="mecânica/index.html">Mecânica</a></li>
-                    <li><a href="termologia/index.html">Termologia</a></li>
-                    <li><a href="onda/index.html">Ondulatória</a></li>
-                    <li><a href="eletromag/index.html">Eletromagnetismo</a></li>
-                    <li><a href="fm/index.html">Física Moderna</a></li>
-                </ul>
-            </section>
-            <section class="t">
-                <h2>Banco de Provas e Questões</h2>
-                <ul type="none">
-                    <li><a href="02/ENEM/index.html">ENEM</a></li>
-                    <li><a href="02/UERJ/index.html">UERJ</a></li>
-                </ul>
-            </section>
+<nav class="nav02"></nav>
+<main class="main02">
+    <h3>"Tentar aprender sem praticar é como tentar aprender a andar de skate só assitindo video aula. Pratique! - Professor Gustavo Guanabara."</h3>
+    <section class="grid" id="sec-0201">
+        <div class="t">
+            <h2>Tema</h2>
+            <ul type="none">
+                <li><a href="mecânica/index.html">Mecânica</a></li>
+                <li><a href="termologia/index.html">Termologia</a></li>
+                <li><a href="onda/index.html">Ondulatória</a></li>
+                <li><a href="eletromag/index.html">Eletromagnetismo</a></li>
+                <li><a href="fm/index.html">Física Moderna</a></li>
+            </ul>
         </div>
-        <div class="update">Última atualização: 20/06/2024</div>
-    </main>
-    <div class="fundopreto2"></div>
-    <div class="linha"></div>
+        <div class="t">
+            <h2>Banco de Provas e Questões</h2>
+            <ul type="none">
+                <li><a href="ENEM/index.html">ENEM</a></li>
+                <li><a href="UERJ/index.html">UERJ</a></li>
+            </ul>
+        </div>
+    </section>
+    <div class="update">Última atualização: 20/06/2024</div>
+</main>
 </body>
 </html>

@@ -81,3 +81,19 @@ math
 <mrow>
 <table>
 <mtr>
+
+
+.linha {
+    position: absolute;
+    top: 5%;
+    height: 2px;
+    background-color: #fff;
+    animation: ani2 3s forwards;
+    width: 90%;
+}
+@keyframes ani2 {
+    0% {width: 0%}
+    25% {width: 100%}
+    50% {width: 100%; opacity: 1;}
+    100% {opacity: 0;}
+}
