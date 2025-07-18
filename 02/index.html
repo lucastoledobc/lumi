@@ -11,41 +11,19 @@
     <style>
 * {
     color: #fff;
-    scrollbar-width: none;
-}
-body {
-    background: #000000ff;
-    animation: ani1 3s forwards 1s;
-}
-@keyframes ani1 {
-    0% {background: #000000ff;}
-    100% {background: #000000cc;}
 }
 
-.h1 {
-    height: 20svh;
-    animation: ani2 2s forwards;
+.main20 {
+    width: 100%;
 }
-@keyframes ani2 {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-.h101 {
-    font-size: clamp(1.3rem, 13vw, 6rem);
-    text-align: center;
-}
-
-main {
-    overflow-y: scroll;
-    height: 80svh;
-}
-
 .botoes {
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    height: 50svh;
+
+    min-height: 50svh;
+    width: 100%;    
 }
 .link {
     display: inline-block;
@@ -87,37 +65,42 @@ main {
 }
 
 #descri {
-    color: #00000000;
-    width: clamp(200px, 80%, 1000px);
-    height: 0svh;
-    padding: 1rem;
+    width: 80%;
+
+    background-color: #000;
+    padding: 0.1rem 1rem;
     border: thick double var(--branco);
     border-radius: 1rem;
-    transition: 1s;
-    animation: altura 1s forwards 0.5s, azul 1s forwards 1.5s;
+    margin: auto;
+
+    animation: ani-opacity 1s forwards, altura 1s forwards 0.5s;
+    opacity: 0;
+    max-height: 0svh;
 }
 @keyframes altura {
-    0%{height: 0svh;}
-    100%{height: calc(20svh - 2rem);}
+    0%{max-height: 0svh;}
+    100%{max-height: 20svh;}
 }
-@keyframes azul {
-    0%{color: #00000000;}
-    100%{color: #ffffffff;}
+#descri > * {
+    opacity: 0;
+    animation: 1s ani-opacity forwards 1s;
 }
     </style>
 </head>
 <body>
-    <div class="h1 flex">
-        <h1 class="h101">Conteúdo</h1>
-    </div>
-    <main>
-        <div class="botoes">
+    <header class="header20 flex">
+        <a href="/01/">Conteúdos</a>
+    </header>
+    <main class="main20">
+        <section class="botoes">
             <a href="01_teoria/" class="link" onmouseenter="flink(1)" onmouseleave="flink(0)">Teoria</a>
             <a href="02_pratica/" class="link" onmouseenter="flink(2)" onmouseleave="flink(0)">Prática</a>
             <a href="03_buscar/" class="link" onmouseenter="flink(3)" onmouseleave="flink(0)">Buscar</a>
-        </div>
-        <section id="descri">
-                Selecione um.
+        </section>
+        <section class="section2" id="descri">
+            <p>Teoria: veja tema, conceitos, leis ou teorias físicas.</p>
+            <p>Prática: questões/exercícios de física.</p>
+            <p>Buscar: proucure por uma questão ou tema específico.</p>
         </section>
     </main>
 </body>

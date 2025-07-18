@@ -49,16 +49,15 @@ fetch('/anexos/scripts/users.json')
 /* 02 */
 /* 02 */
 /* 02 */
-
-header02 = document.getElementsByClassName("header02")[0];
-if (header02 != null) {
-    header02.innerHTML += `
-                <nav class="nav02">
-                    <a href="/index.html">Lumi Física</a>
-                </nav>
-                <search class="pesquisar flex">
-                    <input type="text" name="search" id="search02" placeholder="Pesquisar">
-                </search>
+header21 = document.getElementsByClassName("header21")[0];
+if (header21 != null) {
+    header21.innerHTML += `
+        <nav class="nav02 flex">
+            <a href="/01/index.html">Lumi Física</a>
+        </nav>
+        <search class="pesquisar flex">
+            <input type="text" name="search" id="search02" placeholder="Pesquisar">
+        </search>
     `;
 }
 
@@ -69,7 +68,10 @@ function flink(x) {
     descri.style.height = ' calc(19.99svh - 2rem)';
     descri.style.opacity = '0.99';
     if (x == 0) {
-        descri.textContent = `Selecione um.`;
+        descri.innerHTML = `
+            <p>Teoria: veja tema, conceitos, leis ou teorias físicas.</p>
+            <p>Prática: questões/exercícios de física.</p>
+            <p>Buscar: proucure por uma questão ou tema específico.</p>`;
     }   
     if (x == 1) {
         descri.textContent = `Encontre textos e vídeos sobre conteúdos de física, como cinemática, lei de Ohm e mais.`;

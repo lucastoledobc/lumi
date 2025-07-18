@@ -2,59 +2,86 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <title>Conteúdo</title>
-    <link rel="stylesheet" href="/anexos/estilos/style.css" media="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/anexos/estilos/style.css">
     <script src="/anexos/scripts/script.js" defer></script>
-    <meta name="description" content="Conteúdo teórico de Física para ensino básico, ensino médio e ensino superior.">
+
+    <title>Questões</title>
+    <meta name="description" content="Questões e exercícios de Física para ensino básico, ensino médio e ensino superior.">
     <style>
-main {
+.main20 {
+    width: clamp(300px, 80%, 1000px);
     background: url(/anexos/midias/fundo-1.png);
-    width: clamp(300px, 90%, 1200px);
-    overflow-y: scroll;
-    border: 1px solid #ffffff;
-    animation: ani3 1s forwards 1s;
-    height: 0%;
-    opacity: 0;
+    border: 1px solid #fff;
+    margin: auto;
+
+    animation: 1s ani-opacity forwards, 1s ani-altura forwards 0.5s;
+    max-height: 0%;
 }
-@keyframes ani3 {
-    0% {height: 0%; opacity: 0;}
-    1% {opacity: 1;}
-    100% {height: 90%;opacity: 1;}
+@keyframes ani-altura {
+    0% {max-height: 0%;}
+    100% {max-height: 90%;}
 }
-.grid {
+
+#sect-0201 {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
 }
-.t {
-    border-radius: 1rem;
+#sect-0202 {
+    font-style: italic;
+    text-align: right;
+}
+h2 {
+    text-align: center;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    height: 100%;
+}
+.section02 {
+    height: 40%;
+}
+
+div > a::before {
+    content: "➡️";
 }
     </style>
 </head>
 <body>
-<nav class="nav02"></nav>
-<main class="main02">
-    <h3>"Tentar aprender sem praticar é como tentar aprender a andar de skate só assitindo video aula. Pratique! - Professor Gustavo Guanabara."</h3>
-    <section class="grid" id="sec-0201">
-        <div class="t">
+<header class="header20 flex">
+    <a href="/01/">Prática</a>
+</header>
+<main class="main20">
+    <section class="section20" id="sect-0201">
+        <div class="section20-1" id="div-0201">
             <h2>Tema</h2>
-            <ul type="none">
-                <li><a href="mecânica/index.html">Mecânica</a></li>
-                <li><a href="termologia/index.html">Termologia</a></li>
-                <li><a href="onda/index.html">Ondulatória</a></li>
-                <li><a href="eletromag/index.html">Eletromagnetismo</a></li>
-                <li><a href="fm/index.html">Física Moderna</a></li>
-            </ul>
+            <div class="lista">
+                <a href="matem/index.html">Matemática</a>
+                <a href="cienc/index.html">Ciência</a>
+                <a href="mecan/index.html">Mecânica</a>
+                <a href="termo/index.html">Termologia</a>
+                <a href="ondul/index.html">Ondulatória</a>
+                <a href="optic/index.html">Óptica</a>
+                <a href="eletr/index.html">Eletromagnetismo</a>
+                <a href="moder/index.html">Física Moderna</a>
+            </div>                
         </div>
-        <div class="t">
-            <h2>Banco de Provas e Questões</h2>
-            <ul type="none">
-                <li><a href="ENEM/index.html">ENEM</a></li>
-                <li><a href="UERJ/index.html">UERJ</a></li>
-            </ul>
+        <div class="section20-1" id="div-0202">
+            <h2>Universidades</h2>
+            <div class="lista">
+                <a href="ENEM/index.html">ENEM</a>
+                <a href="UERJ/index.html">UERJ</a>
+            </div>
         </div>
     </section>
-    <div class="update">Última atualização: 20/06/2024</div>
+    <section class="section20" id="sect-0202">
+        "Tentar aprender sem praticar é como tentar aprender a andar de skate só assitindo video aula. Pratique! - Professor Gustavo Guanabara."
+    </section>
 </main>
 </body>
 </html>
