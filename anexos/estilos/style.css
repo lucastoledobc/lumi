@@ -96,27 +96,91 @@ input[type='email'], textarea {
 
 
 
-/* 00 */
-/* 00 */
-/* 00 */
-.body00 * {
-    color: #fff
+
+
+/* 01 */
+/* 01 */
+/* 01 */
+
+.body-01-01 {
+    background: #000000ff;
+    animation: ani1 15s forwards 1s;
+}
+@keyframes ani1 {
+    0% {background: #000000ff;}
+    100% {background: #00000000;}
 }
 
-.header00 {
-    height: 20%;
+.body-01-01 * {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-01-01 {
+    height: 30svh;
+    animation: ani-opacity 2s forwards;
+}
+.header-01-02 {
+    height: 20svh;
+    width: clamp(300px, 80%, 1000px);
+    margin: auto;
+    animation: ani-opacity 2s forwards;
+}
+.h1-01-01 {
+    font-weight: 600;
+    font-size: clamp(1.3rem, 13vw, 6rem);
+}
+.h1-01-02 {
+    font-weight: 600;
+    font-size: clamp(1.3rem, 13vw, 3rem);
+}
+
+
+
+.main-01-01 {
+    min-height: 65%;
     width: clamp(300px, 80%, 1000px);
 }
-.header00 > h1 {    
+
+.cristal {
+    display: inline-block;
+    font-family: var(--font2), var(--font2), 'Times New Roman', Times, serif;
+    color: #000;
+    font-weight: 500;
     text-align: center;
-    font-size: 2rem;
+    width: 8rem;
+    padding: 1rem;
+    margin: 0.3rem;
+    clip-path: polygon(15% 5%, 85% 5%, 100% 50%, 85% 95%, 15% 95%, 0% 50%);
+    transition: 0.5s;
+    background-size: 600%;
+    background-image: linear-gradient(
+        325deg,
+        var(--azul4) 30%,
+        var(--branco) 50%,
+        var(--azul4) 70%
+    );
+    animation: ani3 4s infinite 1s, ani4 2s forwards 1s;
+}
+@keyframes ani3 {
+    0% {background-position: 0%;}
+    100% {background-position: 100%;}
+}
+@keyframes ani4 {
+    0% {color: #000;}
+    100% {color: #fff;}
+}
+.cristal:hover {
+    font-weight: bold;
+    background-image: linear-gradient(
+        325deg,
+        var(--amar3) 30%,
+        var(--branco) 50%,
+        var(--amar3) 70%
+    );
 }
 
-.main00 {
-    min-height: 70%;
-    width: clamp(300px, 80%, 1000px);
-}
-.section00 {
+.section-01-01 {
     width: calc(100% - 2rem);
     
     background-color: #000;
@@ -128,15 +192,6 @@ input[type='email'], textarea {
     
     opacity: 0;
     max-height: 0px;
-}
-#sect-0001 {
-    animation: ani-sect00 2s forwards 0.5s;
-}
-#sect-0002 {
-    animation: ani-sect00 2s forwards 4s;
-}
-#sect-0003 {
-    animation: ani-sect00 2s forwards 8s;
 }
 @keyframes ani-sect00 {
     0% {opacity: 0;}
@@ -157,7 +212,7 @@ input[type='email'], textarea {
     animation: ani-opacity 1s forwards 10s;
 }
 
-.footer00 {
+.footer-01-01 {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -165,32 +220,19 @@ input[type='email'], textarea {
     min-height: calc(10% - 1rem);
     padding: 0.5rem 1rem;
 }
-.btn-link {
+.btn-continuar {
     font-size: 2rem;
     text-decoration: underline;
     margin: 0;
-    animation: ani-footer00 2s infinite;
+    opacity: 0;
 }
-@keyframes ani-footer00 {
+@keyframes continuar {
     0% {opacity: 1;}
     50% {opacity: 0.5;}
     100% {opacity: 1;}
 }
 
 
-
-/* 01 */
-/* 01 */
-/* 01 */
-.main01 {
-    width: clamp(300px, 80%, 1000px);
-}
-.main01 * {
-    color: #fff;
-}
-.section1 {
-    padding: 0.5rem 0;
-}
 
 
 
@@ -488,6 +530,8 @@ math {
 
 
 
+
+
 /* 03 */
 /* 03 */
 /* 03 */
@@ -624,12 +668,16 @@ math {
 
 
 
+
+
 /* 04 */
 /* 04 */
 /* 04 */
 .main04 * {
     background: #fff url(/anexos/midias/fundo-2.png);
 }
+
+
 
 
 
