@@ -65,8 +65,6 @@ if (header21 != null) {
 
 function flink(x) {
     descri = document.getElementById('descri');
-    descri.style.height = ' calc(19.99svh - 2rem)';
-    descri.style.opacity = '0.99';
     if (x == 0) {
         descri.innerHTML = `
             <p>Teoria: veja tema, conceitos, leis ou teorias físicas.</p>
