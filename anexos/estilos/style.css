@@ -70,9 +70,10 @@ h1 {
 p {
     line-height: 1.8rem;
     text-align: justify;
+    margin: 0.3rem 0;
 }
-a, address {
-    text-decoration: none;
+address {
+    display: inline-block;
 }
 button {
     cursor: pointer;
@@ -81,12 +82,12 @@ img {
     display: block;
 }
 input[type='email'], textarea {
-    margin: 0.3rem 0;
+    display: block;
+    margin-bottom: 0.5rem;
     width: 100%;
     text-wrap: wrap;
     field-sizing: content;
 }
-
 .flex{
     display: flex;
     align-items: center;
@@ -635,24 +636,18 @@ math {
 /* 05 */
 /* 05 */
 /* 05 */
-.body05 {
+.body-05-01 {
     position: relative;
-    background: #505050 url(/anexos/midias/fundo-4.png) fixed center;
-    animation: 1s entrar forwards;
+    background: #a0a0a0 url(/anexos/midias/fundo-4.png) fixed center;
+    animation: 1s ani-left forwards;
     left: -100%;
 }
-@keyframes entrar {
-    from {left: -100%}
-    to {left: 0%}
-}
-.main05 {
-    height: calc(100svh - 2rem);
+
+.main-05-01 {
     padding: 1rem;
-    overflow-y: scroll;
 }
 
-
-.section05 {
+.section-05-01 {
     background-color: #f0f0f0;
     padding: 1rem;
     border-radius: 1rem;
@@ -660,38 +655,21 @@ math {
     opacity: 0;
     transform: translateX(2rem);
 }
-#sect-0501 {
-    animation: lado05 0.75s forwards 1s;
-}
-#sect-0502 {
-    animation: lado05 0.75s forwards 1.2s;
-}
-#sect-0503 {
-    animation: lado05 0.75s forwards 1.4s;
-}
 @keyframes lado05 {
     0% {opacity: 0; transform: translateX(2rem);}
     100% {opacity: 1; transform: translateX(0rem);}
 }
 
-
-.h205 {    
-    padding-bottom: 1rem;
-}
-.link-sub {
-    text-decoration: underline;
-}
-address {
-    display: inline-block;
+.h2-05-01 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
 }
 
-.botao05 {
-    opacity: 0;
-    animation: 0.75s lado05 forwards 1.5s;
-}
-.botao05 > a {
+.button-05-01 > a {
     color: #000;
     padding: 0.3rem;
+    text-decoration: none;
 }
 
 
@@ -704,4 +682,8 @@ address {
 @keyframes ani-opacity {
     0% {opacity: 0;}
     100% {opacity: 1;}
+}
+@keyframes ani-left {
+    from {left: -100%}
+    to {left: 0%}
 }

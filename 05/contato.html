@@ -7,29 +7,44 @@
     <script src="../anexos/scripts/script.js" defer></script>
 
     <title>Contato</title>
-    <meta name="description" content="Contato com Lumi Física">
+    <meta name="description" content="Contato com Lumi Física.">
+    <style>
+#sect-51-01 {
+    animation: lado05 0.75s forwards 1s;
+}
+#sect-51-02 {
+    animation: lado05 0.75s forwards 1.2s;
+}
+#button-05-voltar {
+    opacity: 0;
+    animation: 0.75s lado05 forwards 1.5s;
+}
+    </style>
 </head>
-<body class="body05">
-    <main class="main05">
-        <section class="section05" id="sect-0501">
-            <h2 class="h2">Dúvidas e Sugestões</h2>
-            <p>
-                Não tenha medo ou vergonha de tirar dúvidas. Pode mandar para o email abaixo que respondo assim que puder.
-            </p>
-            <address><a href="mailto:lumifisica@gmail.com">lumifisica@gmail.com</a></address>
-            
-            <p>(Esse email também é uma chave pix caso queira ajudar a manter o site).</p>
-            <p>(Desesativando o adblock também me ajuda bastante).</p>
-        </section>
-        <section class="section05" id="sect-0502">
-            <h2 class="h2">Contato</h2>
-            <form action="https://formsubmit.co/lumifisica@gmail.com" method="POST">
-                <input type="email" name="email" placeholder="Seu email aqui" required>
-                <textarea name="message" placeholder="Escreva a mensagem aqui..." required></textarea>
-            <button type="submit" id="enviar">Enviar</button>
-            </form>
-        </section>
-        <button type="button" class="botao05"><a href="/01/index.html">Voltar</a></button>
-    </main>
+<body class="body-05-01">
+<main class="main-05-01">
+    <section class="section-05-01" id="sect-51-01">
+        <h2 class="h2-05-01">Dúvidas e Sugestões:</h2>
+        <p>
+            Não tenha medo ou vergonha de tirar dúvidas. Pode mandar para o email abaixo que respondo assim que puder.
+        </p>
+
+        <address>Email: <a href="mailto:lumifisica@gmail.com">lumifisica@gmail.com</a>.</address>
+        
+        <p>(Esse email também é uma chave pix caso queira ajudar a manter o site).</p>
+        <p>(Desesativando o adblock também me ajuda bastante).</p>
+    </section>
+
+    <section class="section-05-01" id="sect-51-02">
+        <h2 class="h2-05-01">Contato:</h2>
+        <form action="https://formsubmit.co/lumifisica@gmail.com" method="POST">
+            <input type="email" name="email" placeholder="Seu email aqui (caso queira uma resposta).">
+            <textarea name="message" placeholder="Escreva a mensagem aqui..." required></textarea>
+            <button type="submit" class="button-05-01" id="enviar">Enviar</button>
+        </form>
+    </section>
+
+    <button type="button" class="button-05-01" id="button-05-voltar"><a href="/01/index.html">Voltar</a></button>
+</main>
 </body>
 </html>
