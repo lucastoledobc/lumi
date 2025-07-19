@@ -9,66 +9,50 @@
     <title>Início</title>  
     <meta name="description" content="Site de Física para ensino básico, ensino médio e ensino superior.">  
     <style>
+
+.header-01-01 {
+    animation: ani-opacity 1s forwards;
+}
 .main-01-01 {
     display: grid;
     height: 65svh;
     overflow-y: scroll;
     /* grid-template-rows: repeat(6, min-content); */
 }
-.div-link {
-    opacity: 0;
-    margin: auto;
-}
 
-#link1 {
-    animation: ani-link 0.5s forwards 1s;
+#cristal1 {
+    animation: ani-opacity 0.5s forwards 1s, ani3 8s infinite 1s, ani4 2s forwards 1s;
 }
-#link2 {
-    animation: ani-link 0.5s forwards 1.1s;
+#cristal2 {
+    animation: ani-opacity 0.5s forwards 1.1s, ani3 8s infinite 1s, ani4 2s forwards 1s;
 }
-#link3 {
-    animation: ani-link 0.5s forwards 1.2s;
+#cristal3 {
+    animation: ani-opacity 0.5s forwards 1.2s, ani3 8s infinite 1s, ani4 2s forwards 1s;
 }
-#link4 {
-    animation: ani-link 0.5s forwards 1.3s;
+#cristal4 {
+    animation: ani-opacity 0.5s forwards 1.3s, ani3 8s infinite 1s, ani4 2s forwards 1s;
 }
-#link5 {
-    animation: ani-link 0.5s forwards 1.4s;
+#cristal5 {
+    animation: ani-opacity 0.5s forwards 1.4s, ani3 8s infinite 1s, ani4 2s forwards 1s;
 }
-#link6 {
-    animation: ani-link 0.5s forwards 1.5s;
-}
-@keyframes ani-link {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+#cristal6 {
+    animation: ani-opacity 0.5s forwards 1.5s, ani3 8s infinite 1s, ani4 2s forwards 1s;
 }
     </style>
 </head>
 
 <body class="body-01-01">
-<header class="header-01-01 flex">
-    <h1 class="h1-01-01">Lumi Física</h1>
-</header>
+    <header class="header-01-01 flex">
+        <h1 class="h1-01-01">Lumi Física</h1>
+    </header>
 
-<main class="main-01-01">
-    <div class="div-link" id="link1">
-        <a href="/01/lumi.html" class="cristal">Jogo principal</a>
-    </div>
-    <div class="div-link" id="link2">
-        <a href="/02/" class="cristal">Conteúdos</a>
-    </div>
-    <div class="div-link" id="link3">
-        <a href="/03/" class="cristal">Jogos</a>
-    </div>
-    <div class="div-link" id="link4">
-        <a href="/04/" class="cristal">Projetos</a>
-    </div>
-    <div class="div-link" id="link5">
-        <a href="/05/" class="cristal">Sobre</a>
-    </div>
-    <div class="div-link" id="link6">
-        <a href="/05/contato.html" class="cristal">Contato</a>
-    </div>
-</main>
-</body>
+    <main class="main-01-01">
+        <a href="/01/lumi.html" class="cristal" id="cristal1">Jogo principal</a>
+        <a href="/02/" class="cristal" id="cristal2">Conteúdos</a>
+        <a href="/03/" class="cristal" id="cristal3">Jogos</a>
+        <a href="/04/" class="cristal" id="cristal4">Projetos</a>
+        <a href="/05/" class="cristal" id="cristal5">Sobre</a>
+        <a href="/05/contato.html" class="cristal" id="cristal6">Contato</a>
+    </main>
+    </body>
 </html>

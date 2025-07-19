@@ -118,7 +118,7 @@ input[type='email'], textarea {
 
 .header-01-01 {
     height: 30svh;
-    animation: ani-opacity 2s forwards;
+    animation: ani-opacity 0.5s forwards;
 }
 .header-01-02 {
     height: 20svh;
@@ -150,7 +150,7 @@ input[type='email'], textarea {
     text-align: center;
     width: 8rem;
     padding: 1rem;
-    margin: 0.3rem;
+    margin: auto;
     clip-path: polygon(15% 5%, 85% 5%, 100% 50%, 85% 95%, 15% 95%, 0% 50%);
     transition: 0.5s;
     background-size: 600%;
@@ -160,10 +160,12 @@ input[type='email'], textarea {
         var(--branco) 50%,
         var(--azul4) 70%
     );
-    animation: ani3 4s infinite 1s, ani4 2s forwards 1s;
+    animation: ani-opacity 1s forwards, ani3 8s infinite 1s, ani4 2s forwards 1s;
+    opacity: 0;
 }
 @keyframes ani3 {
     0% {background-position: 0%;}
+    40% {background-position: 100%;}
     100% {background-position: 100%;}
 }
 @keyframes ani4 {
@@ -239,11 +241,15 @@ input[type='email'], textarea {
 /* 02 */
 /* 02 */
 /* 02 */
-.header20 {
+.body-02-01 * {
+    color: #fff;
+    text-decoration: none;
+}
+.header-02-01 {
     height: 20svh;
     animation: ani-aparecer 2s forwards;
 }
-.header20 > a {
+.h2-02-01 {
     font-family: var(--fon1), var(--fon2);
     font-size: clamp(1.3rem, 13vw, 6rem);
     color: #fff;

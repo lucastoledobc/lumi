@@ -9,9 +9,6 @@
     <title>Conteúdos</title>
     <meta name="description" content="Conteúdo e questões de Física para ensino básico, ensino médio e ensino superior.">
     <style>
-* {
-    color: #fff;
-}
 
 .main20 {
     width: 100%;
@@ -24,44 +21,6 @@
 
     min-height: 50svh;
     width: 100%;    
-}
-.link {
-    display: inline-block;
-    font-family: var(--font2), var(--font2), 'Times New Roman', Times, serif;
-    color: #000;
-    font-weight: 500;
-    text-align: center;
-    width: 8rem;
-    padding: 1rem;
-    margin: 0.3rem;
-    clip-path: polygon(15% 5%, 85% 5%, 100% 50%, 85% 95%, 15% 95%, 0% 50%);
-    transition: 0.5s;
-    background-size: 600%;
-    background-image: linear-gradient(
-        325deg,
-        var(--azul4) 30%,
-        var(--branco) 50%,
-        var(--azul4) 70%
-    );
-    animation: ani3 4s infinite, ani4 2s forwards 0.5s;
-}
-@keyframes ani3 {
-    0% {background-position: 0%;}
-    100% {background-position: 100%;}
-}
-@keyframes ani4 {
-    0% {color: #000;}
-    100% {color: #fff;}
-}
-
-.link:hover {
-    font-weight: bold;
-    background-image: linear-gradient(
-        325deg,
-        var(--amar3) 30%,
-        var(--branco) 50%,
-        var(--amar3) 70%
-    );
 }
 
 #descri {
@@ -78,8 +37,8 @@
     max-height: 0rem;
 }
 @keyframes altura {
-    0%{max-height: 0rem;}
-    100%{max-height: 10rem;}
+    0%{max-height: 0rem; background-color: #fff;}
+    100%{max-height: 10rem; background-color: #000;}
 }
 #descri > * {
     opacity: 0;
@@ -87,15 +46,15 @@
 }
     </style>
 </head>
-<body>
-    <header class="header20 flex">
-        <a href="/01/">Conteúdos</a>
+<body class="body-02-01">
+    <header class="header-02-01 flex">
+        <a href="/01/" class="h2-02-01">Conteúdos</a>
     </header>
     <main class="main20">
         <section class="botoes">
-            <a href="01_teoria/" class="link" onmouseenter="flink(1)" onmouseleave="flink(0)">Teoria</a>
-            <a href="02_pratica/" class="link" onmouseenter="flink(2)" onmouseleave="flink(0)">Prática</a>
-            <a href="03_buscar/" class="link" onmouseenter="flink(3)" onmouseleave="flink(0)">Buscar</a>
+            <a href="01_teoria/" class="cristal" onmouseenter="flink(1)" onmouseleave="flink(0)">Teoria</a>
+            <a href="02_pratica/" class="cristal" onmouseenter="flink(2)" onmouseleave="flink(0)">Prática</a>
+            <a href="03_buscar/" class="cristal" onmouseenter="flink(3)" onmouseleave="flink(0)">Buscar</a>
         </section>
         <section id="descri">
             <p>Teoria: veja tema, conceitos, leis ou teorias físicas.</p>
