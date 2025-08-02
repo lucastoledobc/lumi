@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Grifith - Tema I</title>
+        <link rel="stylesheet" href="/anexos/estilos/style.css">
+        <script src="/anexos/scripts/script.js" defer></script>
+        <meta name="description" content="Site de Física para ensino básico, ensino médio e ensino superior.">
+    </head>
+    <body class="body02">
+        <header class="header02 flex"></header>
+    <main class="main02">
+        <section class="enunciado">
+            <p>UERJ 2023) Na tirinha de Mauricio de Sousa, os personagens Cebolinha e Cascão fazem uma brincadeira utilizando duas latas e um barbante. Ao perceberem que o som pode ser transmitido através do barbante, resolvem alterar o comprimento do barbante para ficar cada vez mais extenso. As demais condições permaneceram inalteradas durante a brincadeira.</p>
+
+            <figure class="figure">
+                <img class="img02" src="../../../midias/enem20239101-cebolinha.png" alt="Imagem cebolinha e cascão">
+                <figcaption class="figcaption">SOUSA, M. Disponível em: <a href="http://www.monica.com.br" target="_blank">www.monica.com.br</a>. Acesso em: 2 out. 2012 (adaptado).<br></figcaption>
+            </figure>
+
+            <p>Na prática, à medida que se <span class="link-dica" onclick="fdica(0)">aumenta o comprimento do barbante</span>, ocorre a redução de qual característica da onda sonora?</p>
+        <div class="dica">
+            Eles estão ficando mais longe um do outro. O que acontece com o som ao percorrer longas distâncias?
+            <button onclick="fdica(0)">Fechar</button>
+        </div>
+
+        <div class="opções">
+            <input type="radio" name="opt" id="0" value="0">
+            <label for="0" class="label-opt" id="label0">(A) Altura.</label>
+
+            <input type="radio" name="opt" id="1" value="0">
+            <label for="1" class="label-opt" id="label1">(B) Período.</label>
+
+            <input type="radio" name="opt" id="2" value="1">
+            <label for="2" class="label-opt" id="label2">(C) Amplitude.</label>
+
+            <input type="radio" name="opt" id="3" value="0">
+            <label for="3" class="label-opt" id="label3">(D) Velocidade.</label>
+
+            <input type="radio" name="opt" id="4" value="0">
+            <label for="4" class="label-opt" id="label4">(E) Comprimento de onda.</label>
+        </div>
+        
+        <button class="bresponder" onclick="fgabarito()">Responder</button>
+          
+        </section>
+
+
+
+        <section class="gabarito">
+
+        <div class="flex" id="resposta"></div>
+
+        <div class="bsreso">
+            <input type="radio" name="breso" class="breso" id="rc" onclick="fabrir(0)">
+            <label for="rc" class="label-breso" id="labelrc">Resposta Curta</label>
+
+            <input type="radio" name="breso" class="breso" id="rl" onclick="fabrir(1)">
+            <label for="rl" class="label-breso" id="labelrl">Resposta Completa</label>
+
+            <input type="radio" name="breso" class="breso" id="vdo" onclick="fabrir(2)">
+            <label for="vdo" class="label-breso" id="labelvdo">Resposta em Vídeo</label>
+        </div>
+
+        <div class="reso" id="reso1" style="visibility: visible; opacity: 1">
+            <p>Som é uma onda que vai ficando mais “fraca” com a distância, o que significa a amplitude. Uma pessoa de longe pode gritar para aumentar a amplitude e assim ser ouvida.</p>
+            <p>Gabarito: C) Amplitude.</p>
+        </div>
+        <div class="reso" id="reso2">
+           <p>Se eu gritar no seu ouvido o som vai ter uma grande amplitude, mas se eu sussurrar a amplitude vai ser bem menor. A questão pergunta qual das características vai diminuir se Cebolinha e Cascão se afastarem, é a amplitude porque quanto mais longe você está de uma fonte sonora, menor é a amplitude do som quando você escuta ele.</p>
+
+            <p>A) Frequência mede o quão agudo ou grave é o som, mas o som não fica mais agudo ou grave por estar longe. Só se estiver em movimento, mas isso é o efeito Doppler (outra história).</p>
+            <p>B) Período é o tempo de vibração individual das moléculas. Pensa assim: quando a gente fala, o ar começa a vibrar (ir para frente e para trás repetidamente). O período é o tempo de cada ciclo dessa vibração, não tem a ver com o aumento do barbante pois, sendo pequeno ou grande, as moléculas vão vibrar no mesmo tempo.</p>
+
+            <p>D) A velocidade do som depende do meio no qual se encontra. A velocidade do som na água é diferente da velocidade do som no ar. O barbante aumentar não muda a qualidade dele, então a velocidade é a mesma.</p>
+
+            <p>E) Aqui a resposta é matemática, não tem jeito. Comprimento de onda depende da velocidade e da frequência:</p>
+
+            
+            <math display="block">
+                <mi>v</mi><mo>=</mo><mi>λ</mi><mo>*</mo><mi>f</mi>
+            </math>
+            
+
+            <p><strong>Como a velocidade é constante e a frequência é constante, o comprimento de onda também é constante.</strong></p>
+            <p>Imagine que a velocidade é 10 m/s, frequência 5 Hz e o comprimento de onda vale 2 m.</p>
+            
+            <math display="block">
+                <mn>10</mn><mo>=</mo><mn>5</mn><mo>*</mo><mn>2</mn>
+            </math>
+
+            <p>Veja que essa equação faz sentido.</p>
+            <p>Porém, vamos mudar o comprimento de onda para 4 m.</p>
+
+            <math display="block">
+                <mn>10</mn><mo>=</mo><mn>5</mn><mo>*</mo><mn>4</mn>
+            </math>
+
+            <p>Note que agora não faz sentido. Se um valor mudar, outro também precisa mudar.
+            Nesse caso, a gente ja confirmou que a velocidade e frequência não vão mudar, então o comprimento de onda também não vai mudar.</p>
+        </div>
+        <div class="reso" id="reso3">
+            <div class="bsreso">
+                <input type="radio" name="bvdo" class="breso" id="hori" onclick="fvdo(0)"  checked>
+                <label class="label-breso" for="hori">Horizontal</label>
+                <input type="radio" name="bvdo" class="breso" id="vert" onclick="fvdo(1)">
+                <label class="label-breso" for="vert">Vertical</label>
+            </div>
+            <iframe class="video" id="vdo1" src="https://www.youtube.com/embed/--XQesl7YHw?si=qSsheHBwh-Bub2X2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
+            <iframe class="video" id="vdo2" src="https://www.youtube.com/embed/vfm1cjSdwPc?si=13qvIGiVIm3HmooK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        </section>
+    </main>
+    <footer class="footer02"></footer>
+</body>
+</html>
