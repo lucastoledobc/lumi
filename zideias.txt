@@ -1,4 +1,4 @@
-FAZER:
+A FAZER:
 
 -> 00 Geral:
 
@@ -30,6 +30,7 @@ Teoria:
 	4. avançado
 - botão "pq to aprendendo isso?"
 - botão "Quero mais detalhes".
+- niveis de explicação
 
 Prática:
 - pular entre as questoes
