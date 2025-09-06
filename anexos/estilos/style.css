@@ -13,10 +13,15 @@
 }
 
 :root {
+    --fon1: DynaPuff;
+    --fon2: EBGaramond;
+    --fon3: Lato;
+
     --preto: #000000;
     --branco: #ffffff;
     --trans: #00000000;
-    --fundo: #f6f6f6;
+    --fundob: #f6f6f6;
+    --fundop: #252525;
 
     --azul1: #B7E8FD;
     --azul2: #5DCBFA;
@@ -34,12 +39,6 @@
     --verd2: #1b9c1b;
     --verm1: #E40909;
     --verm2: #9c1b1b;
-
-    --fon1: DynaPuff;
-    --fon2: EBGaramond;
-    --fon3: Lato;
-
-    --bm: 0.5vw;
 }
 
 * {
@@ -50,11 +49,13 @@
     scrollbar-width: none;
 }
 html {
-    background: var(--preto) url(/anexos/midias/fundo-star.gif) fixed center;
+    background-color: #000;
+    background-image: url(/anexos/midias/fundo-star.gif);
+    background-position: center;
+    background-size: cover;
     overflow: clip;
 }
 body {
-    background: #00000088;
     height: 100svh;
     overflow: scroll;
 }
@@ -300,6 +301,30 @@ input[type='email'], textarea {
     animation: lado05 0.75s forwards 1.4s;
 }
 
+.body-02-02 {
+    position: relative;
+    background: #a0a0a0 url(/anexos/midias/fundo-1.png) fixed center;
+    animation: 1s ani-left forwards;
+    left: -100%;
+}
+.main-02-02 {
+    padding: 1rem;
+}
+.section-02-02 {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateX(2rem);
+}
+.section-02-02 > a, a:visited, a::before {
+    color: var(--preto);
+    content: "• ";
+    text-decoration: none;
+
+}
+
 .grid02 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -316,15 +341,27 @@ input[type='email'], textarea {
     text-align: right;
     padding: 0.1rem 0.3rem;
 }
+
+/* CARD */
+.div-card {
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+}
 .card {
-    border: 2px solid black;
+    display: block;
+    text-decoration: none;
+}
+.card > h2 {
+    box-shadow: 10px 10px;
+}
+.card:visited {
+    color: #000;
 }
 
-
+/* ENUNCIADO */
 .body02 {
     background: var(--branco) url(/anexos/midias/fundo-1.png) fixed center;
 }
-/* ENUNCIADO */
 .enunciado {
     padding: 0.5rem;
 }

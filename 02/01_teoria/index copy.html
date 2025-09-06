@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/anexos/estilos/style.css">
+    <script src="/anexos/scripts/script.js" defer></script>
+
+    <title>Conteúdos</title>
+    <meta name="description" content="Conteúdo teórico de Física para ensino básico, ensino médio e ensino superior.">
+    <style>
+.f1 {
+    height: 10svh;
+    color: #ffffff00;
+    animation: ani1 2s forwards 1s;
+}
+@keyframes ani1 {
+    0% {color: #ffffff00;}
+    100% {color: #ffffffff;}
+}
+
+.linha {
+    position: absolute;
+    top: 10%;
+    width: 10%;
+    border: 1px solid white;
+    animation: ani2 1s forwards;
+}
+@keyframes ani2 {
+    0% {left: -100%;}
+    100% {left: 100%;}
+}
+
+main {
+    background: url(/anexos/midias/fundo-1.png);
+    width: clamp(300px, 90%, 1200px);
+    overflow-y: scroll;
+    scrollbar-width: none;
+    height: 90svh;
+    border: 1px solid white;
+}
+.fundopreto2 {            
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100svh;
+    background-color: black;
+    animation: ani3 1s forwards 1s;
+}
+@keyframes ani3 {
+    0% {top: 0%;}
+    100% {top: 100%; visibility: collapse;}
+}
+    </style>
+</head>
+<body>
+    <div class="f1 flex"><h1>Teoria</h1></div>
+    <main>
+    <section class="section-conteudo">
+        <h2>Matemática</h2>
+        <hr>
+        <a>Fundamental</a>
+        <a>Médio</a>
+        <a>Superior</a>        
+    </section>
+    <section class="section-conteudo">
+        <h2>Ciência</h2>
+        <hr>
+        <a href=""></a>
+    </section>
+    <section class="section-conteudo">
+        <h2>Mecânica</h2>
+        <hr>
+        <h3>Fundamental</h3>
+
+        <br>
+        <h3>Médio</h3>
+
+        <br>
+        <h3>Superior</h3>        
+    </section>
+    </main>
+    <div class="fundopreto2"></div>
+    <div class="linha"></div>
+</body>
+</html>
