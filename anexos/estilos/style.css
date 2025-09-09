@@ -105,11 +105,7 @@ input[type='email'], textarea {
 
 .body-01-01 {
     background: #000000ff;
-    animation: ani1 15s forwards 1s;
-}
-@keyframes ani1 {
-    0% {background: #000000ff;}
-    100% {background: #00000000;}
+    animation: desaparecer 15s forwards 1s;
 }
 
 .body-01-01 * {
@@ -764,4 +760,8 @@ math {
 @keyframes ani-left {
     from {left: -100%}
     to {left: 0%}
+}
+@keyframes ani-desaparecer {
+    0% {background: #000000ff;}
+    100% {background: #00000000;}
 }
