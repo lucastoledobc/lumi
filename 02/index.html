@@ -10,8 +10,31 @@
     <meta name="description" content="Conteúdo e questões de Física para ensino básico, ensino médio e ensino superior.">
     <style>
 
+.body-02-01 * {
+    color: #fff;
+    text-decoration: none;
+}
+.header-02-01 {
+    height: 20svh;
+    animation: ani-aparecer 2s forwards;
+}
+.h2-02-01 {
+    font-family: var(--fon1), var(--fon2);
+    font-size: clamp(1.3rem, 13vw, 6rem);
+    color: #fff;
+}
+
 .main20 {
     width: 100%;
+}
+.section20 {
+    background-color: var(--fundo);
+    width: calc(90% - 2rem);
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    margin: 1rem auto;
+    opacity: 0;
+    transform: translateX(2rem);
 }
 .botoes {
     display: flex;
