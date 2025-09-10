@@ -9,33 +9,6 @@
     <title>Conteúdos</title>
     <meta name="description" content="Conteúdo e questões de Física para ensino básico, ensino médio e ensino superior.">
     <style>
-
-.body-02-01 * {
-    color: #fff;
-    text-decoration: none;
-}
-.header-02-01 {
-    height: 20svh;
-    animation: ani-aparecer 2s forwards;
-}
-.h2-02-01 {
-    font-family: var(--fon1), var(--fon2);
-    font-size: clamp(1.3rem, 13vw, 6rem);
-    color: #fff;
-}
-
-.main20 {
-    width: 100%;
-}
-.section20 {
-    background-color: var(--fundo);
-    width: calc(90% - 2rem);
-    padding: 1rem 1.5rem;
-    border-radius: 1rem;
-    margin: 1rem auto;
-    opacity: 0;
-    transform: translateX(2rem);
-}
 .botoes {
     display: flex;
     align-items: center;
@@ -46,7 +19,7 @@
     width: 100%;    
 }
 
-#descri {
+.descri {
     width: 80%;
 
     background-color: #000;
@@ -63,7 +36,7 @@
     0%{max-height: 0rem; background-color: #fff;}
     100%{max-height: 10rem; background-color: #000;}
 }
-#descri > * {
+.descri > * {
     opacity: 0;
     animation: 1s ani-opacity forwards 1s;
 }
@@ -73,13 +46,13 @@
     <header class="header-02-01 flex">
         <a href="/01/" class="h2-02-01">Conteúdos</a>
     </header>
-    <main class="main20">
+    <main class="main-02-01">
         <section class="botoes">
             <a href="01_teoria/" class="cristal" onmouseenter="flink(1)" onmouseleave="flink(0)">Teoria</a>
             <a href="02_pratica/" class="cristal" onmouseenter="flink(2)" onmouseleave="flink(0)">Prática</a>
             <a href="03_buscar/" class="cristal" onmouseenter="flink(3)" onmouseleave="flink(0)">Buscar</a>
         </section>
-        <section id="descri">
+        <section class="descri">
             <p>Teoria: veja tema, conceitos, leis ou teorias físicas.</p>
             <p>Prática: questões/exercícios de física.</p>
             <p>Buscar: proucure por uma questão ou tema específico.</p>
