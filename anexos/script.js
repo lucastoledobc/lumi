@@ -277,65 +277,39 @@ function fganhar() {
     audio.play();
     var count = 200;
     var defaults = {
-  origin: { y: 0.7 }
-};
+        origin: { y: 0.7 }
+    };
 
-function fire(particleRatio, opts) {
-  confetti({
-    ...defaults,
-    ...opts,
-    particleCount: Math.floor(count * particleRatio)
-  });
-}
+    function fire(particleRatio, opts) {
+    confetti({
+        ...defaults,
+        ...opts,
+        particleCount: Math.floor(count * particleRatio)
+    });
+    }
 
-fire(0.25, {
-  spread: 26,
-  startVelocity: 55,
-});
-fire(0.2, {
-  spread: 60,
-});
-fire(0.35, {
-  spread: 100,
-  decay: 0.91,
-  scalar: 0.8
-});
-fire(0.1, {
-  spread: 120,
-  startVelocity: 25,
-  decay: 0.92,
-  scalar: 1.2
-});
-fire(0.1, {
-  spread: 120,
-  startVelocity: 45,
-});
-}
-
-
-
-/* 04 */
-/* 04 */
-/* 04 */
-
-function curiosidade (url) {
-    const urls = new Array();
-    urls[0] = "http://learninginhand.com";
-    urls[1] = "http://learninginhand.com/about";
-    urls[2] = "http://learninginhand.com/contact";
-    urls[4] = "http://learninginhand.com/services";
-    urls[5] = "http://learninginhand.com/videos";
-    urls[6] = "http://learninginhand.com/infographics";
-    urls[7] = "http://learninginhand.com/resources";
-    urls[8] = "http://learninginhand.com/stickaround";
-    urls[9] = "http://learninginhand.com/posts";
-    urls[10] = "http://learninginhand.com/pet";
-
-    var random = Math.floor(Math.random()*urls.length);
-
-    window.location = urls[random];
-
-    return url
+    fire(0.25, {
+    spread: 26,
+    startVelocity: 55,
+    });
+    fire(0.2, {
+    spread: 60,
+    });
+    fire(0.35, {
+    spread: 100,
+    decay: 0.91,
+    scalar: 0.8
+    });
+    fire(0.1, {
+    spread: 120,
+    startVelocity: 25,
+    decay: 0.92,
+    scalar: 1.2
+    });
+    fire(0.1, {
+    spread: 120,
+    startVelocity: 45,
+    });
 }
 
 

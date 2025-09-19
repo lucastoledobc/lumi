@@ -30,20 +30,27 @@ button > img {
     border-radius: 5px;
 }
 .jogos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
     padding: 0 1rem 1rem 1rem;
 }
 .link-jogo {
-    font-size: 1.5rem;
-    text-decoration: underline;
-    text-align: center;
     display: inline-block;
+
     width: 5rem;
+    height: 9rem;
     padding: 0.5rem;
     margin: 1rem;
     border: 2px solid var(--branco);
     border-radius: 5px;
     opacity: 0;
     transition: opacity 2s;
+
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-align: center;
 }
 .img03 {
     aspect-ratio: 1;
@@ -91,7 +98,7 @@ button > img {
     border: 1px solid var(--branco);
     box-shadow: 0 0 30px rgb(255, 255, 255);
     border-radius: 50%;
-    right: 125%;
+    right: 90%;
     top: 53%;
 }
 
@@ -119,7 +126,7 @@ button > img {
         <h1 class="h100 flex">Lista de Jogos</h1>
     </header>
 
-    <main class="main00">
+    <main class="main0">
         <section class="section3" id="s0">
             <button class="botao-barra">Ciência<img class="imgbotao" src="/lumi/anexos/img/icon-seta-direita-outline.svg" alt="Abrir"></button>
 
@@ -136,7 +143,7 @@ button > img {
 
 
             <div class="jogos">
-                <a class="link-jogo js4" href="04/sistema_solar.html">
+                <a class="link-jogo js2" href="fisica/sistema_solar.html">
                     <div class="img04" id="sss">
                         <div id="eixo2"><div id="terra"><div id="lua"></div>
                             </div>
@@ -144,20 +151,10 @@ button > img {
                     </div>
                     Sistema Solar
                 </a>
-            </div>
-
-            <div class="jogos">
-                <a class="link-jogo js5" href="05/calor.html">
-                <div class="img03" id="cores"></div>
-                Calor
-                </a>
-            </div>
-            
-            <div class="jogos">
-                    <a class="link-jogo js7" href="07/cores.html">
+                <a class="link-jogo js2" href="fisica/cores.html">
                     <div class="img03" id="cores"></div>
                     Cores
-                    </a>
+                </a>
             </div>
         </section>
 
@@ -207,7 +204,7 @@ for (let i = 0, j = section.length; i<j; i++) {
         jogos = document.getElementsByClassName("js"+i);
         
         if (section["s"+i].style.maxHeight == '3rem') {
-            section["s"+i].style.maxHeight = '100rem';
+            section["s"+i].style.maxHeight = '1000rem';
             imgbotao[i].src = '/lumi/anexos/img/icon-seta-baixo-outline.svg';
 
             for(let k of jogos){
