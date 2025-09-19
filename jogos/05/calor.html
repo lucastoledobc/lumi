@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/lumi/anexoslumi/estilos/style.css"> 
+    <script src="/lumi/anexoslumi/scripts/script.js" defer></script>
+    
+    <title>Calor</title>
+    <meta name="description" content="Combinação de cores primárias RGB.">
+
+    <style>
+        #ajuda {
+            display: none;
+        }
+        main > section {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        .top {
+            height: 20svh;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .mid {
+            height: 50svh;
+        }
+        
+        
+        .bot {
+            height: 20svh;
+        }
+    </style>
+</head>
+
+
+
+<body class="body03">
+    <h1 class="h103 flex">Quantidade de calor</h1>
+    <main class="main03">
+        <section class="top">
+            <div class="nivel">
+                <select class="select03" name="nivel" id="nivel" value = '1'>
+                    <option value="1">Fácil</option>
+                    <option value="2">Médio</option>
+                    <option value="3">Difícil</option>
+                    <option value="4">Sobrevivência</option>
+                    <option value="5">Experimental</option>
+                </select>
+            </div>
+            <h2 class="h203">Qual mais fácil aquecer?</h2>
+        </section>
+
+        <section class="mid">
+            <div class="opt" id="opt1">
+                <button class="botao03" id="bopt1">Opção 1</button>
+
+            </div>
+            <div class="opt" id="opt1">
+                <button class="botao03" id="bopt2">Opção 2</button>                
+            </div>
+
+        </section>
+
+        <section class="bot"></section>
+    </main>
+    
+    <section id="botoes-icones"></section>
+    
+    <dialog class="popup" id="ajuda">
+        <h1 class="h1-ajuda">Jogo do calor</h1>
+        <section class="mid-ajuda">
+            <h2 class="h2-ajuda">Qual aquece mais facilmente?</h2>
+            <p>Aponte qual dos objetos precisa de menos calor para aumentar sua temperatura.</p>
+            <p>-> Fácil: acerte apenas olhando a massa ou calor específico.
+            <br>-> Médio: Calcule a quantidade de calor para acertar.
+            <br>-> Difícil: A variação de temperatura entra em jogo.
+            <br>-> Sobrevivência: acerte o maior número em 10 segundos.
+            <br>-> Experimental: fique livre para ver como <strong>quantidade de calor</strong> funciona.
+        </section>
+        <div class="botao-ajuda"><button class="botao03" onclick="fstart()">Jogar</button></div>
+        <section class="bot-ajuda"></section>
+    </dialog>
+    <dialog class="popup" id="ganhar"></dialog>
+</body>
+
+
+
+<script>
+ajuda = document.getElementById("ajuda");
+ganhar = document.getElementById("ganhar");
+
+bopt1 = document.getElementById('bopt1');
+bopt2 = document.getElementById('bopt2');
+
+/*SETs*/
+
+function fstart() {
+    ajuda.style.display = 'none';
+}
+select.addEventListener("input", function() {
+    fjogar();
+})
+
+
+</script>
+</html>

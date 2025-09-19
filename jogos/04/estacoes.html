@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/lumi/anexoslumi/estilos/game.css">    
+    <script src="/lumi/anexoslumi/scripts/game.js" defer></script>
+    
+    <title>Estações</title>
+    <meta name="description" content="Tenha uma melhor visão espacial de como funciona as estações do ano.">
+    <style>
+        html {
+            overflow: clip;
+        }
+        #sol {
+            position: absolute;
+            aspect-ratio: 1;
+            width: clamp(1rem, 200vw, 160vh);
+            top: 50%;
+            transform: translate(-90%,-50%);
+
+            background: rgb(255, 230, 0);
+            box-shadow: 0 0 clamp(1rem, 60vw, 60vh) rgb(200, 200, 0, 0.733);
+            border-radius: 50%;
+            animation: radius 15s linear infinite;
+        }
+        @keyframes radius {
+            0% {box-shadow: 0 0 clamp(1rem, 60vw, 60vh) rgb(200, 200, 0, 0.733);}
+            50% {box-shadow: 0 0 clamp(1rem, 60vw, 60vh) rgb(200, 200, 0, 0.533);}
+            100% {box-shadow: 0 0 clamp(1rem, 60vw, 60vh) rgb(200, 200, 0, 0.733);}
+        }
+        #d2 {
+            position: absolute;
+            right: 0%;
+            width: 50vw;
+            height: 90svh;
+        }
+        .text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(1rem,6vh,8vw);
+            height: 10svh;
+        }
+        #terra {
+            position: relative;
+            aspect-ratio: 1;
+            width: clamp(1rem, 40vw, 40vh);
+            margin: auto;
+            top: 30%;
+            transform: translate(0%,-50%);
+
+            background: rgb(0, 81, 255);
+            box-shadow: 0 0 20px rgba(82, 82, 252, 0.733);
+            border-radius: 50%;
+        }
+        .pad {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50vw;
+            height: 25svh;
+            top: 50%;
+        }
+        .botao {
+            aspect-ratio: 1;
+            width: 3vw;
+            background-color: none;
+        }
+        :hover {}
+    </style>
+</head>
+<body>
+    <h1>Estações</h1>
+    <main>
+        <div id="sol"></div>
+        <section class="top">
+            <div id="d2">
+                <section class="text">
+                    Verão
+                </section>
+                <div id="terra"></div>
+                <section class="pad">
+                    <button class="botao" id="dire"><img src="/lumi/anexoslumi/midias/icon-seta-esquerda.svg" alt="estação anterior"></button>
+                    <p>Verão</p>
+                    <button class="botao" id="esqu"><img src="/lumi/anexoslumi/midias/icon-seta-direita.svg" alt="próxima estação"></button>
+                </section>
+            </div>
+        </section>
+    </main>
+    <section id="botoes"></section>
+    <dialog class="popup" id="ajuda">
+        <h1>Jogo das Cores</h1>
+        <p>Tente desenhar a cor que vai aparecer clicando nos controladores abaixo.</p>
+        <img src="/lumi/anexoslumi/midias/Captura de tela 2025-01-21 212246.png" alt="">
+            <button onclick="fjogar()" onfocus="fstart()">Jogar</button>
+    </dialog>
+    <dialog class="popup" id="ganhar"></dialog>
+</body>
+
+<script>
+    
+</script>
+
+</html>

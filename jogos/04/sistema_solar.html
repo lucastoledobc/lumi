@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/lumi/anexoslumi/estilos/style.css">    
+    <script src="/lumi/anexoslumi/scripts/script.js" defer></script>
+    
+    <title>Sistema Solar</title>
+    <meta name="description" content="Sistema Sol-Terra-Lua.">
+    <style>
+        main * {
+            position: absolute;
+            aspect-ratio: 1;
+        }
+
+        #sol {
+            width: clamp(1rem, 20vw, 20vh);
+
+            background: rgb(255, 230, 0);
+            box-shadow: 0 0 30px rgb(200, 200, 0, 0.733);
+            border-radius: 50%;
+        }
+        #eixo1 {
+            width: clamp(1rem, 60vw, 60vh);
+            border-bottom: 2px solid var(--branco);
+            border-radius: 50%;
+            /* border-bottom: 0px solid rgb(255, 255, 255); */
+            animation: girar 10s linear infinite;
+        }
+        @keyframes girar {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        #terra {
+            width: clamp(1rem, 10vw, 10vh);
+            background: rgb(0, 81, 255);
+            box-shadow: 0 0 20px rgba(82, 82, 252, 0.733);
+            border-radius: 50%;
+            right: 93%;
+            top:50%;
+        }
+        
+        #eixo2 {
+            width: clamp(1rem, 20vw, 20vh);
+            border-bottom: 1px solid var(--branco);
+            border-radius: 50%;
+            animation: girar 10s linear infinite;
+            left: -5vh;
+            top: -5vh;
+        }
+
+        @media (orientation: portrait) {
+            #eixo2 {
+            left: -5vw;
+            top: -5vw;
+        }
+        }
+
+        #lua {
+            width: clamp(1rem, 5vw, 5vh);
+
+            background: rgb(255, 255, 255);
+            border: 1px solid var(--branco);
+            box-shadow: 0 0 30px rgb(255, 255, 255);
+            border-radius: 50%;
+            right: 85%;
+            top:53%;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="h103 flex">Sistema Solar</h1>
+    <main class="main03 flex">
+        <div id="sol"></div>
+
+        <div id="eixo1">
+            <div id="terra">
+                <div id="eixo2">
+                    <div id="lua"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <section id="botoes"></section>
+    
+    <dialog class="popup" id="ajuda">
+        <h1>Sistema solar simplificado</h1>
+        <p>Sistema Sol-Terra-Lua</p>
+            <button onclick="fstart()">Jogar</button>
+            <footer>Agradecimentos: Canal <a href="https://youtu.be/gYQ2uLA3EW0?si=-qGQTnAKb4UJ81Iy" target="_blank">divLoda (youtube)</a> que teve a ideia original.</footer>
+    </dialog>
+    <dialog class="popup" id="ganhar"></dialog>
+</body>
+
+<script>
+    ajuda = document.getElementById('ajuda');
+    function fstart() {
+        ajuda.style.display='none';
+    }
+</script>
+
+</html>

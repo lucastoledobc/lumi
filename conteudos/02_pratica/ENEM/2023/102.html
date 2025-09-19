@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>ENEM 2023) Uma academia decide</title>
+        <link rel="stylesheet" href="/lumi/anexoslumi/estilos/style.css">
+        <script src="/lumi/anexoslumi/scripts/script.js" defer></script>
+        <meta name="description" content="Site de Física para ensino básico, ensino médio e ensino superior.">
+    </head>
+    <body>
+        <header class="header02 flex"></header>
+    <main class="main02">
+        <section class="enunciado">
+            <p>ENEM 2023) Uma academia decide trocar gradualmente seus aparelhos de musculação. Agora, os frequentadores que utilizam os aparelhos do tipo 1 podem também utilizar os aparelhos do tipo 2, representados na figura, para elevar cargas correspondentes às massas M<sub>1</sub> e M<sub>2</sub>, com velocidade constante. A fim de que o exercício seja realizado com a mesma força <math>
+                <mover>
+                    <mrow><ms>F</ms></mrow>
+                    <mo>→</mo>
+                </mover>
+            </math>, os usuários devem ser orientados a respeito da relação entre as cargas nos dois tipos de aparelhos, já que as polias fixas apenas mudam a direção das forças, enquanto a polia móvel divide as forças.</p>
+            <p>Em ambos os aparelhos, considere as cordas inextensíveis, as massas das polias e das cordas desprezíveis e que não há dissipação de energia.
+            </p>
+
+            <figure class="figure">
+                <img class="img02" src="../../../midias/enem202310201-aparelho.png" alt="Aparelhos de academia">
+            </figure>
+
+            <p>Para essa academia, qual deve ser a razão<strong><math>
+                <mfrac>
+                    <mrow><msub><ms>M</ms><mn>2</mn></msub></mrow>
+                    <mrow><msub><ms>M</ms><mn>1</mn></msub></mrow>
+                </mfrac>
+            </math></strong>informada aos usuários? </p>
+
+        <div class="opções">
+            <input type="radio" name="opt" id="0" value="0">
+            <label for="0" class="label-opt" id="label0">(A) <math>
+                <mfrac>
+                    <mrow><mn>1</mn></mrow>
+                    <mrow><mn>4</mn></mrow>
+                </mfrac>
+            </math></label>
+
+            <input type="radio" name="opt" id="1" value="0">
+            <label for="1" class="label-opt" id="label1">(B) <math>
+                <mfrac>
+                    <mrow><mn>1</mn></mrow>
+                    <mrow><mn>2</mn></mrow>
+                </mfrac>
+            </math></label>
+
+            <input type="radio" name="opt" id="2" value="0">
+            <label for="2" class="label-opt" id="label2">(C) 1</label>
+
+            <input type="radio" name="opt" id="3" value="1">
+            <label for="3" class="label-opt" id="label3">(D) 2</label>
+
+            <input type="radio" name="opt" id="4" value="0">
+            <label for="4" class="label-opt" id="label4">(E) 4</label>
+        </div>
+        
+        <button class="bresponder" onclick="fgabarito()">Responder</button>
+          
+        </section>
+
+
+
+        <section class="gabarito">
+
+        <div class="flex" id="resposta"></div>
+
+        <div class="bsreso">
+            <input type="radio" name="breso" class="breso" id="rc" onclick="fabrir(0)">
+            <label for="rc" class="label-breso" id="labelrc">Resposta Curta</label>
+
+            <input type="radio" name="breso" class="breso" id="rl" onclick="fabrir(1)">
+            <label for="rl" class="label-breso" id="labelrl">Resposta Completa</label>
+
+            <input type="radio" name="breso" class="breso" id="vdo" onclick="fabrir(2)">
+            <label for="vdo" class="label-breso" id="labelvdo">Resposta em Vídeo</label>
+        </div>
+
+        <div class="reso" id="reso1" style="visibility: visible; opacity: 1">
+            <p>Para cada polia móvel o valor do peso divide por 2. logo, para que a tensão na corda seja igual em ambos casos, M<sub>2</sub> tem que ser o dobro de M<sub>1</sub>. Portanto, <math>
+                <mfrac>
+                    <mrow><msub><ms>M</ms><mn>2</mn></msub></mrow>
+                    <mrow><msub><ms>M</ms><mn>1</mn></msub></mrow>
+                </mfrac><mo>=</mo><mn>2</mn>
+            </math>.</p>
+            <p>Gabarito: D) 2.</p>
+        </div>
+
+        <div class="reso" id="reso2">
+           <p>Uma polia móvel é sustentada em duas partes:</p>
+
+           <-- imagem polia -->
+
+            <p>Isso significa que a tensão nessa corda é dividida por 2.</p>
+
+            <p>Portanto, se colocar um objeto de 2 kg no aparelho dois, você vai puxar a corda e sentir como se só tivesse 1 kg.
+            </p>
+
+            <p>Então para que os aparelhos sejam equivalentes, a massa M2 tem que ser sempre o dobro de M1, ou seja, M<sub>2</sub> = 2M<sub>1</sub>.</p>
+
+            <math display="block">
+                <mfrac>
+                    <mrow><msub><ms>M</ms><mn>2</mn></msub></mrow>
+                    <mrow><msub><ms>M</ms><mn>1</mn></msub></mrow>
+                </mfrac><mo>=</mo>
+                <mfrac>
+                    <mrow><msub><ms>2M</ms><mn>1</mn></msub></mrow>
+                    <mrow><msub><ms>M</ms><mn>1</mn></msub></mrow>
+                </mfrac>
+            </math>
+            <p>Veja que temos <math>
+                <mfrac>
+                    <mrow><msub><ms>M</ms><mn>1</mn></msub></mrow>
+                    <mrow><msub><ms>M</ms><mn>1</mn></msub></mrow>
+                </mfrac>
+            </math>, isso é igual a 1. Um número dividido por ele mesmo é 1, tipo <math>
+                <mfrac>
+                    <mrow><mn>5</mn></mrow>
+                    <mrow><mn>5</mn></mrow>
+                </mfrac><mo>=</mo><mn>1</mn>
+            </math>.</p>
+            <p>Sendo assim, </p>
+            <math display="block">
+                <mfrac>
+                    <mrow><msub><ms>M</ms><mn>2</mn></msub></mrow>
+                    <mrow><msub><ms>M</ms><mn>1</mn></msub></mrow>
+                </mfrac><mo>=</mo><mn>2</mn>
+                <mfrac>
+                    <mrow><msub><ms>M</ms><mn>1</mn></msub></mrow>
+                    <mrow><msub><ms>M</ms><mn>1</mn></msub></mrow>
+                </mfrac>
+            </math>
+            <math display="block">
+                <mfrac>
+                    <mrow><msub><ms>M</ms><mn>2</mn></msub></mrow>
+                    <mrow><msub><ms>M</ms><mn>1</mn></msub></mrow>
+                </mfrac><mo>=</mo><mn>2</mn><mo>*</mo><mn>1</mn>
+            </math>
+            <math display="block">
+                <mfrac>
+                    <mrow><msub><ms>M</ms><mn>2</mn></msub></mrow>
+                    <mrow><msub><ms>M</ms><mn>1</mn></msub></mrow>
+                </mfrac><mo>=</mo><mn>2</mn>
+            </math>
+        </div>
+
+        <div class="reso" id="reso3">
+            <div class="bsreso">
+                <input type="radio" name="bvdo" class="breso" id="hori" onclick="fvdo(0)"  checked>
+                <label class="label-breso" for="hori">Horizontal</label>
+                <input type="radio" name="bvdo" class="breso" id="vert" onclick="fvdo(1)">
+                <label class="label-breso" for="vert">Vertical</label>
+            </div>
+            <iframe class="video" id="vdo1" src="https://www.youtube.com/embed/E7idiz-Rr3U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
+            <iframe class="video" id="vdo2" src="https://www.youtube.com/embed/NTfK6k0XRbs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        </section>
+    </main>
+    <footer class="footer02"></footer>
+</body>
+</html>

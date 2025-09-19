@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>ENEM 2023</title>
+        <link rel="stylesheet" href="/lumi/anexoslumi/estilos/style.css">
+        <script src="/lumi/anexoslumi/scripts/script.js" defer></script>
+        <meta name="description" content="Site de Física para ensino básico, ensino médio e ensino superior.">
+    </head>
+    <body>
+        <header class="header02 flex">
+            <nav class="nav02">
+                <a href="/index.html">Lumi Física</a>
+            </nav>
+            <!-- <search class="pesquisar">
+                <input type="text" name="search" id="search">
+            </search> -->
+        </header>
+    <main class="main02">
+        <section class="enunciado">
+            Em 01/03/95, um artigo que custava R$ 250,00 teve seu preço diminuído em p% de seu valor. Em 01/04/95, o novo preço foi novamente diminuído em p% de seu valor, passando a custar R$ 211,60. O preço desse artigo em 31/03/95 era: 
+
+        <div class="opções">
+            <input type="radio" name="opt" id="0" value="0">
+            <label for="0" class="label-opt" id="label0" value="0">(A) R$ 225,80.</label>
+
+            <input type="radio" name="opt" id="1" value="0">
+            <label for="1" class="label-opt" id="label1" value="0">(B) R$ 228,00.</label>
+
+            <input type="radio" name="opt" id="2" value="0">
+            <label for="2" class="label-opt" id="label2" value="1">(C) R$ 228,60.</label>
+
+            <input type="radio" name="opt" id="3" value="1">
+            <label for="3" class="label-opt" id="label3" value="0" >(D) R$ 230,00.</label>
+
+            <input type="radio" name="opt" id="4" value="0">
+            <label for="4" class="label-opt" id="label4" value="0">(E) R$ 230,80.</label>
+        </div>
+        
+        <button class="bresponder" onclick="fgabarito()">Responder</button>
+          
+        </section>
+
+
+
+        <section class="gabarito">
+
+        <div class="flex" id="resposta"></div>
+
+        <div class="bsreso">
+            <input type="radio" name="breso" class="breso" id="rc" onclick="fabrir(0)" checked>
+            <label for="rc" class="label-breso" id="labelrc">Resposta Curta</label>
+
+            <input type="radio" name="breso" class="breso" id="rl" onclick="fabrir(1)">
+            <label for="rl" class="label-breso" id="labelrl">Resposta Completa</label>
+
+            <input type="radio" name="breso" class="breso" id="vdo" onclick="fabrir(2)">
+            <label for="vdo" class="label-breso" id="labelvdo">Resposta em Vídeo</label>
+        </div>
+
+        <div class="reso" id="reso1" style="visibility: visible; opacity: 1">
+        </div>
+
+        <div class="reso" id="reso2">           
+        </div>
+
+        <div class="reso" id="reso3">
+            
+        </div>
+        </section>
+    </main>
+    <footer class="footer02"></footer>
+</body>
+</html>

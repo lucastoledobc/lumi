@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>ENEM 2023) O bluetooth é uma tecnologia</title>
+        <link rel="stylesheet" href="/lumi/anexoslumi/estilos/style.css">
+        <script src="/lumi/anexoslumi/scripts/script.js" defer></script>
+        <meta name="description" content="Site de Física para ensino básico, ensino médio e ensino superior.">
+    </head>
+    <body>
+        <header class="header02 flex"></header>
+    <main class="main02">
+        <section class="enunciado">
+            <p>ENEM 2023) O bluetooth é uma tecnologia de comunicação sem fio, de curto alcance, presente em diferentes dispositivos eletrônicos de consumo. Ela permite que aparelhos eletrônicos diferentes se conectem e troquem dados entre si. No padrão bluetooth, denominado de Classe 2, as antenas transmitem sinais de potência igual a 2,4 mW e possibilitam conectar dois dispositivos distanciados até 10 m. Considere que essas antenas se comportam como fontes puntiformes que emitem ondas eletromagnéticas esféricas e que a intensidade do sinal é calculada pela potência por unidade de área. Considere 3 como valor aproximado para π.</p>
+            <p>Para que o sinal de bluetooth seja detectado pelas antenas, o valor mínimo de sua intensidade, em W/m<sup>2</sup> , é mais próximo de </p>
+        <div class="dica">
+            <p>Queremos luz com comprimento de onda <strong>pequeno</strong> para ter espaço para <strong>mais</strong> informação.</p>
+            <button onclick="fdica(0)">Fechar</button>
+        </div>
+
+        <div class="opções">
+            <input type="radio" name="opt" id="0" value="1">
+            <label for="0" class="label-opt" id="label0">(A) 2,0 × 10<sup>–6</sup>.</label>
+
+            <input type="radio" name="opt" id="1" value="0">
+            <label for="1" class="label-opt" id="label1">(B)  2,0 × 10<sup>–5</sup>.</label>
+
+            <input type="radio" name="opt" id="2" value="0">
+            <label for="2" class="label-opt" id="label2">(C)  2,4 × 10<sup>–5</sup>.</label>
+
+            <input type="radio" name="opt" id="3" value="0">
+            <label for="3" class="label-opt" id="label3">(D)  2,4 × 10<sup>–3</sup>.</label>
+
+            <input type="radio" name="opt" id="4" value="0">
+            <label for="4" class="label-opt" id="label4">(E)  2,4 × 10<sup>–1</sup>.</label>
+        </div>
+        
+        <button class="bresponder" onclick="fgabarito()">Responder</button>
+          
+        </section>
+
+
+
+        <section class="gabarito">
+
+        <div class="flex" id="resposta"></div>
+
+        <div class="bsreso">
+            <input type="radio" name="breso" class="breso" id="rc" onclick="fabrir(0)">
+            <label for="rc" class="label-breso" id="labelrc">Resposta Curta</label>
+
+            <input type="radio" name="breso" class="breso" id="rl" onclick="fabrir(1)">
+            <label for="rl" class="label-breso" id="labelrl">Resposta Completa</label>
+
+            <input type="radio" name="breso" class="breso" id="vdo" onclick="fabrir(2)">
+            <label for="vdo" class="label-breso" id="labelvdo">Resposta em Vídeo</label>
+        </div>
+
+        <div class="reso" id="reso1" style="visibility: visible; opacity: 1">
+            <p>Vamos calcular a intensidade desse sinal que é emitido para todos os lados, ou seja, em forma de esfera. Nesse caso é uma esfera de raio = 10 m.</p>
+            <math>
+                <mrow>
+                <mo>{</mo>
+                    <mtable>
+                        <mtr>
+                        <mrow>
+                            <mi>P</mi><mo>=</mo><mn>2,4</mn><mo>mW</mo>
+                        </mrow>
+                        </mtr>
+
+                        <mtr>
+                        <mrow>
+                            <mi>d</mi><mo>=</mo><mn>10</mn><mo>m</mo>
+                        </mrow>
+                        </mtr>
+                    </mtable>
+                </mrow>
+            </math>
+
+            <math display="block">
+                <mi>I</mi><mo>=</mo>
+                <mfrac>
+                    <mrow><mi>P</mi></mrow>
+                    <mrow><mi>A</mi></mrow>
+                </mfrac><mo>=</mo>
+                <mfrac>
+                    <mrow><mi>P</mi></mrow>
+                    <mrow><mn>4</mn><mo>*</mo><mi>π</mi><mo>*</mo><msup><mi>d</mi><mn>2</mn></msup></mrow>
+                </mfrac>
+            </math>
+
+            <math display="block">
+                <mi>I</mi><mo>=</mo>
+                <mfrac>
+                    <mrow><mn>2,4</mn></mrow>
+                    <mrow><mn>4</mn><mo>*</mo><mn>3</mn><mo>*</mo><msup><mn>10</mn><mn>2</mn></msup></mrow>
+                </mfrac><mo>=</mo>
+                <mrow><mn>2</mn><mo>*</mo><msup><mn>10</mn><mn>-3</mn></msup><msup><mo>mW/m</mo><mn>2</mn></msup></mrow>
+            </math>
+            <p>Gabarito: A) 2,0 × 10<sup>–6</sup> W/m<sup>2</sup>.</p>
+        </div>
+        <div class="reso" id="reso2">
+           <p>Quando uma fonte como celular emite um sinal, ele emite para todos os lados. Parecido como quando acendemos uma lâmpada e a luz segue em todas direções.
+            Agora imagine que podemos ver essa luz andando em câmera lenta, seria como uma esfera de luz que vai aumentando.
+            Essa intensidade da luz pode ser calculada dividindo o valor da potência pela área dessa esfera.</p>
+
+            <math display="block">
+                <mi>I</mi><mo>=</mo>
+                <mfrac>
+                    <mrow><mi>P</mi></mrow>
+                    <mrow><mi>A</mi></mrow>
+                </mfrac>
+            </math>
+
+            <p>A lógica é que conforme a esfera for aumentando, a energia vai se espalhando, logo a intensidade diminui, por isso a área é inversamente proporcional à intensidade.</p>
+            <p>A área de uma esfera é calculada como 4πr<sup>2</sup>. Nesse caso, nosso raio será de 10 m, pois é a distância entre os celulares. Imagina assim: um celular está emitindo um sinal e gerando essa esfera, e o outro celular está no final dessa esfera. A distância entre o centro e o limite de uma esfera é o raio.</p>
+
+            <p>Vamos lá:</p>
+
+            <math display="block">
+                <mi>A</mi><mo>=</mo>
+                    <mrow><mn>4</mn><mo>*</mo><mn>π</mn><mo>*</mo><msup><mi>d</mi><mn>2</mn></msup></mrow>
+            </math>
+
+            <math display="block">
+                <mi>A</mi><mo>=</mo>
+                    <mrow><mn>4</mn><mo>*</mo><mn>3</mn><mo>*</mo><msup><mn>10</mn><mn>2</mn></msup></mrow>
+            </math>
+            
+            <math display="block">
+                <mi>A</mi><mo>=</mo>
+                    <mrow><mn>4</mn><mo>*</mo><mn>3</mn><mo>*</mo><mn>100</mn></mrow>
+            </math>
+
+            <math display="block">
+                <mi>A</mi><mo>=</mo>
+                    <mrow><mn>1200</mn><msup><mo>m</mo><mn>2</mn></msup></mrow>
+            </math>
+
+            <p>(como o raio está em metros, a área vai estar em metros quadrados. Note que elevamos o raio ao quadrado).</p>
+
+            <p>Agora vamos para a intensidade:</p>
+
+            <math display="block">
+                <mi>I</mi><mo>=</mo>
+                <mfrac>
+                    <mrow><mi>P</mi></mrow>
+                    <mrow><mi>A</mi></mrow>
+                </mfrac><mo>=</mo>
+                <mfrac>
+                    <mrow><mn>2,4</mn></mrow>
+                    <mrow><mn>1200</mn></mrow>
+                </mfrac>
+            </math>
+
+            <math display="block">
+                <mi>I</mi><mo>=</mo>
+                <mrow><mn>0,002</mn><msup><mo>mW/m</mo><mn>2</mn></msup></mrow>
+            </math>
+
+            <p>Temos 3 zeros, então:</p>
+
+            <math display="block">
+                <mi>I</mi><mo>=</mo>
+                <mrow><mn>2</mn><mo>*</mo><msup><mn>10</mn><mn>-3</mn></msup><msup><mo>mW/m</mo><mn>2</mn></msup></mrow>
+            </math>
+            
+            <p>(Se não entendeu clique aqui)</p>
+
+            <p>Para converter de mW para W, vamos multiplicar por 10<sup>-3</sup>, pois m é mili (0,001 = 10<sup>-3</sup>).</p>
+
+            <math display="block">
+                <mi>I</mi><mo>=</mo>
+                <mrow><mn>2</mn><mo>*</mo><msup><mn>10</mn><mn>-3</mn></msup><mo>*</mo><msup><mn>10</mn><mn>-3</mn></msup></mrow>
+            </math>
+
+            <math display="block">
+                <mi>I</mi><mo>=</mo>
+                <mrow><mn>2</mn><mo>*</mo><msup><mn>10</mn><mn>-6</mn></msup><msup><mo>W/m</mo><mn>2</mn></msup></mrow>
+            </math>            
+        </div>
+        <div class="reso" id="reso3">
+            <div class="bsreso">
+                <input type="radio" name="bvdo" class="breso" id="hori" onclick="fvdo(0)"  checked>
+                <label class="label-breso" for="hori">Horizontal</label>
+                <input type="radio" name="bvdo" class="breso" id="vert" onclick="fvdo(1)">
+                <label class="label-breso" for="vert">Vertical</label>
+            </div>
+            <iframe class="video" id="vdo1" src="https://www.youtube.com/embed/39ON9gdw2hg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
+            <iframe class="video" id="vdo2" src="https://www.youtube.com/embed/jT4tKsXFeV0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        </section>
+    </main>
+    <footer class="footer02"></footer>
+</body>
+</html>

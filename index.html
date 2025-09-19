@@ -3,148 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="anexos/estilos/style.css">
-    <script src="anexos/scripts/script.js" defer></script>
-    
-    <title>Start</title>
-    <meta name="description" content="Site de Física para ensino básico, ensino médio e ensino superior.">
+    <link rel="stylesheet" href="/lumi/anexoslumi/estilos/style.css">
+    <script src="/lumi/anexoslumi/scripts/script.js" defer></script>
+
+    <title>Início</title>  
+    <meta name="description" content="Site de Física para ensino básico, ensino médio e ensino superior.">  
     <style>
-* {
-    overflow: clip;
-    color: #fff;
-    text-decoration: none;
-}
-
-body {
-    background-color: black;
-    width: 100vw;
-    max-width: 100svw;
-    height: 100vh;            
-}
-.portal {
-    background: black url(anexos/midias/fundo-portal.png) no-repeat center;
-    background-size: cover;
-
-    position: absolute;
-    width: 100vh;
-    height: 100vh;
-    animation: portal 3s linear infinite;
-}
-@keyframes portal {
-    0% {transform: rotate(0deg);}
-    100% {transform: rotate(360deg);}
-}
-.buraco {
-    background: #000 url(anexos/midias/fundo-escuro.png) no-repeat center;
-    background-size: cover;
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    animation: buraco 2s linear forwards;
-}
-@keyframes buraco {
-    0% {background-color: #000000ff;}
-    100% {background-color: #00000000;}
-}
-
-
-
-.div1, .div2 {
-    text-align: center;
-    text-shadow:
-    -0.01rem 0 #000,
-    0.01rem 0 #000,
-    0 -0.01rem #000,
-    0 0.01rem #000;
-    margin: auto;
-    min-height: 20vh;
-    
-    opacity: 0;
-    animation: opaco 3s linear forwards 1s;
-}        
-
-.h1 {
-    font-family: var(--fon1);
-    font-size: clamp(5rem, 10vw, 20vh);
-    font-weight: bolder;
-    display: inline-block;
-}
-@keyframes opaco {
-    0% {opacity: 0;}
-    100% {opacity: 100;}
-}
-.l1 {
-    animation: poping 1.5s linear infinite;
-}
-.l2 {
-    animation: poping 1.5s linear infinite 0.33s;
-}
-.l3 {
-    animation: poping 1.5s linear infinite 0.66s;
-}
-.l4 {
-    animation: poping 1.5s linear infinite 1s;
-}
-@keyframes poping {
-    0% {translate: 0 10px;}
-    50% {translate: 0 -20px;}
-    100% {translate: 0 10px;}
-}
-
-
-
-.start {
-    font-size: clamp(3rem, 5vw, 10vh);
-    position: absolute;
-    top: 80%;
-    padding: 2px 8px;
-    border: 2px solid #fff;
-    border-radius: 1rem;
-
-    opacity: 0;
-}
-.a1 {
-    animation: ani1 2s linear forwards 1s;
-
-}
-.a2 {   
-    opacity: 0;         
-    animation: ani2 1.4s linear infinite 2.7s;
-}
-@keyframes ani1 {
-    0% {opacity: 0;}
-    40% {opacity: 1;}
-    60% {opacity: 1;}
-    100% {opacity: 0;}
-}
-@keyframes ani2 {
-    0% {opacity: 0.3;}
-    40% {opacity: 1;}
-    60% {opacity: 1;}
-    100% {opacity: 0.3;}
-}
     </style>
 </head>
-<body class="body00 flex">
-    <div class="portal"></div>
-    <div class="buraco"></div>
-    <div class="divtitulo">
-        <div class="div1">
-            <div class="h1 l1">L</div> 
-            <div class="h1 l2">U</div> 
-            <div class="h1 l3">M</div> 
-            <div class="h1 l4">I</div>
-        </div>
-        <div class="div2">
-            <div class="h1 l1">F</div>
-            <div class="h1 l2">í</div> 
-            <div class="h1 l3">s</div> 
-            <div class="h1 l4">i</div> 
-            <div class="h1 l1">c</div> 
-            <div class="h1 l2">a</div>
-        </div>
-    </div>
-    <a href="/01/" class="start a1">START</a>
-    <a href="/01/" class="start a2">START</a>
+
+<body class="body00">
+    <header class="header00">
+        <h1 class="h100">Lumi Física</h1>
+    </header>
+
+    <main class="main00">
+        <a href="conteudos/" class="cristal" id="cristal1">Conteúdo</a>
+        <a href="jogos/" class="cristal" id="cristal2">Jogos e simuladores</a>
+    </main>
 </body>
 </html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>ENEM 2023) Em uma indústria alimentícia</title>
+        <link rel="stylesheet" href="/lumi/anexoslumi/estilos/style.css">
+        <script src="/lumi/anexoslumi/scripts/script.js" defer></script>
+        <meta name="description" content="Site de Física para ensino básico, ensino médio e ensino superior.">
+    </head>
+    <body>
+        <header class="header02 flex"></header>
+    <main class="main02">
+        <section class="enunciado">
+            <p>ENEM 2023) Em uma indústria alimentícia, para produção de doce de leite, utiliza-se um tacho de parede oca com uma entrada para vapor de água a 120 °C e uma saída para água líquida em equilíbrio com o vapor a 100 °C. Ao passar pela parte oca do tacho, o vapor de água transforma-se em líquido, liberando energia. A parede transfere essa energia para o interior do tacho, resultando na evaporação de água e consequente concentração do produto. No processo de concentração do produto, é utilizada energia proveniente.</p>
+        <div class="dica">
+            <p>Queremos luz com comprimento de onda <strong>pequeno</strong> para ter espaço para <strong>mais</strong> informação.</p>
+            <button onclick="fdica(0)">Fechar</button>
+        </div>
+
+        <div class="opções">
+            <input type="radio" name="opt" id="0" value="0">
+            <label for="0" class="label-opt" id="label0">(A) somente do calor latente de vaporização.</label>
+
+            <input type="radio" name="opt" id="1" value="0">
+            <label for="1" class="label-opt" id="label1">(B) somente do calor latente de condensação.</label>
+
+            <input type="radio" name="opt" id="2" value="0">
+            <label for="2" class="label-opt" id="label2">(C) do calor sensível e do calor latente de vaporização.</label>
+
+            <input type="radio" name="opt" id="3" value="1">
+            <label for="3" class="label-opt" id="label3">(D) do calor sensível e do calor latente de condensação.</label>
+
+            <input type="radio" name="opt" id="4" value="0">
+            <label for="4" class="label-opt" id="label4">(E) do calor latente de condensação e do calor latente de vaporização.</label>
+        </div>
+        
+        <button class="bresponder" onclick="fgabarito()">Responder</button>
+          
+        </section>
+
+
+
+        <section class="gabarito">
+
+        <div class="flex" id="resposta"></div>
+
+        <div class="bsreso">
+            <input type="radio" name="breso" class="breso" id="rc" onclick="fabrir(0)">
+            <label for="rc" class="label-breso" id="labelrc">Resposta Curta</label>
+
+            <input type="radio" name="breso" class="breso" id="rl" onclick="fabrir(1)">
+            <label for="rl" class="label-breso" id="labelrl">Resposta Completa</label>
+
+            <input type="radio" name="breso" class="breso" id="vdo" onclick="fabrir(2)">
+            <label for="vdo" class="label-breso" id="labelvdo">Resposta em Vídeo</label>
+        </div>
+
+        <div class="reso" id="reso1" style="visibility: visible; opacity: 1">
+            <p>Primeiro o vapor de água diminui a temperatura diminui de 120 C (cede calor sensível), depois o vapor transforma em água (calor latente).</p>
+            <p>Gabarito: D) do calor sensível e do calor latente de condensação.</p>
+        </div>
+        <div class="reso" id="reso2">
+           <p>Calor é energia térmica que está sendo transferida.</p>
+
+            <p>Se eu colocar a mão no gelo eu vou ceder calor para o gelo e minha mão vai ficar mais fria. O gelo recebe calor e derrete.</p>
+
+            <p>Se eu colocar a mão numa panela quente, eu vou receber calor e me queimar.</p>
+
+            <p>Calor sensível é o calor que se recebe/cede e altera a temperatura.</p>
+
+            <p>Calor latente é o calor que se recebe/cede e altera o estado físico.</p>
+
+            <p>Nessa questão o enunciado conta uma situação onde a água entra como vapor e sai como água líquida, ou seja, ocorre uma condensação.</p>
+
+            <p>Então o vapor diminui sua temperatura (cede calor sensível) e depois condensa (cede calor latente).</p>
+        </div>
+        <div class="reso" id="reso3">
+            <div class="bsreso">
+                <input type="radio" name="bvdo" class="breso" id="hori" onclick="fvdo(0)"  checked>
+                <label class="label-breso" for="hori">Horizontal</label>
+                <input type="radio" name="bvdo" class="breso" id="vert" onclick="fvdo(1)">
+                <label class="label-breso" for="vert">Vertical</label>
+            </div>
+            <iframe class="video" id="vdo1" src="https://www.youtube.com/embed/rVbyY2xMaLs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
+            <iframe class="video" id="vdo2" src="https://www.youtube.com/embed/ZtCi-Qtrs9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        </section>
+    </main>
+    <footer class="footer02"></footer>
+</body>
+</html>
