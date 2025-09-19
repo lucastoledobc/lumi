@@ -3,23 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/lumi/anexos/estilos/style.css"> 
-    <script src="/lumi/anexos/scripts/script.js" defer></script>
+    <link rel="stylesheet" href="/lumi/anexos/style.css"> 
+    <script src="/lumi/anexos/script.js" defer></script>
 
     <title>Jogos Lumi Física</title>
     <meta name="description" content="Jogos de Física e Matemática">
     <style>
-* {
-    color: var(--branco);
-}
-
-main {            
-    width: clamp(300px, 90%, 1200px);
-    height: 90svh;
-    overflow-y: scroll;
-    scrollbar-width: none;
-}
-
 .botao-barra {
     background-color: var(--trans);
     cursor: pointer;
@@ -125,31 +114,26 @@ button > img {
 }
     </style>
 </head>
-<body>
-    <h1 class="h103 flex">Lista de Jogos</h1>
-    <main>
+<body class="body00">
+    <header class="header00">
+        <h1 class="h100 flex">Lista de Jogos</h1>
+    </header>
+
+    <main class="main00">
         <section class="section3" id="s0">
-            <button class="botao-barra">Ciência<img class="imgbotao" src="/lumi/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
+            <button class="botao-barra">Ciência<img class="imgbotao" src="/lumi/anexos/img/icon-seta-direita-outline.svg" alt="Abrir"></button>
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde id rem possimus, in pariatur dolore eveniet tempore veniam porro molestiae quidem quibusdam error officia harum, ullam facere odit. In, consectetur.</p>
         </section>
 
         <section class="section3" id="s1">
-            <button class="botao-barra">Teoria e Conceitos<img class="imgbotao" src="/lumi/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
+            <button class="botao-barra">Matemática<img class="imgbotao" src="/lumi/anexos/img/icon-seta-direita-outline.svg" alt="Abrir"></button>
 
         </section>
 
         <section class="section3" id="s2">
-            <button class="botao-barra">Mecânica de Sólidos<img class="imgbotao" src="/lumi/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
+            <button class="botao-barra">Física<img class="imgbotao" src="/lumi/anexos/img/icon-seta-direita-outline.svg" alt="Abrir"></button>
 
-        </section>
-
-        <section class="section3" id="s3">
-            <button class="botao-barra">Mecânica de Fluídos<img class="imgbotao" src="/lumi/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>            
-        </section>
-
-        <section class="section3" id="s4">
-            <button class="botao-barra">Astronomia<img class="imgbotao" src="/lumi/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
 
             <div class="jogos">
                 <a class="link-jogo js4" href="04/sistema_solar.html">
@@ -161,59 +145,30 @@ button > img {
                     Sistema Solar
                 </a>
             </div>
-        </section>
-
-        <section class="section3" id="s5">
-            <button class="botao-barra">Termologia<img class="imgbotao" src="/lumi/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
 
             <div class="jogos">
                 <a class="link-jogo js5" href="05/calor.html">
                 <div class="img03" id="cores"></div>
                 Calor
                 </a>
-            </div>    
-        </section>
-
-        <section class="section3" id="s6">
-            <button class="botao-barra">Ondulatória<img class="imgbotao" src="/lumi/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
-
-        </section>
-
-        <section class="section3" id="s7">
-            <button class="botao-barra">Óptica<img class="imgbotao" src="/lumi/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
-
-        <div class="jogos">
-                <a class="link-jogo js7" href="07/cores.html">
-                <div class="img03" id="cores"></div>
-                Cores
-                </a>
-        </div>
-        </section>
-
-        <section class="section3" id="s8">
-            <button class="botao-barra">Eletromagntismo<img class="imgbotao" src="/lumi/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
-
-        </section>
-        
-        <section class="section3" id="s9">
-            <button class="botao-barra">Moderna<img class="imgbotao" src="/lumi/anexos/midias/icon-seta-direita-outline.svg" alt="Abrir"></button>
+            </div>
             
-
+            <div class="jogos">
+                    <a class="link-jogo js7" href="07/cores.html">
+                    <div class="img03" id="cores"></div>
+                    Cores
+                    </a>
+            </div>
         </section>
+
+        <section class="section3" id="s3">
+            <button class="botao-barra">Tecnologia<img class="imgbotao" src="/lumi/anexos/img/icon-seta-direita-outline.svg" alt="Abrir"></button>            
+        </section>        
     </main>
     
     <section id="botoes-icones"></section>
 
-    <dialog class="popup" id="ajuda" style="display: none;">
-        <h1 class="h1-ajuda">Jogos Lumi Física</h1>
-        <section class="mid-ajuda">
-            <h2 class="h2-ajuda">Seja bem-vindo!</h2>
-            <p>Professor(a), quase todos jogos possuem uma sala experimental, aproveite. </p>
-        </section>
-        <div class="botao-ajuda"><button class="botao2" onclick="fstart()">Fechar</button></div>
-        <section class="bot-ajuda"><button class="agradecimento">Agradecimentos</button>
-        </section>
-    </dialog>
+    <footer class="footer00"></footer>
 </body>
 
 <script>
@@ -253,7 +208,7 @@ for (let i = 0, j = section.length; i<j; i++) {
         
         if (section["s"+i].style.maxHeight == '3rem') {
             section["s"+i].style.maxHeight = '100rem';
-            imgbotao[i].src = '/lumi/anexos/midias/icon-seta-baixo-outline.svg';
+            imgbotao[i].src = '/lumi/anexos/img/icon-seta-baixo-outline.svg';
 
             for(let k of jogos){
                 k.style.opacity = '1';
@@ -268,7 +223,7 @@ for (let i = 0, j = section.length; i<j; i++) {
                 k.style.opacity = '0';
             }
             section["s"+i].style.maxHeight = '3rem';
-            imgbotao[i].src = '/lumi/anexos/midias/icon-seta-direita-outline.svg';
+            imgbotao[i].src = '/lumi/anexos/img/icon-seta-direita-outline.svg';
         }
     });
 }

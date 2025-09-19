@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
     font-family: DynaPuff;
-    src: url(fontes/DynaPuff-VariableFont_wdth\,wght.ttf);
+    src: url(fontes/GAME_glm.ttf);
 }
 @font-face {
     font-family: EBGaramond;
@@ -48,12 +48,6 @@
     scroll-behavior: smooth;
     scrollbar-width: none;
 }
-
-
-
-/* 01 */
-/* 01 */
-/* 01 */
 html {
     background-color: #000;
     background-image: url(/lumi/anexos/img/fundo-star.gif);
@@ -103,6 +97,56 @@ input[type='email'], textarea {
 
 
 
+/* 01 */
+/* 01 */
+/* 01 */
+.body00 * {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.header00 {
+    min-height: 6rem;
+    padding: 1rem;
+}
+.h100 {
+    font-size: clamp(1rem, 8vw, 3rem);
+    text-align: center;
+    text-wrap: balance;
+    height: 10svh;
+    padding: 0 1rem;
+    overflow: clip;
+}
+.main00 {
+    min-height: calc(100% - 10rem);
+}
+.cristal {
+    padding: 1rem;
+    border: double #fff;
+    border-radius: 0.5rem;
+}
+
+.footer00 {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    height: 2rem;
+    padding: 0 1rem;
+    
+    font-size: 0.9rem;
+    text-align: end;
+}
+.footer00 * {
+    font-size: 0.9rem;
+}
+.footer00 > div > a {
+    text-decoration: underline;
+}
+/* .footer00 *  */
+
+
 /* 02 */
 /* 02 */
 /* 02 */
@@ -117,3 +161,128 @@ input[type='email'], textarea {
 /* 03 */
 /* 03 */
 /* 03 */
+.body03 * {
+    color: #fff;
+    scrollbar-width: none;
+}
+
+.h103 {
+    font-size: clamp(1rem, 3vh, 2rem);
+    text-align: center;
+    text-wrap: balance;
+    height: 10svh;
+    padding: 0 1rem;
+    overflow: clip;
+}
+.h203 {
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+    text-align: center;
+    text-decoration: underline;
+    padding: 0.5rem;
+}
+
+.main03 {
+    width: calc(90% - 10vw);
+    height: 90svh;
+    padding: 0 5vw;
+    overflow: clip;
+}
+.section3 {
+    overflow-y: clip;
+    border: thick double var(--branco);
+    border-radius: 1rem;
+    margin: 1.5rem 0;
+    transform: translate(-100%);
+    opacity: 0;
+    transition: max-height 1s, transform 1s, opacity 1s;
+}
+
+.botao03 {
+    background-color: var(--preto);
+    font-family: var(--fon1);
+    text-wrap: nowrap;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.select03 {
+    background-color: var(--preto);
+    font-size: clamp(1rem, 5vw, 2rem);
+    padding: 0.5rem;
+    border: 2px solid var(--branco);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* BOTOES */
+.botao-icone {
+    position: absolute;
+    background-color: var(--preto);
+    aspect-ratio: 1;
+    border-radius: 5px;
+}
+.icon-botao {
+    background-color: var(--branco);
+    width: clamp(1rem, 7vw, 2rem);
+    filter: invert(100%);
+}
+#bback {
+    left: var(--bm);
+    top: var(--bm);
+}
+#bconf, #bajuda, #bvolu, #bdark {
+    top: var(--bm);
+    right: var(--bm);
+}
+#bmaxi {
+    bottom: var(--bm);
+    right: var(--bm);
+    opacity: 50%;
+}
+
+/* POP UP */
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    background-color: var(--preto);
+    padding: 0 1rem;
+    border: 3px solid var(--branco);
+    border-radius: 15px;
+}
+#ajuda {
+    display: block;
+    width: 80%;
+    height: 80%;
+}
+
+.h1-ajuda {
+    font: clamp(1rem, 7vw, 2rem) var(--fon1);
+    text-align: center;
+    text-wrap: balance;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+}
+.mid-ajuda {
+    height: 75%;
+    overflow: scroll;
+}
+
+.botao-ajuda {
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bot-ajuda {
+    position: absolute;
+    bottom: var(--bm);
+    left: var(--bm);
+}
+.bot-ajuda , .bot-ajuda * {
+    font-size: 1rem;
+}

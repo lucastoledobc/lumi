@@ -3,60 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/lumi/anexos/estilos/style.css">
-    <script src="/lumi/anexos/scripts/script.js" defer></script>
+    <link rel="stylesheet" href="/lumi/anexos/style.css">
+    <script src="/lumi/anexos/script.js" defer></script>
 
     <title>Conteúdos</title>
     <meta name="description" content="Conteúdo e questões de Física para ensino básico, ensino médio e ensino superior.">
     <style>
-.botoes {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-
-    min-height: 50svh;
-    width: 100%;    
-}
-
-.descri {
-    width: 80%;
-
-    background-color: #000;
-    padding: 1rem 1rem;
-    border: thick double var(--branco);
-    border-radius: 1rem;
-    margin: auto;
-
-    animation: ani-opacity 1s forwards, altura 1s forwards 0.5s;
-    opacity: 0;
-    max-height: 0rem;
-}
-@keyframes altura {
-    0%{max-height: 0rem; background-color: #fff;}
-    100%{max-height: 10rem; background-color: #000;}
-}
-.descri > * {
-    opacity: 0;
-    animation: 1s ani-opacity forwards 1s;
-}
     </style>
 </head>
-<body class="body-02-01">
-    <header class="header-02-01 flex">
-        <a href="/01/" class="h2-02-01">Conteúdos</a>
+<body class="body00">
+    <header class="header00 flex">
+        <h1 class="h100">Conteúdos</h1>        
     </header>
-    <main class="main-02-01">
+    <main class="main00">
         <section class="botoes">
             <a href="01_teoria/" class="cristal" onmouseenter="flink(1)" onmouseleave="flink(0)">Teoria</a>
             <a href="02_pratica/" class="cristal" onmouseenter="flink(2)" onmouseleave="flink(0)">Prática</a>
             <a href="03_buscar/" class="cristal" onmouseenter="flink(3)" onmouseleave="flink(0)">Buscar</a>
         </section>
-        <section class="descri">
-            <p>Teoria: veja tema, conceitos, leis ou teorias físicas.</p>
-            <p>Prática: questões/exercícios de física.</p>
-            <p>Buscar: proucure por uma questão ou tema específico.</p>
-        </section>
     </main>
+    <footer class="footer00"></footer>
 </body>
 </html>
