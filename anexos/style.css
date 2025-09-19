@@ -1,0 +1,119 @@
+@charset "UTF-8";
+@font-face {
+    font-family: DynaPuff;
+    src: url(fontes/DynaPuff-VariableFont_wdth\,wght.ttf);
+}
+@font-face {
+    font-family: EBGaramond;
+    src: url(fontes/EBGaramond-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Lato;
+    src: url(fontes/Lato-Regular.ttf);
+}
+
+:root {
+    --fon1: DynaPuff;
+    --fon2: EBGaramond;
+    --fon3: Lato;
+
+    --preto: #000000;
+    --branco: #ffffff;
+    --trans: #00000000;
+    --fundob: #f6f6f6;
+    --fundop: #252525;
+
+    --azul1: #B7E8FD;
+    --azul2: #5DCBFA;
+    --azul3: #07ADF5;
+    --azul4: #056F9C;
+    --azul5: #023145;
+
+    --amar1: #FDE8B7;
+    --amar2: #FACB5D;
+    --amar3: #F5AD07;
+    --amar4: #9C6F05;
+    --amar5: #453102;
+
+    --verd1: #1be41b;
+    --verd2: #1b9c1b;
+    --verm1: #E40909;
+    --verm2: #9c1b1b;
+}
+
+* {
+    font: clamp(1rem, 5vw, 1.1rem) var(--fon2), var(--fon3), 'Times New Roman', Times, serif;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+
+
+/* 01 */
+/* 01 */
+/* 01 */
+html {
+    background-color: #000;
+    background-image: url(/lumi/anexos/img/fundo-star.gif);
+    background-position: center;
+    background-size: cover;
+    overflow: clip;
+}
+body {
+    height: 100svh;
+    overflow: scroll;
+}
+main {
+    min-width: 300px;
+    width: calc(100% - 2rem);
+    max-width: 1200px;
+    margin: auto;
+}
+h1 {
+    font-family: var(--fon1);
+}
+p {
+    line-height: 1.8rem;
+    text-align: justify;
+    margin: 0.3rem 0;
+}
+address {
+    display: inline-block;
+}
+button {
+    cursor: pointer;
+}
+img {
+    display: block;
+}
+input[type='email'], textarea {
+    display: block;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    text-wrap: wrap;
+    field-sizing: content;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* 02 */
+/* 02 */
+/* 02 */
+
+
+
+
+
+
+
+
+/* 03 */
+/* 03 */
+/* 03 */

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Lumi</title>
-    <link rel="stylesheet" href="../lumi/anexoslumi/estilos/style.css" media="all">
-    <script src="../lumi/anexoslumi/scripts/script.js" defer></script>
+    <link rel="stylesheet" href="../lumi/anexos/estilos/style.css" media="all">
+    <script src="../lumi/anexos/scripts/script.js" defer></script>
 
 </head>
 <body>

@@ -1,7 +1,7 @@
     // HEAD
 
 document.head.innerHTML += `    
-    <link rel="shortcut icon" href="/lumi/anexoslumi/midias/favicon-32x32.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/lumi/anexos/midias/favicon-32x32.png" type="image/x-icon">
 `;
 
 
@@ -24,7 +24,7 @@ pesquisar.addEventListener('input', e => {
         user.element.classList.toggle('hide', !isVisible);
     })
 })
-fetch('/lumi/anexoslumi/scripts/users.json')
+fetch('/lumi/anexos/scripts/users.json')
 .then(res => res.json())
 .then(data => {
     users = data.map(user => {
@@ -157,25 +157,25 @@ if (botoesIcones != null) {
     botoesIcones.innerHTML = `
     <button type="button" class="botao-icone" id="bback">
         <a href="/03/index.html"> 
-        <img src="/lumi/anexoslumi/midias/icon-back.svg" class="icon-botao" id="iback" alt="Voltar">
+        <img src="/lumi/anexos/midias/icon-back.svg" class="icon-botao" id="iback" alt="Voltar">
         </a>
     </button>
 
     <button type="button" class="botao-icone" id="bdark" onclick="fdark()">
-        <img src="/lumi/anexoslumi/midias/icon-dark1.svg" class="icon-botao" id="idark" alt="Modo escuro">
+        <img src="/lumi/anexos/midias/icon-dark1.svg" class="icon-botao" id="idark" alt="Modo escuro">
     </button>
     <button type="button" class="botao-icone" id="bvolu" onclick="fvolu()">
-        <img src="/lumi/anexoslumi/midias/icon-volume-3.svg" class="icon-botao" id="ivolu" alt="Mute">
+        <img src="/lumi/anexos/midias/icon-volume-3.svg" class="icon-botao" id="ivolu" alt="Mute">
     </button>
     <button type="button"  class="botao-icone"id="bajuda" onclick="fajuda()">
-        <img src="/lumi/anexoslumi/midias/icon-help.svg"  class="icon-botao id="iajuda" alt="Ajuda">
+        <img src="/lumi/anexos/midias/icon-help.svg"  class="icon-botao id="iajuda" alt="Ajuda">
     </button>
     <button type="button" class="botao-icone" id="bconf" onclick="fconf()">
-        <img src="/lumi/anexoslumi/midias/icon-conf-outline.svg" class="icon-botao" id="iconf" alt="Configuração">
+        <img src="/lumi/anexos/midias/icon-conf-outline.svg" class="icon-botao" id="iconf" alt="Configuração">
     </button>
 
     <button type="button" class="botao-icone" id="bmaxi" onclick="fmaxi()">
-        <img src="/lumi/anexoslumi/midias/icon-maxi.svg" class="icon-botao" id="imaxi" alt="Maximizar">
+        <img src="/lumi/anexos/midias/icon-maxi.svg" class="icon-botao" id="imaxi" alt="Maximizar">
     </button>
 `;
 
@@ -186,8 +186,8 @@ function fconf() {
     bajuda = document.getElementById('bajuda');
     bvolu = document.getElementById('bvolu');
 
-    if (bconf.innerHTML != '<img src="/lumi/anexoslumi/midias/icon-close.svg" class="icon-botao" id="iconf" alt="Fechar">') {
-        bconf.innerHTML = `<img src="/lumi/anexoslumi/midias/icon-close.svg" class="icon-botao" id="iconf" alt="Fechar">`;
+    if (bconf.innerHTML != '<img src="/lumi/anexos/midias/icon-close.svg" class="icon-botao" id="iconf" alt="Fechar">') {
+        bconf.innerHTML = `<img src="/lumi/anexos/midias/icon-close.svg" class="icon-botao" id="iconf" alt="Fechar">`;
         
         bajuda.style.top = 'calc(var(--bm) * 4 + clamp(1rem, 7vw, 2rem))';
         bajuda.style.opacity = '1';
@@ -198,7 +198,7 @@ function fconf() {
         bvolu.style.transition = '1s';
     } else {        
         bconf.innerHTML = `
-        <img src="/lumi/anexoslumi/midias/icon-conf-outline.svg" class="icon-botao" id="iconf" alt="Configuração">
+        <img src="/lumi/anexos/midias/icon-conf-outline.svg" class="icon-botao" id="iconf" alt="Configuração">
         `;
 
         bajuda.style.top = '10px';
@@ -219,12 +219,12 @@ function fajuda() {
 
 // Volume
 function fvolu() {
-    if (bvolu.innerHTML != `<img src="/lumi/anexoslumi/midias/icon-volume-mute.svg" class="icon-botao" id="ivolu" alt="Volume">`) {
+    if (bvolu.innerHTML != `<img src="/lumi/anexos/midias/icon-volume-mute.svg" class="icon-botao" id="ivolu" alt="Volume">`) {
             document.querySelectorAll("video, audio").forEach((elem) => elem.volume = 0);
-            bvolu.innerHTML = `<img src="/lumi/anexoslumi/midias/icon-volume-mute.svg" class="icon-botao" id="ivolu" alt="Volume">`;
+            bvolu.innerHTML = `<img src="/lumi/anexos/midias/icon-volume-mute.svg" class="icon-botao" id="ivolu" alt="Volume">`;
         } else {
             document.querySelectorAll("video, audio").forEach((elem) => elem.volume = 1);
-            bvolu.innerHTML = `<img src="/lumi/anexoslumi/midias/icon-volume-3.svg" class="icon-botao" id="ivolu" alt="Mute">`;
+            bvolu.innerHTML = `<img src="/lumi/anexos/midias/icon-volume-3.svg" class="icon-botao" id="ivolu" alt="Mute">`;
     }
 }
 
@@ -235,15 +235,15 @@ function fmaxi() {
     let tela = document.documentElement;
     if (tela.requestFullscreen) {
         tela.requestFullscreen(), img.innerHTML = `
-        <img src="/lumi/anexoslumi/midias/icon-mini.svg" class="icon-botao" id="imaxi" onclick="fmini()" alt="Minimizar">
+        <img src="/lumi/anexos/midias/icon-mini.svg" class="icon-botao" id="imaxi" onclick="fmini()" alt="Minimizar">
         `;
         } else if (tela.webkitRequestFullscreen) { /* Safari */
         tela.webkitRequestFullscreen(), img.innerHTML = `
-        <img src="/lumi/anexoslumi/midias/icon-mini.svg" class="icon-botao" id="imaxi" onclick="fmini()" alt="Minimizar">
+        <img src="/lumi/anexos/midias/icon-mini.svg" class="icon-botao" id="imaxi" onclick="fmini()" alt="Minimizar">
         `;
         } else if (tela.msRequestFullscreen) { /* IE11 */
         tela.msRequestFullscreen(), img.innerHTML = `
-        <img src="/lumi/anexoslumi/midias/icon-mini.svg" class="icon-botao" id="imaxi" onclick="fmini()" alt="Minimizar">
+        <img src="/lumi/anexos/midias/icon-mini.svg" class="icon-botao" id="imaxi" onclick="fmini()" alt="Minimizar">
         `;
         }
 }
@@ -251,15 +251,15 @@ function fmini() {
     let img = document.getElementById("bmaxi");
     if (document.exitFullscreen) {
         document.exitFullscreen(), img.innerHTML = `
-        <img src="/lumi/anexoslumi/midias/icon-maxi.svg" class="icon-botao" id="imaxi" onclick="fmaxi()" alt="Maximizar">
+        <img src="/lumi/anexos/midias/icon-maxi.svg" class="icon-botao" id="imaxi" onclick="fmaxi()" alt="Maximizar">
         `;
     } else if (document.webkitExitFullscreen) { /* Safari */
         document.webkitExitFullscreen(), img.innerHTML = `
-        <img src="/lumi/anexoslumi/midias/icon-maxi.svg" class="icon-botao" id="imaxi" onclick="fmaxi()" alt="Maximizar">
+        <img src="/lumi/anexos/midias/icon-maxi.svg" class="icon-botao" id="imaxi" onclick="fmaxi()" alt="Maximizar">
         `;
     } else if (document.msExitFullscreen) { /* IE11 */
         document.msExitFullscreen(), img.innerHTML = `
-        <img src="/lumi/anexoslumi/midias/icon-maxi.svg" class="icon-botao" id="imaxi" onclick="fmaxi()" alt="Maximizar">
+        <img src="/lumi/anexos/midias/icon-maxi.svg" class="icon-botao" id="imaxi" onclick="fmaxi()" alt="Maximizar">
         `;
     }
 } 
@@ -271,7 +271,7 @@ ganhar = document.getElementById('ganhar');
 if (ganhar != null) {
     ganhar.innerHTML = `<h1 class="h1-ganhar">Você acertou!</h1>
                 <button class="botao" onclick="fjogar()">Jogar de novo</button>
-        <audio src="/lumi/anexoslumi/midias/sound/erro1.wav"></audio>
+        <audio src="/lumi/anexos/midias/sound/erro1.wav"></audio>
     `;
 }
 

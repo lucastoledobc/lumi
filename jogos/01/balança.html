@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/lumi/anexoslumi/estilos/game.css">    
-    <script src="/lumi/anexoslumi/scripts/game.js" defer></script>
+    <link rel="stylesheet" href="/lumi/anexos/estilos/game.css">    
+    <script src="/lumi/anexos/scripts/game.js" defer></script>
     
     <title>Equilíbrio</title>
     <meta name="description" content="Nesse jogo descubra o peso necessário para manter o equilíbrio.">
@@ -13,7 +13,7 @@
             background-attachment: fixed;
             background-position: center;
             background-size: cover;
-            background-image: url(/lumi/anexoslumi/midias/fundo-casa-vermelho.svg);
+            background-image: url(/lumi/anexos/midias/fundo-casa-vermelho.svg);
         } */
         /* #barra {
             height: 6svh;
@@ -100,7 +100,7 @@
         </section>
         <section class="mid">
             <div class="triangulo"></div>
-            <div class="barra"><img src="/lumi/anexoslumi/midias/bag.svg" alt="bolsa" id="bag"></div>
+            <div class="barra"><img src="/lumi/anexos/midias/bag.svg" alt="bolsa" id="bag"></div>
         </section>
         <section class="bot">
 
@@ -127,13 +127,13 @@
     select = document.getElementById("nivel");
     select.addEventListener("change", function() {
         if (select.value == 1) {
-            document.body.style.backgroundImage = 'url(/lumi/anexoslumi/midias/fundo-casa-vermelho.svg)';
+            document.body.style.backgroundImage = 'url(/lumi/anexos/midias/fundo-casa-vermelho.svg)';
         }
         else if (select.value == 2) {
-            document.body.style.backgroundImage = 'url(/lumi/anexoslumi/midias/fundo-casa-amarelo.svg)';
+            document.body.style.backgroundImage = 'url(/lumi/anexos/midias/fundo-casa-amarelo.svg)';
         } 
         else if (select.value == 3) {
-            document.body.style.backgroundImage = 'url(/lumi/anexoslumi/midias/fundo-casa-verde.svg)';
+            document.body.style.backgroundImage = 'url(/lumi/anexos/midias/fundo-casa-verde.svg)';
         }
     })
 
