@@ -29,7 +29,7 @@ pesquisar.addEventListener('input', e => {
         user.element.classList.toggle('hide', !isVisible);
     })
 })
-fetch('/lumi/anexos/scripts/users.json')
+fetch('/lumi/anexos/users.json')
 .then(res => res.json())
 .then(data => {
     users = data.map(user => {
