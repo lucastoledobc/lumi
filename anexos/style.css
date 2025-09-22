@@ -64,9 +64,14 @@ main {
     width: calc(100% - 2rem);
     max-width: 1200px;
     margin: auto;
+    min-height: calc(100% - 10rem);
 }
 h1 {
     font-family: var(--fon1);
+}
+a {
+    color: #000;
+    text-decoration: none;
 }
 p {
     line-height: 1.8rem;
@@ -125,7 +130,6 @@ input[type='email'], textarea {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    min-height: calc(100% - 10rem);
 }
 .cristal {
     background-color: #000;
@@ -161,10 +165,12 @@ input[type='email'], textarea {
     height: 2rem;
     padding: 0 1rem;
     
+    color: #fff;
     font-size: 0.9rem;
     text-align: end;
 }
 .footer00 * {
+    color: #fff;
     font-size: 0.9rem;
 }
 .footer00 > div > a {
@@ -176,16 +182,15 @@ input[type='email'], textarea {
 /* 02 */
 /* 02 */
 /* 02 */
-.body-02-02 {
+.body02 {
     position: relative;
-    background: #a0a0a0 url(/lumi/anexos/img/fundo-azul.png) fixed center;
     animation: 1s ani-left forwards;
     left: -100%;
 }
-.main-02-02 {
+.main02 {
     padding: 1rem;
 }
-.section-02-02 {
+.section02 {
     background-color: #f0f0f0;
     padding: 1rem;
     border-radius: 1rem;
@@ -211,11 +216,28 @@ input[type='email'], textarea {
 #sect-0206 {
     animation: lado05 0.75s forwards 1.5s;
 }
-.section-02-02 > a, .section-02-02 > a:visited, .section-02-02 > a::before {
+.section02 > a, .section02 > a:visited, .section02 > a::before {
     color: var(--preto);
     content: "• ";
     text-decoration: none;
 }
+
+/* TEORIA */
+
+.body02-teoria {
+    background: var(--azul3) url(/lumi/anexos/img/fundo-azul3.png)
+}
+.body02-matematica {
+    background: var(--azul3) url(/lumi/anexos/img/fundo-amar1.png)
+}
+
+
+/* PRATICA */
+
+.body02-pratica {
+    background: var(--azul3) url(/lumi/anexos/img/fundo-azul4.png)
+}
+
 
 /* CARD */
 .div-card {
@@ -234,9 +256,6 @@ input[type='email'], textarea {
 }
 
 /* FUNDO */
-.body02 {
-    background: var(--branco) url(/lumi/anexos/img/fundo-1.png) fixed center;
-}
 .header02, .footer02 {
     width: clamp(300px, 100%, 1200px);
 }
@@ -263,7 +282,7 @@ input[type='email'], textarea {
     height: 3svh;
 }
 
-.main02 {
+.main02-02 {
     background: var(--branco) url(/lumi/anexos/img/fundo-1.png) fixed center;
     height: 90svh;
     overflow-y: scroll;

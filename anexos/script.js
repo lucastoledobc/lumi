@@ -7,47 +7,8 @@ document.head.innerHTML += `
     // FOOTER
 const footer0 = document.getElementsByClassName('footer00')[0];
 footer0.innerHTML += `
-    <div>Criado por <a href="https://lucastoledobc.github.io/projetos/">Lucas Toledo</a></div>
+    <div>Criado por <a href="https://lucastoledobc.github.io/projetos/" target="blank">Lucas Toledo</a></div>
 `;
-
-/* 01 */
-/* 01 */
-/* 01 */
-
-// Search
-pesquisar = document.getElementById('pesquisar');
-if (pesquisar != null) {
-footer = document.getElementsByTagName("footer")[0];
-userCardTemplate = document.querySelector('template');
-pesquisaResultado = document.querySelector('[result]');
-users = [];
-
-pesquisar.addEventListener('input', e => {
-    const value = e.target.value;
-    users.forEach(user => {
-        const isVisible = user.name.includes(value) || user.email.includes(value);
-        user.element.classList.toggle('hide', !isVisible);
-    })
-})
-fetch('/lumi/anexos/users.json')
-.then(res => res.json())
-.then(data => {
-    users = data.map(user => {
-    // data.forEach(user => {
-        card = userCardTemplate.content.cloneNode(true).children[0];
-        pesquisarh = card.querySelector('[nome]');
-        pesquisarh.textContent = user.name;
-        pesquisarb = card.querySelector('[email]');
-        pesquisarb.textContent = user.email;
-        pesquisaResultado.append(card);
-        return {
-            name: user.name,
-            email: user.email,
-            element: card
-        }
-    })
-})
-}
 
 
 
@@ -66,26 +27,6 @@ if (header21 != null) {
     `;
 }
 
-
-
-function flink(x) {
-    descri = document.getElementById('descri');
-    if (x == 0) {
-        descri.innerHTML = `
-            <p>Teoria: veja tema, conceitos, leis ou teorias físicas.</p>
-            <p>Prática: questões/exercícios de física.</p>
-            <p>Buscar: proucure por uma questão ou tema específico.</p>`;
-    }   
-    if (x == 1) {
-        descri.textContent = `Encontre textos e vídeos sobre conteúdos de física, como cinemática, lei de Ohm e mais.`;
-    }
-    if (x == 2) {
-        descri.textContent = `Encontre exercícios e questões de vestibulares sobre física, como ENEM, UERJ e mais.`;
-    }
-    if (x == 3) {
-        descri.textContent = `Busque por um tema ou uma questão em específico.`;
-    }
-}
 
 function fgabarito() {
     document.getElementsByClassName('gabarito')[0].style.display = 'block';

@@ -7,8 +7,11 @@
     <script src="/lumi/anexos/script.js" defer></script>
 
     <title>Jogos Lumi Física</title>
-    <meta name="description" content="Jogos de Física e Matemática">
+    <meta name="description" content="Jogos e simuladores de Física e Matemática">
     <style>
+main {
+    min-height: calc(100% - 10rem);
+}
 .botao-barra {
     background-color: var(--trans);
     cursor: pointer;
@@ -32,7 +35,7 @@ button > img {
 .jogos {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: start;
     flex-wrap: wrap;
     padding: 0 1rem 1rem 1rem;
 }
@@ -121,14 +124,15 @@ button > img {
 }
     </style>
 </head>
+
 <body class="body00">
     <header class="header00">
         <h1 class="h100 flex">Lista de Jogos</h1>
     </header>
 
-    <main class="main0">
+    <main>
         <div class="jogos">
-            <a class="link-jogo js2" href="fisica/sistema_solar.html">
+            <a class="link-jogo js2" href="sistema_solar.html">
                 <div class="img04" id="sss">
                     <div id="eixo2"><div id="terra"><div id="lua"></div>
                         </div>
@@ -136,7 +140,7 @@ button > img {
                 </div>
                 Sistema Solar
             </a>
-            <a class="link-jogo js2" href="fisica/cores.html">
+            <a class="link-jogo js2" href="cores.html">
                 <div class="img03" id="cores"></div>
                 Cores
             </a>
@@ -147,16 +151,9 @@ button > img {
 </body>
 
 <script>
-ajuda = document.getElementById('ajuda');
 section = document.getElementsByClassName("section3");
 botaoBarra = document.getElementsByClassName("botao-barra");
 imgbotao = document.getElementsByClassName("imgbotao");
-
-
-
-function fstart() {
-    ajuda.style.display='none';
-}
 
 
 
