@@ -182,13 +182,21 @@ input[type='email'], textarea {
 /* 02 */
 /* 02 */
 /* 02 */
-.body02 {
+.body02-0 {
     position: relative;
     animation: 1s ani-left forwards;
     left: -100%;
 }
-.main02 {
+.header02 {
+    min-height: 8%;
+}
+.header02 > div {
     padding: 1rem;
+}
+
+
+.main02 {
+    min-height: 89%;
 }
 .section02 {
     background-color: #f0f0f0;
@@ -219,15 +227,18 @@ input[type='email'], textarea {
 .section02 > a, .section02 > a:visited, .section02 > a::before {
     color: var(--preto);
     content: "• ";
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 
 .footer02 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 3%;
     background-color: var(--azul5);
-    font-size: 0.8rem;
     text-align: center;
-    padding: 0.2rem 0;
 }
 .footer02 * {
     color: var(--branco);
@@ -250,13 +261,17 @@ input[type='email'], textarea {
     background: var(--azul3) url(/lumi/anexos/img/fundo-cinza.png)
 }
 .header02-teoria {
-    height: 2rem;
-    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header02-teoria * {
+    min-height: 10%;
     border-radius: 1rem;
-    margin: 1rem;
     
     background-color: #f0f0f0;
     font-weight: bold;
+
 }
 
 .main02-teoria {
@@ -268,8 +283,23 @@ input[type='email'], textarea {
 /* PRATICA */
 
 .body02-pratica {
-    background: var(--azul3) url(/lumi/anexos/img/fundo-azul4.png)
+    background: var(--azul3) url(/lumi/anexos/img/fundo-azul5.png)
 }
+
+.header02-pratica {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header02-pratica * {
+    min-height: 10%;
+    border-radius: 1rem;
+    
+    background-color: #f0f0f0;
+    font-weight: bold;
+
+}
+
 
 
 /* CARD */
@@ -288,49 +318,7 @@ input[type='email'], textarea {
     color: #000;
 }
 
-/* FUNDO */
-.header02 {
-    width: clamp(300px, 100%, 1200px);
-}
-.header02 {
-    background: linear-gradient(-30deg, var(--azul5), var(--azul1), var(--azul5));
-    height: 5svh;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-.nav02 {
-    height: 5svh;
-}
-.nav02 > a {
-    font: bold 1.5rem var(--fon1);
-    text-align: center;
-    text-wrap: nowrap;
-    color: var(--branco);
-}
-#search02 {
-    padding: 0.1rem;
-    border-radius: 0.5rem;
-    width: clamp(50px, 90%, 700px);
-    height: 3svh;
-}
 
-.main02-02 {
-    background: var(--branco) url(/lumi/anexos/img/fundo-1.png) fixed center;
-    height: 90svh;
-    overflow-y: scroll;
-    padding: 1rem;
-}
-.grid02 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.update {
-    font-size: 0.98rem;
-    text-align: right;
-    padding: 0.1rem 0.3rem;
-}
 
 /* ENUNCIADO */
 .enunciado {
@@ -421,7 +409,7 @@ input[type="radio"] {
     margin: 1.5rem 0.5rem;
     overflow: hidden;
     transition: all 0.2s ease-in;
-}  
+}
 .bresponder:hover {
     font-weight: 500;
     color: var(--branco);
