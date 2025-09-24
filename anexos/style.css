@@ -182,16 +182,28 @@ input[type='email'], textarea {
 /* 02 */
 /* 02 */
 /* 02 */
-.body02-0 {
+
+/* 00 */
+
+/* 01 */
+.body02-1 {
     position: relative;
     animation: 1s ani-left forwards;
     left: -100%;
 }
+
 .header02 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     min-height: 8%;
 }
 .header02 > div {
     padding: 1rem;
+    border-radius: 1rem;
+    
+    background-color: var(--fundob);
 }
 
 
@@ -260,25 +272,6 @@ input[type='email'], textarea {
 .body02-tech {
     background: var(--azul3) url(/lumi/anexos/img/fundo-cinza.png)
 }
-.header02-teoria {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.header02-teoria * {
-    min-height: 10%;
-    border-radius: 1rem;
-    
-    background-color: #f0f0f0;
-    font-weight: bold;
-
-}
-
-.main02-teoria {
-    min-height: calc(80% - 1rem);
-    margin: 1rem;
-}
-
 
 /* PRATICA */
 
@@ -286,21 +279,14 @@ input[type='email'], textarea {
     background: var(--azul3) url(/lumi/anexos/img/fundo-azul5.png)
 }
 
-.header02-pratica {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+/* 02 */
+
+.main02-2 {
+    border-radius: 0.5rem;
+
+    background-color: var(--fundob);
 }
-.header02-pratica * {
-    min-height: 10%;
-    border-radius: 1rem;
-    
-    background-color: #f0f0f0;
-    font-weight: bold;
-
-}
-
-
 
 /* CARD */
 .div-card {
@@ -464,23 +450,30 @@ input[type="radio"] {
 }
 
 .bsreso {
-    background-color: var(--branco);
     display: flex;
+    align-items: center;
+    justify-content: space-around;
+
     width: 90%;
     padding: 0.8rem 1rem;
     border-radius: 3rem;
-    box-shadow: 0 0 1px var(--azul1), 4px 8px 12px var(--azul5);
     margin: 1rem auto;
+
+    background-color: var(--branco);
+    box-shadow: 0 0 1px var(--azul1), 4px 8px 12px var(--azul5);
 }
 
 .label-breso {
-    background-color: var(--branco);
-    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+
     padding: 0.4rem 1rem;
     border-radius: 3rem;
+
+    background-color: var(--branco);
+    text-align: center;
+
     cursor: pointer;
     transition: 0.25s ease-in;
 }
