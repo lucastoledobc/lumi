@@ -6,9 +6,11 @@ document.head.innerHTML += `
 
     // FOOTER
 const footer0 = document.getElementsByClassName('footer00')[0];
-footer0.innerHTML += `
-    <div>Criado por <a href="https://lucastoledobc.github.io/projetos/" target="blank">Lucas Toledo</a></div>
-`;
+if (footer0 != null) {
+    footer0.innerHTML += `
+        <div>Criado por <a href="https://lucastoledobc.github.io/projetos/" target="blank">Lucas Toledo</a></div>
+    `;
+}
 
 
 
@@ -26,6 +28,10 @@ if (header21 != null) {
         </search>
     `;
 }
+const footer02 = document.getElementsByClassName('footer02')[0];
+footer02.innerHTML += `
+    <div>Criado por <a href="https://lucastoledobc.github.io/projetos/" target="blank">Lucas Toledo</a></div>
+`;
 
 
 function fgabarito() {
@@ -83,11 +89,6 @@ function fdica(x) {
     else {
         dica[x].style.display = 'none';
     }
-}
-
-footer = document.getElementsByClassName("footer02")[0];
-if (footer != null) {
-    footer.innerHTML = `Site criado por Lucas Toledo.`;
 }
 
 

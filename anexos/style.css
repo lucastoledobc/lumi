@@ -176,7 +176,7 @@ input[type='email'], textarea {
 .footer00 > div > a {
     text-decoration: underline;
 }
-/* .footer00 *  */
+
 
 
 /* 02 */
@@ -222,13 +222,46 @@ input[type='email'], textarea {
     text-decoration: none;
 }
 
+
+.footer02 {
+    background-color: var(--azul5);
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0.2rem 0;
+}
+.footer02 * {
+    color: var(--branco);
+    font-size: 0.9rem;
+}
+.footer02 > div > a {
+    text-decoration: underline;
+}
+
+
 /* TEORIA */
 
 .body02-teoria {
     background: var(--azul3) url(/lumi/anexos/img/fundo-azul3.png)
 }
 .body02-matematica {
-    background: var(--azul3) url(/lumi/anexos/img/fundo-amar1.png)
+    background: var(--amar2) url(/lumi/anexos/img/fundo-amar1.png)
+}
+.body02-tech {
+    background: var(--azul3) url(/lumi/anexos/img/fundo-cinza.png)
+}
+.header02-teoria {
+    height: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1rem;
+    
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.main02-teoria {
+    min-height: calc(80% - 1rem);
+    margin: 1rem;
 }
 
 
@@ -256,7 +289,7 @@ input[type='email'], textarea {
 }
 
 /* FUNDO */
-.header02, .footer02 {
+.header02 {
     width: clamp(300px, 100%, 1200px);
 }
 .header02 {
@@ -501,13 +534,6 @@ math {
     max-height: 500px;
 }
 
-.footer02 {
-    background-color: var(--azul5);
-    font-size: 0.8rem;
-    text-align: center;
-    color: var(--branco);
-    padding: 0.2rem 0;
-}
 
 
 
