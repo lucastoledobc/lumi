@@ -17,17 +17,6 @@ if (footer0 != null) {
 /* 02 */
 /* 02 */
 /* 02 */
-header21 = document.getElementsByClassName("header21")[0];
-if (header21 != null) {
-    header21.innerHTML += `
-        <nav class="nav02 flex">
-            <a href="/01/index.html">Lumi Física</a>
-        </nav>
-        <search class="pesquisar flex">
-            <input type="text" name="search" id="search02" placeholder="Pesquisar">
-        </search>
-    `;
-}
 const footer02 = document.getElementsByClassName('footer02')[0];
 footer02.innerHTML += `
     <div>Criado por <a href="https://lucastoledobc.github.io/projetos/" target="blank">Lucas Toledo</a></div>

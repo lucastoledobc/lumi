@@ -197,7 +197,7 @@ input[type='email'], textarea {
     align-items: center;
     justify-content: center;
 
-    min-height: 8%;
+    min-height: 12%;
 }
 .header02 > div {
     padding: 1rem;
@@ -208,7 +208,7 @@ input[type='email'], textarea {
 
 
 .main02 {
-    min-height: 89%;
+    min-height: 85%;
 }
 .section02 {
     background-color: #f0f0f0;
