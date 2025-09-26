@@ -64,7 +64,6 @@ main {
     width: calc(100% - 2rem);
     max-width: 1200px;
     margin: auto;
-    min-height: calc(100% - 10rem);
 }
 h1 {
     font-family: var(--fon1);
@@ -191,6 +190,7 @@ input[type='email'], textarea {
     justify-content: center;
 
     min-height: 12%;
+    margin-bottom: 1rem;
 }
 .header02 > div {
     padding: 1rem;
@@ -201,7 +201,8 @@ input[type='email'], textarea {
 
 
 .main02 {
-    min-height: 85%;
+    min-height: calc(85% - 2rem);
+    margin-top: 1rem;
 }
 .section02 {
     background-color: #f0f0f0;
@@ -231,7 +232,7 @@ input[type='email'], textarea {
 }
 .section02 > a, .section02 > a:visited, .section02 > a::before {
     color: var(--preto);
-    content: "• ";
+    /* content: "• "; */
     text-decoration: underline;
 }
 
@@ -263,8 +264,16 @@ input[type='email'], textarea {
 
 /* BUSCA */
 
-.body02-pratica {
+.body02-busca {
     background: var(--azul3) url(/lumi/anexos/img/fundo-azul1.png)
+}
+
+.main02-busca {
+    background-color: var(--fundob);
+    border-radius: 0.5rem;
+}
+.busca02 {
+    width: 100%;
 }
 
 /* TEORIA */
@@ -285,9 +294,9 @@ input[type='email'], textarea {
     background: var(--azul3) url(/lumi/anexos/img/fundo-azul3.png)
 }
 
-/* ESCOLAR */
+/* ESCOLA */
 
-.body02-material {
+.body02-escola {
     background: var(--azul3) url(/lumi/anexos/img/fundo-azul2.png)
 }
 
@@ -306,11 +315,26 @@ input[type='email'], textarea {
     border-radius: 0.5rem;
 }
 .card {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    grid-template-rows: 1fr 3fr;
+
+    width: 90%;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    margin: 0.5rem auto;
+
+    background-color: var(--branco);
     text-decoration: none;
 }
-.card > h2 {
-    box-shadow: 10px 10px;
+.card > img {
+    width: 5rem;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.card > main {
+    width: 100%;
+    text-align: justify;
 }
 .card:visited {
     color: #000;
