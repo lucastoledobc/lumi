@@ -111,16 +111,16 @@ input[type='email'], textarea {
 
 
 .header00 {
-    min-height: 6rem;
-    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 12%;
 }
 .h100 {
     font-size: clamp(1rem, 8vw, 3rem);
     text-align: center;
     text-wrap: balance;
-    height: 10svh;
-    padding: 0 1rem;
-    overflow: clip;
 }
 
 
@@ -129,6 +129,8 @@ input[type='email'], textarea {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+
+    height: 85%;
 }
 .cristal {
     background-color: #000;
@@ -161,7 +163,7 @@ input[type='email'], textarea {
     align-items: center;
     justify-content: end;
 
-    height: 2rem;
+    height: 3%;
     padding: 0 1rem;
     
     color: #fff;
@@ -202,7 +204,7 @@ input[type='email'], textarea {
 
 .main02 {
     min-height: calc(85% - 2rem);
-    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 .section02 {
     background-color: #f0f0f0;
@@ -242,7 +244,7 @@ input[type='email'], textarea {
     align-items: center;
     justify-content: center;
 
-    min-height: 3%;
+    height: 3%;
     background-color: var(--azul5);
     text-align: center;
 }
@@ -581,6 +583,12 @@ math {
     padding: 0.5rem;
 }
 
+.main03-0 {
+    height: 85%;
+}
+
+
+/* JOGOS */
 .main03 {
     width: calc(90% - 10vw);
     height: 90svh;
